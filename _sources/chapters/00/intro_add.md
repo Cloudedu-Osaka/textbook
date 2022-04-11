@@ -1,6 +1,6 @@
 # Precautions
 
-この授業のための事前注意:
+この授業のための事前準備と注意:
 
 * プログラミング環境の設定
   1. 認証連携 (Federated authentication)
