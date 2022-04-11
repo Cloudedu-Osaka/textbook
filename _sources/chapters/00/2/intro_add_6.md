@@ -1,4 +1,4 @@
-# Withdrawal of Consent
+# Withdrawal of consent
 
 <div align="right">令和 4 年 4 月 19 日</div>
 <div align="center"><font size="5">同意撤回書</font></div>
