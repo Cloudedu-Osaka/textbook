@@ -1,4 +1,4 @@
-# Accessing JupyterHub
+# Application registration
 
 この講義用に準備した[JupyterHub](https://http://cloudedu-jhub.japaneast.cloudapp.azure.com/)にアクセスします。
 

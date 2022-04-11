@@ -2,16 +2,16 @@ format: jb-book
 root: chapters/intro
 title: Introduction
 parts:
-- caption: SUPPLEMENTS
+- caption: 2022/04/12
   numbered: false
   chapters:
-  - file: chapters/00/1/intro_add
+  - file: chapters/00/intro_add
     title: Precautions
     sections:
     - file: chapters/00/0/1/Receiving_invitation_mail
-      title: Receiving invitation
+      title: Federated authentication
     - file: chapters/00/0/1/Accessing_JupyterHub
-      title: Accessing JupyterHub
+      title: Application registration
     - file: chapters/00/1/intro_add_1
       title: Notebook execution
     - file: chapters/00/1/intro_add_2
