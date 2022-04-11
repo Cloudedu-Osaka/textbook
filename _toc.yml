@@ -2,16 +2,28 @@ format: jb-book
 root: chapters/intro
 title: Introduction
 parts:
-- caption: Addendum
+- caption: SUPPLEMENTS
   numbered: false
   chapters:
-  - file: chapters/00/intro_add_1
-    title: Addendum 1
-  - file: chapters/00/intro_add_2
-    title: Addendum 2
-  - file: chapters/00/intro_add_3
-    title: Addendum 3
-- caption: Data 8
+  - file: chapters/00/1/intro_add
+    title: Precautions
+    sections:
+    - file: chapters/00/1/intro_add_1
+      title: Notebook execution
+    - file: chapters/00/1/intro_add_2
+      title: Initialization for security
+    - file: chapters/00/1/intro_add_3
+      title: Event logging
+  - file: chapters/00/2/intro_add
+    title: Request for cooperation
+    sections:
+    - file: chapters/00/2/intro_add_4
+      title: Experiment explanation
+    - file: chapters/00/2/intro_add_5
+      title: Informed concent
+    - file: chapters/00/2/intro_add_6
+      title: Withdrawal of concent
+- caption: DATA 8
   numbered: true
   chapters:
   - file: chapters/01/what-is-data-science
