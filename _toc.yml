@@ -13,7 +13,7 @@ parts:
     - file: chapters/00/1/intro_add_2
       title: Initialization for security
     - file: chapters/00/1/intro_add_3
-      title: Event logging
+      title: Activity logging
   - file: chapters/00/2/intro_add
     title: Request for cooperation
     sections:

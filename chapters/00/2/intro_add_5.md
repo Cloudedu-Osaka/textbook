@@ -1,4 +1,4 @@
-# Informed Consent
+# Informed consent
 
 <div align="right">令和 4 年 4 月 19 日</div>
 <div align="center"><font size="5">同意書</font></div>
