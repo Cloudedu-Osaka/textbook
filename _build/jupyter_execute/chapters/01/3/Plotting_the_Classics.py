@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[1]:
+# In[8]:
 
 
 from datascience import *
@@ -20,6 +20,12 @@ from urllib.request import urlopen
 import re
 def read_url(url): 
     return re.sub('\\s+', ' ', urlopen(url).read().decode())
+
+
+# In[ ]:
+
+
+
 
 
 # # Plotting the classics

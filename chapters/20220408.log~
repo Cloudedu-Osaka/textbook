@@ -1,0 +1,55 @@
+# IPython log file
+
+import os
+
+from datetime import date
+from datetime import time
+from datetime import datetime as dt
+import os
+
+from datetime import date
+from datetime import time
+from datetime import datetime as dt
+def logfile(user=os.environ.get('JUPYTERHUB_USER') or 'jovyan'):
+    prefix='/srv'
+    if os.path.isdir(prefix) and os.access(prefix, os.W_OK):
+        prefix+=('/'+user)
+        if not os.path.isdir(prefix):
+            os.makedirs(prefix)
+    else:
+        prefix='.'
+    return prefix+'/'+dt.now().strftime('%Y%m%d')+'.log'
+path=logfile()
+get_ipython().run_line_magic('logstop', '')
+get_ipython().run_line_magic('logstart', '-otq $path')
+import os
+
+from datetime import date
+from datetime import time
+from datetime import datetime as dt
+def logfile(user=os.environ.get('JUPYTERHUB_USER') or 'jovyan'):
+    prefix='/srv'
+    if os.path.isdir(prefix) and os.access(prefix, os.W_OK):
+        prefix+=('/'+user)
+        if not os.path.isdir(prefix):
+            os.makedirs(prefix)
+    else:
+        prefix='.'
+    return prefix+'/'+dt.now().strftime('%Y%m%d')+'.log'
+# Fri, 08 Apr 2022 19:36:29
+def logfile(user=os.environ.get('JUPYTERHUB_USER') or 'jovyan'):
+    prefix='/srv'
+    if os.path.isdir(prefix) and os.access(prefix, os.W_OK):
+        prefix+=('/'+user)
+        if not os.path.isdir(prefix):
+            os.makedirs(prefix)
+    else:
+        prefix='.'
+    return prefix+'/'+dt.now().strftime('%Y%m%d')+'.log'
+# Fri, 08 Apr 2022 19:36:29
+logfile()
+#[Out]# './20220408.log'
+# Fri, 08 Apr 2022 19:36:34
+path=logfile()
+get_ipython().run_line_magic('logstop', '')
+get_ipython().run_line_magic('logstart', '-otq $path')
