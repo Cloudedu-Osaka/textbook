@@ -8,24 +8,24 @@
 ```{attention}
 高確率でスパムとして扱われるので、
 受信フォルダに見当たらないときはスパム・フォルダを探して救出してください。
-```{image}./Screen Shot 2022-04-11 at 17.04.20.png
+```{image}./fig-1.png
 ```
 
 ## 招待の承諾
 
 「招待の承諾」というリンクをクリックしてください。
 
-```{image}./Screen Shot 2022-04-11 at 17.05.48.png
+```{image}./fig-2.png
 ```
 
 阪大アカウント (`uXXXXXXx@ecs.osaka-u.ac.jp`) のパスワードの入力画面に切り替わるので、パスワードを入力してください。
 
-```{image}./Screen Shot 2022-04-11 at 17.06.23.png
+```{image}./fig-3.png
 ```
 
 アクセス許可を与えて下さい。この講義では、この講義で使用するプログラミング環境への「サインイン」に用います。
 
-```{image}./Screen Shot 2022-04-11 at 17.06.56.png
+```{image}./fig-4.png
 ```
 
 ```{attention}
