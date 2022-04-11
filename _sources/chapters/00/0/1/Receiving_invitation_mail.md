@@ -1,4 +1,4 @@
-# Receiving invitation
+# Federated authentication
 
 ## 招待メールの受信
 
