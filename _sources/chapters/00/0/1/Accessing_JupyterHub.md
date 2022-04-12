@@ -1,7 +1,7 @@
 # Application registration
 
 この講義用に準備した
-[JupyterHub](https://http://cloudedu-jhub.japaneast.cloudapp.azure.com/)にアクセスします。
+[JupyterHub](https://cloudedu-jhub.japaneast.cloudapp.azure.com/)にアクセスします。
 ウィンドウ中心の "`Sign in with Azure AD`" をクリックして下さい。
 ```{attention}
 Webブラウザは、Google ChromeかMicrosoft Edge (最新のもの) を推奨します。
