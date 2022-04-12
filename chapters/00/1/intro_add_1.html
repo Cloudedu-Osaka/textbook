@@ -53,8 +53,8 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="shortcut icon" href="../../../_static/favicon.png"/>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="Initialization for security" href="intro_add_2.html" />
-    <link rel="prev" title="Accessing JupyterHub" href="../0/1/Accessing_JupyterHub.html" />
+    <link rel="next" title="Notebook security" href="intro_add_2.html" />
+    <link rel="prev" title="Application registration" href="../0/1/Accessing_JupyterHub.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -103,12 +103,12 @@ const thebe_selector_output = ".output, .cell_output"
     <div class="bd-toc-item active">
         <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
-  SUPPLEMENTS
+  2022/04/12
  </span>
 </p>
 <ul class="current nav bd-sidenav">
  <li class="toctree-l1 current active has-children">
-  <a class="reference internal" href="intro_add.html">
+  <a class="reference internal" href="../intro_add.html">
    Precautions
   </a>
   <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
@@ -119,12 +119,12 @@ const thebe_selector_output = ".output, .cell_output"
   <ul class="current">
    <li class="toctree-l2">
     <a class="reference internal" href="../0/1/Receiving_invitation_mail.html">
-     Receiving invitation
+     Federated authentication
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../0/1/Accessing_JupyterHub.html">
-     Accessing JupyterHub
+     Application registration
     </a>
    </li>
    <li class="toctree-l2 current active">
@@ -134,12 +134,12 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="intro_add_2.html">
-     Initialization for security
+     Notebook security
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="intro_add_3.html">
-     Activity logging
+     Notebook activity
     </a>
    </li>
   </ul>
@@ -939,7 +939,8 @@ const thebe_selector_output = ".output, .cell_output"
                 
   <div class="tex2jax_ignore mathjax_ignore section" id="notebook-execution">
 <h1>Notebook execution<a class="headerlink" href="#notebook-execution" title="Permalink to this headline">¶</a></h1>
-<p>この講義で配布する資料は、実行が可能です。</p>
+<p>この講義で配布する資料 (ノートブック) は、この講義用に準備したJupyterHubで実行が可能です。
+ノートブックの実行手順は次の通りです:</p>
 <ul class="simple">
 <li><p>ウィンドウ上列のアイコン列のロケットにマウスカーソルを合わせる</p></li>
 <li><p>プルダウンから “Launch JupyterHub” を選択する</p></li>
@@ -950,7 +951,7 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="simple">
 <li><p>クラウド上に仮想コンピュータを起動する</p></li>
 <li><p>配付資料を記録するためのストレージ領域を確保する (初回のみ)</p></li>
-<li><p>プログラミング環境を起動する</p></li>
+<li><p>個人用のプログラミング環境を起動する</p></li>
 </ul>
 </div>
 <p>次のセルを選択し、コントロールキーを押しながらリターン・キーを押すとセルの内容が実行出来ます。</p>
@@ -972,8 +973,18 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 <div class="admonition attention">
 <p class="admonition-title">Attention</p>
-<p>ノートブックの実行から配付資料に戻るには、ブラウザの戻るボタンを押してください。</p>
-<p>または、JupyterHubでノートブックを起動する際に、コンテキスト・メニューで新しいタブでリンクを開くと良いでしょう。</p>
+<p>ノートブックの実行から配付資料に戻るには、ブラウザの戻るボタンを押してください。
+ただし、Firefoxを使っている場合は、配付資料の転送画面に戻ってしまうことがあるので、
+戻るボタンを長押しして、それよりも前の画面に戻ってください。</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>JupyterHubでノートブックを起動する際に、コンテキスト・メニューで新しいタブでリンクを開くと良いでしょう。</p>
+</div>
+<div class="admonition attention">
+<p class="admonition-title">Attention</p>
+<p>戻るボタンを押したとき、未保存のフォームを放置しても良いか確認が出ることがありますが、
+この講義では、とくに気にせず戻って構いません。</p>
 </div>
 </div>
 
@@ -1006,13 +1017,13 @@ const thebe_selector_output = ".output, .cell_output"
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Accessing JupyterHub</p>
+            <p class="prev-next-title">Application registration</p>
         </div>
     </a>
     <a class='right-next' id="next-link" href="intro_add_2.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Initialization for security</p>
+        <p class="prev-next-title">Notebook security</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
