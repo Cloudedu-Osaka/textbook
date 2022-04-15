@@ -1,6 +1,27 @@
 #!/usr/bin/env python
 # coding: utf-8
 
+# In[ ]:
+
+
+# initialization for my classroom
+import os
+from datetime import datetime as dt
+
+def logfile(user=os.environ.get('JUPYTERHUB_USER') or 'jovyan'):
+    prefix='/srv'
+    if os.path.isdir(prefix) and os.access(prefix, os.W_OK):
+        prefix+=('/'+user)
+        if not os.path.isdir(prefix):
+            os.makedirs(prefix)
+    else:
+        prefix='.'
+    return prefix+'/'+dt.now().strftime('%Y%m%d')+'.log'
+
+path=logfile()
+get_ipython().run_line_magic('logstart', '-otq $path append')
+
+
 # In[1]:
 
 
