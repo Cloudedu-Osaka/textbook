@@ -18,6 +18,8 @@ parts:
       title: Notebook security
     - file: chapters/00/1/intro_add_3
       title: Notebook activity
+    - file: chapters/00/1/intro_add_4
+      title: Notebook extended setting
   - file: chapters/00/2/intro_add
     title: Request for cooperation
     sections:
