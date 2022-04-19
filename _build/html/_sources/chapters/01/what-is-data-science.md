@@ -1,21 +1,31 @@
 What is Data Science?
 ====================
 
-Data Science is about drawing useful conclusions from large and diverse data
-sets through exploration, prediction, and inference.  Exploration involves
-identifying patterns in information.  Prediction involves using information
-we know to make informed guesses about values we wish we knew.  Inference
-involves quantifying our degree of certainty: will the patterns that we found in our data also appear in new observations? How accurate are our predictions? Our primary
-tools for exploration are visualizations and descriptive statistics, for
-prediction are machine learning and optimization, and for inference are
-statistical tests and models.
+データサイエンスとは、大規模かつ多様なデータセットから、
+**探索 (exploration)**、**予測 (prediction)**、**推定 (inference)** を通じて有用な結論を導き出すことです。
+<u>**探索**とは、情報のパターンを特定することです。</u>
+**予測**とは、私たちが知っている情報を使って、私たちが知りたかった値を推測することです。
+**推定**とは、確からしさの度合いを定量化することです: 
+<u>データから発見したパターンが新たな観測でも現れるでしょうか？</u>
+予測はどの程度正確なのでしょうか？
+<u>**探索**のための主なツールは可視化と記述統計学であり、</u>
+**予測**のためのツールは機械学習とその最適化であり、
+**推定**のためのツールは統計的な検定とモデルです。
 
-Statistics is a central component of data science because statistics
-studies how to make robust conclusions based on incomplete information. Computing
-is a central component because programming allows us to apply analysis
-techniques to the large and diverse data sets that arise in real-world
-applications: not just numbers, but text, images, videos, and sensor readings.
-Data science is all of these things, but it is more than the sum of its parts
-because of the applications. Through understanding a particular domain, data
-scientists learn to ask appropriate questions about their data and correctly
-interpret the answers provided by our inferential and computational tools.
+* [Descriptive statistics - Wikipedia](https://en.wikipedia.org/wiki/Descriptive_statistics)
+* [Statistical inference - Wikipedia](https://en.wikipedia.org/wiki/Statistical_inference)
+  - [推計統計学 - Wikipedia](https://ja.wikipedia.org/wiki/%E6%8E%A8%E8%A8%88%E7%B5%B1%E8%A8%88%E5%AD%A6)
+
+統計学は、不完全な情報に基づいて、
+いかに確かな結論を導き出すかを研究するものであり、
+データサイエンスの中心的な要素です。
+コンピュータを使った計算も中心的な構成要素です。
+なぜなら、<u>プログラミングによって、
+現実世界の応用事例で発生する大規模かつ多様なデータセット
+(数字だけでなく、テキスト、画像、動画、センサーの読み取り値) に
+分析技術を適用することができる</u>からです。
+データサイエンスは、これらすべての要素で構成されていますが、
+応用次第で、それ以上となりえます。
+データサイエンティストは、
+<u>特定の分野を理解することでデータについて適切な疑問を持ち、
+推定ツールや計算ツールが提供する答えを正しく解釈することを学びます</u>。

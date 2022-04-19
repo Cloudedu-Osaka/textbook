@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[ ]:
+# In[1]:
 
 
 # initialization for my classroom
@@ -19,10 +19,11 @@ def logfile(user=os.environ.get('JUPYTERHUB_USER') or 'jovyan'):
     return prefix+'/'+dt.now().strftime('%Y%m%d')+'.log'
 
 path=logfile()
+#%logstop
 get_ipython().run_line_magic('logstart', '-otq $path append')
 
 
-# In[1]:
+# In[2]:
 
 
 from datascience import *
@@ -42,7 +43,7 @@ def read_url(url):
     return re.sub('\\s+', ' ', urlopen(url).read().decode())
 
 
-# In[2]:
+# In[3]:
 
 
 # Read two books, fast (again)!
@@ -58,9 +59,9 @@ little_women_chapters = little_women_text.split('CHAPTER ')[1:]
 
 # # Literary Characters
 # 
-# *The Adventures of Huckleberry Finn* describes a journey that Huck and Jim take along the Mississippi River. Tom Sawyer joins them towards the end as the action heats up. Having loaded the text, we can quickly visualize how many times these characters have each been mentioned at any point in the book.
+# *The Adventures of Huckleberry Finn* は、ハックとジムがミシシッピ川に沿って旅する様子を描いている。トム・ソーヤーも終盤に加わり、アクションがヒートアップしていきます。テキストを読み込むと、これらの登場人物が本のどの場面で何回出てきたかをすぐに視覚化することができます。
 
-# In[3]:
+# In[7]:
 
 
 # Count how many times the names Jim, Tom, and Huck appear in each chapter.
@@ -79,13 +80,13 @@ cum_counts.plot(column_for_xticks=3)
 plots.title('Cumulative Number of Times Each Name Appears', y=1.08);
 
 
-# In the plot above, the horizontal axis shows chapter numbers and the vertical axis shows how many times each character has been mentioned up to and including that chapter. 
+# 上のプロットは、横軸が章番号、縦軸がその章までに各キャラクターが何回登場したかを示しています。 
 # 
-# You can see that Jim is a central character by the large number of times his name appears. Notice how Tom is hardly mentioned for much of the book until he arrives and joins Huck and Jim, after Chapter 30. His curve and Jim's rise sharply at that point, as the action involving both of them intensifies. As for Huck, his name hardly appears at all, because he is the narrator. 
+# ジムが中心人物であることは、彼の名前の登場回数の多さからもわかります。また、30 章以降にトムがやってきてハックとジムと合流するまで、トムがほとんど登場しないことに注目しましょう。この章では、トムがハックとジムのもとにやってきて合流するまで、トムはほとんど言及されず、ハックとジムの行動が激化するにつれて、トムとジムの曲線は急激に上昇します。また、ハックに関しては、語り手であるために、彼の名前はほとんど登場しません。 
 
-# *Little Women* is a story of four sisters growing up together during the civil war. In this book, chapter numbers are spelled out and chapter titles are written in all capital letters.
+# *Little Women* は、南北戦争中に4人の姉妹が共に成長する物語です。この本では、章番号が綴られ、章題はすべて大文字で書かれています。
 
-# In[4]:
+# In[8]:
 
 
 # The chapters of Little Women, in a table
@@ -93,9 +94,9 @@ plots.title('Cumulative Number of Times Each Name Appears', y=1.08);
 Table().with_column('Chapters', little_women_chapters)
 
 
-# We can track the mentions of main characters to learn about the plot of this book as well.  The protagonist Jo interacts with her sisters Meg, Beth, and Amy regularly, up until Chapter 27 when she moves to New York alone.
+# 主要人物の言及を追跡することで、本書の筋も知ることができます。主人公のジョーは、一人でニューヨークに引っ越す27章までは、メグ、ベス、エイミーの3人の姉妹と定期的に交流しています。
 
-# In[5]:
+# In[9]:
 
 
 # Counts of names in the chapters of Little Women
@@ -116,4 +117,10 @@ cum_counts.plot(column_for_xticks=5)
 plots.title('Cumulative Number of Times Each Name Appears', y=1.08);
 
 
-# Laurie is a young man who marries one of the girls in the end. See if you can use the plots to guess which one.
+# ローリーは、最後に女の子の一人と結婚する青年です。プロットをもとに、どの女性と結婚するのか当ててみてください。
+
+# In[ ]:
+
+
+
+

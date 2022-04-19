@@ -1,7 +1,12 @@
 format: jb-book
-root: chapters/intro
+root: chapters/00/entry
 title: Introduction
 parts:
+- caption: 2022/04/19
+  numberd: false
+  chapters:
+  - file: chapters/00/3/intro_add_1
+    title: Notebook additional setting
 - caption: 2022/04/12
   numbered: false
   chapters:

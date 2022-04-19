@@ -1,29 +1,34 @@
 Why Data Science?
 =================
 
-Most important decisions are made with only partial information and uncertain
-outcomes. However, the degree of uncertainty for many decisions can be reduced
-sharply by access to large data sets and the computational tools
-required to analyze them effectively. Data-driven decision making has already
-transformed a tremendous breadth of industries, including finance, advertising,
-manufacturing, and real estate. At the same time, a wide range of academic
-disciplines are evolving rapidly to incorporate large-scale data analysis into
-their theory and practice.
+重要な意思決定の多くは、部分的な情報しか得られず、結果が不確実な状態で行われます。
+しかし、多くの意思決定における不確実性の程度は、
+大規模なデータセットとそれを効果的に分析するために必要な計算ツールを利用することによって、
+大幅に減らすことができます。
+データ駆動型の意思決定は、すでに金融、広告、製造、不動産など、非常に広範な業界を変革しています。
+同時に、様々な学問分野においても、大規模データ解析を理論と実践に取り入れるべく、急速な進化を遂げています。
 
-Studying data science enables individuals to bring these techniques to bear on
-their work, their scientific endeavors, and their personal decisions. Critical
-thinking has long been a hallmark of a rigorous education, but critiques are
-often most effective when supported by data. A critical analysis of any aspect
-of the world, may it be business or social science, involves inductive
-reasoning; conclusions can rarely been proven outright, but only supported by
-the available evidence. Data science provides the means to make precise,
-reliable, and quantitative arguments about any set of observations. With
-unprecedented access to information and computing, critical thinking about
-any aspect of the world that can be measured would be incomplete without
-effective inferential techniques.
+データサイエンスを学ぶことで、
+これらの技術を自分の仕事、科学的な試み、そして個人の判断に生かすことができるようになります。
+**批判的思考**は、長い間、厳格な教育の特徴でしたが、
+批評はデータによって裏付けられたときに最も効果的であることが多いのです。
+ビジネスであれ社会科学であれ、世界のあらゆる側面を批判的に分析するには、
+**帰納的推論**が必要です。
+結論がそのまま証明されることはほとんどなく、
+利用可能な証拠によってのみ支持されます。
+データサイエンスは、あらゆる観測結果に対して、
+正確で信頼性の高い定量的な議論を行う手段を提供します。
+情報と計算へのかつてないアクセスによって、
+測定可能な世界のあらゆる側面に関する批判的思考は、
+効果的な推論技術なしには不完全なものになるでしょう。
 
-The world has too many unanswered questions and difficult challenges to leave
-this critical reasoning to only a few specialists. All educated members of 
-society can build the capacity to reason about data. The tools, techniques, 
-and data sets are all readily available; this text aims to make them 
-accessible to everyone.
+* [Critical thinking - Wikipedia](https://en.wikipedia.org/wiki/Critical_thinking)
+  * [批判的思考 - Wikipedia](https://ja.wikipedia.org/wiki/%E6%89%B9%E5%88%A4%E7%9A%84%E6%80%9D%E8%80%83)
+* [Inductive reasoning - Wikipedia](https://en.wikipedia.org/wiki/Inductive_reasoning)
+  * [帰納 - Wikipedia](https://ja.wikipedia.org/wiki/%E5%B8%B0%E7%B4%8D)
+
+この批判的推論を一部の専門家だけに任せておくには、
+世界には答えのない問題や困難な課題が多すぎるのです。
+<u>ここで教育を受けたすべての人が、
+データについて推論する能力を身につけることができます。</u>
+そのためのツールやテクニック、データセットはすべて容易に入手可能なのです。

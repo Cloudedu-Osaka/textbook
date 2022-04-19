@@ -4,6 +4,28 @@
 # In[1]:
 
 
+# initialization for my classroom
+import os
+from datetime import datetime as dt
+
+def logfile(user=os.environ.get('JUPYTERHUB_USER') or 'jovyan'):
+    prefix='/srv'
+    if os.path.isdir(prefix) and os.access(prefix, os.W_OK):
+        prefix+=('/'+user)
+        if not os.path.isdir(prefix):
+            os.makedirs(prefix)
+    else:
+        prefix='.'
+    return prefix+'/'+dt.now().strftime('%Y%m%d')+'.log'
+
+path=logfile()
+#%logstop
+get_ipython().run_line_magic('logstart', '-otq $path append')
+
+
+# In[1]:
+
+
 from datascience import *
 import numpy as np
 path_data = '../../../../data/'
@@ -37,9 +59,9 @@ little_women_chapters = little_women_text.split('CHAPTER ')[1:]
 
 # # Another Kind of Character
 # 
-# In some situations, the relationships between quantities allow us to make predictions. This text will explore how to make accurate predictions based on incomplete information and develop methods for combining multiple sources of uncertain information to make decisions.
+# 状況によっては、量と量の関係から予測を立てることができます。このテキストでは、不完全な情報に基づいて正確な予測を行う方法を探り、複数の不確実な情報源を組み合わせて意思決定を行う方法を開発します。
 # 
-# As an example of visualizing information derived from multiple sources, let us first use the computer to get some information that would be tedious to acquire by hand. In the context of novels, the word "character" has a second meaning: a printed symbol such as a letter or number or punctuation symbol. Here, we ask the computer to count the number of characters and the number of periods in each chapter of both *Huckleberry Finn* and *Little Women*.
+# 複数のソースから得られる情報を可視化する例として、まず、人手で取得するのが面倒な情報をコンピューターで取得する方法を考えてみましょう。小説の文脈では、"character" という言葉には、文字や数字、句読点などの印刷された記号という第二の意味があります。ここでは *Huckleberry Finn* と *Little Women* の各章の文字数とピリオドの数をコンピュータに数えてもらいます。
 
 # In[3]:
 
@@ -58,7 +80,7 @@ chars_periods_little_women = Table().with_columns([
     ])
 
 
-# Here are the data for *Huckleberry Finn*. Each row of the table corresponds to one chapter of the novel and displays the number of characters as well as the number of periods in the chapter. Not surprisingly, chapters with fewer characters also tend to have fewer periods, in general: the shorter the chapter, the fewer sentences there tend to be, and vice versa. The relation is not entirely predictable, however, as sentences are of varying lengths and can involve other punctuation such as question marks. 
+# *Huckleberry Finn* のデータです。 表の各行は小説の1章に対応し、その章の文字数とピリオドの数が表示されています。驚くには値しませんが、一般に、文字数の少ない章は、ピリオドも少ない傾向があります: 章が短いほど、文章も少なくなる傾向があり、その逆もまた然りです。しかし、文の長さは様々であり、クエスチョンマークなど他の句読点を含むこともあるため、この関係は完全に予測できるものではありません。
 
 # In[4]:
 
@@ -66,7 +88,7 @@ chars_periods_little_women = Table().with_columns([
 chars_periods_huck_finn
 
 
-# Here are the corresponding data for *Little Women*.
+# *Little Women* の同様なデータはこちらです。
 
 # In[5]:
 
@@ -74,9 +96,9 @@ chars_periods_huck_finn
 chars_periods_little_women
 
 
-# You can see that the chapters of *Little Women* are in general longer than those of *Huckleberry Finn*. Let us see if these two simple variables – the length and number of periods in each chapter – can tell us anything more about the two books. One way to do this is to plot both sets of data on the same axes. 
+# *Little Women* の章は、*Huckleberry Finn* の章より全般的に長いことがおわかりいただけると思います。この2つの単純な変数、各章の長さとピリオドの数が、この2冊の本について何かもっと教えてくれるかどうか見てみましょう。これを行う1つの方法は、両方のデータを同じ軸にプロットすることです。
 # 
-# In the plot below, there is a dot for each chapter in each book. Blue dots correspond to *Huckleberry Finn* and gold dots to *Little Women*. The horizontal axis represents the number of periods and the vertical axis represents the number of characters.
+# 下のプロットでは、各書籍の各章に点がついています。青い点は *Huckleberry Finn* 、金の点は *Little Women* に対応します。横軸は期間の数、縦軸は登場人物の数を表しています。
 
 # In[6]:
 
@@ -92,8 +114,14 @@ plots.xlabel('Number of periods in chapter')
 plots.ylabel('Number of characters in chapter');
 
 
-# The plot shows us that many but not all of the chapters of *Little Women* are longer than those of *Huckleberry Finn*, as we had observed by just looking at the numbers. But it also shows us something more. Notice how the blue points are roughly clustered around a straight line, as are the yellow points. Moreover, it looks as though both colors of points might be clustered around the *same* straight line.
+# このプロットは、私たちが数字を見ただけで観察していたように、 *Little Women* の多くの章が *Huckleberry Finn* の章より長いことを示しています。しかし、このプロットはそれ以上のことも示しています。青い点は、黄色い点と同じように、ほぼ直線の周りに集まっていることに注目してください。しかも、両方の色の点が *同じ* 直線の周りに集まっているように見えるのです。
 
-# Now look at all the chapters that contain about 100 periods. The plot shows that those chapters contain about 10,000 characters to about 15,000 characters, roughly. That's about 100 to 150 characters per period.
+# では、約100のピリオドが含まれる章をすべて見てみましょう。プロットを見ると、それらの章にはおよそ1万字から1万5千字の文字が含まれていることがわかります。これは1ピリオドあたり約100〜150文字です。
 # 
-# Indeed, it appears from looking at the plot that on average both books tend to have somewhere between 100 and 150 characters between periods, as a very rough estimate. Perhaps these two great 19th century novels were signaling something so very familiar to us now: the 140-character limit of Twitter.
+# 実際、プロットを見ると、両書とも平均して、ごく大雑把に見積もって100字から150字の間でピリオドが打たれる傾向にあるようです。もしかしたら、この19世紀の二大小説は、今の私たちにとって非常に身近な存在であるTwitterの140字制限というものを示唆していたのかもしれません。
+
+# In[ ]:
+
+
+
+

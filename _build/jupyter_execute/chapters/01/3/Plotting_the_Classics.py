@@ -1,7 +1,29 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[8]:
+# In[1]:
+
+
+# initialization for my classroom
+import os
+from datetime import datetime as dt
+
+def logfile(user=os.environ.get('JUPYTERHUB_USER') or 'jovyan'):
+    prefix='/srv'
+    if os.path.isdir(prefix) and os.access(prefix, os.W_OK):
+        prefix+=('/'+user)
+        if not os.path.isdir(prefix):
+            os.makedirs(prefix)
+    else:
+        prefix='.'
+    return prefix+'/'+dt.now().strftime('%Y%m%d')+'.log'
+
+path=logfile()
+#%logstop
+get_ipython().run_line_magic('logstart', '-otq $path append')
+
+
+# In[2]:
 
 
 from datascience import *
@@ -22,21 +44,15 @@ def read_url(url):
     return re.sub('\\s+', ' ', urlopen(url).read().decode())
 
 
-# In[ ]:
-
-
-
-
-
 # # Plotting the classics
 # 
-# In this example, we will explore statistics for two classic novels: *The Adventures of Huckleberry Finn* by Mark Twain, and *Little Women* by Louisa May Alcott. The text of any book can be read by a computer at great speed. Books published before 1923 are currently in the *public domain*, meaning that everyone has the right to copy or use the text in any way. [Project Gutenberg](http://www.gutenberg.org/) is a website that publishes public domain books online. Using Python, we can load the text of these books directly from the web.
+# この例では、Mark Twain の *The Adventures of Huckleberry Finn* と Louisa May Alcott の *Little Women* という2つの古典的な小説の統計を調べます。どのような本でも、そのテキストはコンピュータで高速に読み取ることができます。1923年以前に出版された書籍は、現在*パブリックドメイン*となっており、誰もがテキストをコピーし、どのようにでも利用する権利があります。[Project Gutenberg](http://www.gutenberg.org/) は、パブリックドメインの書籍をオンラインで公開しているウェブサイトです。Pythonを使って、これらの書籍のテキストをウェブから直接読み込むことができます。
 # 
-# This example is meant to illustrate some of the broad themes of this text. Don't worry if the details of the program don't yet make sense. Instead, focus on interpreting the images generated below. Later sections of the text will describe most of the features of the Python programming language used below.
+# この例は、このテキストの大まかなテーマのいくつかを説明するためのものです。プログラムの詳細がまだ理解できなくても気にしないでください。それよりも、下に表示される画像を理解することに集中しましょう。この後、このテキストで使用されているプログラミング言語Pythonのほとんどの機能を説明します。
 # 
-# First, we read the text of both books into lists of chapters, called `huck_finn_chapters` and `little_women_chapters`. In Python, a name cannot contain any spaces, and so we will often use an underscore `_` to stand in for a space. The `=` in the lines below give a name on the left to the result of some computation described on the right. A *uniform resource locator* or *URL* is an address on the Internet for some content; in this case, the text of a book. The `#` symbol starts a comment, which is ignored by the computer but helpful for people reading the code.
+# まず、両方の本のテキストを `huck_finn_chapters` と `little_women_chapters` という章のリストに読み込みます。Pythonでは、名前にスペースを含めることができないので、しばしばアンダースコア `_` をスペースの代わりに使用します。以下の行の `=` は、左側の名前に右側で記述された計算の結果を与えています。統一的資源位置指定子（URL: Uniform Resource Locator）は、インターネット上のあるコンテンツのアドレスで、この場合は本のテキストです。`#` 記号はコメントの開始を表し、コンピュータには無視されますがコードを読む人には役に立ちます。
 
-# In[2]:
+# In[5]:
 
 
 # Read two books, fast!
@@ -50,9 +66,9 @@ little_women_text = read_url(little_women_url)
 little_women_chapters = little_women_text.split('CHAPTER ')[1:]
 
 
-# While a computer cannot understand the text of a book, it can provide us with some insight into the structure of the text. The name `huck_finn_chapters` is currently bound to a list of all the chapters in the book. We can place them into a table to see how each chapter begins.
+# コンピュータは本の本文を理解することはできませんが、本文の構造をある程度理解することはできます `huck_finn_chapters` という名前は、現在、本の中のすべての章のリストと結びついています。それらをテーブルに配置して、各章がどのように始まるかを見ることができます。  
 
-# In[3]:
+# In[6]:
 
 
 # Display the chapters of Huckleberry Finn in a table.
@@ -60,4 +76,10 @@ little_women_chapters = little_women_text.split('CHAPTER ')[1:]
 Table().with_column('Chapters', huck_finn_chapters)
 
 
-# Each chapter begins with a chapter number in Roman numerals, followed by the first sentence of the chapter. Project Gutenberg has printed the first word of each chapter in upper case. 
+# 各章は、ローマ数字による章番号で始まり、その章の最初の文が続きます。Project Gutenbergは、各章の最初の単語を大文字で表示しています。
+
+# In[ ]:
+
+
+
+
