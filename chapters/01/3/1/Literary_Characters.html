@@ -103,6 +103,18 @@ const thebe_selector_output = ".output, .cell_output"
     <div class="bd-toc-item active">
         <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
+  2022/04/19
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../00/3/intro_add_1.html">
+   Notebook additional setting
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
   2022/04/12
  </span>
 </p>
@@ -942,15 +954,68 @@ const thebe_selector_output = ".output, .cell_output"
             
               <div>
                 
-  <div class="cell tag_remove-input docutils container">
+  <div class="cell tag_hide-input docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># initialization for my classroom</span>
+<span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">datetime</span> <span class="k">as</span> <span class="n">dt</span>
+
+<span class="k">def</span> <span class="nf">logfile</span><span class="p">(</span><span class="n">user</span><span class="o">=</span><span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;JUPYTERHUB_USER&#39;</span><span class="p">)</span> <span class="ow">or</span> <span class="s1">&#39;jovyan&#39;</span><span class="p">):</span>
+    <span class="n">prefix</span><span class="o">=</span><span class="s1">&#39;/srv&#39;</span>
+    <span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">isdir</span><span class="p">(</span><span class="n">prefix</span><span class="p">)</span> <span class="ow">and</span> <span class="n">os</span><span class="o">.</span><span class="n">access</span><span class="p">(</span><span class="n">prefix</span><span class="p">,</span> <span class="n">os</span><span class="o">.</span><span class="n">W_OK</span><span class="p">):</span>
+        <span class="n">prefix</span><span class="o">+=</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="o">+</span><span class="n">user</span><span class="p">)</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">isdir</span><span class="p">(</span><span class="n">prefix</span><span class="p">):</span>
+            <span class="n">os</span><span class="o">.</span><span class="n">makedirs</span><span class="p">(</span><span class="n">prefix</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">prefix</span><span class="o">=</span><span class="s1">&#39;.&#39;</span>
+    <span class="k">return</span> <span class="n">prefix</span><span class="o">+</span><span class="s1">&#39;/&#39;</span><span class="o">+</span><span class="n">dt</span><span class="o">.</span><span class="n">now</span><span class="p">()</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s1">&#39;%Y%m</span><span class="si">%d</span><span class="s1">&#39;</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39;.log&#39;</span>
+
+<span class="n">path</span><span class="o">=</span><span class="n">logfile</span><span class="p">()</span>
+<span class="c1">#%logstop</span>
+<span class="o">%</span><span class="k">logstart</span> -otq $path append
+</pre></div>
 </div>
-<div class="cell tag_remove-input docutils container">
 </div>
-<div class="cell tag_remove-input docutils container">
+</div>
+<div class="cell tag_hide-input docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">datascience</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="n">path_data</span> <span class="o">=</span> <span class="s1">&#39;../../../&#39;</span>
+<span class="kn">import</span> <span class="nn">matplotlib</span>
+<span class="n">matplotlib</span><span class="o">.</span><span class="n">use</span><span class="p">(</span><span class="s1">&#39;Agg&#39;</span><span class="p">)</span>
+<span class="o">%</span><span class="k">matplotlib</span> inline
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plots</span>
+<span class="n">plots</span><span class="o">.</span><span class="n">style</span><span class="o">.</span><span class="n">use</span><span class="p">(</span><span class="s1">&#39;fivethirtyeight&#39;</span><span class="p">)</span>
+<span class="kn">import</span> <span class="nn">warnings</span>
+<span class="n">warnings</span><span class="o">.</span><span class="n">simplefilter</span><span class="p">(</span><span class="n">action</span><span class="o">=</span><span class="s2">&quot;ignore&quot;</span><span class="p">,</span> <span class="n">category</span><span class="o">=</span><span class="ne">FutureWarning</span><span class="p">)</span>
+
+<span class="kn">from</span> <span class="nn">urllib.request</span> <span class="kn">import</span> <span class="n">urlopen</span> 
+<span class="kn">import</span> <span class="nn">re</span>
+<span class="k">def</span> <span class="nf">read_url</span><span class="p">(</span><span class="n">url</span><span class="p">):</span> 
+    <span class="k">return</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\\</span><span class="s1">s+&#39;</span><span class="p">,</span> <span class="s1">&#39; &#39;</span><span class="p">,</span> <span class="n">urlopen</span><span class="p">(</span><span class="n">url</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">()</span><span class="o">.</span><span class="n">decode</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell tag_hide-input docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Read two books, fast (again)!</span>
+
+<span class="n">huck_finn_url</span> <span class="o">=</span> <span class="s1">&#39;https://www.inferentialthinking.com/data/huck_finn.txt&#39;</span>
+<span class="n">huck_finn_text</span> <span class="o">=</span> <span class="n">read_url</span><span class="p">(</span><span class="n">huck_finn_url</span><span class="p">)</span>
+<span class="n">huck_finn_chapters</span> <span class="o">=</span> <span class="n">huck_finn_text</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;CHAPTER &#39;</span><span class="p">)[</span><span class="mi">44</span><span class="p">:]</span>
+
+<span class="n">little_women_url</span> <span class="o">=</span> <span class="s1">&#39;https://www.inferentialthinking.com/data/little_women.txt&#39;</span>
+<span class="n">little_women_text</span> <span class="o">=</span> <span class="n">read_url</span><span class="p">(</span><span class="n">little_women_url</span><span class="p">)</span>
+<span class="n">little_women_chapters</span> <span class="o">=</span> <span class="n">little_women_text</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;CHAPTER &#39;</span><span class="p">)[</span><span class="mi">1</span><span class="p">:]</span>
+</pre></div>
+</div>
+</div>
 </div>
 <div class="tex2jax_ignore mathjax_ignore section" id="literary-characters">
 <h1><span class="section-number">1.3.1. </span>Literary Characters<a class="headerlink" href="#literary-characters" title="Permalink to this headline">¶</a></h1>
-<p><em>The Adventures of Huckleberry Finn</em> describes a journey that Huck and Jim take along the Mississippi River. Tom Sawyer joins them towards the end as the action heats up. Having loaded the text, we can quickly visualize how many times these characters have each been mentioned at any point in the book.</p>
+<p><em>The Adventures of Huckleberry Finn</em> は、ハックとジムがミシシッピ川に沿って旅する様子を描いている。トム・ソーヤーも終盤に加わり、アクションがヒートアップしていきます。テキストを読み込むと、これらの登場人物が本のどの場面で何回出てきたかをすぐに視覚化することができます。</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Count how many times the names Jim, Tom, and Huck appear in each chapter.</span>
@@ -974,9 +1039,9 @@ const thebe_selector_output = ".output, .cell_output"
 <img alt="../../../../_images/Literary_Characters_4_0.png" src="../../../../_images/Literary_Characters_4_0.png" />
 </div>
 </div>
-<p>In the plot above, the horizontal axis shows chapter numbers and the vertical axis shows how many times each character has been mentioned up to and including that chapter.</p>
-<p>You can see that Jim is a central character by the large number of times his name appears. Notice how Tom is hardly mentioned for much of the book until he arrives and joins Huck and Jim, after Chapter 30. His curve and Jim’s rise sharply at that point, as the action involving both of them intensifies. As for Huck, his name hardly appears at all, because he is the narrator.</p>
-<p><em>Little Women</em> is a story of four sisters growing up together during the civil war. In this book, chapter numbers are spelled out and chapter titles are written in all capital letters.</p>
+<p>上のプロットは、横軸が章番号、縦軸がその章までに各キャラクターが何回登場したかを示しています。</p>
+<p>ジムが中心人物であることは、彼の名前の登場回数の多さからもわかります。また、30 章以降にトムがやってきてハックとジムと合流するまで、トムがほとんど登場しないことに注目しましょう。この章では、トムがハックとジムのもとにやってきて合流するまで、トムはほとんど言及されず、ハックとジムの行動が激化するにつれて、トムとジムの曲線は急激に上昇します。また、ハックに関しては、語り手であるために、彼の名前はほとんど登場しません。</p>
+<p><em>Little Women</em> は、南北戦争中に4人の姉妹が共に成長する物語です。この本では、章番号が綴られ、章題はすべて大文字で書かれています。</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># The chapters of Little Women, in a table</span>
@@ -1027,7 +1092,7 @@ const thebe_selector_output = ".output, .cell_output"
 </table>
 <p>... (37 rows omitted)</p></div></div>
 </div>
-<p>We can track the mentions of main characters to learn about the plot of this book as well.  The protagonist Jo interacts with her sisters Meg, Beth, and Amy regularly, up until Chapter 27 when she moves to New York alone.</p>
+<p>主要人物の言及を追跡することで、本書の筋も知ることができます。主人公のジョーは、一人でニューヨークに引っ越す27章までは、メグ、ベス、エイミーの3人の姉妹と定期的に交流しています。</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Counts of names in the chapters of Little Women</span>
@@ -1053,7 +1118,7 @@ const thebe_selector_output = ".output, .cell_output"
 <img alt="../../../../_images/Literary_Characters_9_0.png" src="../../../../_images/Literary_Characters_9_0.png" />
 </div>
 </div>
-<p>Laurie is a young man who marries one of the girls in the end. See if you can use the plots to guess which one.</p>
+<p>ローリーは、最後に女の子の一人と結婚する青年です。プロットをもとに、どの女性と結婚するのか当ててみてください。</p>
 </div>
 
     <script type="text/x-thebe-config">
