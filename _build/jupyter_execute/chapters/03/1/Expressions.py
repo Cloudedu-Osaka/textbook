@@ -34,6 +34,11 @@ try:
 except NameError:
     _showtraceback=IPython.core.interactiveshell.InteractiveShell.showtraceback
 
+try:
+    _showsyntaxerror
+except NameError:
+    _showsyntaxerror=IPython.core.interactiveshell.InteractiveShell.showsyntaxerror
+
 import logging
 logging.basicConfig(filename=path.replace('.log','-exc.log'), format='%(asctime)s %(message)s', level=logging.ERROR, force=True)
 
@@ -49,7 +54,16 @@ def showtraceback(self, *args, **kwargs):
     logging.error(self.InteractiveTB.stb2text(stb))
     _showtraceback(self, *args, **kwargs)
 
+def showsyntaxerror(self, *args, **kwargs):
+    etype, value, last_traceback = self._get_exc_info()
+    elist = traceback.extract_tb(last_traceback) if kwargs.get('running_compiled_code') else []
+    stb = self.SyntaxTB.structured_traceback(etype, value, elist)
+    logging.error(os.environ.get('JUPYTERHUB_USER') or 'jovyan')
+    logging.error(self.InteractiveTB.stb2text(stb))
+    _showsyntaxerror(self, *args, **kwargs)
+
 IPython.core.interactiveshell.InteractiveShell.showtraceback = showtraceback
+IPython.core.interactiveshell.InteractiveShell.showsyntaxerror = showsyntaxerror
 
 
 # # Expressions
@@ -58,7 +72,7 @@ IPython.core.interactiveshell.InteractiveShell.showtraceback = showtraceback
 # 
 # プログラムは式 *expressions* で構成されており、データの組み合わせ方をコンピュータに記述します。例えば、掛け算の式は、2つの数値の間に `*` という記号を入れることで成り立っています。`3 * 4` のような式は、コンピュータによって評価 *evaluated* されます。各セルの最後の式（この場合は `12` ）の値（評価 *evaluation* の結果）が、セルの下に表示されます。
 
-# In[1]:
+# In[2]:
 
 
 3 * 4
@@ -78,7 +92,7 @@ IPython.core.interactiveshell.InteractiveShell.showtraceback = showtraceback
 
 # プログラミング言語の文法規則は厳格です。Pythonでは、`*` という記号は2回続けて使えません。コンピュータは、規定の式構造と異なる式を解釈しようとはしません。代わりに、`SyntaxError` というエラーを表示します。言語の構文 *Syntax* はその文法規則の集合であり、`SyntaxError` は式の構造が言語の規則のどれとも一致しないことを示します。
 
-# In[2]:
+# In[3]:
 
 
 3 * * 4
@@ -98,7 +112,7 @@ IPython.core.interactiveshell.InteractiveShell.showtraceback = showtraceback
 
 # 表現を少し変えるだけで、意味が全く変わってしまうことがあります。以下では、 `*` の間のスペースが削除されています。2 つの数値式の間に `**` が表示されているため、この式は正規の指数表現（最初の数値を 2 番目の数値のべき乗にしたもの: 3×3×3×3）であることがわかります。記号 `*` と `**` は演算子 *operators* と呼ばれ、それらが結合する値は被演算子 *operands* と呼ばれます。
 
-# In[3]:
+# In[4]:
 
 
 3 ** 4

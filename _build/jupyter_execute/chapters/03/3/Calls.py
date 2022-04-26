@@ -34,6 +34,11 @@ try:
 except NameError:
     _showtraceback=IPython.core.interactiveshell.InteractiveShell.showtraceback
 
+try:
+    _showsyntaxerror
+except NameError:
+    _showsyntaxerror=IPython.core.interactiveshell.InteractiveShell.showsyntaxerror
+
 import logging
 logging.basicConfig(filename=path.replace('.log','-exc.log'), format='%(asctime)s %(message)s', level=logging.ERROR, force=True)
 
@@ -49,7 +54,16 @@ def showtraceback(self, *args, **kwargs):
     logging.error(self.InteractiveTB.stb2text(stb))
     _showtraceback(self, *args, **kwargs)
 
+def showsyntaxerror(self, *args, **kwargs):
+    etype, value, last_traceback = self._get_exc_info()
+    elist = traceback.extract_tb(last_traceback) if kwargs.get('running_compiled_code') else []
+    stb = self.SyntaxTB.structured_traceback(etype, value, elist)
+    logging.error(os.environ.get('JUPYTERHUB_USER') or 'jovyan')
+    logging.error(self.InteractiveTB.stb2text(stb))
+    _showsyntaxerror(self, *args, **kwargs)
+
 IPython.core.interactiveshell.InteractiveShell.showtraceback = showtraceback
+IPython.core.interactiveshell.InteractiveShell.showsyntaxerror = showsyntaxerror
 
 
 # # Call Expressions
