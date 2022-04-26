@@ -109,7 +109,7 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../../00/3/intro_add_1.html">
-   Additional setting
+   Notebook additional setting
   </a>
  </li>
 </ul>
@@ -152,11 +152,6 @@ const thebe_selector_output = ".output, .cell_output"
    <li class="toctree-l2">
     <a class="reference internal" href="../../00/1/intro_add_3.html">
      Notebook activity
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../00/1/intro_add_4.html">
-     Notebook extended setting
     </a>
    </li>
   </ul>
@@ -954,10 +949,12 @@ const thebe_selector_output = ".output, .cell_output"
             
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="expressions">
+  <div class="cell tag_remove-input docutils container">
+</div>
+<div class="tex2jax_ignore mathjax_ignore section" id="expressions">
 <h1><span class="section-number">3.1. </span>Expressions<a class="headerlink" href="#expressions" title="Permalink to this headline">¶</a></h1>
-<p>Programming languages are much simpler than human languages. Nonetheless, there are some rules of grammar to learn in any language, and that is where we will begin. In this text, we will use the <a class="reference external" href="https://www.python.org/">Python</a> programming language. Learning the grammar rules is essential, and the same rules used in the most basic programs are also central to more sophisticated programs.</p>
-<p>Programs are made up of <em>expressions</em>, which describe to the computer how to combine pieces of data. For example, a multiplication expression consists of a <code class="docutils literal notranslate"><span class="pre">*</span></code> symbol between two numerical expressions. Expressions, such as <code class="docutils literal notranslate"><span class="pre">3</span> <span class="pre">*</span> <span class="pre">4</span></code>, are <em>evaluated</em> by the computer. The value (the result of <em>evaluation</em>) of the last expression in each cell, <code class="docutils literal notranslate"><span class="pre">12</span></code> in this case, is displayed below the cell.</p>
+<p>プログラミング言語は人間の言語に比べてはるかに単純です。とはいえ、どんな言語にも学ぶべき文法のルールがあるので、まずはそこから始めてみましょう。この教科書では、プログラミング言語「 <a class="reference external" href="https://www.python.org/">Python</a> 」を使用します。文法ルールの学習は不可欠であり、最も基本的なプログラムで使用される同じルールは、より高度なプログラムでも中心的な役割を果たします。</p>
+<p>プログラムは式 <em>expressions</em> で構成されており、データの組み合わせ方をコンピュータに記述します。例えば、掛け算の式は、2つの数値の間に <code class="docutils literal notranslate"><span class="pre">*</span></code> という記号を入れることで成り立っています。<code class="docutils literal notranslate"><span class="pre">3</span> <span class="pre">*</span> <span class="pre">4</span></code> のような式は、コンピュータによって評価 <em>evaluated</em> されます。各セルの最後の式（この場合は <code class="docutils literal notranslate"><span class="pre">12</span></code> ）の値（評価 <em>evaluation</em> の結果）が、セルの下に表示されます。</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mi">3</span> <span class="o">*</span> <span class="mi">4</span>
@@ -970,7 +967,7 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 </div>
-<p>The grammar rules of a programming language are rigid. In Python, the <code class="docutils literal notranslate"><span class="pre">*</span></code> symbol cannot appear twice in a row. The computer will not try to interpret an expression that differs from its prescribed expression structures. Instead, it will show a <code class="docutils literal notranslate"><span class="pre">SyntaxError</span></code> error. The <em>Syntax</em> of a language is its set of grammar rules, and a <code class="docutils literal notranslate"><span class="pre">SyntaxError</span></code> indicates that an expression structure doesn’t match any of the rules of the language.</p>
+<p>プログラミング言語の文法規則は厳格です。Pythonでは、<code class="docutils literal notranslate"><span class="pre">*</span></code> という記号は2回続けて使えません。コンピュータは、規定の式構造と異なる式を解釈しようとはしません。代わりに、<code class="docutils literal notranslate"><span class="pre">SyntaxError</span></code> というエラーを表示します。言語の構文 <em>Syntax</em> はその文法規則の集合であり、<code class="docutils literal notranslate"><span class="pre">SyntaxError</span></code> は式の構造が言語の規則のどれとも一致しないことを示します。</p>
 <div class="cell tag_raises-exception docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mi">3</span> <span class="o">*</span> <span class="o">*</span> <span class="mi">4</span>
@@ -986,7 +983,7 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 </div>
-<p>Small changes to an expression can change its meaning entirely. Below, the space between the <code class="docutils literal notranslate"><span class="pre">*</span></code>’s has been removed. Because <code class="docutils literal notranslate"><span class="pre">**</span></code> appears between two numerical expressions, the expression is a well-formed <em>exponentiation</em> expression (the first number raised to the power of the second: 3 times 3 times 3 times 3). The symbols <code class="docutils literal notranslate"><span class="pre">*</span></code> and <code class="docutils literal notranslate"><span class="pre">**</span></code> are called <em>operators</em>, and the values they combine are called <em>operands</em>.</p>
+<p>表現を少し変えるだけで、意味が全く変わってしまうことがあります。以下では、 <code class="docutils literal notranslate"><span class="pre">*</span></code> の間のスペースが削除されています。2 つの数値式の間に <code class="docutils literal notranslate"><span class="pre">**</span></code> が表示されているため、この式は正規の指数表現（最初の数値を 2 番目の数値のべき乗にしたもの: 3×3×3×3）であることがわかります。記号 <code class="docutils literal notranslate"><span class="pre">*</span></code> と <code class="docutils literal notranslate"><span class="pre">**</span></code> は演算子 <em>operators</em> と呼ばれ、それらが結合する値は被演算子 <em>operands</em> と呼ばれます。</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mi">3</span> <span class="o">**</span> <span class="mi">4</span>
@@ -999,7 +996,7 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 </div>
-<p><strong>Common Operators.</strong> Data science often involves combining numerical values, and the set of operators in a programming language are designed to so that expressions can be used to express any sort of arithmetic. In Python, the following operators are essential.</p>
+<p><strong>一般的な演算子</strong> データサイエンスでは数値を組み合わせることが多く、プログラミング言語の演算子群は、あらゆる演算を表現できるように設計されています。Pythonでは、以下の演算子が基本的なものです。</p>
 <table class="colwidths-auto table">
 <thead>
 <tr class="row-odd"><th class="head"><p>Expression Type</p></th>
@@ -1041,7 +1038,7 @@ const thebe_selector_output = ".output, .cell_output"
 </tr>
 </tbody>
 </table>
-<p>Python expressions obey the same familiar rules of <em>precedence</em> as in algebra: multiplication and division occur before addition and subtraction. Parentheses can be used to group together smaller expressions within a larger expression.</p>
+<p>Pythonの式は、代数学でおなじみの優先順位 <em>precedence</em> のルールに従います: 乗算と除算は、加算と減算の前に行われます。括弧は、より大きな式の中でより小さな式をグループ化するために使用することができます。</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mi">1</span> <span class="o">+</span> <span class="mi">2</span> <span class="o">*</span> <span class="mi">3</span> <span class="o">*</span> <span class="mi">4</span> <span class="o">*</span> <span class="mi">5</span> <span class="o">/</span> <span class="mi">6</span> <span class="o">**</span> <span class="mi">3</span> <span class="o">+</span> <span class="mi">7</span> <span class="o">+</span> <span class="mi">8</span> <span class="o">-</span> <span class="mi">9</span> <span class="o">+</span> <span class="mi">10</span>
@@ -1066,7 +1063,7 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 </div>
-<p>This chapter introduces many types of expressions. Learning to program involves trying out everything you learn in combination, investigating the behavior of the computer. What happens if you divide by zero? What happens if you divide twice in a row? You don’t always need to ask an expert (or the Internet); many of these details can be discovered by trying them out yourself.</p>
+<p>この章では、多くの種類の式を紹介します。プログラミングを学ぶには、学んだことをすべて組み合わせて試し、コンピュータの動作を調べることが必要です。ゼロで割るとどうなるか? 2回続けて割ったらどうなるのか? これらの詳細は、必ずしも専門家（あるいはインターネット）に聞く必要はなく、自分で試してみることで発見できることが多いのです。</p>
 </div>
 
     <script type="text/x-thebe-config">

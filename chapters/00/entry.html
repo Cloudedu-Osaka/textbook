@@ -979,6 +979,26 @@ const thebe_selector_output = ".output, .cell_output"
 <div class="section" id="id2">
 <h2>毎授業前の設定更新<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
 <p>配付資料の追加や更新があるため、毎授業開始前に次のセルを実行してください。</p>
+<div class="admonition attention">
+<p class="admonition-title">Attention</p>
+<p>04/19の講義でWebインターフェイスを使って <code class="docutils literal notranslate"><span class="pre">nbextenstions</span></code> の設定をしてもらいましたが、次のセルを実行することでも対応が可能です。設定が行われていると <code class="docutils literal notranslate"><span class="pre">Validation:</span> <span class="pre">OK</span></code> と表示されるので確認をお願いします。</p>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>jupyter nbextension <span class="nb">enable</span> hide_input/main
+<span class="o">!</span>jupyter nbextension <span class="nb">enable</span> init_cell/main
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Enabling notebook extension hide_input/main...
+      - Validating: <span class=" -Color -Color-Green">OK</span>
+Enabling notebook extension init_cell/main...
+      - Validating: <span class=" -Color -Color-Green">OK</span>
+</pre></div>
+</div>
+</div>
+</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>find <span class="si">${</span><span class="nv">HOME</span><span class="si">}</span>/textbook/chapters -name <span class="se">\*</span>.ipynb -not -path <span class="s1">&#39;*/.*&#39;</span> -exec jupyter trust <span class="o">{}</span> <span class="se">\;</span>
