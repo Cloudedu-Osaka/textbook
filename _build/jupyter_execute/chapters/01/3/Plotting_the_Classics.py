@@ -22,6 +22,35 @@ path=logfile()
 #%logstop
 get_ipython().run_line_magic('logstart', '-otq $path append')
 
+# [python - cannot override sys.excepthook - Stack Overflow](https://stackoverflow.com/questions/1261668/cannot-override-sys-excepthook/28758396)
+# https://github.com/ipython/ipython/blob/e6432249582e05f438303ce73d082a0351bb383e/IPython/core/interactiveshell.py#L1952
+
+import sys
+import traceback
+import IPython
+
+try:
+    _showtraceback
+except NameError:
+    _showtraceback=IPython.core.interactiveshell.InteractiveShell.showtraceback
+
+import logging
+logging.basicConfig(filename=path.replace('.log','-exc.log'), format='%(asctime)s %(message)s', level=logging.ERROR, force=True)
+
+import sys
+import traceback
+import IPython
+
+def showtraceback(self, *args, **kwargs):
+    etype, value, tb = self._get_exc_info(kwargs.get('exc_tuple'))
+    stb = self.InteractiveTB.structured_traceback(
+        etype, value, tb, tb_offset=kwargs.get('tb_offset'))
+    logging.error(os.environ.get('JUPYTERHUB_USER') or 'jovyan')
+    logging.error(self.InteractiveTB.stb2text(stb))
+    _showtraceback(self, *args, **kwargs)
+
+IPython.core.interactiveshell.InteractiveShell.showtraceback = showtraceback
+
 
 # In[2]:
 
@@ -52,7 +81,7 @@ def read_url(url):
 # 
 # まず、両方の本のテキストを `huck_finn_chapters` と `little_women_chapters` という章のリストに読み込みます。Pythonでは、名前にスペースを含めることができないので、しばしばアンダースコア `_` をスペースの代わりに使用します。以下の行の `=` は、左側の名前に右側で記述された計算の結果を与えています。統一的資源位置指定子（URL: Uniform Resource Locator）は、インターネット上のあるコンテンツのアドレスで、この場合は本のテキストです。`#` 記号はコメントの開始を表し、コンピュータには無視されますがコードを読む人には役に立ちます。
 
-# In[5]:
+# In[4]:
 
 
 # Read two books, fast!
@@ -66,14 +95,38 @@ little_women_text = read_url(little_women_url)
 little_women_chapters = little_women_text.split('CHAPTER ')[1:]
 
 
+# In[ ]:
+
+
+
+
+
+# In[ ]:
+
+
+
+
+
 # コンピュータは本の本文を理解することはできませんが、本文の構造をある程度理解することはできます `huck_finn_chapters` という名前は、現在、本の中のすべての章のリストと結びついています。それらをテーブルに配置して、各章がどのように始まるかを見ることができます。  
 
-# In[6]:
+# In[5]:
 
 
 # Display the chapters of Huckleberry Finn in a table.
 
 Table().with_column('Chapters', huck_finn_chapters)
+
+
+# In[ ]:
+
+
+
+
+
+# In[ ]:
+
+
+
 
 
 # 各章は、ローマ数字による章番号で始まり、その章の最初の文が続きます。Project Gutenbergは、各章の最初の単語を大文字で表示しています。

@@ -1,6 +1,57 @@
 #!/usr/bin/env python
 # coding: utf-8
 
+# In[ ]:
+
+
+# initialization for my classroom
+import os
+from datetime import datetime as dt
+
+def logfile(user=os.environ.get('JUPYTERHUB_USER') or 'jovyan'):
+    prefix='/srv'
+    if os.path.isdir(prefix) and os.access(prefix, os.W_OK):
+        prefix+=('/'+user)
+        if not os.path.isdir(prefix):
+            os.makedirs(prefix)
+    else:
+        prefix='.'
+    return prefix+'/'+dt.now().strftime('%Y%m%d')+'.log'
+
+path=logfile()
+#%logstop
+get_ipython().run_line_magic('logstart', '-otq $path append')
+
+# [python - cannot override sys.excepthook - Stack Overflow](https://stackoverflow.com/questions/1261668/cannot-override-sys-excepthook/28758396)
+# https://github.com/ipython/ipython/blob/e6432249582e05f438303ce73d082a0351bb383e/IPython/core/interactiveshell.py#L1952
+
+import sys
+import traceback
+import IPython
+
+try:
+    _showtraceback
+except NameError:
+    _showtraceback=IPython.core.interactiveshell.InteractiveShell.showtraceback
+
+import logging
+logging.basicConfig(filename=path.replace('.log','-exc.log'), format='%(asctime)s %(message)s', level=logging.ERROR, force=True)
+
+import sys
+import traceback
+import IPython
+
+def showtraceback(self, *args, **kwargs):
+    etype, value, tb = self._get_exc_info(kwargs.get('exc_tuple'))
+    stb = self.InteractiveTB.structured_traceback(
+        etype, value, tb, tb_offset=kwargs.get('tb_offset'))
+    logging.error(os.environ.get('JUPYTERHUB_USER') or 'jovyan')
+    logging.error(self.InteractiveTB.stb2text(stb))
+    _showtraceback(self, *args, **kwargs)
+
+IPython.core.interactiveshell.InteractiveShell.showtraceback = showtraceback
+
+
 # In[1]:
 
 
@@ -18,15 +69,15 @@ movies = Table.read_table(path_data + 'movies_by_year.csv')
 
 # # Introduction to Tables
 # 
-# We can now apply Python to analyze data. We will work with data stored in Table structures.
+# Pythonを活用してデータを分析することができるようになりました。ここでは表構造に格納されたデータを扱います。
 # 
-# Tables are a fundamental way of representing data sets. A table can be viewed in two ways:
-# * a sequence of named columns that each describe a single attribute of all entries in a data set, or
-# * a sequence of rows that each contain all information about a single individual in a data set.
+# 表はデータセットを表現する基本的な方法です。表は2つの方法で参照することができます:
+# * 各々がデータセット内の全エントリの単一の属性を記述する、名前付きカラム (columns) の列
+# * データセットに含まれる各個に関するすべての情報を含む行 (rows) の列
 # 
-# We will study tables in great detail in the next several chapters. For now, we will just introduce a few methods without going into technical details. 
+# テーブルについては、次の章以降で詳しく説明します。今のところ、技術的な詳細には触れずに、いくつかの方法を紹介するだけにとどめておきます。
 # 
-# The table `cones` has been imported for us; later we will see how, but here we will just work with it. First, let's take a look at it.
+# `cones` テーブルは既にインポートされています; 後でその方法を見ますが、ここではそれを使って作業するだけです。まず、それを見てみましょう。
 
 # In[2]:
 
@@ -34,15 +85,27 @@ movies = Table.read_table(path_data + 'movies_by_year.csv')
 cones
 
 
-# The table has six rows. Each row corresponds to one ice cream cone. The ice cream cones are the *individuals*.
+# In[ ]:
+
+
+
+
+
+# In[ ]:
+
+
+
+
+
+# この表には6つの行があります。各行が1つのアイスクリームコーンに対応しています。アイスクリームコーンはバラ売りです。
 # 
-# Each cone has three attributes: flavor, color, and price. Each column contains the data on one of these attributes, and so all the entries of any single column are of the same kind. Each column has a label. We will refer to columns by their labels.
+# 各コーンはフレーバー、色、価格の3つの属性を持っています。各列はこれらの属性のうちの1つに関するデータを含むので、任意の1つの列のすべてのエントリは同じ種類です。各列はラベルを持ちます。我々は列をそのラベルで呼ぶことにします。
 # 
-# A table method is just like a function, but it must operate on a table. So the call looks like
+# テーブルメソッド *method* は関数に似ていますが、テーブルに対して操作します。呼び出しは次のようになります。
 # 
 # `name_of_table.method(arguments)`
 # 
-# For example, if you want to see just the first two rows of a table, you can use the table method `show`.
+# たとえば、テーブルの最初の2行だけを表示したい場合は、テーブルメソッド `show` を使用することができます。
 
 # In[3]:
 
@@ -50,10 +113,22 @@ cones
 cones.show(2)
 
 
-# You can replace 2 by any number of rows. If you ask for more than six, you will only get six, because `cones` only has six rows.
+# In[ ]:
+
+
+
+
+
+# In[ ]:
+
+
+
+
+
+# 2を任意の列の数で置き換えることができます。もし、6つ以上の列を要求した場合、 `cones` は6列しかないので、6つしか得られません。
 
 # ## Choosing Sets of Columns
-# The method `select` creates a new table consisting of only the specified columns.
+# `select` メソッドは、指定された列のみからなる新しいテーブルを作成します。
 
 # In[4]:
 
@@ -61,7 +136,19 @@ cones.show(2)
 cones.select('Flavor')
 
 
-# This leaves the original table unchanged.
+# In[ ]:
+
+
+
+
+
+# In[ ]:
+
+
+
+
+
+# これにより、元のテーブルが変更されることはありません。
 
 # In[5]:
 
@@ -69,7 +156,19 @@ cones.select('Flavor')
 cones
 
 
-# You can select more than one column, by separating the column labels by commas.
+# In[ ]:
+
+
+
+
+
+# In[ ]:
+
+
+
+
+
+# 列のラベルをカンマで区切ることにより、複数の列を選択することができます。
 
 # In[6]:
 
@@ -77,7 +176,19 @@ cones
 cones.select('Flavor', 'Price')
 
 
-# You can also *drop* columns you don't want. The table above can be created by dropping the `Color` column.
+# In[ ]:
+
+
+
+
+
+# In[ ]:
+
+
+
+
+
+# また、不要な列をドロップすることも可能です。上の表は、 `Color` のカラムをドロップすることで作成できます。
 
 # In[7]:
 
@@ -85,7 +196,19 @@ cones.select('Flavor', 'Price')
 cones.drop('Color')
 
 
-# You can name this new table and look at it again by just typing its name.
+# In[ ]:
+
+
+
+
+
+# In[ ]:
+
+
+
+
+
+# この新しいテーブルに名前を付けて、その名前を入力するだけで再び参照することができます。
 
 # In[8]:
 
@@ -95,11 +218,23 @@ no_colors = cones.drop('Color')
 no_colors
 
 
-# Like `select`, the `drop` method creates a smaller table and leaves the original table unchanged. In order to explore your data, you can create any number of smaller tables by using choosing or dropping columns. It will do no harm to your original data table.
+# In[ ]:
+
+
+
+
+
+# In[ ]:
+
+
+
+
+
+# `select` と同様に、 `drop` メソッドでも小さなテーブルが作成され、元のテーブルは変更されずに残ります。データを調査するために、列の選択またはドロップを使用して、任意の数の小さなテーブルを作成することができます。元のデータテーブルに害を与えることはありません。
 
 # ## Sorting Rows
 
-# The `sort` method creates a new table by arranging the rows of the original table in ascending order of the values in the specified column. Here the `cones` table has been sorted in ascending order of the price of the cones.
+# `sort` メソッドは、元のテーブルの行を指定した列の値の昇順に並べることで、新しいテーブルを作成します。ここでは、 `cones` のテーブルがコーンの値段の昇順にソートされています。
 
 # In[9]:
 
@@ -107,9 +242,21 @@ no_colors
 cones.sort('Price')
 
 
-# To sort in descending order, you can use an *optional* argument to `sort`. As the name implies, optional arguments don't have to be used, but they can be used if you want to change the default behavior of a method. 
+# In[ ]:
+
+
+
+
+
+# In[ ]:
+
+
+
+
+
+# 降順に並べ替えるには、`sort` のオプションの引数を使用します。 オプション引数はその名の通り、使わなくてもよいものですが、 メソッドのデフォルトの振る舞いを変えたい場合に使用します。 
 # 
-# By default, `sort` sorts in increasing order of the values in the specified column. To sort in decreasing order, use the optional argument `descending=True`.
+# デフォルトでは、 `sort` は指定された列の値の昇順でソートします。降順でソートするには、オプションの引数  `descending=True` を使用します。
 
 # In[10]:
 
@@ -117,12 +264,24 @@ cones.sort('Price')
 cones.sort('Price', descending=True)
 
 
-# Like `select` and `drop`, the `sort` method leaves the original table unchanged.
+# In[ ]:
+
+
+
+
+
+# In[ ]:
+
+
+
+
+
+# `select` and `drop`と同様に、`sort` 方式では元のテーブルが変更されることはありません。
 
 # ## Selecting Rows that Satisfy a Condition
-# The `where` method creates a new table consisting only of the rows that satisfy a given condition. In this section we will work with a very simple condition, which is that the value in a specified column must be equal to a value that we also specify. Thus the `where` method has two arguments.
+# The `where` メソッドは、指定された条件を満たす行のみからなる新しいテーブルを作成します。この節では、指定した列の値が、同じく指定した値と等しくなければならないという非常に単純な条件を扱います。したがって、 `where` メソッドには2つの引数を与えます。
 # 
-# The code in the cell below creates a table consisting only of the rows corresponding to chocolate cones.
+# 下のセルにあるコードは、チョコレートコーンに対応する行だけからなる表を作成します。
 
 # In[11]:
 
@@ -130,9 +289,21 @@ cones.sort('Price', descending=True)
 cones.where('Flavor', 'chocolate')
 
 
-# The arguments, separated by a comma, are the label of the column and the value we are looking for in that column. The `where` method can also be used when the condition that the rows must satisfy is more complicated. In those situations the call will be a little more complicated as well.
+# In[ ]:
+
+
+
+
+
+# In[ ]:
+
+
+
+
+
+# 引数はカンマで区切られ、列のラベルとその列で探している値を取ります。 `where` メソッドは、行が満たすべき条件がより複雑な場合にも使うことができます。そのような状況では、呼び出しも少し複雑になります。
 # 
-# It is important to provide the value exactly. For example, if we specify `Chocolate` instead of `chocolate`, then `where` correctly finds no rows where the flavor is `Chocolate`.
+# 値を正確に指定することが重要です。例えば、`chocolate`ではなく、`Chocolate`を指定すると、 `where` はフレーバーが`Chocolate`の行を正しく見つけることができません。
 
 # In[12]:
 
@@ -140,7 +311,19 @@ cones.where('Flavor', 'chocolate')
 cones.where('Flavor', 'Chocolate')
 
 
-# Like all the other table methods in this section, `where` leaves the original table unchanged.
+# In[ ]:
+
+
+
+
+
+# In[ ]:
+
+
+
+
+
+# このセクションの他のすべてのテーブルメソッドと同様に、 `where` は元のテーブルを変更せずに残します。 
 
 # ## Example: Salaries in the NBA
 

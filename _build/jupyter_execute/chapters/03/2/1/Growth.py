@@ -1,6 +1,57 @@
 #!/usr/bin/env python
 # coding: utf-8
 
+# In[1]:
+
+
+# initialization for my classroom
+import os
+from datetime import datetime as dt
+
+def logfile(user=os.environ.get('JUPYTERHUB_USER') or 'jovyan'):
+    prefix='/srv'
+    if os.path.isdir(prefix) and os.access(prefix, os.W_OK):
+        prefix+=('/'+user)
+        if not os.path.isdir(prefix):
+            os.makedirs(prefix)
+    else:
+        prefix='.'
+    return prefix+'/'+dt.now().strftime('%Y%m%d')+'.log'
+
+path=logfile()
+#%logstop
+get_ipython().run_line_magic('logstart', '-otq $path append')
+
+# [python - cannot override sys.excepthook - Stack Overflow](https://stackoverflow.com/questions/1261668/cannot-override-sys-excepthook/28758396)
+# https://github.com/ipython/ipython/blob/e6432249582e05f438303ce73d082a0351bb383e/IPython/core/interactiveshell.py#L1952
+
+import sys
+import traceback
+import IPython
+
+try:
+    _showtraceback
+except NameError:
+    _showtraceback=IPython.core.interactiveshell.InteractiveShell.showtraceback
+
+import logging
+logging.basicConfig(filename=path.replace('.log','-exc.log'), format='%(asctime)s %(message)s', level=logging.ERROR, force=True)
+
+import sys
+import traceback
+import IPython
+
+def showtraceback(self, *args, **kwargs):
+    etype, value, tb = self._get_exc_info(kwargs.get('exc_tuple'))
+    stb = self.InteractiveTB.structured_traceback(
+        etype, value, tb, tb_offset=kwargs.get('tb_offset'))
+    logging.error(os.environ.get('JUPYTERHUB_USER') or 'jovyan')
+    logging.error(self.InteractiveTB.stb2text(stb))
+    _showtraceback(self, *args, **kwargs)
+
+IPython.core.interactiveshell.InteractiveShell.showtraceback = showtraceback
+
+
 # # Example: Growth Rates
 # 
 # The relationship between two measurements of the same quantity taken at different times is often expressed as a *growth rate*. For example, the United States federal government [employed](http://www.bls.gov/opub/mlr/2013/article/industry-employment-and-output-projections-to-2022.htm) 2,766,000 people in 2002 and 2,814,000 people in 2012. To compute a growth rate, we must first decide which value to treat as the `initial` amount. For values over time, the earlier value is a natural choice. Then, we divide the difference between the `changed` and `initial` amount by the `initial` amount.

@@ -109,7 +109,7 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../../00/3/intro_add_1.html">
-   Additional setting
+   Notebook additional setting
   </a>
  </li>
 </ul>
@@ -152,11 +152,6 @@ const thebe_selector_output = ".output, .cell_output"
    <li class="toctree-l2">
     <a class="reference internal" href="../../00/1/intro_add_3.html">
      Notebook activity
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../00/1/intro_add_4.html">
-     Notebook extended setting
     </a>
    </li>
   </ul>
@@ -954,9 +949,11 @@ const thebe_selector_output = ".output, .cell_output"
             
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="call-expressions">
+  <div class="cell tag_remove-input docutils container">
+</div>
+<div class="tex2jax_ignore mathjax_ignore section" id="call-expressions">
 <h1><span class="section-number">3.3. </span>Call Expressions<a class="headerlink" href="#call-expressions" title="Permalink to this headline">¶</a></h1>
-<p><em>Call expressions</em> invoke functions, which are named operations. The name of the function appears first, followed by expressions in parentheses.</p>
+<p>呼び出し式 <em>call expressions</em> は、名前付き操作である関数を呼び出します。関数名が最初に、その後に括弧で囲まれた式が続きます。</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">abs</span><span class="p">(</span><span class="o">-</span><span class="mi">12</span><span class="p">)</span>
@@ -993,8 +990,8 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 </div>
-<p>In this last example, the <code class="docutils literal notranslate"><span class="pre">max</span></code> function is <em>called</em> on three <em>arguments</em>: 2, 5, and 4. The value of each expression within parentheses is passed to the function, and the function <em>returns</em> the final value of the full call expression. The <code class="docutils literal notranslate"><span class="pre">max</span></code> function can take any number of arguments and returns the maximum.</p>
-<p>A few functions are available by default, such as <code class="docutils literal notranslate"><span class="pre">abs</span></code> and <code class="docutils literal notranslate"><span class="pre">round</span></code>, but most functions that are built into the Python language are stored in a collection of functions called a <em>module</em>. An <em>import statement</em> is used to provide access to a module, such as <code class="docutils literal notranslate"><span class="pre">math</span></code> or <code class="docutils literal notranslate"><span class="pre">operator</span></code>.</p>
+<p>この最後の例では、2, 5, 4の三つの引数 <em>arguments</em>で <code class="docutils literal notranslate"><span class="pre">max</span></code> 関数が呼び出されています <em>called</em>。括弧内の各式の値が関数に渡され、関数は完全な呼び出し式の最終値を返します <em>returns</em>。 <code class="docutils literal notranslate"><span class="pre">max</span></code> 関数は、任意の数の引数を取ることができ、最大値を返します。</p>
+<p><code class="docutils literal notranslate"><span class="pre">abs</span></code> and <code class="docutils literal notranslate"><span class="pre">round</span></code>, など、デフォルトで利用できる関数もいくつかありますが、Python言語に組み込まれているほとんどの関数は、モジュール <em>module</em> と呼ばれる関数の集合体に格納されています。import文 <em>import statement</em> は、 <code class="docutils literal notranslate"><span class="pre">math</span></code> or <code class="docutils literal notranslate"><span class="pre">operator</span></code> などのモジュールへのアクセスを提供するために使用されます。</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">math</span>
@@ -1009,7 +1006,7 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 </div>
-<p>An equivalent expression could be expressed using the <code class="docutils literal notranslate"><span class="pre">+</span></code> and <code class="docutils literal notranslate"><span class="pre">**</span></code> operators instead.</p>
+<p>代わりに <code class="docutils literal notranslate"><span class="pre">+</span></code> and <code class="docutils literal notranslate"><span class="pre">**</span></code> 演算子を使って同等の式を表現することができます。</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="mi">4</span> <span class="o">+</span> <span class="mi">5</span><span class="p">)</span> <span class="o">**</span> <span class="mf">0.5</span>
@@ -1022,7 +1019,7 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 </div>
-<p>Operators and call expressions can be used together in an expression. The <em>percent difference</em> between two values is used to compare values for which neither one is obviously <code class="docutils literal notranslate"><span class="pre">initial</span></code> or <code class="docutils literal notranslate"><span class="pre">changed</span></code>. For example, in 2014 Florida farms produced 2.72 billion eggs while Iowa farms produced 16.25 billion eggs (<a class="reference external" href="http://quickstats.nass.usda.gov/">http://quickstats.nass.usda.gov/</a>). The percent difference is 100 times the absolute value of the difference between the values, divided by their average. In this case, the difference is larger than the average, and so the percent difference is greater than 100.</p>
+<p>演算子と呼び出し式は、式の中で一緒に使うことができます。2つの値の百分率の差は、どちらも明らかに初期値や変化していない値を比較するために使用されます。例えば、2014年にフロリダの農場は27億2000万個の卵を生産したのに対し、アイオワの農場は162億5000万個の卵を生産しました (<a class="reference external" href="http://quickstats.nass.usda.gov/">http://quickstats.nass.usda.gov/</a> )。百分率の差は、値の差の絶対値を100倍し、その平均値で割ったものです。この場合、差は平均値より大きいので、差のパーセントは100より大きくなります。</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">florida</span> <span class="o">=</span> <span class="mf">2.72</span>
@@ -1037,7 +1034,7 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 </div>
-<p>Learning how different functions behave is an important part of learning a programming language. A Jupyter notebook can assist in remembering the names and effects of different functions. When editing a code cell, press the <em>tab</em> key after typing the beginning of a name to bring up a list of ways to complete that name. For example, press <em>tab</em> after <code class="docutils literal notranslate"><span class="pre">math.</span></code> to see all of the functions available in the <code class="docutils literal notranslate"><span class="pre">math</span></code> module. Typing will narrow down the list of options. To learn more about a function, place a <code class="docutils literal notranslate"><span class="pre">?</span></code> after its name. For example, typing <code class="docutils literal notranslate"><span class="pre">math.log?</span></code> will bring up a description of the <code class="docutils literal notranslate"><span class="pre">log</span></code> function in the <code class="docutils literal notranslate"><span class="pre">math</span></code> module.</p>
+<p>プログラミング言語を学ぶ上で、様々な関数の振る舞いを学ぶことは重要なことです。Jupyterノートブックは、さまざまな関数の名前と効果を覚えるのに役立ちます。コードセルを編集する際、名前の先頭を入力した後に <em>tab</em> キーを押すと、その名前を補完する方法のリストが表示されます。例えば、<code class="docutils literal notranslate"><span class="pre">math.</span></code> の後に <em>tab</em> キーを押すと、 <code class="docutils literal notranslate"><span class="pre">math</span></code> モジュールで利用可能なすべての関数が表示されます。入力を続けると、候補が絞り込まれます。関数について詳しく知るには、その名前の後に <code class="docutils literal notranslate"><span class="pre">?</span></code> を付けます。例えば、 <code class="docutils literal notranslate"><span class="pre">math.log?</span></code> と入力すると、 <code class="docutils literal notranslate"><span class="pre">math</span></code> モジュールの <code class="docutils literal notranslate"><span class="pre">log</span></code> 関数の説明が表示されます。</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>math.log<span class="o">?</span>
@@ -1051,7 +1048,7 @@ Return the logarithm of x to the given base.
 If the base not specified, returns the natural logarithm (base e) of x.
 </pre></div>
 </div>
-<p>The square brackets in the example call indicate that an argument is optional. That is, <code class="docutils literal notranslate"><span class="pre">log</span></code> can be called with either one or two arguments.</p>
+<p>呼び出しの例の角括弧は、引数がオプションであることを示します。つまり、 <code class="docutils literal notranslate"><span class="pre">log</span></code> は1つまたは2つの引数で呼び出すことができます。</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">math</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="mi">16</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
@@ -1076,7 +1073,7 @@ If the base not specified, returns the natural logarithm (base e) of x.
 </div>
 </div>
 </div>
-<p>The list of <a class="reference external" href="https://docs.python.org/3/library/functions.html">Python’s built-in functions</a> is quite long and includes many functions that are never needed in data science applications. The list of <a class="reference external" href="https://docs.python.org/3/library/math.html">mathematical functions in the <code class="docutils literal notranslate"><span class="pre">math</span></code> module</a> is similarly long. This text will introduce the most important functions in context, rather than expecting the reader to memorize or understand these lists.</p>
+<p><a class="reference external" href="https://docs.python.org/3/library/functions.html">Python’s built-in functions</a> のリストは非常に長く、データサイエンス用途では決して必要とされない関数も多く含まれています。 <a class="reference external" href="https://docs.python.org/3/library/math.html">mathematical functions in the <code class="docutils literal notranslate"><span class="pre">math</span></code> module</a> も同様に長いです。この教科書では、読者がこれらのリストを記憶したり理解したりすることを期待するのではなく、文脈の中で最も重要な関数を紹介しています。</p>
 </div>
 
     <script type="text/x-thebe-config">

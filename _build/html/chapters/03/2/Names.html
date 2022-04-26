@@ -109,7 +109,7 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../../00/3/intro_add_1.html">
-   Additional setting
+   Notebook additional setting
   </a>
  </li>
 </ul>
@@ -152,11 +152,6 @@ const thebe_selector_output = ".output, .cell_output"
    <li class="toctree-l2">
     <a class="reference internal" href="../../00/1/intro_add_3.html">
      Notebook activity
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../00/1/intro_add_4.html">
-     Notebook extended setting
     </a>
    </li>
   </ul>
@@ -954,9 +949,11 @@ const thebe_selector_output = ".output, .cell_output"
             
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="names">
+  <div class="cell tag_remove-input docutils container">
+</div>
+<div class="tex2jax_ignore mathjax_ignore section" id="names">
 <h1><span class="section-number">3.2. </span>Names<a class="headerlink" href="#names" title="Permalink to this headline">¶</a></h1>
-<p>Names are given to values in Python using an <em>assignment</em> statement. In an assignment, a name is followed by <code class="docutils literal notranslate"><span class="pre">=</span></code>, which is followed by any expression. The value of the expression to the right of <code class="docutils literal notranslate"><span class="pre">=</span></code> is <em>assigned</em> to the name. Once a name has a value assigned to it, the value will be substituted for that name in future expressions.</p>
+<p>Pythonでは、代入文 <em>assignment</em> を使って値に名前を付けます。代入文では、名前の後に <code class="docutils literal notranslate"><span class="pre">=</span></code> が続き、その後に任意の式が続きます。<code class="docutils literal notranslate"><span class="pre">=</span></code> の右側の式の値が名前に代入 <em>assigned</em> されます。一旦、名前に値が割り当てられると、以降の式ではその値がその名前に置き換えられます。</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mi">10</span>
@@ -971,7 +968,7 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 </div>
-<p>A previously assigned name can be used in the expression to the right of <code class="docutils literal notranslate"><span class="pre">=</span></code>.</p>
+<p>あらかじめ割り当てられた名前は、 <code class="docutils literal notranslate"><span class="pre">=</span></code> の右側の式で使用することができます。</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">quarter</span> <span class="o">=</span> <span class="mi">1</span><span class="o">/</span><span class="mi">4</span>
@@ -986,7 +983,7 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 </div>
-<p>However, only the current value of an expression is assigned to a name. If that value changes later, names that were defined in terms of that value will not change automatically.</p>
+<p>ただし、名前に割り当てられるのは、式の現在の値のみです。その値が後で変更されても、その値で定義された名前は自動的に変更されません。</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">quarter</span> <span class="o">=</span> <span class="mi">4</span>
@@ -1000,7 +997,7 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 </div>
-<p>Names must start with a letter, but can contain both letters and numbers. A name cannot contain a space; instead, it is common to use an underscore character <code class="docutils literal notranslate"><span class="pre">_</span></code> to replace each space. Names are only as useful as you make them; it’s up to the programmer to choose names that are easy to interpret. Typically, more meaningful names can be invented than <code class="docutils literal notranslate"><span class="pre">a</span></code> and <code class="docutils literal notranslate"><span class="pre">b</span></code>. For example, to describe the sales tax on a $5 purchase in Berkeley, CA, the following names clarify the meaning of the various quantities involved.</p>
+<p>名前は文字で始めなければなりませんが、文字と数字の両方を含むことができます。名前にスペースを含めることはできません。スペースの代わりにアンダースコア文字 <code class="docutils literal notranslate"><span class="pre">_</span></code> を使用することが一般的です。プログラマーは、 <code class="docutils literal notranslate"><span class="pre">a</span></code> や <code class="docutils literal notranslate"><span class="pre">b</span></code> よりも解釈しやすい名前を選択する必要があります。たとえば、カリフォルニア州バークレーで5ドルの買い物をしたときの消費税を表すには、次のような名前をつけると、さまざまな数量の意味が明確になります。</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">purchase_price</span> <span class="o">=</span> <span class="mi">5</span>

@@ -154,11 +154,6 @@ const thebe_selector_output = ".output, .cell_output"
      Notebook activity
     </a>
    </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../00/1/intro_add_4.html">
-     Notebook extended setting
-    </a>
-   </li>
   </ul>
  </li>
  <li class="toctree-l1 has-children">
@@ -954,28 +949,7 @@ const thebe_selector_output = ".output, .cell_output"
             
               <div>
                 
-  <div class="cell tag_hide-input docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># initialization for my classroom</span>
-<span class="kn">import</span> <span class="nn">os</span>
-<span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">datetime</span> <span class="k">as</span> <span class="n">dt</span>
-
-<span class="k">def</span> <span class="nf">logfile</span><span class="p">(</span><span class="n">user</span><span class="o">=</span><span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;JUPYTERHUB_USER&#39;</span><span class="p">)</span> <span class="ow">or</span> <span class="s1">&#39;jovyan&#39;</span><span class="p">):</span>
-    <span class="n">prefix</span><span class="o">=</span><span class="s1">&#39;/srv&#39;</span>
-    <span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">isdir</span><span class="p">(</span><span class="n">prefix</span><span class="p">)</span> <span class="ow">and</span> <span class="n">os</span><span class="o">.</span><span class="n">access</span><span class="p">(</span><span class="n">prefix</span><span class="p">,</span> <span class="n">os</span><span class="o">.</span><span class="n">W_OK</span><span class="p">):</span>
-        <span class="n">prefix</span><span class="o">+=</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="o">+</span><span class="n">user</span><span class="p">)</span>
-        <span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">isdir</span><span class="p">(</span><span class="n">prefix</span><span class="p">):</span>
-            <span class="n">os</span><span class="o">.</span><span class="n">makedirs</span><span class="p">(</span><span class="n">prefix</span><span class="p">)</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="n">prefix</span><span class="o">=</span><span class="s1">&#39;.&#39;</span>
-    <span class="k">return</span> <span class="n">prefix</span><span class="o">+</span><span class="s1">&#39;/&#39;</span><span class="o">+</span><span class="n">dt</span><span class="o">.</span><span class="n">now</span><span class="p">()</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s1">&#39;%Y%m</span><span class="si">%d</span><span class="s1">&#39;</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39;.log&#39;</span>
-
-<span class="n">path</span><span class="o">=</span><span class="n">logfile</span><span class="p">()</span>
-<span class="c1">#%logstop</span>
-<span class="o">%</span><span class="k">logstart</span> -otq $path append
-</pre></div>
-</div>
-</div>
+  <div class="cell tag_remove-input docutils container">
 </div>
 <div class="cell tag_hide-input docutils container">
 <div class="cell_input docutils container">
@@ -1150,12 +1124,173 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../../../_images/Another_Kind_Of_Character_10_0.png" src="../../../../_images/Another_Kind_Of_Character_10_0.png" />
+<img alt="../../../../_images/Another_Kind_Of_Character_16_0.png" src="../../../../_images/Another_Kind_Of_Character_16_0.png" />
 </div>
 </div>
 <p>このプロットは、私たちが数字を見ただけで観察していたように、 <em>Little Women</em> の多くの章が <em>Huckleberry Finn</em> の章より長いことを示しています。しかし、このプロットはそれ以上のことも示しています。青い点は、黄色い点と同じように、ほぼ直線の周りに集まっていることに注目してください。しかも、両方の色の点が <em>同じ</em> 直線の周りに集まっているように見えるのです。</p>
 <p>では、約100のピリオドが含まれる章をすべて見てみましょう。プロットを見ると、それらの章にはおよそ1万字から1万5千字の文字が含まれていることがわかります。これは1ピリオドあたり約100〜150文字です。</p>
 <p>実際、プロットを見ると、両書とも平均して、ごく大雑把に見積もって100字から150字の間でピリオドが打たれる傾向にあるようです。もしかしたら、この19世紀の二大小説は、今の私たちにとって非常に身近な存在であるTwitterの140字制限というものを示唆していたのかもしれません。</p>
+<hr class="docutils" />
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">chars_periods_huck_finn</span><span class="o">.</span><span class="n">column</span><span class="p">(</span><span class="s1">&#39;Huck Finn Chapter Length&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([ 7026, 11982,  8529,  6799,  8166, 14550, 13218, 22208,  8081,
+        7036, 14437, 14665, 10234,  7620, 12046, 17027, 17182, 24031,
+       17259, 18338, 19172, 10431, 11442, 12041, 14971, 14717, 13608,
+       18347, 19038,  6119, 18523, 11767, 13466, 10968, 13712, 10792,
+       13095, 12778, 10864, 11534, 13430, 15754, 21798])
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">chars_periods_huck_finn</span><span class="o">.</span><span class="n">column</span><span class="p">(</span><span class="s1">&#39;Number of Periods&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([ 66, 117,  72,  84,  91, 125, 127, 249,  71,  70, 168, 129,  83,
+        89,  98, 183, 145, 202, 105, 122, 275,  70, 102, 103, 107, 145,
+        99, 160, 127,  39, 161,  90, 115, 102, 136,  85,  88, 133,  96,
+        60,  77,  92, 228])
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">chars_periods_huck_finn</span><span class="o">.</span><span class="n">column</span><span class="p">(</span><span class="s1">&#39;Huck Finn Chapter Length&#39;</span><span class="p">)</span> <span class="o">/</span> <span class="n">chars_periods_huck_finn</span><span class="o">.</span><span class="n">column</span><span class="p">(</span><span class="s1">&#39;Number of Periods&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([106.45454545, 102.41025641, 118.45833333,  80.94047619,
+        89.73626374, 116.4       , 104.07874016,  89.18875502,
+       113.81690141, 100.51428571,  85.93452381, 113.68217054,
+       123.30120482,  85.61797753, 122.91836735,  93.04371585,
+       118.49655172, 118.96534653, 164.37142857, 150.31147541,
+        69.71636364, 149.01428571, 112.17647059, 116.90291262,
+       139.91588785, 101.49655172, 137.45454545, 114.66875   ,
+       149.90551181, 156.8974359 , 115.04968944, 130.74444444,
+       117.09565217, 107.52941176, 100.82352941, 126.96470588,
+       148.80681818,  96.07518797, 113.16666667, 192.23333333,
+       174.41558442, 171.23913043,  95.60526316])
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">average</span><span class="p">(</span><span class="n">chars_periods_huck_finn</span><span class="o">.</span><span class="n">column</span><span class="p">(</span><span class="s1">&#39;Huck Finn Chapter Length&#39;</span><span class="p">)</span> 
+           <span class="o">/</span> <span class="n">chars_periods_huck_finn</span><span class="o">.</span><span class="n">column</span><span class="p">(</span><span class="s1">&#39;Number of Periods&#39;</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>119.45440586359823
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">chars_periods_huck_finn</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="s1">&#39;Number of Periods&#39;</span><span class="p">,</span> <span class="n">are</span><span class="o">.</span><span class="n">between</span><span class="p">(</span><span class="mi">90</span><span class="p">,</span><span class="mi">110</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><table border="1" class="dataframe">
+    <thead>
+        <tr>
+            <th>Huck Finn Chapter Length</th> <th>Number of Periods</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>8166                    </td> <td>91               </td>
+        </tr>
+        <tr>
+            <td>12046                   </td> <td>98               </td>
+        </tr>
+        <tr>
+            <td>17259                   </td> <td>105              </td>
+        </tr>
+        <tr>
+            <td>11442                   </td> <td>102              </td>
+        </tr>
+        <tr>
+            <td>12041                   </td> <td>103              </td>
+        </tr>
+        <tr>
+            <td>14971                   </td> <td>107              </td>
+        </tr>
+        <tr>
+            <td>13608                   </td> <td>99               </td>
+        </tr>
+        <tr>
+            <td>11767                   </td> <td>90               </td>
+        </tr>
+        <tr>
+            <td>10968                   </td> <td>102              </td>
+        </tr>
+        <tr>
+            <td>10864                   </td> <td>96               </td>
+        </tr>
+    </tbody>
+</table>
+<p>... (1 rows omitted)</p></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">chars_periods_huck_finn</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="s1">&#39;Number of Periods&#39;</span><span class="p">,</span> <span class="n">are</span><span class="o">.</span><span class="n">between</span><span class="p">(</span><span class="mi">90</span><span class="p">,</span><span class="mi">110</span><span class="p">))</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="s1">&#39;Huck Finn Chapter Length&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../../../_images/Another_Kind_Of_Character_27_0.png" src="../../../../_images/Another_Kind_Of_Character_27_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">average</span><span class="p">(</span><span class="n">chars_periods_huck_finn</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="s1">&#39;Number of Periods&#39;</span><span class="p">,</span> <span class="n">are</span><span class="o">.</span><span class="n">between</span><span class="p">(</span><span class="mi">90</span><span class="p">,</span><span class="mi">110</span><span class="p">))</span><span class="o">.</span><span class="n">column</span><span class="p">(</span><span class="s1">&#39;Huck Finn Chapter Length&#39;</span><span class="p">)</span>
+           <span class="o">/</span> <span class="n">chars_periods_huck_finn</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="s1">&#39;Number of Periods&#39;</span><span class="p">,</span> <span class="n">are</span><span class="o">.</span><span class="n">between</span><span class="p">(</span><span class="mi">90</span><span class="p">,</span><span class="mi">110</span><span class="p">))</span><span class="o">.</span><span class="n">column</span><span class="p">(</span><span class="s1">&#39;Number of Periods&#39;</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>127.83232086180345
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">chars_periods_huck_finn</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="s1">&#39;Huck Finn Chapter Length&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../../../_images/Another_Kind_Of_Character_29_0.png" src="../../../../_images/Another_Kind_Of_Character_29_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">average</span><span class="p">(</span><span class="n">chars_periods_huck_finn</span><span class="o">.</span><span class="n">column</span><span class="p">(</span><span class="s1">&#39;Huck Finn Chapter Length&#39;</span><span class="p">)</span> 
+           <span class="o">/</span> <span class="n">chars_periods_huck_finn</span><span class="o">.</span><span class="n">column</span><span class="p">(</span><span class="s1">&#39;Number of Periods&#39;</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>119.45440586359823
+</pre></div>
+</div>
+</div>
+</div>
 </div>
 
     <script type="text/x-thebe-config">

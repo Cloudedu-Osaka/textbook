@@ -154,11 +154,6 @@ const thebe_selector_output = ".output, .cell_output"
      Notebook activity
     </a>
    </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../00/1/intro_add_4.html">
-     Notebook extended setting
-    </a>
-   </li>
   </ul>
  </li>
  <li class="toctree-l1 has-children">
@@ -954,28 +949,7 @@ const thebe_selector_output = ".output, .cell_output"
             
               <div>
                 
-  <div class="cell tag_hide-input docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># initialization for my classroom</span>
-<span class="kn">import</span> <span class="nn">os</span>
-<span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">datetime</span> <span class="k">as</span> <span class="n">dt</span>
-
-<span class="k">def</span> <span class="nf">logfile</span><span class="p">(</span><span class="n">user</span><span class="o">=</span><span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;JUPYTERHUB_USER&#39;</span><span class="p">)</span> <span class="ow">or</span> <span class="s1">&#39;jovyan&#39;</span><span class="p">):</span>
-    <span class="n">prefix</span><span class="o">=</span><span class="s1">&#39;/srv&#39;</span>
-    <span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">isdir</span><span class="p">(</span><span class="n">prefix</span><span class="p">)</span> <span class="ow">and</span> <span class="n">os</span><span class="o">.</span><span class="n">access</span><span class="p">(</span><span class="n">prefix</span><span class="p">,</span> <span class="n">os</span><span class="o">.</span><span class="n">W_OK</span><span class="p">):</span>
-        <span class="n">prefix</span><span class="o">+=</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="o">+</span><span class="n">user</span><span class="p">)</span>
-        <span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">isdir</span><span class="p">(</span><span class="n">prefix</span><span class="p">):</span>
-            <span class="n">os</span><span class="o">.</span><span class="n">makedirs</span><span class="p">(</span><span class="n">prefix</span><span class="p">)</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="n">prefix</span><span class="o">=</span><span class="s1">&#39;.&#39;</span>
-    <span class="k">return</span> <span class="n">prefix</span><span class="o">+</span><span class="s1">&#39;/&#39;</span><span class="o">+</span><span class="n">dt</span><span class="o">.</span><span class="n">now</span><span class="p">()</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s1">&#39;%Y%m</span><span class="si">%d</span><span class="s1">&#39;</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39;.log&#39;</span>
-
-<span class="n">path</span><span class="o">=</span><span class="n">logfile</span><span class="p">()</span>
-<span class="c1">#%logstop</span>
-<span class="o">%</span><span class="k">logstart</span> -otq $path append
-</pre></div>
-</div>
-</div>
+  <div class="cell tag_remove-input docutils container">
 </div>
 <div class="cell tag_hide-input docutils container">
 <div class="cell_input docutils container">
@@ -1115,7 +1089,7 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../../../_images/Literary_Characters_9_0.png" src="../../../../_images/Literary_Characters_9_0.png" />
+<img alt="../../../../_images/Literary_Characters_13_0.png" src="../../../../_images/Literary_Characters_13_0.png" />
 </div>
 </div>
 <p>ローリーは、最後に女の子の一人と結婚する青年です。プロットをもとに、どの女性と結婚するのか当ててみてください。</p>
