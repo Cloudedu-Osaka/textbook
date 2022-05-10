@@ -53,7 +53,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="shortcut icon" href="../../_static/favicon.png"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="8.1. Applying a Function to a Column" href="1/Applying_a_Function_to_a_Column.html" />
+    <link rel="next" title="8.5. Applying a Function to a Column" href="1/Applying_a_Function_to_a_Column.html" />
     <link rel="prev" title="7.3. Overlaid Graphs" href="../07/3/Overlaid_Graphs.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
@@ -469,27 +469,27 @@ const thebe_selector_output = ".output, .cell_output"
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="1/Applying_a_Function_to_a_Column.html">
-     8.1. Applying Functions to Columns
+     8.5. Applying Functions to Columns
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="2/Classifying_by_One_Variable.html">
-     8.2. Classifying by One Variable
+     8.6. Classifying by One Variable
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="3/Cross-Classifying_by_More_than_One_Variable.html">
-     8.3. Cross-Classifying
+     8.7. Cross-Classifying
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="4/Joining_Tables_by_Columns.html">
-     8.4. Joining Tables by Columns
+     8.8. Joining Tables by Columns
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="5/Bike_Sharing_in_the_Bay_Area.html">
-     8.5. Bike Sharing in the Bay Area
+     8.9. Bike Sharing in the Bay Area
     </a>
    </li>
   </ul>
@@ -931,6 +931,34 @@ const thebe_selector_output = ".output, .cell_output"
         <!-- Table of contents -->
         <div class="d-none d-md-block col-md-2 bd-toc show noprint">
             
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#signature">
+   8.1. 署名 signature
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#docstring">
+   8.2. 解説 (“docstring”)
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#body">
+   8.3. 本体 (body)
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#indent">
+   8.4. 段組 (indent)
+  </a>
+ </li>
+</ul>
+
+            </nav>
         </div>
     </div>
 </div>
@@ -943,20 +971,126 @@ const thebe_selector_output = ".output, .cell_output"
                 <div id="print-main-content">
                     <div id="jb-print-toc">
                         
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#signature">
+   8.1. 署名 signature
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#docstring">
+   8.2. 解説 (“docstring”)
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#body">
+   8.3. 本体 (body)
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#indent">
+   8.4. 段組 (indent)
+  </a>
+ </li>
+</ul>
+
+                        </nav>
                     </div>
                 </div>
             </div>
             
               <div>
                 
-  <div class="cell tag_remove-input docutils container">
+  <div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># initialization for my classroom</span>
+<span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">datetime</span> <span class="k">as</span> <span class="n">dt</span>
+
+<span class="k">def</span> <span class="nf">logfile</span><span class="p">(</span><span class="n">user</span><span class="o">=</span><span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;JUPYTERHUB_USER&#39;</span><span class="p">)</span> <span class="ow">or</span> <span class="s1">&#39;jovyan&#39;</span><span class="p">):</span>
+    <span class="n">prefix</span><span class="o">=</span><span class="s1">&#39;/srv&#39;</span>
+    <span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">isdir</span><span class="p">(</span><span class="n">prefix</span><span class="p">)</span> <span class="ow">and</span> <span class="n">os</span><span class="o">.</span><span class="n">access</span><span class="p">(</span><span class="n">prefix</span><span class="p">,</span> <span class="n">os</span><span class="o">.</span><span class="n">W_OK</span><span class="p">):</span>
+        <span class="n">prefix</span><span class="o">+=</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="o">+</span><span class="n">user</span><span class="p">)</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">isdir</span><span class="p">(</span><span class="n">prefix</span><span class="p">):</span>
+            <span class="n">os</span><span class="o">.</span><span class="n">makedirs</span><span class="p">(</span><span class="n">prefix</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">prefix</span><span class="o">=</span><span class="s1">&#39;.&#39;</span>
+    <span class="k">return</span> <span class="n">prefix</span><span class="o">+</span><span class="s1">&#39;/&#39;</span><span class="o">+</span><span class="n">dt</span><span class="o">.</span><span class="n">now</span><span class="p">()</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s1">&#39;%Y%m</span><span class="si">%d</span><span class="s1">&#39;</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39;.log&#39;</span>
+
+<span class="n">path</span><span class="o">=</span><span class="n">logfile</span><span class="p">()</span>
+<span class="c1">#%logstop</span>
+<span class="o">%</span><span class="k">logstart</span> -otq $path append
+
+<span class="c1"># [python - cannot override sys.excepthook - Stack Overflow](https://stackoverflow.com/questions/1261668/cannot-override-sys-excepthook/28758396)</span>
+<span class="c1"># https://github.com/ipython/ipython/blob/e6432249582e05f438303ce73d082a0351bb383e/IPython/core/interactiveshell.py#L1952</span>
+
+<span class="kn">import</span> <span class="nn">sys</span>
+<span class="kn">import</span> <span class="nn">traceback</span>
+<span class="kn">import</span> <span class="nn">IPython</span>
+
+<span class="k">try</span><span class="p">:</span>
+    <span class="n">_showtraceback</span>
+<span class="k">except</span> <span class="ne">NameError</span><span class="p">:</span>
+    <span class="n">_showtraceback</span><span class="o">=</span><span class="n">IPython</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">interactiveshell</span><span class="o">.</span><span class="n">InteractiveShell</span><span class="o">.</span><span class="n">showtraceback</span>
+
+<span class="k">try</span><span class="p">:</span>
+    <span class="n">_showsyntaxerror</span>
+<span class="k">except</span> <span class="ne">NameError</span><span class="p">:</span>
+    <span class="n">_showsyntaxerror</span><span class="o">=</span><span class="n">IPython</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">interactiveshell</span><span class="o">.</span><span class="n">InteractiveShell</span><span class="o">.</span><span class="n">showsyntaxerror</span>
+
+<span class="kn">import</span> <span class="nn">logging</span>
+<span class="n">logging</span><span class="o">.</span><span class="n">basicConfig</span><span class="p">(</span><span class="n">filename</span><span class="o">=</span><span class="n">path</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;.log&#39;</span><span class="p">,</span><span class="s1">&#39;-exc.log&#39;</span><span class="p">),</span> <span class="nb">format</span><span class="o">=</span><span class="s1">&#39;</span><span class="si">%(asctime)s</span><span class="s1"> </span><span class="si">%(message)s</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">level</span><span class="o">=</span><span class="n">logging</span><span class="o">.</span><span class="n">ERROR</span><span class="p">,</span> <span class="n">force</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="kn">import</span> <span class="nn">sys</span>
+<span class="kn">import</span> <span class="nn">traceback</span>
+<span class="kn">import</span> <span class="nn">IPython</span>
+
+<span class="k">def</span> <span class="nf">showtraceback</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+    <span class="n">etype</span><span class="p">,</span> <span class="n">value</span><span class="p">,</span> <span class="n">tb</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_exc_info</span><span class="p">(</span><span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;exc_tuple&#39;</span><span class="p">))</span>
+    <span class="n">stb</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">InteractiveTB</span><span class="o">.</span><span class="n">structured_traceback</span><span class="p">(</span>
+        <span class="n">etype</span><span class="p">,</span> <span class="n">value</span><span class="p">,</span> <span class="n">tb</span><span class="p">,</span> <span class="n">tb_offset</span><span class="o">=</span><span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;tb_offset&#39;</span><span class="p">))</span>
+    <span class="n">logging</span><span class="o">.</span><span class="n">error</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;JUPYTERHUB_USER&#39;</span><span class="p">)</span> <span class="ow">or</span> <span class="s1">&#39;jovyan&#39;</span><span class="p">)</span>
+    <span class="n">logging</span><span class="o">.</span><span class="n">error</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">InteractiveTB</span><span class="o">.</span><span class="n">stb2text</span><span class="p">(</span><span class="n">stb</span><span class="p">))</span>
+    <span class="n">_showtraceback</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">showsyntaxerror</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+    <span class="n">etype</span><span class="p">,</span> <span class="n">value</span><span class="p">,</span> <span class="n">last_traceback</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_exc_info</span><span class="p">()</span>
+    <span class="n">elist</span> <span class="o">=</span> <span class="n">traceback</span><span class="o">.</span><span class="n">extract_tb</span><span class="p">(</span><span class="n">last_traceback</span><span class="p">)</span> <span class="k">if</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;running_compiled_code&#39;</span><span class="p">)</span> <span class="k">else</span> <span class="p">[]</span>
+    <span class="n">stb</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">SyntaxTB</span><span class="o">.</span><span class="n">structured_traceback</span><span class="p">(</span><span class="n">etype</span><span class="p">,</span> <span class="n">value</span><span class="p">,</span> <span class="n">elist</span><span class="p">)</span>
+    <span class="n">logging</span><span class="o">.</span><span class="n">error</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;JUPYTERHUB_USER&#39;</span><span class="p">)</span> <span class="ow">or</span> <span class="s1">&#39;jovyan&#39;</span><span class="p">)</span>
+    <span class="n">logging</span><span class="o">.</span><span class="n">error</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">InteractiveTB</span><span class="o">.</span><span class="n">stb2text</span><span class="p">(</span><span class="n">stb</span><span class="p">))</span>
+    <span class="n">_showsyntaxerror</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+
+<span class="n">IPython</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">interactiveshell</span><span class="o">.</span><span class="n">InteractiveShell</span><span class="o">.</span><span class="n">showtraceback</span> <span class="o">=</span> <span class="n">showtraceback</span>
+<span class="n">IPython</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">interactiveshell</span><span class="o">.</span><span class="n">InteractiveShell</span><span class="o">.</span><span class="n">showsyntaxerror</span> <span class="o">=</span> <span class="n">showsyntaxerror</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell tag_hide-input docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">datascience</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="kn">import</span> <span class="nn">matplotlib</span>
+<span class="n">path_data</span> <span class="o">=</span> <span class="s1">&#39;../../assets/data/&#39;</span>
+<span class="n">matplotlib</span><span class="o">.</span><span class="n">use</span><span class="p">(</span><span class="s1">&#39;Agg&#39;</span><span class="p">)</span>
+<span class="o">%</span><span class="k">matplotlib</span> inline
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plots</span>
+<span class="n">plots</span><span class="o">.</span><span class="n">style</span><span class="o">.</span><span class="n">use</span><span class="p">(</span><span class="s1">&#39;fivethirtyeight&#39;</span><span class="p">)</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+</pre></div>
+</div>
+</div>
 </div>
 <div class="tex2jax_ignore mathjax_ignore section" id="functions-and-tables">
 <h1><span class="section-number">8. </span>Functions and Tables<a class="headerlink" href="#functions-and-tables" title="Permalink to this headline">¶</a></h1>
-<p>We are building up a useful inventory of techniques for identifying patterns and themes in a data set by using functions already available in Python. We will now explore a core feature of the Python programming language: function definition.</p>
-<p>We have used functions extensively already in this text, but never defined a function of our own. The purpose of defining a function is to give a name to a computational process that may be applied multiple times. There are many situations in computing that require repeated computation. For example, it is often the case that we want to perform the same manipulation on every value in a column of a table.</p>
+<p>Pythonで既に利用可能な関数を使用して、データセットのパターンやテーマを特定するための有用な技術資産を構築しています。ここでは、Pythonプログラミング言語の中核的な機能である関数定義について説明します。</p>
+<p>この教科書では、すでに関数を広範囲に使用していますが、独自の関数を定義したことはありません。関数を定義する目的は、複数回適用できる計算処理に名前を付けることです。計算の世界では、繰り返し計算を必要とする場面が多くあります。例えば、表の列のすべての値に対して同じ操作を行いたいことはよくあることです。</p>
 <h2>Defining a Function</h2>
-<p>The definition of the <code class="docutils literal notranslate"><span class="pre">double</span></code> function below simply doubles a number.</p>
+<p>次の <code class="docutils literal notranslate"><span class="pre">double</span></code> 関数の定義は、単純に数値を2倍にするものです。</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Our first function definition</span>
@@ -968,10 +1102,45 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 </div>
+<div class="section" id="signature">
+<h2><span class="section-number">8.1. </span>署名 signature<a class="headerlink" href="#signature" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>関数の呼び出しは次のようになります（名前と引数の数は同じです）。例: <code class="docutils literal notranslate"><span class="pre">double(3)</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">double</span></code> を呼び出すとき、引数は任意の式にすることができます。(名前 <code class="docutils literal notranslate"><span class="pre">x</span></code> は呼び出しに影響しません)。</p></li>
+<li><p>関数の本体では、<code class="docutils literal notranslate"><span class="pre">x</span></code> は引数の名前であり、あたかも本体が <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">=</span> <span class="pre">&lt;最初の引数&gt;</span></code> というコードを含んでいるかのようになります。</p></li>
+</ul>
+</div>
+<div class="section" id="docstring">
+<h2><span class="section-number">8.2. </span>解説 (“docstring”)<a class="headerlink" href="#docstring" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>その関数が行うことを説明するテキストです。</p></li>
+<li><p>伝統的に三重引用符で囲まれているので、数行に渡って記述することができます。</p></li>
+<li><p>伝統的に、最初の行はその関数が行うことを簡潔に説明します。</p></li>
+<li><p>次の行では、より詳細な説明や例を示すことができます。</p></li>
+<li><p>ちょうど <code class="docutils literal notranslate"><span class="pre">max?</span></code> が組み込み関数 max のドキュメントを表示するように、 <code class="docutils literal notranslate"><span class="pre">double?</span></code> を実行するとそのテキストが表示されます。</p></li>
+</ul>
+</div>
+<div class="section" id="body">
+<h2><span class="section-number">8.3. </span>本体 (body)<a class="headerlink" href="#body" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>ここにあるすべてのコードは、この関数を呼び出すたびに実行されます。</p></li>
+<li><p>特別なステートメント <code class="docutils literal notranslate"><span class="pre">return</span></code> は Python にこの関数の各呼び出しの値が何であるかを伝えます：それは <code class="docutils literal notranslate"><span class="pre">return</span></code> の後の式の値です。</p></li>
+<li><p>例えば、 <code class="docutils literal notranslate"><span class="pre">double(3)</span></code> の値は <code class="docutils literal notranslate"><span class="pre">6</span></code> です。(引数が <code class="docutils literal notranslate"><span class="pre">3</span></code> の場合、本体が <code class="docutils literal notranslate"><span class="pre">x=3</span></code> で始まっているようなものであることを忘れないでください。
+多くの場合、本体には <code class="docutils literal notranslate"><span class="pre">return</span></code> された値を計算するためのコードが何行にもわたって書かれています。ここには、他の場所に書けるようなPythonのコードを書くことができます。</p></li>
+</ul>
+</div>
+<div class="section" id="indent">
+<h2><span class="section-number">8.4. </span>段組 (indent)<a class="headerlink" href="#indent" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>本文中の各コード行はインデントされています（つまり、空白が前にあります）。</p></li>
+<li><p>伝統的に、2つまたは4つのスペースを使用します。一貫性があればいいのです。</p></li>
+<li><p>これはPythonに、それらの行がbodyの一部であることを伝えます。</p></li>
+<li><p>関数のボディは、インデントされていない行で終了します。</p></li>
+</ul>
 <p>We start any function definition by writing <code class="docutils literal notranslate"><span class="pre">def</span></code>.  Here is a breakdown of the other parts (the <em>syntax</em>) of this small function:</p>
 <p><img alt="function syntax" src="../../_images/function_definition.jpg" /></p>
-<p>When we run the cell above, no particular number is doubled, and the code inside the body of <code class="docutils literal notranslate"><span class="pre">double</span></code> is not yet evaluated.  In this respect, our function is analogous to a <em>recipe</em>.  Each time we follow the instructions in a recipe, we need to start with ingredients.  Each time we want to use our function to double a number, we need to specify a number.</p>
-<p>We can call <code class="docutils literal notranslate"><span class="pre">double</span></code> in exactly the same way we have called other functions. Each time we do that, the code in the body is executed, with the value of the argument given the name <code class="docutils literal notranslate"><span class="pre">x</span></code>.</p>
+<p>上のセルを実行したとき、特定の数値は2倍にならず、 <code class="docutils literal notranslate"><span class="pre">double</span></code> のボディ内のコードはまだ評価されていません。この点で、この関数はレシピに似ています。レシピの指示に従うたびに、材料から始める必要があります。この関数を使って数値を2倍にするためには、毎回、数値を指定する必要があります。</p>
+<p>他の関数を呼び出したのと全く同じ方法で <code class="docutils literal notranslate"><span class="pre">double</span></code> 呼び出すことができます。その都度、引数の値に  <code class="docutils literal notranslate"><span class="pre">x</span></code> という名前を付けて、本文中のコードを実行します。</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">double</span><span class="p">(</span><span class="mi">17</span><span class="p">)</span>
@@ -996,11 +1165,18 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 </div>
-<p>The two expressions above are both <em>call expressions</em>. In the second one, the value of the expression <code class="docutils literal notranslate"><span class="pre">-0.6/4</span></code> is computed and then passed as the argument named <code class="docutils literal notranslate"><span class="pre">x</span></code> to the <code class="docutils literal notranslate"><span class="pre">double</span></code> function. Each call expresson results in the body of <code class="docutils literal notranslate"><span class="pre">double</span></code> being executed, but with a different value of <code class="docutils literal notranslate"><span class="pre">x</span></code>.</p>
-<p>The body of <code class="docutils literal notranslate"><span class="pre">double</span></code> has only a single line:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>double<span class="o">?</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>上の2つの式は、いずれも呼び出し式です。2番目の式では、 <code class="docutils literal notranslate"><span class="pre">-0.6/4</span></code> iという値が計算され、 <code class="docutils literal notranslate"><span class="pre">x</span></code> という引数として <code class="docutils literal notranslate"><span class="pre">double</span></code> 関数に渡されています。それぞれの呼び出し式は <code class="docutils literal notranslate"><span class="pre">double</span></code> の本体を実行することになりますが、 <code class="docutils literal notranslate"><span class="pre">x</span></code> の値は異なります。</p>
+<p><code class="docutils literal notranslate"><span class="pre">double</span></code> の本体は1行しかありません。</p>
 <p><code class="docutils literal notranslate"><span class="pre">return</span> <span class="pre">2*x</span></code></p>
-<p>Executing this <em><code class="docutils literal notranslate"><span class="pre">return</span></code> statement</em> completes execution of the <code class="docutils literal notranslate"><span class="pre">double</span></code> function’s body and computes the value of the call expression.</p>
-<p>The argument to <code class="docutils literal notranslate"><span class="pre">double</span></code> can be any expression, as long as its value is a number.  For example, it can be a name.  The <code class="docutils literal notranslate"><span class="pre">double</span></code> function does not know or care how its argument is computed or stored; its only job is to execute its own body using the values of the arguments passed to it.</p>
+<p>この <em><code class="docutils literal notranslate"><span class="pre">return</span></code> 文 statement</em> を実行すると、 <code class="docutils literal notranslate"><span class="pre">double</span></code> 関数本体の実行が終了し、呼び出した式の値が計算されます。</p>
+<p><code class="docutils literal notranslate"><span class="pre">double</span></code> の引数は、その値が数値であれば、どのような式でもかまいません。例えば、名前でもかまいません。<code class="docutils literal notranslate"><span class="pre">double</span></code> 関数は、その引数がどのように計算され、どのように格納されるかを知りませんし、気にしません。その唯一の仕事は、渡された引数の値を使って自分自身の本体を実行することです。</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">any_name</span> <span class="o">=</span> <span class="mi">42</span>
@@ -1014,7 +1190,7 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 </div>
-<p>The argument can also be any value that can be doubled. For example, a whole array of numbers can be passed as an argument to <code class="docutils literal notranslate"><span class="pre">double</span></code>, and the result will be another array.</p>
+<p>また、引数には2倍できる任意の値を指定することができます。例えば、数値の配列全体を <code class="docutils literal notranslate"><span class="pre">double</span></code> の引数として渡すことができ、結果は別の配列になります。</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">double</span><span class="p">(</span><span class="n">make_array</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
@@ -1027,8 +1203,8 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 </div>
-<p>However, names that are defined inside a function, including arguments like <code class="docutils literal notranslate"><span class="pre">double</span></code>’s <code class="docutils literal notranslate"><span class="pre">x</span></code>, have only a fleeting existence.  They are defined only while the function is being called, and they are only accessible inside the body of the function. We can’t refer to <code class="docutils literal notranslate"><span class="pre">x</span></code> outside the body of <code class="docutils literal notranslate"><span class="pre">double</span></code>. The technical terminology is that <code class="docutils literal notranslate"><span class="pre">x</span></code> has <em>local scope</em>.</p>
-<p>Therefore the name <code class="docutils literal notranslate"><span class="pre">x</span></code> isn’t recognized outside the body of the function, even though we have called <code class="docutils literal notranslate"><span class="pre">double</span></code> in the cells above.</p>
+<p>しかし <code class="docutils literal notranslate"><span class="pre">double</span></code> の <code class="docutils literal notranslate"><span class="pre">x</span></code>のような引数を含め、関数内部で定義される名前は、一瞬の存在でしかありません。関数が呼び出されている間だけ定義され、関数の本体の中でしかアクセスできません。 <code class="docutils literal notranslate"><span class="pre">double</span></code> の本体の外では <code class="docutils literal notranslate"><span class="pre">x</span></code> を参照することはできません。専門用語では、 <code class="docutils literal notranslate"><span class="pre">x</span></code> はローカルスコープ <em>local scope</em> を持っているといいます。</p>
+<p>したがって、上のセルで <code class="docutils literal notranslate"><span class="pre">double</span></code> を呼び出しても、関数本体の外では  <code class="docutils literal notranslate"><span class="pre">x</span></code> という名前は認識されません。</p>
 <div class="cell tag_raises-exception docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span>
@@ -1082,7 +1258,7 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 </div>
-<p>Contrast the function <code class="docutils literal notranslate"><span class="pre">percent</span></code> defined above with the function <code class="docutils literal notranslate"><span class="pre">percents</span></code> defined below. The latter takes an array as its argument, and converts all the numbers in the array to percents out of the total of the values in the array. The percents are all rounded to two decimal places, this time replacing <code class="docutils literal notranslate"><span class="pre">round</span></code> by <code class="docutils literal notranslate"><span class="pre">np.round</span></code> because the argument is an array and not a number.</p>
+<p>上で定義した関数 <code class="docutils literal notranslate"><span class="pre">percent</span></code> と、下で定義した関数 <code class="docutils literal notranslate"><span class="pre">percents</span></code> を対比してみましょう。後者は引数として配列を受け取り，配列内の数値の総和からパーセントに変換します．パーセントはすべて小数点以下2桁に丸められますが、今回は引数が数値ではなく配列なので、 <code class="docutils literal notranslate"><span class="pre">round</span></code> を <code class="docutils literal notranslate"><span class="pre">np.round</span></code> 置き換えています。</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">percents</span><span class="p">(</span><span class="n">counts</span><span class="p">):</span>
@@ -1093,7 +1269,7 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 </div>
-<p>The function <code class="docutils literal notranslate"><span class="pre">percents</span></code> returns an array of percents that add up to 100 apart from rounding.</p>
+<p>関数 <code class="docutils literal notranslate"><span class="pre">percents</span></code> は、四捨五入して100になるようなパーセンテージの配列を返します．</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">some_array</span> <span class="o">=</span> <span class="n">make_array</span><span class="p">(</span><span class="mi">7</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
@@ -1107,7 +1283,7 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 </div>
-<p>It is helpful to understand the steps Python takes to execute a function.  To facilitate this, we have put a function definition and a call to that function in the same cell below.</p>
+<p>Pythonが関数を実行する際の手順を理解しておくと便利です。これを容易にするために、以下では関数の定義とその関数の呼び出しを同じセルに入れました。</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">biggest_difference</span><span class="p">(</span><span class="n">array_x</span><span class="p">):</span>
@@ -1128,9 +1304,96 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 </div>
-<p>Here is what happens when we run that cell:</p>
+<p>そのセルを実行すると、次のようになります:</p>
 <p><img alt="function execution" src="../../_images/function_execution.jpg" /></p>
-<h2>Multiple Arguments</h2><p>There can be multiple ways to generalize an expression or block of code, and so a function can take multiple arguments that each determine different aspects of the result. For example, the <code class="docutils literal notranslate"><span class="pre">percents</span></code> function we defined previously rounded to two decimal places every time. The following two-argument definition allows different calls to round to different amounts.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">some_numbers</span> <span class="o">=</span> <span class="n">make_array</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<span class="n">some_numbers</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([ 2,  4,  5,  6,  4, -1,  1])
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">big_diff</span> <span class="o">=</span> <span class="n">biggest_difference</span><span class="p">(</span><span class="n">some_numbers</span><span class="p">)</span>
+<span class="n">big_diff</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>5
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The biggest difference is&quot;</span><span class="p">,</span> <span class="n">big_diff</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The biggest difference is 5
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#def biggest_difference(array_x):</span>
+<span class="c1">#    &quot;&quot;&quot;Find the biggest difference in absolute value between two adjacent elements of array_x.&quot;&quot;&quot;</span>
+<span class="c1">#    diffs = np.diff(array_x)</span>
+<span class="c1">#    absolute_diffs = abs(diffs)</span>
+<span class="c1">#    return max(absolute_diffs)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">diffs</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">diff</span><span class="p">(</span><span class="n">some_numbers</span><span class="p">)</span>
+<span class="n">diffs</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([ 2,  1,  1, -2, -5,  2])
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">absolute_diffs</span> <span class="o">=</span> <span class="nb">abs</span><span class="p">(</span><span class="n">diffs</span><span class="p">)</span>
+<span class="n">absolute_diffs</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([2, 1, 1, 2, 5, 2])
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">max</span><span class="p">(</span><span class="n">absolute_diffs</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>5
+</pre></div>
+</div>
+</div>
+</div>
+<h2>Multiple Arguments</h2><p>ある式やコードブロックを一般化する方法は複数存在するため、関数は複数の引数を取り、それぞれが結果の異なる側面を決定することができます。例えば、前回定義した <code class="docutils literal notranslate"><span class="pre">percents</span></code> 関数は、毎回小数点以下2桁に丸められます。次の2つの引数定義では、異なる呼び出しで異なる数値に丸めることができます。</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">percents</span><span class="p">(</span><span class="n">counts</span><span class="p">,</span> <span class="n">decimal_places</span><span class="p">):</span>
@@ -1153,7 +1416,7 @@ Rounded to 3 decimal places: [28.571 14.286 57.143]
 </div>
 </div>
 </div>
-<p>The flexibility of this new definition comes at a small price: each time the function is called, the number of decimal places must be specified. Default argument values allow a function to be called with a variable number of arguments; any argument that isn’t specified in the call expression is given its default value, which is stated in the first line of the <code class="docutils literal notranslate"><span class="pre">def</span></code> statement. For example, in this final definition of <code class="docutils literal notranslate"><span class="pre">percents</span></code>, the optional argument <code class="docutils literal notranslate"><span class="pre">decimal_places</span></code> is given a default value of 2.</p>
+<p>この新しい定義の柔軟性には、関数が呼び出されるたびに、小数点以下の桁数を指定しなければならないという、わずかな代償が伴います。デフォルトの引数値により、関数を可変数の引数で呼び出すことができます。呼び出し式で指定されていない引数には、 <code class="docutils literal notranslate"><span class="pre">def</span></code> 文の最初の行に記述されたデフォルト値が与えられます。たとえば、この <code class="docutils literal notranslate"><span class="pre">percents</span></code> の最終定義では、オプションの引数 <code class="docutils literal notranslate"><span class="pre">decimal_places</span></code> にはデフォルト値として 2 が指定されています。</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">percents</span><span class="p">(</span><span class="n">counts</span><span class="p">,</span> <span class="n">decimal_places</span><span class="o">=</span><span class="mi">2</span><span class="p">):</span>
@@ -1175,7 +1438,8 @@ Rounded to the default number of decimal places: [28.57 14.29 57.14]
 </div>
 </div>
 <h2>Note: Methods</h2>
-<p>Functions are called by placing argument expressions in parentheses after the function name. Any function that is defined in isolation is called in this way. You have also seen examples of methods, which are like functions but are called using dot notation, such as <code class="docutils literal notranslate"><span class="pre">some_table.sort(some_label)</span></code>. The functions that you define will always be called using the function name first, passing in all of the arguments.</p>
+<p>関数は、関数名の後の括弧の中に引数式を入れることで呼び出されます。単独で定義された関数はすべてこの方法で呼び出されます。また、メソッドの例を見たことがあると思いますが、これは関数に似ていますが、 <code class="docutils literal notranslate"><span class="pre">some_table.sort(some_label)</span></code> のようにドット記法で呼び出されます。定義された関数は、常に最初に関数名を使い、すべての引数を渡して呼び出されます。</p>
+</div>
 <div class="toctree-wrapper compound">
 </div>
 </div>
@@ -1215,7 +1479,7 @@ Rounded to the default number of decimal places: [28.57 14.29 57.14]
     <a class='right-next' id="next-link" href="1/Applying_a_Function_to_a_Column.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">8.1. </span>Applying a Function to a Column</p>
+        <p class="prev-next-title"><span class="section-number">8.5. </span>Applying a Function to a Column</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

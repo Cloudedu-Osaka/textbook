@@ -469,27 +469,27 @@ const thebe_selector_output = ".output, .cell_output"
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../../08/1/Applying_a_Function_to_a_Column.html">
-     8.1. Applying Functions to Columns
+     8.5. Applying Functions to Columns
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../08/2/Classifying_by_One_Variable.html">
-     8.2. Classifying by One Variable
+     8.6. Classifying by One Variable
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../08/3/Cross-Classifying_by_More_than_One_Variable.html">
-     8.3. Cross-Classifying
+     8.7. Cross-Classifying
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../08/4/Joining_Tables_by_Columns.html">
-     8.4. Joining Tables by Columns
+     8.8. Joining Tables by Columns
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../08/5/Bike_Sharing_in_the_Bay_Area.html">
-     8.5. Bike Sharing in the Bay Area
+     8.9. Bike Sharing in the Bay Area
     </a>
    </li>
   </ul>
@@ -949,10 +949,12 @@ const thebe_selector_output = ".output, .cell_output"
             
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="strings">
+  <div class="cell tag_remove-input docutils container">
+</div>
+<div class="tex2jax_ignore mathjax_ignore section" id="strings">
 <h1><span class="section-number">4.2. </span>Strings<a class="headerlink" href="#strings" title="Permalink to this headline">¶</a></h1>
-<p>Much of the world’s data is text, and a piece of text represented in a computer is called a <em>string</em>. A string can represent a word, a sentence, or even the contents of every book in a library. Since text can include numbers (like this: 5) or truth values (True), a string can also describe those things.</p>
-<p>The meaning of an expression depends both upon its structure and the types of values that are being combined. So, for instance, adding two strings together produces another string. This expression is still an addition expression, but it is combining a different type of value.</p>
+<p>世界のデータの多くはテキストであり、コンピュータの中で表現されるテキストの断片は文字列と呼ばれます。文字列は、単語や文章、あるいは図書館にあるすべての本の内容を表すことができます。文字列には数字（5）や真理値（True）を含めることができるので、それらを記述することもできます。</p>
+<p>式の意味は、式の構造と組み合わされる値の種類に依存します。例えば、2つの文字列を足すと、もう1つの文字列が生成されます。この式も加算式であることに変わりはありませんが、異なる種類の値を組み合わせています。</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;data&quot;</span> <span class="o">+</span> <span class="s2">&quot;science&quot;</span>
@@ -965,7 +967,7 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 </div>
-<p>Addition is completely literal; it combines these two strings together without regard for their contents. It doesn’t add a space because these are different words; that’s up to the programmer (you) to specify.</p>
+<p>加算は完全にリテラル literal (ありのまま) で、2つの文字列の内容を無視して結合されます。異なる単語だからといって、スペースを追加することはありません。</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;data&quot;</span> <span class="o">+</span> <span class="s2">&quot; &quot;</span> <span class="o">+</span> <span class="s2">&quot;science&quot;</span>
@@ -978,7 +980,7 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 </div>
-<p>Single and double quotes can both be used to create strings: <code class="docutils literal notranslate"><span class="pre">'hi'</span></code> and <code class="docutils literal notranslate"><span class="pre">&quot;hi&quot;</span></code> are identical expressions. Double quotes are often preferred because they allow you to include apostrophes inside of strings.</p>
+<p>文字列の作成には、一重引用符と二重引用符の両方が使用できます: <code class="docutils literal notranslate"><span class="pre">'hi'</span></code> と <code class="docutils literal notranslate"><span class="pre">&quot;hi&quot;</span></code> は同じ表現です。 二重引用符は、文字列の中にアポストロフィーを含めることができるため、しばしば好まれます。</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;This won&#39;t work with a single-quoted string!&quot;</span>
@@ -992,7 +994,7 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <p>Why not? Try it out.</p>
-<p>The <code class="docutils literal notranslate"><span class="pre">str</span></code> function returns a string representation of any value. Using this function, strings can be constructed that have embedded values.</p>
+<p><code class="docutils literal notranslate"><span class="pre">str</span></code> 関数は、任意の値の文字列表現を返します。この関数を使うと、値を埋め込んだ文字列を作成することができます。</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;That&#39;s &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39; &#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>

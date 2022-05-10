@@ -469,27 +469,27 @@ const thebe_selector_output = ".output, .cell_output"
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../../08/1/Applying_a_Function_to_a_Column.html">
-     8.1. Applying Functions to Columns
+     8.5. Applying Functions to Columns
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../08/2/Classifying_by_One_Variable.html">
-     8.2. Classifying by One Variable
+     8.6. Classifying by One Variable
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../08/3/Cross-Classifying_by_More_than_One_Variable.html">
-     8.3. Cross-Classifying
+     8.7. Cross-Classifying
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../08/4/Joining_Tables_by_Columns.html">
-     8.4. Joining Tables by Columns
+     8.8. Joining Tables by Columns
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../08/5/Bike_Sharing_in_the_Bay_Area.html">
-     8.5. Bike Sharing in the Bay Area
+     8.9. Bike Sharing in the Bay Area
     </a>
    </li>
   </ul>
@@ -975,14 +975,18 @@ const thebe_selector_output = ".output, .cell_output"
             
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="numbers">
+  <div class="cell tag_remove-input docutils container">
+</div>
+<div class="cell tag_remove-input docutils container">
+</div>
+<div class="tex2jax_ignore mathjax_ignore section" id="numbers">
 <h1><span class="section-number">4.1. </span>Numbers<a class="headerlink" href="#numbers" title="Permalink to this headline">¶</a></h1>
-<p>Computers are designed to perform numerical calculations, but there are some important details about working with numbers that every programmer working with quantitative data should know. Python (like most other programming languages) distinguishes between two different types of numbers:</p>
+<p>コンピュータは数値計算を行うために設計されていますが、数値を扱う上で、定量的なデータを扱うプログラマーが知っておくべき重要な内容がいくつかあります。Pythonは（他の多くのプログラミング言語と同様に）2つの異なるタイプの数を区別します:</p>
 <ul class="simple">
-<li><p>Integers are called <code class="docutils literal notranslate"><span class="pre">int</span></code> values in the Python language. They can only represent whole numbers (negative, zero, or positive) that don’t have a fractional component</p></li>
-<li><p>Real numbers are called <code class="docutils literal notranslate"><span class="pre">float</span></code> values (or <em>floating point values</em>) in the Python language. They can represent whole or fractional numbers but have some limitations.</p></li>
+<li><p>Python言語では、整数を <code class="docutils literal notranslate"><span class="pre">int</span></code> 値と呼びます。小数点を含まない整数（負、0、正）のみを表現することができます。</p></li>
+<li><p>実数は、Python言語では <code class="docutils literal notranslate"><span class="pre">float</span></code> 値 (または浮動小数点値 <em>floating point values</em>）と呼ばれています。整数や分数を表現することができますが、いくつかの制限があります。</p></li>
 </ul>
-<p>The type of a number is evident from the way it is displayed: <code class="docutils literal notranslate"><span class="pre">int</span></code> values have no decimal point and <code class="docutils literal notranslate"><span class="pre">float</span></code> values always have a decimal point.</p>
+<p>数字の種類は、表示の仕方でわかります: <code class="docutils literal notranslate"><span class="pre">int</span></code> 値には小数点がなく、 <code class="docutils literal notranslate"><span class="pre">float</span></code> 値には常に小数点があります。</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Some int values</span>
@@ -1045,7 +1049,7 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 </div>
-<p>When a <code class="docutils literal notranslate"><span class="pre">float</span></code> value is combined with an <code class="docutils literal notranslate"><span class="pre">int</span></code> value using some arithmetic operator, then the result is always a <code class="docutils literal notranslate"><span class="pre">float</span></code> value. In most cases, two integers combine to form another integer, but any number (<code class="docutils literal notranslate"><span class="pre">int</span></code> or <code class="docutils literal notranslate"><span class="pre">float</span></code>) divided by another will be a <code class="docutils literal notranslate"><span class="pre">float</span></code> value. Very large or very small <code class="docutils literal notranslate"><span class="pre">float</span></code> values are displayed using scientific notation.</p>
+<p><code class="docutils literal notranslate"><span class="pre">float</span></code> 値と <code class="docutils literal notranslate"><span class="pre">int</span></code> 値を何らかの算術演算子で結合すると、その結果は常に <code class="docutils literal notranslate"><span class="pre">float</span></code> 値になります。ほとんどの場合、2つの整数が組み合わさって別の整数になりますが、どんな数値 (<code class="docutils literal notranslate"><span class="pre">int</span></code> or <code class="docutils literal notranslate"><span class="pre">float</span></code>) も別の数値で割ると <code class="docutils literal notranslate"><span class="pre">float</span></code> 値になります。非常に大きな値や非常に小さな値の <code class="docutils literal notranslate"><span class="pre">float</span></code> は、科学的記数法で表示されます。</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mf">1.5</span> <span class="o">+</span> <span class="mi">2</span>
@@ -1082,7 +1086,7 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 </div>
-<p>The <code class="docutils literal notranslate"><span class="pre">type</span></code> function can be used to find the type of any number.</p>
+<p><code class="docutils literal notranslate"><span class="pre">type</span></code> 関数は、任意の数値の型を求めることができます。</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">type</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
@@ -1107,7 +1111,7 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 </div>
-<p>The <code class="docutils literal notranslate"><span class="pre">type</span></code> of an expression is the type of its final value. So, the <code class="docutils literal notranslate"><span class="pre">type</span></code> function will never indicate that the type of an expression is a name, because names are always evaluated to their assigned values.</p>
+<p>式の <code class="docutils literal notranslate"><span class="pre">type</span></code> は、その最終的な値の型です。つまり、式が名前であることを <code class="docutils literal notranslate"><span class="pre">type</span></code> 関数が示すことはありません。なぜなら、名前は常に代入された値で評価されるからです。</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">3</span>
@@ -1135,13 +1139,13 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 <div class="section" id="more-about-float-values">
 <h2><span class="section-number">4.1.1. </span>More About Float Values<a class="headerlink" href="#more-about-float-values" title="Permalink to this headline">¶</a></h2>
-<p>Float values are very flexible, but they do have limits.</p>
+<p>フロート値は非常に自由度が高いが、制限もあります。</p>
 <ol class="simple">
-<li><p>A <code class="docutils literal notranslate"><span class="pre">float</span></code> can represent extremely large and extremely small numbers. There are limits, but you will rarely encounter them.</p></li>
-<li><p>A <code class="docutils literal notranslate"><span class="pre">float</span></code> only represents 15 or 16 significant digits for any number; the remaining precision is lost. This limited precision is enough for the vast majority of applications.</p></li>
-<li><p>After combining <code class="docutils literal notranslate"><span class="pre">float</span></code> values with arithmetic, the last few digits may be incorrect. Small rounding errors are often confusing when first encountered.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">float</span></code> は極端に大きな数字も極端に小さな数字も表すことができます。限界はありますが、それに遭遇することはほとんどありません。</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">float</span></code> はどんな数でも15桁か16桁の有効数字しか表せず、残りの精度は失われてしまいます。大部分のアプリケーションでは、この限られた精度で十分です。</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">float</span></code> の値を算術で結合した後、最後の数桁が不正確になることがあります。小さな丸め誤差は、最初に遭遇したときにはしばしば混乱させられます。</p></li>
 </ol>
-<p>The first limit can be observed in two ways. If the result of a computation is a very large number, then it is represented as infinite. If the result is a very small number, then it is represented as zero.</p>
+<p>最初の制限は2つの方法で観察することができます。計算結果が非常に大きな数である場合、無限大と表現されます。計算結果が非常に小さな数であれば、0として表現されます。</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mf">2e306</span> <span class="o">*</span> <span class="mi">10</span>
@@ -1190,7 +1194,7 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 </div>
-<p>The second limit can be observed by an expression that involves numbers with more than 15 significant digits. These extra digits are discarded before any arithmetic is carried out.</p>
+<p>第二の制限は、有効数字が15桁を超えるような式で観察することができます。これらの余分な桁は、演算を実行する前に破棄されます。</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mf">0.6666666666666666</span> <span class="o">-</span> <span class="mf">0.6666666666666666123456789</span>
@@ -1203,7 +1207,7 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 </div>
-<p>The third limit can be observed when taking the difference between two expressions that should be equivalent. For example, the expression <code class="docutils literal notranslate"><span class="pre">2</span> <span class="pre">**</span> <span class="pre">0.5</span></code> computes the square root of 2, but squaring this value does not exactly recover 2.</p>
+<p>3つ目の限界は、等価であるはずの2つの式の差を取るときに見られます。例えば、 <code class="docutils literal notranslate"><span class="pre">2</span> <span class="pre">**</span> <span class="pre">0.5</span></code> という式は2の平方根を計算しますが、この値を2乗しても正確には2にはなりません。</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mi">2</span> <span class="o">**</span> <span class="mf">0.5</span>
@@ -1240,8 +1244,8 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 </div>
-<p>The final result above is <code class="docutils literal notranslate"><span class="pre">0.0000000000000004440892098500626</span></code>, a number that is very close to zero. The correct answer to this arithmetic expression is 0, but a small error in the final significant digit appears very different in scientific notation. This behavior appears in almost all programming languages because it is the result of the standard way that arithmetic is carried out on computers.</p>
-<p>Although <code class="docutils literal notranslate"><span class="pre">float</span></code> values are not always exact, they are certainly reliable and work the same way across all different kinds of computers and programming languages.</p>
+<p>上の最終結果は <code class="docutils literal notranslate"><span class="pre">0.0000000000000004440892098500626</span></code>となり、0に非常に近い数字になります。この算術式の正解は0ですが、最後の有効桁に小さな誤差があるため、科学的記数法では全く違って表示されます。このような動作はほとんどのプログラミング言語で見られますが、これはコンピュータで算術演算を行う際の標準的な方法の結果だからです。</p>
+<p><code class="docutils literal notranslate"><span class="pre">float</span></code> は必ずしも正確ではありませんが、信頼性が高く、あらゆる種類のコンピュータやプログラミング言語で同じように機能します。</p>
 </div>
 </div>
 

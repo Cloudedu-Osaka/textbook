@@ -469,27 +469,27 @@ const thebe_selector_output = ".output, .cell_output"
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../../../08/1/Applying_a_Function_to_a_Column.html">
-     8.1. Applying Functions to Columns
+     8.5. Applying Functions to Columns
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../../08/2/Classifying_by_One_Variable.html">
-     8.2. Classifying by One Variable
+     8.6. Classifying by One Variable
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../../08/3/Cross-Classifying_by_More_than_One_Variable.html">
-     8.3. Cross-Classifying
+     8.7. Cross-Classifying
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../../08/4/Joining_Tables_by_Columns.html">
-     8.4. Joining Tables by Columns
+     8.8. Joining Tables by Columns
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../../08/5/Bike_Sharing_in_the_Bay_Area.html">
-     8.5. Bike Sharing in the Bay Area
+     8.9. Bike Sharing in the Bay Area
     </a>
    </li>
   </ul>
@@ -949,10 +949,12 @@ const thebe_selector_output = ".output, .cell_output"
             
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="string-methods">
+  <div class="cell tag_remove-input docutils container">
+</div>
+<div class="tex2jax_ignore mathjax_ignore section" id="string-methods">
 <h1><span class="section-number">4.2.1. </span>String Methods<a class="headerlink" href="#string-methods" title="Permalink to this headline">¶</a></h1>
-<p>From an existing string, related strings can be constructed using string methods, which are functions that operate on strings. These methods are called by placing a dot after the string, then calling the function.</p>
-<p>For example, the following method generates an uppercased version of a string.</p>
+<p>既存の文字列から、関連する文字列を作成するには、文字列を操作する関数である文字列メソッドを使用します。これらのメソッドを呼び出すには、文字列の後にドットを置き、その後に関数を呼び出します。</p>
+<p>例えば、次のメソッドは、文字列を大文字に変換して生成します。</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;loud&quot;</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span>
@@ -965,7 +967,7 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 </div>
-<p>Perhaps the most important method is <code class="docutils literal notranslate"><span class="pre">replace</span></code>, which replaces all instances of a substring within the string. The <code class="docutils literal notranslate"><span class="pre">replace</span></code> method takes two arguments, the text to be replaced and its replacement.</p>
+<p>おそらく最も重要なメソッドは <code class="docutils literal notranslate"><span class="pre">replace</span></code>で、文字列内の部分文字列のすべてのインスタンスを置き換えます。 <code class="docutils literal notranslate"><span class="pre">replace</span></code> メソッドは、置換する文字列とその置換後の文字列の2つの引数を取ります。</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="s1">&#39;hitchhiker&#39;</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;hi&#39;</span><span class="p">,</span> <span class="s1">&#39;ma&#39;</span><span class="p">)</span>
@@ -978,7 +980,7 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 </div>
-<p>String methods can also be invoked using variable names, as long as those names are bound to strings. So, for instance, the following two-step process generates the word “degrade” starting from “train” by first creating “ingrain” and then applying a second replacement.</p>
+<p>文字列メソッドは、変数名が文字列に束縛されている限り、変数名を使って呼び出すこともできます。つまり、例えば以下の2段階の処理では、まず「ingrain」を生成し、2回目の置換を施すことで、「train」から「degrade」という単語を生成しています。</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">s</span> <span class="o">=</span> <span class="s2">&quot;train&quot;</span>
@@ -994,7 +996,7 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 </div>
-<p>Note that the line <code class="docutils literal notranslate"><span class="pre">t</span> <span class="pre">=</span> <span class="pre">s.replace('t',</span> <span class="pre">'ing')</span></code> doesn’t change the string <code class="docutils literal notranslate"><span class="pre">s</span></code>, which is still “train”.  The method call <code class="docutils literal notranslate"><span class="pre">s.replace('t',</span> <span class="pre">'ing')</span></code> just has a value, which is the string “ingrain”.</p>
+<p><code class="docutils literal notranslate"><span class="pre">t</span> <span class="pre">=</span> <span class="pre">s.replace('t',</span> <span class="pre">'ing')</span></code> という行は、文字列 <code class="docutils literal notranslate"><span class="pre">s</span></code>を変更しないので、”train “のままであることに注意してください。 <code class="docutils literal notranslate"><span class="pre">s.replace('t',</span> <span class="pre">'ing')</span></code> というメソッド呼び出しは値を持つだけで、それは文字列 “ingrain” なのです。</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">s</span>
@@ -1007,7 +1009,7 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 </div>
-<p>This is the first time we’ve seen methods, but methods are not unique to strings.  As we will see shortly, other types of objects can have them.</p>
+<p>この教科書ではメソッドを見るのが初めてですが、メソッドは文字列に限ったものではありません。まもなく見るように、他の種類のオブジェクトもメソッドを持つことができます。</p>
 </div>
 
     <script type="text/x-thebe-config">
