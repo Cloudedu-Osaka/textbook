@@ -49,6 +49,8 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../../../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="canonical" href="https://inferentialthinking.org/chapters/15/5/Visual_Diagnostics.html" />
     <link rel="shortcut icon" href="../../../_static/favicon.png"/>
     <link rel="index" title="Index" href="../../../genindex.html" />
@@ -1012,17 +1014,19 @@ const thebe_selector_output = ".output, .cell_output"
 <div class="tex2jax_ignore mathjax_ignore section" id="visual-diagnostics">
 <h1><span class="section-number">15.5. </span>Visual Diagnostics<a class="headerlink" href="#visual-diagnostics" title="Permalink to this headline">¶</a></h1>
 <p>Suppose a data scientist has decided to use linear regression to estimate values of one variable (called the response variable) based on another variable (called the predictor). To see how well this method of estimation performs, the data scientist must measure how far off the estimates are from the actual values. These differences are called <em>residuals</em>.</p>
-<p>$$
+<div class="math notranslate nohighlight">
+\[
 \mbox{residual} ~=~ \mbox{observed value} ~-~ \mbox{regression estimate}
-$$</p>
+\]</div>
 <p>A residual is what’s left over – the residue – after estimation.</p>
-<p>Residuals are the vertical distances of the points from the regression line. There is one residual for each point in the scatter plot. The residual is the difference between the observed value of $y$ and the fitted value of $y$, so for the point $(x, y)$,</p>
-<p>$$
+<p>Residuals are the vertical distances of the points from the regression line. There is one residual for each point in the scatter plot. The residual is the difference between the observed value of <span class="math notranslate nohighlight">\(y\)</span> and the fitted value of <span class="math notranslate nohighlight">\(y\)</span>, so for the point <span class="math notranslate nohighlight">\((x, y)\)</span>,</p>
+<div class="math notranslate nohighlight">
+\[
 \mbox{residual} ~~ = ~~ y ~-~
 \mbox{fitted value of }y
 ~~ = ~~ y ~-~
 \mbox{height of regression line at }x
-$$</p>
+\]</div>
 <p>The function <code class="docutils literal notranslate"><span class="pre">residual</span></code> calculates the residuals. The calculation assumes all the relevant functions we have already defined: <code class="docutils literal notranslate"><span class="pre">standard_units</span></code>, <code class="docutils literal notranslate"><span class="pre">correlation</span></code>, <code class="docutils literal notranslate"><span class="pre">slope</span></code>, <code class="docutils literal notranslate"><span class="pre">intercept</span></code>, and <code class="docutils literal notranslate"><span class="pre">fit</span></code>.</p>
 <div class="cell tag_remove-input docutils container">
 </div>

@@ -49,6 +49,8 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../../../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="canonical" href="https://inferentialthinking.org/chapters/12/2/Causality.html" />
     <link rel="shortcut icon" href="../../../_static/favicon.png"/>
     <link rel="index" title="Index" href="../../../genindex.html" />
@@ -1393,7 +1395,7 @@ const thebe_selector_output = ".output, .cell_output"
 <h2><span class="section-number">12.2.4. </span>The Test Statistic<a class="headerlink" href="#the-test-statistic" title="Permalink to this headline">¶</a></h2>
 <p>If the two group proportions are very different from each other, we will lean towards the alternative hypothesis that the two underlying distributions are different. So our test statistic will be the distance between the two group proportions, that is, the absolute value of the difference between them.</p>
 <p>Large values of the test statistic will favor the alternative hypothesis over the null.</p>
-<p>Since the two group proportions were 0.6 and 0.125, the observed value of the test statistic is $\big{\vert} 0.6 - 0.125 \big{\vert} = 0.475$.</p>
+<p>Since the two group proportions were 0.6 and 0.125, the observed value of the test statistic is <span class="math notranslate nohighlight">\(\big{\vert} 0.6 - 0.125 \big{\vert} = 0.475\)</span>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">bta</span><span class="o">.</span><span class="n">group</span><span class="p">(</span><span class="s1">&#39;Group&#39;</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">average</span><span class="p">)</span>

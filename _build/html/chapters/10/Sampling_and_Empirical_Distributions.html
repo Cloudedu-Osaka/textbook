@@ -49,6 +49,8 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="canonical" href="https://inferentialthinking.org/chapters/10/Sampling_and_Empirical_Distributions.html" />
     <link rel="shortcut icon" href="../../_static/favicon.png"/>
     <link rel="index" title="Index" href="../../genindex.html" />
@@ -1169,7 +1171,7 @@ ABC: 0
 <p>... (10 rows omitted)</p></div></div>
 </div>
 <p>Run the cell a few times to see how the output varies.</p>
-<p>This systematic sample is a probability sample. In this scheme, all rows have chance $1/10$ of being chosen. For example, Row 23 is chosen if and only if Row 3 is chosen, and the chance of that is $1/10$.</p>
+<p>This systematic sample is a probability sample. In this scheme, all rows have chance <span class="math notranslate nohighlight">\(1/10\)</span> of being chosen. For example, Row 23 is chosen if and only if Row 3 is chosen, and the chance of that is <span class="math notranslate nohighlight">\(1/10\)</span>.</p>
 <p>But not all subsets have the same chance of being chosen. Because the selected rows are evenly spaced, most subsets of rows have no chance of being chosen. The only subsets that are possible are those that consist of rows all separated by multiples of 10. Any of those subsets is selected with chance 1/10.  Other subsets, such as a subset containing both the 15th and 16th rows of the table, or any subset of size more than 10, are selected with chance 0.</p>
 <h2>Random Samples Drawn With or Without Replacement</h2>
 <p>In this course, we will mostly deal with the two most straightforward methods of sampling.</p>

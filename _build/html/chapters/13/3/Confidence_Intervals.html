@@ -49,6 +49,8 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../../../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="canonical" href="https://inferentialthinking.org/chapters/13/3/Confidence_Intervals.html" />
     <link rel="shortcut icon" href="../../../_static/favicon.png"/>
     <link rel="index" title="Index" href="../../../genindex.html" />
@@ -1090,9 +1092,10 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 <p>Birth weight is an important factor in the health of a newborn infant. Smaller babies tend to need more medical care in their first days than larger newborns. It is therefore helpful to have an estimate of birth weight before the baby is born. One way to do this is to examine the relationship between birth weight and the number of gestational days.</p>
 <p>A simple measure of this relationship is the ratio of birth weight to the number of gestational days. The table <code class="docutils literal notranslate"><span class="pre">ratios</span></code> contains the first two columns of <code class="docutils literal notranslate"><span class="pre">baby</span></code>, as well as a column of the ratios. The first entry in that column was calculated as follows:</p>
-<p>$$
+<div class="math notranslate nohighlight">
+\[
 \frac{120~\mbox{ounces}}{284~\mbox{days}} ~\approx ~ 0.4225~ \mbox{ounces per day}
-$$</p>
+\]</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ratios</span> <span class="o">=</span> <span class="n">births</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s1">&#39;Birth Weight&#39;</span><span class="p">,</span> <span class="s1">&#39;Gestational Days&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">with_columns</span><span class="p">(</span>

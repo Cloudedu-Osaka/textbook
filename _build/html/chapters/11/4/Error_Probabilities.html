@@ -49,6 +49,8 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../../../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="canonical" href="https://inferentialthinking.org/chapters/11/4/Error_Probabilities.html" />
     <link rel="shortcut icon" href="../../../_static/favicon.png"/>
     <link rel="index" title="Index" href="../../../genindex.html" />
@@ -1076,9 +1078,10 @@ const thebe_selector_output = ".output, .cell_output"
 <p><strong>Null:</strong> The coin is fair. That is, the results are like draws made at random with replacement from <em>Heads, Tails</em>.</p>
 <p><strong>Alternative:</strong> The coin is not fair.</p>
 <p>Suppose you are going to test this hypothesis based on 2000 tosses of the coin. You would expect a fair coin to land heads 1000 times out of 2000, so a reasonable test statistic to use is</p>
-<p>$$
+<div class="math notranslate nohighlight">
+\[
 \text{test statistic} ~ = ~ \big{\vert} ~ \text{number of heads} - 1000 ~ \big{\vert}
-$$</p>
+\]</div>
 <p>Small values of this statistic favor the null hypothesis, and large values favor the alternative.</p>
 <p>We have simulated this statistic under the null hypothesis many times, and drawn its empirical distribution.</p>
 <div class="cell tag_remove-input docutils container">
@@ -1106,7 +1109,7 @@ $$</p>
 <div class="section" id="the-cutoff-for-the-p-value-is-an-error-probability">
 <h2><span class="section-number">11.4.3. </span>The Cutoff for the p-value is an Error Probability<a class="headerlink" href="#the-cutoff-for-the-p-value-is-an-error-probability" title="Permalink to this headline">¶</a></h2>
 <p>The example above is a special case of a general fact:</p>
-<p><strong>If you use a $p$% cutoff for the p-value, and the null hypothesis happens to be true, then there is about a $p$% chance that your test will conclude that the alternative is true.</strong></p>
+<p><strong>If you use a <span class="math notranslate nohighlight">\(p\)</span>% cutoff for the p-value, and the null hypothesis happens to be true, then there is about a <span class="math notranslate nohighlight">\(p\)</span>% chance that your test will conclude that the alternative is true.</strong></p>
 <p>Here is the table of the four possible reality/test outcomes again. Probabilities in the top row are computed under the assumption that the null hypothesis is true. The p-value is the probability of the error shown in red.</p>
 <table class="colwidths-auto table">
 <thead>

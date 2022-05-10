@@ -49,6 +49,8 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../../../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="canonical" href="https://inferentialthinking.org/chapters/08/2/Classifying_by_One_Variable.html" />
     <link rel="shortcut icon" href="../../../_static/favicon.png"/>
     <link rel="index" title="Index" href="../../../genindex.html" />
@@ -1107,7 +1109,7 @@ const thebe_selector_output = ".output, .cell_output"
     </tbody>
 </table></div></div>
 </div>
-<p>To create this new table, <code class="docutils literal notranslate"><span class="pre">group</span></code> has calculated the sum of the <code class="docutils literal notranslate"><span class="pre">Price</span></code> entries in all the rows corresponding to each distinct flavor. The prices in the three <code class="docutils literal notranslate"><span class="pre">chocolate</span></code> rows add up to $$16.55$ (you can assume that price is being measured in dollars). The prices in the two <code class="docutils literal notranslate"><span class="pre">strawberry</span></code> rows have a total of $$8.80$.</p>
+<p>To create this new table, <code class="docutils literal notranslate"><span class="pre">group</span></code> has calculated the sum of the <code class="docutils literal notranslate"><span class="pre">Price</span></code> entries in all the rows corresponding to each distinct flavor. The prices in the three <code class="docutils literal notranslate"><span class="pre">chocolate</span></code> rows add up to <span class="math notranslate nohighlight">\(\$16.55\)</span> (you can assume that price is being measured in dollars). The prices in the two <code class="docutils literal notranslate"><span class="pre">strawberry</span></code> rows have a total of <span class="math notranslate nohighlight">\(\$8.80\)</span>.</p>
 <p>The label of the newly created “sum” column is <code class="docutils literal notranslate"><span class="pre">Price</span> <span class="pre">sum</span></code>, which is created by taking the label of the column being summed, and appending the word <code class="docutils literal notranslate"><span class="pre">sum</span></code>.</p>
 <p>Because <code class="docutils literal notranslate"><span class="pre">group</span></code> finds the <code class="docutils literal notranslate"><span class="pre">sum</span></code> of all columns other than the one with the categories, there is no need to specify that it has to <code class="docutils literal notranslate"><span class="pre">sum</span></code> the prices.</p>
 <p>To see in more detail what <code class="docutils literal notranslate"><span class="pre">group</span></code> is doing, notice that you could have figured out the total prices yourself, not only by mental arithmetic but also using code. For example, to find the total price of all the chocolate cones, you could start by creating a new table consisting of only the chocolate cones, and then accessing the column of prices:</p>

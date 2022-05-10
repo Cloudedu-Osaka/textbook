@@ -49,6 +49,8 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../../../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="canonical" href="https://inferentialthinking.org/chapters/11/3/Decisions_and_Uncertainty.html" />
     <link rel="shortcut icon" href="../../../_static/favicon.png"/>
     <link rel="index" title="Index" href="../../../genindex.html" />
@@ -1118,22 +1120,25 @@ const thebe_selector_output = ".output, .cell_output"
 <p>We will be comparing two categorical distributions: the one in Mendel’s model and the one we will get in our random sample. We want to see if these two distributions are close to each other or far apart. So a natural test statistic is the total variation distance (TVD) developed in the previous section.</p>
 <p>It turns out that with just two categories, the TVD is rather simple and easy to interpret. Let’s look at an example. Mendel’s model says that the “purple, white” distribution is [0.75, 0.25]. Suppose the distribution in our sample came out to be [0.7, 0.3].</p>
 <p>Because there are only two categories, something interesting happens when we calculate the TVD. First notice that</p>
-<p>$$
+<div class="math notranslate nohighlight">
+\[
 \vert 0.7 - 0.75 \vert = 0.05 = \vert 0.3 - 0.25 \vert
-$$</p>
+\]</div>
 <p>So the TVD is</p>
-<p>$$
-\frac{1}{2}\big{(} \vert 0.7 - 0.75 \vert + \vert 0.3 - 0.25 \vert \big{)} = 0.05
+<div class="math notranslate nohighlight">
+\[
+\frac{1}{2}\big{(} \vert 0.7 - 0.75 \vert + \vert 0.3 - 0.25 \vert \big{)} = 0.05 
 = \vert 0.7 - 0.75 \vert
-$$</p>
+\]</div>
 <p>That’s just the distance between the two proportions of purple-flowering plants. It is also just the distance between the two proportions of white-flowering plants.</p>
 <p>By a bit of math that we won’t do here, this is true whenever there are just two categories: the TVD is equal to the distance between the two proportions in one category.</p>
 <p>So a perfectly fine test statistic would be the distance between the sample proportion of purple plants and 0.75 which is the corresponding proportion in Mendel’s model.</p>
 <p>Since percents are easier to interpret than proportions, we will work with percents instead.</p>
 <p>Our test statistic will be the distance between the sample percent of purple plants and 75% which is the corresponding percent in Mendel’s model.</p>
-<p>$$
+<div class="math notranslate nohighlight">
+\[
 \big{\vert} \text{sample percent of purple-flowering plants} - 75 \big{\vert}
-$$</p>
+\]</div>
 <p>This test statistic is a <em>distance</em> between the two distributions. It makes sense and is easy to use. A sample percent of around 75% will be consistent with the model, but percents much bigger or much less than 75 will make you think that the model isn’t good. Therefore, small values of the distance will make you lean towards the null hypothesis. Big values of the statistic will make you lean towards the alternative.</p>
 <p>To choose a test statistic in other situations, look at the alternative hypothesis. What values of the statistic will make you think that the alternative hypothesis is a better choice than the null?</p>
 <ul class="simple">
@@ -1209,7 +1214,7 @@ $$</p>
 <img alt="../../../_images/Decisions_and_Uncertainty_12_0.png" src="../../../_images/Decisions_and_Uncertainty_12_0.png" />
 </div>
 </div>
-<p>Look on the horizontal axis to see the typical values of the distance, as predicted by the model. They are rather small. For example, a high proportion of the distances are in the range 0 to 1, meaning that for a high proportion of the samples, the percent of purple-flowering plants is in the range 75% $\pm$ 1%. That is, the sample percent is in the range 74% to 76%.</p>
+<p>Look on the horizontal axis to see the typical values of the distance, as predicted by the model. They are rather small. For example, a high proportion of the distances are in the range 0 to 1, meaning that for a high proportion of the samples, the percent of purple-flowering plants is in the range 75% <span class="math notranslate nohighlight">\(\pm\)</span> 1%. That is, the sample percent is in the range 74% to 76%.</p>
 <p>Also note that this prediction was made using Mendel’s model only, not the proportions observed by Mendel in the plants that he grew. It is time now to compare the predictions and Mendel’s observation.</p>
 </div>
 <div class="section" id="step-4-the-conclusion-of-the-test">

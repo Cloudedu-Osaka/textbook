@@ -49,6 +49,8 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../../../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="canonical" href="https://inferentialthinking.org/chapters/17/3/Rows_of_Tables.html" />
     <link rel="shortcut icon" href="../../../_static/favicon.png"/>
     <link rel="index" title="Index" href="../../../genindex.html" />
@@ -971,7 +973,11 @@ const thebe_selector_output = ".output, .cell_output"
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#alice-s-k-nearest-neighbors">
-   17.3.4. Alice’s $k$ Nearest Neighbors
+   17.3.4. Alice’s
+   <span class="math notranslate nohighlight">
+    \(k\)
+   </span>
+   Nearest Neighbors
   </a>
  </li>
 </ul>
@@ -1017,7 +1023,11 @@ const thebe_selector_output = ".output, .cell_output"
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#alice-s-k-nearest-neighbors">
-   17.3.4. Alice’s $k$ Nearest Neighbors
+   17.3.4. Alice’s
+   <span class="math notranslate nohighlight">
+    \(k\)
+   </span>
+   Nearest Neighbors
   </a>
  </li>
 </ul>
@@ -1236,11 +1246,12 @@ const thebe_selector_output = ".output, .cell_output"
 <div class="section" id="distance-between-points-when-there-are-two-attributes">
 <h2><span class="section-number">17.3.2. </span>Distance Between Points When There are Two Attributes<a class="headerlink" href="#distance-between-points-when-there-are-two-attributes" title="Permalink to this headline">¶</a></h2>
 <p>The main calculation we need to do is to find the distance between Alice’s point and any other point. For this, the first thing we need is a way to compute the distance between any pair of points.</p>
-<p>How do we do this?  In 2-dimensional space, it’s pretty easy.  If we have a point at coordinates $(x_0,y_0)$ and another at $(x_1,y_1)$, the distance between them is</p>
-<p>$$
+<p>How do we do this?  In 2-dimensional space, it’s pretty easy.  If we have a point at coordinates <span class="math notranslate nohighlight">\((x_0,y_0)\)</span> and another at <span class="math notranslate nohighlight">\((x_1,y_1)\)</span>, the distance between them is</p>
+<div class="math notranslate nohighlight">
+\[
 D = \sqrt{(x_0-x_1)^2 + (y_0-y_1)^2}
-$$</p>
-<p>(Where did this come from?  It comes from the Pythogorean theorem: we have a right triangle with side lengths $x_0-x_1$ and $y_0-y_1$, and we want to find the length of the hypotenuse.)</p>
+\]</div>
+<p>(Where did this come from?  It comes from the Pythogorean theorem: we have a right triangle with side lengths <span class="math notranslate nohighlight">\(x_0-x_1\)</span> and <span class="math notranslate nohighlight">\(y_0-y_1\)</span>, and we want to find the length of the hypotenuse.)</p>
 <p>In the next section we’ll see that this formula has a straightforward extension when there are more than two attributes. For now, let’s use the formula and array operations to find the distance between Alice and the patient in Row 3.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1268,7 +1279,7 @@ $$</p>
 </div>
 </div>
 </div>
-<p>We’re going to need the distance between Alice and a bunch of points, so let’s write a function called <code class="docutils literal notranslate"><span class="pre">distance</span></code> that computes the distance between any pair of points. The function will take two arrays, each containing the $(x, y)$ coordinates of a point.  (Remember, those are really the Hemoglobin and Glucose levels of a patient.)</p>
+<p>We’re going to need the distance between Alice and a bunch of points, so let’s write a function called <code class="docutils literal notranslate"><span class="pre">distance</span></code> that computes the distance between any pair of points. The function will take two arrays, each containing the <span class="math notranslate nohighlight">\((x, y)\)</span> coordinates of a point.  (Remember, those are really the Hemoglobin and Glucose levels of a patient.)</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">distance</span><span class="p">(</span><span class="n">point1</span><span class="p">,</span> <span class="n">point2</span><span class="p">):</span>
@@ -1369,8 +1380,8 @@ $$</p>
 <p>This way of using <code class="docutils literal notranslate"><span class="pre">apply</span></code> will help us create the next building block of our classifier.</p>
 </div>
 <div class="section" id="alice-s-k-nearest-neighbors">
-<h2><span class="section-number">17.3.4. </span>Alice’s $k$ Nearest Neighbors<a class="headerlink" href="#alice-s-k-nearest-neighbors" title="Permalink to this headline">¶</a></h2>
-<p>If we want to classify Alice using a k-nearest neighbor classifier, we have to identify her $k$ nearest neighbors. What are the steps in this process? Suppose $k = 5$. Then the steps are:</p>
+<h2><span class="section-number">17.3.4. </span>Alice’s <span class="math notranslate nohighlight">\(k\)</span> Nearest Neighbors<a class="headerlink" href="#alice-s-k-nearest-neighbors" title="Permalink to this headline">¶</a></h2>
+<p>If we want to classify Alice using a k-nearest neighbor classifier, we have to identify her <span class="math notranslate nohighlight">\(k\)</span> nearest neighbors. What are the steps in this process? Suppose <span class="math notranslate nohighlight">\(k = 5\)</span>. Then the steps are:</p>
 <ul class="simple">
 <li><p><strong>Step 1.</strong> Find the distance between Alice and each point in the training sample.</p></li>
 <li><p><strong>Step 2.</strong> Sort the data table in increasing order of the distances.</p></li>

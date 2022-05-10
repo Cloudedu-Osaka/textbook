@@ -49,6 +49,8 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../../../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="canonical" href="https://inferentialthinking.org/chapters/13/1/Percentiles.html" />
     <link rel="shortcut icon" href="../../../_static/favicon.png"/>
     <link rel="index" title="Index" href="../../../genindex.html" />
@@ -1096,14 +1098,14 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 <div class="section" id="the-general-definition">
 <h3><span class="section-number">13.1.2.1. </span>The General Definition<a class="headerlink" href="#the-general-definition" title="Permalink to this headline">¶</a></h3>
-<p>Let $p$ be a number between 0 and 100. The $p$th percentile of a collection is the smallest value in the collection that is at least as large as p% of all the values.</p>
+<p>Let <span class="math notranslate nohighlight">\(p\)</span> be a number between 0 and 100. The <span class="math notranslate nohighlight">\(p\)</span>th percentile of a collection is the smallest value in the collection that is at least as large as p% of all the values.</p>
 <p>By this definition, any percentile between 0 and 100 can be computed for any collection of values, and it is always an element of the collection.</p>
-<p>In practical terms, suppose there are $n$ elements in the collection. To find the $p$th percentile:</p>
+<p>In practical terms, suppose there are <span class="math notranslate nohighlight">\(n\)</span> elements in the collection. To find the <span class="math notranslate nohighlight">\(p\)</span>th percentile:</p>
 <ul class="simple">
 <li><p>Sort the collection in increasing order.</p></li>
-<li><p>Find p% of n: $(p/100) \times n$. Call that $k$.</p></li>
-<li><p>If $k$ is an integer, take the $k$th element of the sorted collection.</p></li>
-<li><p>If $k$ is not an integer, round it up to the next integer, and take that element of the sorted collection.</p></li>
+<li><p>Find p% of n: <span class="math notranslate nohighlight">\((p/100) \times n\)</span>. Call that <span class="math notranslate nohighlight">\(k\)</span>.</p></li>
+<li><p>If <span class="math notranslate nohighlight">\(k\)</span> is an integer, take the <span class="math notranslate nohighlight">\(k\)</span>th element of the sorted collection.</p></li>
+<li><p>If <span class="math notranslate nohighlight">\(k\)</span> is not an integer, round it up to the next integer, and take that element of the sorted collection.</p></li>
 </ul>
 </div>
 <div class="section" id="example">

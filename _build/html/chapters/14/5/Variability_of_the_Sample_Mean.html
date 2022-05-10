@@ -49,6 +49,8 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../../../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="canonical" href="https://inferentialthinking.org/chapters/14/5/Variability_of_the_Sample_Mean.html" />
     <link rel="shortcut icon" href="../../../_static/favicon.png"/>
     <link rel="index" title="Index" href="../../../genindex.html" />
@@ -1246,10 +1248,11 @@ SD of sample means: 1.5883338034053167
 <p>There really are two curves there. But they are so close to each other that it looks as though there is just one.</p>
 <p>What we are seeing is an instance of a general result. Remember that the graph above is based on 10,000 replications for each sample size. But there are many more than 10,000 samples of each size. The probability distribution of the sample mean is based on the means of <em>all possible samples</em> of a fixed size.</p>
 <p><strong>Fix a sample size.</strong> If the samples are drawn at random with replacement from the population, then</p>
-<p>$$
+<div class="math notranslate nohighlight">
+\[
 {\mbox{SD of all possible sample means}} ~=~
 \frac{\mbox{Population SD}}{\sqrt{\mbox{sample size}}}
-$$</p>
+\]</div>
 <p>This is the standard deviation of the averages of all the possible samples that could be drawn. <strong>It measures roughly how far off the sample means are from the population mean.</strong></p>
 </div>
 <div class="section" id="the-central-limit-theorem-for-the-sample-mean">
@@ -1267,7 +1270,7 @@ $$</p>
 </div>
 <div class="section" id="the-square-root-law">
 <h2><span class="section-number">14.5.4. </span>The Square Root Law<a class="headerlink" href="#the-square-root-law" title="Permalink to this headline">¶</a></h2>
-<p>From the table of SD comparisons, you can see that the SD of the means of random samples of 25 flight delays is about 8 minutes. If you multiply the sample size by 4, you’ll get samples of size 100. The SD of the means of all of those samples is about 4 minutes. That’s smaller than 8 minutes, but it’s not 4 times as small; it’s only 2 times as small. That’s because the sample size in the denominator has a square root over it. The sample size increased by a factor of 4, but the SD went down by a factor of $2 = \sqrt{4}$. In other words, the accuracy went up by a factor of $2 = \sqrt{4}$.</p>
+<p>From the table of SD comparisons, you can see that the SD of the means of random samples of 25 flight delays is about 8 minutes. If you multiply the sample size by 4, you’ll get samples of size 100. The SD of the means of all of those samples is about 4 minutes. That’s smaller than 8 minutes, but it’s not 4 times as small; it’s only 2 times as small. That’s because the sample size in the denominator has a square root over it. The sample size increased by a factor of 4, but the SD went down by a factor of <span class="math notranslate nohighlight">\(2 = \sqrt{4}\)</span>. In other words, the accuracy went up by a factor of <span class="math notranslate nohighlight">\(2 = \sqrt{4}\)</span>.</p>
 <p>In general, when you multiply the sample size by a factor, the accuracy of the sample mean goes up by the square root of that factor.</p>
 <p>So to increase accuracy by a factor of 10, you have to multiply sample size by a factor of 100. Accuracy doesn’t come cheap!</p>
 </div>

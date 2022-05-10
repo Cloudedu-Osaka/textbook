@@ -49,6 +49,8 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../../../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="canonical" href="https://inferentialthinking.org/chapters/06/2/Selecting_Rows.html" />
     <link rel="shortcut icon" href="../../../_static/favicon.png"/>
     <link rel="index" title="Index" href="../../../genindex.html" />
@@ -1033,7 +1035,7 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 <div class="tex2jax_ignore mathjax_ignore section" id="selecting-rows">
 <h1><span class="section-number">6.2. </span>Selecting Rows<a class="headerlink" href="#selecting-rows" title="Permalink to this headline">¶</a></h1>
-<p>Often, we would like to extract just those rows that correspond to entries with a particular feature. For example, we might want only the rows corresponding to the Warriors, or to players who earned more than $$10$ million. Or we might just want the top five earners.</p>
+<p>Often, we would like to extract just those rows that correspond to entries with a particular feature. For example, we might want only the rows corresponding to the Warriors, or to players who earned more than <span class="math notranslate nohighlight">\(\$10\)</span> million. Or we might just want the top five earners.</p>
 <div class="section" id="specified-rows">
 <h2><span class="section-number">6.2.1. </span>Specified Rows<a class="headerlink" href="#specified-rows" title="Permalink to this headline">¶</a></h2>
 <p>The Table method <code class="docutils literal notranslate"><span class="pre">take</span></code> does just that – it takes a specified set of rows. Its argument is a row index or array of indices, and it creates a new table consisting of only those rows.</p>
@@ -1170,11 +1172,11 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 <div class="section" id="rows-corresponding-to-a-specified-feature">
 <h2><span class="section-number">6.2.2. </span>Rows Corresponding to a Specified Feature<a class="headerlink" href="#rows-corresponding-to-a-specified-feature" title="Permalink to this headline">¶</a></h2>
-<p>More often, we will want to access data in a set of rows that have a certain feature, but whose indices we don’t know ahead of time. For example, we might want data on all the players who made more than $$10$ million, but we don’t want to spend time counting rows in the sorted table.</p>
+<p>More often, we will want to access data in a set of rows that have a certain feature, but whose indices we don’t know ahead of time. For example, we might want data on all the players who made more than <span class="math notranslate nohighlight">\(\$10\)</span> million, but we don’t want to spend time counting rows in the sorted table.</p>
 <p>The method <code class="docutils literal notranslate"><span class="pre">where</span></code> does the job for us. Its output is a table with the same columns as the original but only the rows <em>where</em> the feature occurs.</p>
-<p>The first argument of <code class="docutils literal notranslate"><span class="pre">where</span></code> is the label of the column that contains the information about whether or not a row has the feature we want. If the feature is “made more than $$10$ million”, the column is <code class="docutils literal notranslate"><span class="pre">SALARY</span></code>.</p>
+<p>The first argument of <code class="docutils literal notranslate"><span class="pre">where</span></code> is the label of the column that contains the information about whether or not a row has the feature we want. If the feature is “made more than <span class="math notranslate nohighlight">\(\$10\)</span> million”, the column is <code class="docutils literal notranslate"><span class="pre">SALARY</span></code>.</p>
 <p>The second argument of <code class="docutils literal notranslate"><span class="pre">where</span></code> is a way of specifying the feature. A couple of examples will make the general method of specification easier to understand.</p>
-<p>In the first example, we extract the data for all those who earned more than $$10$ million.</p>
+<p>In the first example, we extract the data for all those who earned more than <span class="math notranslate nohighlight">\(\$10\)</span> million.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">nba</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="s1">&#39;SALARY&#39;</span><span class="p">,</span> <span class="n">are</span><span class="o">.</span><span class="n">above</span><span class="p">(</span><span class="mi">10</span><span class="p">))</span>
@@ -1224,7 +1226,7 @@ const thebe_selector_output = ".output, .cell_output"
 <p>... (59 rows omitted)</p></div></div>
 </div>
 <p>The use of the argument <code class="docutils literal notranslate"><span class="pre">are.above(10)</span></code> ensured that each selected row had a value of <code class="docutils literal notranslate"><span class="pre">SALARY</span></code> that was greater than 10.</p>
-<p>There are 69 rows in the new table, corresponding to the 69 players who made more than $10$ million dollars. Arranging these rows in order makes the data easier to analyze. DeMar DeRozan of the Toronto Raptors was the “poorest” of this group, at a salary of just over $10$ million dollars.</p>
+<p>There are 69 rows in the new table, corresponding to the 69 players who made more than <span class="math notranslate nohighlight">\(10\)</span> million dollars. Arranging these rows in order makes the data easier to analyze. DeMar DeRozan of the Toronto Raptors was the “poorest” of this group, at a salary of just over <span class="math notranslate nohighlight">\(10\)</span> million dollars.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">nba</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="s1">&#39;SALARY&#39;</span><span class="p">,</span> <span class="n">are</span><span class="o">.</span><span class="n">above</span><span class="p">(</span><span class="mi">10</span><span class="p">))</span><span class="o">.</span><span class="n">sort</span><span class="p">(</span><span class="s1">&#39;SALARY&#39;</span><span class="p">)</span>
@@ -1294,7 +1296,7 @@ const thebe_selector_output = ".output, .cell_output"
     </tbody>
 </table></div></div>
 </div>
-<p>Curry made just under $$11.4$ million dollars. That’s a lot of money, but it’s less than half the salary of LeBron James. You’ll find that salary in the “Top 5” table earlier in this section, or you could find it replacing <code class="docutils literal notranslate"><span class="pre">'Stephen</span> <span class="pre">Curry'</span></code> by <code class="docutils literal notranslate"><span class="pre">'LeBron</span> <span class="pre">James'</span></code> in the line of code above.</p>
+<p>Curry made just under <span class="math notranslate nohighlight">\(\$11.4\)</span> million dollars. That’s a lot of money, but it’s less than half the salary of LeBron James. You’ll find that salary in the “Top 5” table earlier in this section, or you could find it replacing <code class="docutils literal notranslate"><span class="pre">'Stephen</span> <span class="pre">Curry'</span></code> by <code class="docutils literal notranslate"><span class="pre">'LeBron</span> <span class="pre">James'</span></code> in the line of code above.</p>
 <p>In the code, <code class="docutils literal notranslate"><span class="pre">are</span></code> is used again, but this time with the <em>predicate</em> <code class="docutils literal notranslate"><span class="pre">equal_to</span></code> instead of <code class="docutils literal notranslate"><span class="pre">above</span></code>. Thus for example you can get a table of all the Warriors:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1408,7 +1410,7 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 <div class="section" id="multiple-features">
 <h2><span class="section-number">6.2.3. </span>Multiple Features<a class="headerlink" href="#multiple-features" title="Permalink to this headline">¶</a></h2>
-<p>You can access rows that have multiple specified features, by using <code class="docutils literal notranslate"><span class="pre">where</span></code> repeatedly. For example, here is a way to extract all the Point Guards whose salaries were over $$15$ million.</p>
+<p>You can access rows that have multiple specified features, by using <code class="docutils literal notranslate"><span class="pre">where</span></code> repeatedly. For example, here is a way to extract all the Point Guards whose salaries were over <span class="math notranslate nohighlight">\(\$15\)</span> million.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">nba</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="s1">&#39;POSITION&#39;</span><span class="p">,</span> <span class="s1">&#39;PG&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="s1">&#39;SALARY&#39;</span><span class="p">,</span> <span class="n">are</span><span class="o">.</span><span class="n">above</span><span class="p">(</span><span class="mi">15</span><span class="p">))</span>
@@ -1475,7 +1477,7 @@ const thebe_selector_output = ".output, .cell_output"
     </tbody>
 </table></div></div>
 </div>
-<p>Notice that the table above includes Danny Green who made $$10$ million, but <em>not</em> Monta Ellis who made $$10.3$ million. As elsewhere in Python, the range <code class="docutils literal notranslate"><span class="pre">between</span></code> includes the left end but not the right.</p>
+<p>Notice that the table above includes Danny Green who made <span class="math notranslate nohighlight">\(\$10\)</span> million, but <em>not</em> Monta Ellis who made <span class="math notranslate nohighlight">\(\$10.3\)</span> million. As elsewhere in Python, the range <code class="docutils literal notranslate"><span class="pre">between</span></code> includes the left end but not the right.</p>
 <p>If we specify a condition that isn’t satisfied by any row, we get a table with column labels but no rows.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1661,7 +1663,7 @@ const thebe_selector_output = ".output, .cell_output"
 </table>
 <p>... (171 rows omitted)</p></div></div>
 </div>
-<p>You can get all the players who were not Cleveland Cavaliers and had a salary of no less than $$20$ million:</p>
+<p>You can get all the players who were not Cleveland Cavaliers and had a salary of no less than <span class="math notranslate nohighlight">\(\$20\)</span> million:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">other_than_Cavs</span> <span class="o">=</span> <span class="n">nba</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="s1">&#39;TEAM&#39;</span><span class="p">,</span> <span class="n">are</span><span class="o">.</span><span class="n">not_equal_to</span><span class="p">(</span><span class="s1">&#39;Cleveland Cavaliers&#39;</span><span class="p">))</span>

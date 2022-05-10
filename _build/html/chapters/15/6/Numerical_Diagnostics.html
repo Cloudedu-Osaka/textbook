@@ -49,6 +49,8 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../../../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="canonical" href="https://inferentialthinking.org/chapters/15/6/Numerical_Diagnostics.html" />
     <link rel="shortcut icon" href="../../../_static/favicon.png"/>
     <link rel="index" title="Index" href="../../../genindex.html" />
@@ -965,7 +967,10 @@ const thebe_selector_output = ".output, .cell_output"
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#another-way-to-interpret-r">
-   15.6.4. Another Way to Interpret $r$
+   15.6.4. Another Way to Interpret
+   <span class="math notranslate nohighlight">
+    \(r\)
+   </span>
   </a>
  </li>
 </ul>
@@ -1005,7 +1010,10 @@ const thebe_selector_output = ".output, .cell_output"
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#another-way-to-interpret-r">
-   15.6.4. Another Way to Interpret $r$
+   15.6.4. Another Way to Interpret
+   <span class="math notranslate nohighlight">
+    \(r\)
+   </span>
   </a>
  </li>
 </ul>
@@ -1109,10 +1117,11 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 <div class="section" id="sd-of-the-residuals">
 <h2><span class="section-number">15.6.3. </span>SD of the Residuals<a class="headerlink" href="#sd-of-the-residuals" title="Permalink to this headline">¶</a></h2>
-<p><strong>No matter what the shape of the scatter plot, the SD of the residuals is a fraction of the SD of the response variable. The fraction is  $\sqrt{1-r^2}$.</strong></p>
-<p>$$
+<p><strong>No matter what the shape of the scatter plot, the SD of the residuals is a fraction of the SD of the response variable. The fraction is  <span class="math notranslate nohighlight">\(\sqrt{1-r^2}\)</span>.</strong></p>
+<div class="math notranslate nohighlight">
+\[
 \mbox{SD of residuals} ~=~ \sqrt{1 - r^2} \cdot \mbox{SD of }y
-$$</p>
+\]</div>
 <p>We will soon see how this measures the accuracy of the regression estimate. But first, let’s confirm it by example.</p>
 <p>In the case of children’s heights and midparent heights, the SD of the residuals is about 3.39 inches.</p>
 <div class="cell docutils container">
@@ -1127,7 +1136,7 @@ $$</p>
 </div>
 </div>
 </div>
-<p>That’s the same as $\sqrt{1-r^2}$ times the SD of response variable:</p>
+<p>That’s the same as <span class="math notranslate nohighlight">\(\sqrt{1-r^2}\)</span> times the SD of response variable:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">r</span> <span class="o">=</span> <span class="n">correlation</span><span class="p">(</span><span class="n">heights</span><span class="p">,</span> <span class="s1">&#39;MidParent&#39;</span><span class="p">,</span> <span class="s1">&#39;Child&#39;</span><span class="p">)</span>
@@ -1141,7 +1150,7 @@ $$</p>
 </div>
 </div>
 </div>
-<p>The same is true for the regression of mileage on acceleration of hybrid cars. The correlation $r$ is negative (about -0.5), but $r^2$ is positive and therefore $\sqrt{1-r^2}$ is a fraction.</p>
+<p>The same is true for the regression of mileage on acceleration of hybrid cars. The correlation <span class="math notranslate nohighlight">\(r\)</span> is negative (about -0.5), but <span class="math notranslate nohighlight">\(r^2\)</span> is positive and therefore <span class="math notranslate nohighlight">\(\sqrt{1-r^2}\)</span> is a fraction.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">r</span> <span class="o">=</span> <span class="n">correlation</span><span class="p">(</span><span class="n">hybrid</span><span class="p">,</span> <span class="s1">&#39;acceleration&#39;</span><span class="p">,</span> <span class="s1">&#39;mpg&#39;</span><span class="p">)</span>
@@ -1172,21 +1181,23 @@ $$</p>
 </div>
 </div>
 <p>Now let us see how the SD of the residuals is a measure of how good the regression is. Remember that the average of the residuals is 0. Therefore the smaller the SD of the residuals is, the closer the residuals are to 0. In other words, if the SD of the residuals is small, the overall size of the errors in regression is small.</p>
-<p>The extreme cases are when $r=1$ or $r=-1$. In both cases, $\sqrt{1-r^2} = 0$. Therefore the residuals have an average of 0 and an SD of 0 as well, and therefore the residuals are all equal to 0. The regression line does a perfect job of estimation. As we saw earlier in this chapter, if $r = \pm 1$, the scatter plot is a perfect straight line and is the same as the regression line, so indeed there is no error in the regression estimate.</p>
-<p>But usually $r$ is not at the extremes. If $r$ is neither $\pm 1$ nor 0, then $\sqrt{1-r^2}$ is a proper fraction, and the rough overall size of the error of the regression estimate is somewhere between 0 and the SD of $y$.</p>
-<p>The worst case is when $r = 0$. Then $\sqrt{1-r^2} =1$, and the SD of the residuals is equal to the SD of $y$. This is consistent with the observation that if $r=0$ then the regression line is a flat line at the average of $y$. In this situation, the root mean square error of regression is the root mean squared deviation from the average of $y$, which is the SD of $y$. In practical terms, if $r = 0$ then there is no linear association between the two variables, so there is no benefit in using linear regression.</p>
+<p>The extreme cases are when <span class="math notranslate nohighlight">\(r=1\)</span> or <span class="math notranslate nohighlight">\(r=-1\)</span>. In both cases, <span class="math notranslate nohighlight">\(\sqrt{1-r^2} = 0\)</span>. Therefore the residuals have an average of 0 and an SD of 0 as well, and therefore the residuals are all equal to 0. The regression line does a perfect job of estimation. As we saw earlier in this chapter, if <span class="math notranslate nohighlight">\(r = \pm 1\)</span>, the scatter plot is a perfect straight line and is the same as the regression line, so indeed there is no error in the regression estimate.</p>
+<p>But usually <span class="math notranslate nohighlight">\(r\)</span> is not at the extremes. If <span class="math notranslate nohighlight">\(r\)</span> is neither <span class="math notranslate nohighlight">\(\pm 1\)</span> nor 0, then <span class="math notranslate nohighlight">\(\sqrt{1-r^2}\)</span> is a proper fraction, and the rough overall size of the error of the regression estimate is somewhere between 0 and the SD of <span class="math notranslate nohighlight">\(y\)</span>.</p>
+<p>The worst case is when <span class="math notranslate nohighlight">\(r = 0\)</span>. Then <span class="math notranslate nohighlight">\(\sqrt{1-r^2} =1\)</span>, and the SD of the residuals is equal to the SD of <span class="math notranslate nohighlight">\(y\)</span>. This is consistent with the observation that if <span class="math notranslate nohighlight">\(r=0\)</span> then the regression line is a flat line at the average of <span class="math notranslate nohighlight">\(y\)</span>. In this situation, the root mean square error of regression is the root mean squared deviation from the average of <span class="math notranslate nohighlight">\(y\)</span>, which is the SD of <span class="math notranslate nohighlight">\(y\)</span>. In practical terms, if <span class="math notranslate nohighlight">\(r = 0\)</span> then there is no linear association between the two variables, so there is no benefit in using linear regression.</p>
 </div>
 <div class="section" id="another-way-to-interpret-r">
-<h2><span class="section-number">15.6.4. </span>Another Way to Interpret $r$<a class="headerlink" href="#another-way-to-interpret-r" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">15.6.4. </span>Another Way to Interpret <span class="math notranslate nohighlight">\(r\)</span><a class="headerlink" href="#another-way-to-interpret-r" title="Permalink to this headline">¶</a></h2>
 <p>We can rewrite the result above to say that no matter what the shape of the scatter plot,</p>
-<p>$$
+<div class="math notranslate nohighlight">
+\[
 \frac{\mbox{SD of residuals}}{\mbox{SD of }y} ~=~ \sqrt{1-r^2}
-$$</p>
-<p>A complementary result is that no matter what the shape of the scatter plot, the SD of the fitted values is a fraction of the SD of the observed values of $y$. The fraction is $\vert r \vert$.</p>
-<p>$$
+\]</div>
+<p>A complementary result is that no matter what the shape of the scatter plot, the SD of the fitted values is a fraction of the SD of the observed values of <span class="math notranslate nohighlight">\(y\)</span>. The fraction is <span class="math notranslate nohighlight">\(\vert r \vert\)</span>.</p>
+<div class="math notranslate nohighlight">
+\[
 \frac{\mbox{SD of fitted values}}{\mbox{SD of }y} ~=~ \vert r \vert
-$$</p>
-<p>To see where the fraction comes in, notice that the fitted values are all on the regression line whereas the observed values of $y$ are the heights of all the points in the scatter plot and are more variable.</p>
+\]</div>
+<p>To see where the fraction comes in, notice that the fitted values are all on the regression line whereas the observed values of <span class="math notranslate nohighlight">\(y\)</span> are the heights of all the points in the scatter plot and are more variable.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">scatter_fit</span><span class="p">(</span><span class="n">heights</span><span class="p">,</span> <span class="s1">&#39;MidParent&#39;</span><span class="p">,</span> <span class="s1">&#39;Child&#39;</span><span class="p">)</span>
@@ -1224,8 +1235,8 @@ $$</p>
 </div>
 </div>
 </div>
-<p>The ratio is equal to $r$, confirming our result.</p>
-<p>Where does the absolute value come in? First note that as SDs can’t be negative, nor can a ratio of SDs. So what happens when $r$ is negative? The example of fuel efficiency and acceleration will show us.</p>
+<p>The ratio is equal to <span class="math notranslate nohighlight">\(r\)</span>, confirming our result.</p>
+<p>Where does the absolute value come in? First note that as SDs can’t be negative, nor can a ratio of SDs. So what happens when <span class="math notranslate nohighlight">\(r\)</span> is negative? The example of fuel efficiency and acceleration will show us.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">correlation</span><span class="p">(</span><span class="n">hybrid</span><span class="p">,</span> <span class="s1">&#39;acceleration&#39;</span><span class="p">,</span> <span class="s1">&#39;mpg&#39;</span><span class="p">)</span>
@@ -1250,15 +1261,17 @@ $$</p>
 </div>
 </div>
 </div>
-<p>The ratio of the two SDs is $\vert r \vert$.</p>
+<p>The ratio of the two SDs is <span class="math notranslate nohighlight">\(\vert r \vert\)</span>.</p>
 <p>A more standard way to express this result is to recall that</p>
-<p>$$
+<div class="math notranslate nohighlight">
+\[
 \mbox{variance} ~=~ \mbox{mean squared deviation from average} ~=~ \mbox{SD}^2
-$$</p>
+\]</div>
 <p>and therefore, by squaring both sides of our result,</p>
-<p>$$
+<div class="math notranslate nohighlight">
+\[
 \frac{\mbox{variance of fitted values}}{\mbox{variance of }y} ~=~ r^2
-$$</p>
+\]</div>
 </div>
 </div>
 
