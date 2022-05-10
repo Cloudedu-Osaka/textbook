@@ -49,6 +49,8 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../../../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="canonical" href="https://inferentialthinking.org/chapters/17/5/Accuracy_of_the_Classifier.html" />
     <link rel="shortcut icon" href="../../../_static/favicon.png"/>
     <link rel="index" title="Index" href="../../../genindex.html" />
@@ -1009,7 +1011,7 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 <div class="section" id="measuring-the-accuracy-of-our-wine-classifier">
 <h2><span class="section-number">17.5.1. </span>Measuring the Accuracy of Our Wine Classifier<a class="headerlink" href="#measuring-the-accuracy-of-our-wine-classifier" title="Permalink to this headline">¶</a></h2>
-<p>OK, so let’s apply the hold-out method to evaluate the effectiveness of the $k$-nearest neighbor classifier for identifying wines.  The data set has 178 wines, so we’ll randomly permute the data set and put 89 of them in the training set and the remaining 89 in the test set.</p>
+<p>OK, so let’s apply the hold-out method to evaluate the effectiveness of the <span class="math notranslate nohighlight">\(k\)</span>-nearest neighbor classifier for identifying wines.  The data set has 178 wines, so we’ll randomly permute the data set and put 89 of them in the training set and the remaining 89 in the test set.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">shuffled_wine</span> <span class="o">=</span> <span class="n">wine</span><span class="o">.</span><span class="n">sample</span><span class="p">(</span><span class="n">with_replacement</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span> 
@@ -1041,7 +1043,7 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 </div>
-<p>Now for the grand reveal – let’s see how we did.  We’ll arbitrarily use $k=5$.</p>
+<p>Now for the grand reveal – let’s see how we did.  We’ll arbitrarily use <span class="math notranslate nohighlight">\(k=5\)</span>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">evaluate_accuracy</span><span class="p">(</span><span class="n">training_set</span><span class="p">,</span> <span class="n">test_set</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>

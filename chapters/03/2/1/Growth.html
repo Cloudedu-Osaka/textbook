@@ -49,6 +49,8 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../../../../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="canonical" href="https://inferentialthinking.org/chapters/03/2/1/Growth.html" />
     <link rel="shortcut icon" href="../../../../_static/favicon.png"/>
     <link rel="index" title="Index" href="../../../../genindex.html" />
@@ -1098,7 +1100,7 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <p>The total growth over 10 years is equivalent to a 3.6% increase each year.</p>
-<p>In summary, a growth rate <code class="docutils literal notranslate"><span class="pre">g</span></code> is used to describe the relative size of an <code class="docutils literal notranslate"><span class="pre">initial</span></code> amount and a <code class="docutils literal notranslate"><span class="pre">changed</span></code> amount after some amount of time <code class="docutils literal notranslate"><span class="pre">t</span></code>. To compute $changed$, apply the growth rate <code class="docutils literal notranslate"><span class="pre">g</span></code> repeatedly, <code class="docutils literal notranslate"><span class="pre">t</span></code> times using exponentiation.</p>
+<p>In summary, a growth rate <code class="docutils literal notranslate"><span class="pre">g</span></code> is used to describe the relative size of an <code class="docutils literal notranslate"><span class="pre">initial</span></code> amount and a <code class="docutils literal notranslate"><span class="pre">changed</span></code> amount after some amount of time <code class="docutils literal notranslate"><span class="pre">t</span></code>. To compute <span class="math notranslate nohighlight">\(changed\)</span>, apply the growth rate <code class="docutils literal notranslate"><span class="pre">g</span></code> repeatedly, <code class="docutils literal notranslate"><span class="pre">t</span></code> times using exponentiation.</p>
 <p><code class="docutils literal notranslate"><span class="pre">initial</span> <span class="pre">*</span> <span class="pre">(1</span> <span class="pre">+</span> <span class="pre">g)</span> <span class="pre">**</span> <span class="pre">t</span></code></p>
 <p>To compute <code class="docutils literal notranslate"><span class="pre">g</span></code>, raise the total growth to the power of <code class="docutils literal notranslate"><span class="pre">1/t</span></code> and subtract one.</p>
 <p><code class="docutils literal notranslate"><span class="pre">(changed/initial)</span> <span class="pre">**</span> <span class="pre">(1/t)</span> <span class="pre">-</span> <span class="pre">1</span></code></p>

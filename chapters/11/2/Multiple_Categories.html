@@ -49,6 +49,8 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../../../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="canonical" href="https://inferentialthinking.org/chapters/11/2/Multiple_Categories.html" />
     <link rel="shortcut icon" href="../../../_static/favicon.png"/>
     <link rel="index" title="Index" href="../../../genindex.html" />
@@ -1216,7 +1218,7 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 <div class="section" id="a-new-statistic-the-distance-between-two-distributions">
 <h2><span class="section-number">11.2.4. </span>A New Statistic: The Distance between Two Distributions<a class="headerlink" href="#a-new-statistic-the-distance-between-two-distributions" title="Permalink to this headline">¶</a></h2>
-<p>We know how to measure how different two numbers are: if the numbers are $x$ and $y$, the distance between them is $\vert x-y \vert$. Now we have to quantify the distance between two distributions. For example, we have to measure the distance between the blue and gold distributions below.</p>
+<p>We know how to measure how different two numbers are: if the numbers are <span class="math notranslate nohighlight">\(x\)</span> and <span class="math notranslate nohighlight">\(y\)</span>, the distance between them is <span class="math notranslate nohighlight">\(\vert x-y \vert\)</span>. Now we have to quantify the distance between two distributions. For example, we have to measure the distance between the blue and gold distributions below.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">jury</span><span class="o">.</span><span class="n">barh</span><span class="p">(</span><span class="s1">&#39;Ethnicity&#39;</span><span class="p">)</span>

@@ -970,23 +970,23 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="simple">
 <li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Plimpton_322">Plimpton 322 - Wikipedia</a></p></li>
 </ul>
-<p>問: 次の方程式を満たす $x$ を求めよ:
-$$
-x - \frac{1}{x} = 1.5
-$$</p>
+<p>問: 次の方程式を満たす <span class="math notranslate nohighlight">\(x\)</span> を求めよ:
+$<span class="math notranslate nohighlight">\(
+    x - \frac{1}{x} = 1.5
+\)</span>$</p>
 <hr class="docutils" />
-<p>解: $x = 2$</p>
-<p>$x - \frac{1}{x} = c$ としたとき、$v_{1} = \frac{c}{2}$、$v_{3} = 1 + {v_{1}}^2 = 1 + (\frac{c}{2})^2$、$v_{4} = \sqrt{v_{3}} = \sqrt{1 + (\frac{c}{2})^2}$ と置くと、次の連立方程式が成り立つ:
+<p>解: <span class="math notranslate nohighlight">\(x = 2\)</span></p>
+<p><span class="math notranslate nohighlight">\(x - \frac{1}{x} = c\)</span> としたとき、<span class="math notranslate nohighlight">\(v_{1} = \frac{c}{2}\)</span>、<span class="math notranslate nohighlight">\(v_{3} = 1 + {v_{1}}^2 = 1 + (\frac{c}{2})^2\)</span>、<span class="math notranslate nohighlight">\(v_{4} = \sqrt{v_{3}} = \sqrt{1 + (\frac{c}{2})^2}\)</span> と置くと、次の連立方程式が成り立つ:
 $$</p>
-<div class="amsmath math notranslate nohighlight" id="equation-1fa67917-01c1-4cbc-b865-e2d60940c838">
-<span class="eqno">(1)<a class="headerlink" href="#equation-1fa67917-01c1-4cbc-b865-e2d60940c838" title="Permalink to this equation">¶</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-36a8bda8-e9c9-4433-9900-b8fd7c7f5cad">
+<span class="eqno">(1)<a class="headerlink" href="#equation-36a8bda8-e9c9-4433-9900-b8fd7c7f5cad" title="Permalink to this equation">¶</a></span>\[\begin{align}
     x &amp;= v_{4} + v_{1} \\
     \frac{1}{x} &amp;= v_{4} - v_{1}
   \end{align}\]</div>
 <p>$$</p>
-<p>$c = 1.5$ なので、$v_{3} = 1 + (\frac{1.5}{2})^2 = 1.5625$、$v_{4} = \sqrt{v_{3}} = 1.25$、$v_{1} = \frac{1.5}{2} = 0.75$ である。</p>
-<p>$x = v_{4} + v_{1}$ なので、$x = 1.25 + 0.752$ である。このとき、等式 $\frac{1}{x} = v_{4} - v_{1}$ についても $\frac{1}{x} = 1.25 - 0.75 = 0.5 = \frac{1}{2}$ のように成り立っている。</p>
-<p>$v_{1} = 1+\frac{c}{2}$</p>
+<p><span class="math notranslate nohighlight">\(c = 1.5\)</span> なので、<span class="math notranslate nohighlight">\(v_{3} = 1 + (\frac{1.5}{2})^2 = 1.5625\)</span>、<span class="math notranslate nohighlight">\(v_{4} = \sqrt{v_{3}} = 1.25\)</span>、<span class="math notranslate nohighlight">\(v_{1} = \frac{1.5}{2} = 0.75\)</span> である。</p>
+<p><span class="math notranslate nohighlight">\(x = v_{4} + v_{1}\)</span> なので、<span class="math notranslate nohighlight">\(x = 1.25 + 0.752\)</span> である。このとき、等式 <span class="math notranslate nohighlight">\(\frac{1}{x} = v_{4} - v_{1}\)</span> についても <span class="math notranslate nohighlight">\(\frac{1}{x} = 1.25 - 0.75 = 0.5 = \frac{1}{2}\)</span> のように成り立っている。</p>
+<p><span class="math notranslate nohighlight">\(v_{1} = 1+\frac{c}{2}\)</span></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># v1</span>
@@ -1001,7 +1001,7 @@ $$</p>
 </div>
 </div>
 </div>
-<p>$v_{3} = 1 + {v_{1}}^2 = 1 + (\frac{c}{2})^2$</p>
+<p><span class="math notranslate nohighlight">\(v_{3} = 1 + {v_{1}}^2 = 1 + (\frac{c}{2})^2\)</span></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># v3</span>
@@ -1015,7 +1015,7 @@ $$</p>
 </div>
 </div>
 </div>
-<p>$v_{4} = \sqrt{v_{3}}$</p>
+<p><span class="math notranslate nohighlight">\(v_{4} = \sqrt{v_{3}}\)</span></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># v4</span>
@@ -1034,33 +1034,34 @@ $$</p>
 <p class="admonition-title">Attention</p>
 <p>注意</p>
 </div>
-<p>$v_{1}$ と $v_{2}$ は、有理数、さらに有限小数であることを覚えておいてください。</p>
+<p><span class="math notranslate nohighlight">\(v_{1}\)</span> と <span class="math notranslate nohighlight">\(v_{2}\)</span> は、有理数、さらに有限小数であることを覚えておいてください。</p>
 <ul class="simple">
 <li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Rational_number">Rational number - Wikipedia</a></p></li>
 <li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Decimal_representation#Finite_decimal_representations">Decimal representation - Wikipedia</a></p></li>
 </ul>
 <p>連立方程式
 $$</p>
-<div class="amsmath math notranslate nohighlight" id="equation-907ae8d4-7447-49c0-8a3e-834126843fe3">
-<span class="eqno">(2)<a class="headerlink" href="#equation-907ae8d4-7447-49c0-8a3e-834126843fe3" title="Permalink to this equation">¶</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-0f8425a3-cc50-4c4a-9514-9216aa297de3">
+<span class="eqno">(2)<a class="headerlink" href="#equation-0f8425a3-cc50-4c4a-9514-9216aa297de3" title="Permalink to this equation">¶</a></span>\[\begin{align}
     x &amp;= v_{4} + v_{1} \\
     \frac{1}{x} &amp;= v_{4} - v_{1}
   \end{align}\]</div>
-<p>$$
+<div class="math notranslate nohighlight">
+\[
 を$v_{1}$, $v_{4}$ について解くと、
-$$</p>
-<div class="amsmath math notranslate nohighlight" id="equation-65a25c1e-0cdb-4cf7-b593-3036ab971598">
-<span class="eqno">(3)<a class="headerlink" href="#equation-65a25c1e-0cdb-4cf7-b593-3036ab971598" title="Permalink to this equation">¶</a></span>\[\begin{align}
+\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-fa8a861c-fcb8-4d0b-ab48-b9b40a762d48">
+<span class="eqno">(3)<a class="headerlink" href="#equation-fa8a861c-fcb8-4d0b-ab48-b9b40a762d48" title="Permalink to this equation">¶</a></span>\[\begin{align}
     v_{1} &amp;= \frac{1}{2}(x-\frac{1}{x}) \\
     v_{4} &amp;= \frac{1}{2}(x+\frac{1}{x})
   \end{align}\]</div>
 <p>$$
 である。</p>
-<p>$v_{1}$, $1$, $v_{4}$ はピタゴラスの三数であり、${v_{1}}^2 + 1^2 = {v_{4}}^2$が成り立つ。</p>
+<p><span class="math notranslate nohighlight">\(v_{1}\)</span>, <span class="math notranslate nohighlight">\(1\)</span>, <span class="math notranslate nohighlight">\(v_{4}\)</span> はピタゴラスの三数であり、<span class="math notranslate nohighlight">\({v_{1}}^2 + 1^2 = {v_{4}}^2\)</span>が成り立つ。</p>
 <ul class="simple">
 <li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Pythagorean_triple">Pythagorean triple - Wikipedia</a></p></li>
 </ul>
-<p>課題: メソポタミア人は、$x$ の逆数 $\frac{1}{x}$ も同時に求めたかったのだが、何故か?</p>
+<p>課題: メソポタミア人は、<span class="math notranslate nohighlight">\(x\)</span> の逆数 <span class="math notranslate nohighlight">\(\frac{1}{x}\)</span> も同時に求めたかったのだが、何故か?</p>
 </div>
 
     <script type="text/x-thebe-config">

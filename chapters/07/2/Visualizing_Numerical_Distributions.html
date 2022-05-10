@@ -49,6 +49,8 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../../../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="canonical" href="https://inferentialthinking.org/chapters/07/2/Visualizing_Numerical_Distributions.html" />
     <link rel="shortcut icon" href="../../../_static/favicon.png"/>
     <link rel="index" title="Index" href="../../../genindex.html" />
@@ -1422,19 +1424,22 @@ const thebe_selector_output = ".output, .cell_output"
 <li><p>The <strong>area</strong> of each bar is proportional to the number of entries in the bin.</p></li>
 </ol>
 <p>Property 2 is the key to drawing a histogram, and is usually achieved as follows:</p>
-<p>$$
+<div class="math notranslate nohighlight">
+\[
 \mbox{area of bar} ~=~ \mbox{percent of entries in bin}
-$$</p>
+\]</div>
 <p>Since areas represent percents, heights represent something other than percents. The numerical calculation of the heights just uses the fact that the bar is a rectangle:</p>
-<p>$$
+<div class="math notranslate nohighlight">
+\[
 \mbox{area of bar} = \mbox{height of bar} \times \mbox{width of bin}
-$$</p>
+\]</div>
 <p>and so</p>
-<p>$$
-\mbox{height of bar} ~=~
+<div class="math notranslate nohighlight">
+\[
+\mbox{height of bar} ~=~ 
 \frac{\mbox{area of bar}}{\mbox{width of bin}} ~=~
 \frac{\mbox{percent of entries in bin}}{\mbox{width of bin}}
-$$</p>
+\]</div>
 <p>The units of height are “percent per unit on the horizontal axis.” The height is the percent in the bin relative to the width of the bin. So it is called <em>density</em> or <em>crowdedness</em>.</p>
 <p>When drawn using this method, the histogram is said to be drawn on the <em>density scale</em>. On this scale:</p>
 <ul class="simple">
@@ -1485,13 +1490,15 @@ $$</p>
 <p>... (15 rows omitted)</p></div></div>
 </div>
 <p>The [300, 400) bin contains 68 movies. That’s 34% of all the movies:</p>
-<p>$$
+<div class="math notranslate nohighlight">
+\[
 \mbox{Percent} = \frac{68}{200} \cdot 100 = 34
-$$</p>
-<p>The width of the [300, 400) bin is $400 - 300 = 100$. So</p>
-<p>$$
+\]</div>
+<p>The width of the [300, 400) bin is <span class="math notranslate nohighlight">\(400 - 300 = 100\)</span>. So</p>
+<div class="math notranslate nohighlight">
+\[
 \mbox{Height} = \frac{34}{100} = 0.34
-$$</p>
+\]</div>
 <p><strong>Units:</strong> The height of the bar is 34% divided by 100 million dollars, and so the height is 0.34% per million dollars.</p>
 <p>The height of bar is <strong>not</strong> the percent of entries in the bin. It is the percent of entries in the bin relative to the amount of space in the bin. That is why the height measures crowdedness or density. The vertical axis is said to be on the density scale.</p>
 </div>

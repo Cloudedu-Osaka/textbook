@@ -49,6 +49,8 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../../../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="canonical" href="https://inferentialthinking.org/chapters/05/2/Ranges.html" />
     <link rel="shortcut icon" href="../../../_static/favicon.png"/>
     <link rel="index" title="Index" href="../../../genindex.html" />
@@ -950,7 +952,10 @@ const thebe_selector_output = ".output, .cell_output"
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#example-leibniz-s-formula-for-pi">
-   5.2.1. Example: Leibniz’s formula for $\pi$
+   5.2.1. Example: Leibniz’s formula for
+   <span class="math notranslate nohighlight">
+    \(\pi\)
+   </span>
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -980,7 +985,10 @@ const thebe_selector_output = ".output, .cell_output"
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#example-leibniz-s-formula-for-pi">
-   5.2.1. Example: Leibniz’s formula for $\pi$
+   5.2.1. Example: Leibniz’s formula for
+   <span class="math notranslate nohighlight">
+    \(\pi\)
+   </span>
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -1067,14 +1075,17 @@ Ranges are useful in a surprisingly large number of situations, so it’s worthw
 </div>
 </div>
 <div class="section" id="example-leibniz-s-formula-for-pi">
-<h2><span class="section-number">5.2.1. </span>Example: Leibniz’s formula for $\pi$<a class="headerlink" href="#example-leibniz-s-formula-for-pi" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">5.2.1. </span>Example: Leibniz’s formula for <span class="math notranslate nohighlight">\(\pi\)</span><a class="headerlink" href="#example-leibniz-s-formula-for-pi" title="Permalink to this headline">¶</a></h2>
 <p>The great German mathematician and philosopher <a class="reference external" href="https://en.wikipedia.org/wiki/Gottfried_Wilhelm_Leibniz">Gottfried Wilhelm Leibniz</a>
-(1646 - 1716) discovered a wonderful formula for $\pi$ as an infinite sum of simple fractions. The formula is</p>
-<p>$$\pi = 4 \cdot \left(1 - \frac{1}{3} + \frac{1}{5} - \frac{1}{7} + \frac{1}{9} - \frac{1}{11} + \dots\right)$$</p>
-<p>Though some math is needed to establish this, we can use arrays to convince ourselves that the formula works. Let’s calculate the first 5000 terms of Leibniz’s infinite sum and see if it is close to $\pi$.</p>
-<p>$$4 \cdot \left(1 - \frac{1}{3} + \frac{1}{5} - \frac{1}{7} + \frac{1}{9} - \frac{1}{11} + \dots - \frac{1}{9999} \right)$$</p>
+(1646 - 1716) discovered a wonderful formula for <span class="math notranslate nohighlight">\(\pi\)</span> as an infinite sum of simple fractions. The formula is</p>
+<div class="math notranslate nohighlight">
+\[\pi = 4 \cdot \left(1 - \frac{1}{3} + \frac{1}{5} - \frac{1}{7} + \frac{1}{9} - \frac{1}{11} + \dots\right)\]</div>
+<p>Though some math is needed to establish this, we can use arrays to convince ourselves that the formula works. Let’s calculate the first 5000 terms of Leibniz’s infinite sum and see if it is close to <span class="math notranslate nohighlight">\(\pi\)</span>.</p>
+<div class="math notranslate nohighlight">
+\[4 \cdot \left(1 - \frac{1}{3} + \frac{1}{5} - \frac{1}{7} + \frac{1}{9} - \frac{1}{11} + \dots - \frac{1}{9999} \right)\]</div>
 <p>We will calculate this finite sum by adding all the positive terms first and then subtracting the sum of all the negative terms <a class="reference external" href="#footnotes">[1]</a>:</p>
-<p>$$4 \cdot \left( \left(1 + \frac{1}{5} + \frac{1}{9} + \dots + \frac{1}{9997} \right) - \left(\frac{1}{3} + \frac{1}{7} + \frac{1}{11} + \dots + \frac{1}{9999} \right) \right)$$</p>
+<div class="math notranslate nohighlight">
+\[4 \cdot \left( \left(1 + \frac{1}{5} + \frac{1}{9} + \dots + \frac{1}{9997} \right) - \left(\frac{1}{3} + \frac{1}{7} + \frac{1}{11} + \dots + \frac{1}{9999} \right) \right)\]</div>
 <p>The positive terms in the sum have 1, 5, 9, and so on in the denominators. The array <code class="docutils literal notranslate"><span class="pre">by_four_to_20</span></code> contains these numbers up to 17:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1089,7 +1100,7 @@ Ranges are useful in a surprisingly large number of situations, so it’s worthw
 </div>
 </div>
 </div>
-<p>To get an accurate approximation to $\pi$, we’ll use the much longer array <code class="docutils literal notranslate"><span class="pre">positive_term_denominators</span></code>.</p>
+<p>To get an accurate approximation to <span class="math notranslate nohighlight">\(\pi\)</span>, we’ll use the much longer array <code class="docutils literal notranslate"><span class="pre">positive_term_denominators</span></code>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">positive_term_denominators</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">10000</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
@@ -1132,12 +1143,12 @@ Ranges are useful in a surprisingly large number of situations, so it’s worthw
 </div>
 </div>
 </div>
-<p>This is very close to $\pi = 3.14159\dots$. Leibniz’s formula is looking good!</p>
+<p>This is very close to <span class="math notranslate nohighlight">\(\pi = 3.14159\dots\)</span>. Leibniz’s formula is looking good!</p>
 <p><a id='footnotes'></a></p>
 </div>
 <div class="section" id="footnotes">
 <h2><span class="section-number">5.2.2. </span>Footnotes<a class="headerlink" href="#footnotes" title="Permalink to this headline">¶</a></h2>
-<p>[1] Surprisingly, when we add  <em>infinitely</em> many positive and negative fractions, the order can matter! But our approximation to $\pi$ uses only a large finite number of fractions, so it’s okay to add the terms in any convenient order.</p>
+<p>[1] Surprisingly, when we add  <em>infinitely</em> many positive and negative fractions, the order can matter! But our approximation to <span class="math notranslate nohighlight">\(\pi\)</span> uses only a large finite number of fractions, so it’s okay to add the terms in any convenient order.</p>
 </div>
 </div>
 

@@ -49,6 +49,8 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../../../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="canonical" href="https://inferentialthinking.org/chapters/14/2/Variability.html" />
     <link rel="shortcut icon" href="../../../_static/favicon.png"/>
     <link rel="index" title="Index" href="../../../genindex.html" />
@@ -1426,9 +1428,9 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 <div class="section" id="first-main-reason-for-measuring-spread-by-the-sd">
 <h2><span class="section-number">14.2.4. </span>First main reason for measuring spread by the SD<a class="headerlink" href="#first-main-reason-for-measuring-spread-by-the-sd" title="Permalink to this headline">¶</a></h2>
-<p><strong>Informal statement.</strong> In all numerical data sets, the bulk of the entries are within the range “average $\pm$ a few SDs”.</p>
+<p><strong>Informal statement.</strong> In all numerical data sets, the bulk of the entries are within the range “average <span class="math notranslate nohighlight">\(\pm\)</span> a few SDs”.</p>
 <p>For now, resist the desire to know exactly what fuzzy words like “bulk” and “few” mean. We wil make them precise later in this section. Let’s just examine the statement in the context of some more examples.</p>
-<p>We have already seen that <em>all</em> of the heights of the NBA players were in the range “average $\pm$ 3 SDs”.</p>
+<p>We have already seen that <em>all</em> of the heights of the NBA players were in the range “average <span class="math notranslate nohighlight">\(\pm\)</span> 3 SDs”.</p>
 <p>What about the ages? Here is a histogram of the distribution, along with the mean and SD of the ages.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1503,26 +1505,27 @@ const thebe_selector_output = ".output, .cell_output"
 <div class="section" id="chebychev-s-bounds">
 <h2><span class="section-number">14.2.5. </span>Chebychev’s Bounds<a class="headerlink" href="#chebychev-s-bounds" title="Permalink to this headline">¶</a></h2>
 <p>The Russian mathematician <a class="reference external" href="https://en.wikipedia.org/wiki/Pafnuty_Chebyshev">Pafnuty Chebychev</a> (1821-1894) proved a result that makes our rough statements precise.</p>
-<p><strong>For all lists, and all numbers $z$, the proportion of entries that are in the range
-“average $\pm z$ SDs” is at least $1 - \frac{1}{z^2}$.</strong></p>
+<p><strong>For all lists, and all numbers <span class="math notranslate nohighlight">\(z\)</span>, the proportion of entries that are in the range
+“average <span class="math notranslate nohighlight">\(\pm z\)</span> SDs” is at least <span class="math notranslate nohighlight">\(1 - \frac{1}{z^2}\)</span>.</strong></p>
 <p>It is important to note that the result gives a bound, not an exact value or an approximation.</p>
 <p>What makes the result powerful is that it is true for all lists – all distributions, no matter how irregular.</p>
 <p>Specifically, it says that for every list:</p>
 <ul class="simple">
-<li><p>the proportion in the range “average $\pm$ 2 SDs” is <strong>at least 1 - 1/4 = 0.75</strong></p></li>
-<li><p>the proportion in the range “average $\pm$ 3 SDs” is <strong>at least 1 - 1/9 $\approx$ 0.89</strong></p></li>
-<li><p>the proportion in the range “average $\pm$ 4.5 SDs” is <strong>at least 1 - 1/$\boldsymbol{4.5^2}$ $\approx$ 0.95</strong></p></li>
+<li><p>the proportion in the range “average <span class="math notranslate nohighlight">\(\pm\)</span> 2 SDs” is <strong>at least 1 - 1/4 = 0.75</strong></p></li>
+<li><p>the proportion in the range “average <span class="math notranslate nohighlight">\(\pm\)</span> 3 SDs” is <strong>at least 1 - 1/9 <span class="math notranslate nohighlight">\(\approx\)</span> 0.89</strong></p></li>
+<li><p>the proportion in the range “average <span class="math notranslate nohighlight">\(\pm\)</span> 4.5 SDs” is <strong>at least 1 - 1/<span class="math notranslate nohighlight">\(\boldsymbol{4.5^2}\)</span> <span class="math notranslate nohighlight">\(\approx\)</span> 0.95</strong></p></li>
 </ul>
-<p>As we noted above, Chebychev’s result gives a lower bound, not an exact answer or an approximation. For example, the percent of entries in the range “average $\pm ~2$ SDs” might be quite a bit larger than 75%. But it cannot be smaller.</p>
+<p>As we noted above, Chebychev’s result gives a lower bound, not an exact answer or an approximation. For example, the percent of entries in the range “average <span class="math notranslate nohighlight">\(\pm ~2\)</span> SDs” might be quite a bit larger than 75%. But it cannot be smaller.</p>
 </div>
 <div class="section" id="standard-units">
 <h2><span class="section-number">14.2.6. </span>Standard units<a class="headerlink" href="#standard-units" title="Permalink to this headline">¶</a></h2>
-<p>In the calculations above, the quantity $z$ measures <em>standard units</em>, the number of standard deviations above average.</p>
+<p>In the calculations above, the quantity <span class="math notranslate nohighlight">\(z\)</span> measures <em>standard units</em>, the number of standard deviations above average.</p>
 <p>Some values of standard units are negative, corresponding to original values that are below average. Other values of standard units are positive. But no matter what the distribution of the list looks like, Chebychev’s bounds imply that standard units will typically be in the (-5, 5) range.</p>
 <p>To convert a value to standard units, first find how far it is from average, and then compare that deviation with the standard deviation.</p>
-<p>$$
+<div class="math notranslate nohighlight">
+\[
 z ~=~ \frac{\mbox{value }-\mbox{ average}}{\mbox{SD}}
-$$</p>
+\]</div>
 <p>As we will see, standard units are frequently used in data analysis. So it is useful to define a function that converts an array of numbers to standard units.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1640,7 +1643,7 @@ $$</p>
 <p>... (13815 rows omitted)</p></div></div>
 </div>
 <p>What this shows is that it is possible for data to be many SDs above average (and for flights to be delayed by almost 10 hours). The highest value of delay is more than 14 in standard units.</p>
-<p>However, the proportion of these extreme values is small, and Chebychev’s bounds still hold true. For example, let us calculate the percent of delay times that are in the range “average $\pm$ 3 SDs”. This is the same as the percent of times for which the standard units are in the range (-3, 3). That is about 98%, as computed below, consistent with Chebychev’s bound of “at least 89%”.</p>
+<p>However, the proportion of these extreme values is small, and Chebychev’s bounds still hold true. For example, let us calculate the percent of delay times that are in the range “average <span class="math notranslate nohighlight">\(\pm\)</span> 3 SDs”. This is the same as the percent of times for which the standard units are in the range (-3, 3). That is about 98%, as computed below, consistent with Chebychev’s bound of “at least 89%”.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">within_3_sd</span> <span class="o">=</span> <span class="n">united</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="s1">&#39;Delay (Standard Units)&#39;</span><span class="p">,</span> <span class="n">are</span><span class="o">.</span><span class="n">between</span><span class="p">(</span><span class="o">-</span><span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span>
@@ -1654,7 +1657,7 @@ $$</p>
 </div>
 </div>
 </div>
-<p>The histogram of delay times is shown below, with the horizontal axis in standard units. By the table above, the right hand tail continues all the way out to $z=14.27$ standard units (580 minutes). The area of the histogram outside the range $z=-3$ to $z=3$ is about 2%, put together in tiny little bits that are mostly invisible in the histogram.</p>
+<p>The histogram of delay times is shown below, with the horizontal axis in standard units. By the table above, the right hand tail continues all the way out to <span class="math notranslate nohighlight">\(z=14.27\)</span> standard units (580 minutes). The area of the histogram outside the range <span class="math notranslate nohighlight">\(z=-3\)</span> to <span class="math notranslate nohighlight">\(z=3\)</span> is about 2%, put together in tiny little bits that are mostly invisible in the histogram.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">united</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="s1">&#39;Delay (Standard Units)&#39;</span><span class="p">,</span> <span class="n">bins</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="o">-</span><span class="mi">5</span><span class="p">,</span> <span class="mf">15.5</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">))</span>
