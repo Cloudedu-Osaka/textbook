@@ -964,26 +964,33 @@ const thebe_selector_output = ".output, .cell_output"
               <div>
                 
   <div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/Users/manabu/.pyenv/versions/anaconda3-2021.11/envs/jb/lib/python3.9/site-packages/IPython/core/magics/logging.py:130: UserWarning: Couldn&#39;t start log: Log file is already active: ./20220510.log
+  warn(&quot;Couldn&#39;t start log: %s&quot; % sys.exc_info()[1])
+</pre></div>
+</div>
+</div>
 </div>
 <div class="tex2jax_ignore mathjax_ignore section" id="plimpton-322">
 <h1>Plimpton 322<a class="headerlink" href="#plimpton-322" title="Permalink to this headline">¶</a></h1>
 <ul class="simple">
 <li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Plimpton_322">Plimpton 322 - Wikipedia</a></p></li>
 </ul>
-<p>問: 次の方程式を満たす <span class="math notranslate nohighlight">\(x\)</span> を求めよ:
-$<span class="math notranslate nohighlight">\(
+<p>問: 次の方程式を満たす <span class="math notranslate nohighlight">\(x\)</span> を求めよ:</p>
+<div class="math notranslate nohighlight">
+\[
     x - \frac{1}{x} = 1.5
-\)</span>$</p>
+\]</div>
 <hr class="docutils" />
 <p>解: <span class="math notranslate nohighlight">\(x = 2\)</span></p>
-<p><span class="math notranslate nohighlight">\(x - \frac{1}{x} = c\)</span> としたとき、<span class="math notranslate nohighlight">\(v_{1} = \frac{c}{2}\)</span>、<span class="math notranslate nohighlight">\(v_{3} = 1 + {v_{1}}^2 = 1 + (\frac{c}{2})^2\)</span>、<span class="math notranslate nohighlight">\(v_{4} = \sqrt{v_{3}} = \sqrt{1 + (\frac{c}{2})^2}\)</span> と置くと、次の連立方程式が成り立つ:
-$$</p>
-<div class="amsmath math notranslate nohighlight" id="equation-f723f491-7c81-4e9e-9453-1ca4578f3f12">
-<span class="eqno">(1)<a class="headerlink" href="#equation-f723f491-7c81-4e9e-9453-1ca4578f3f12" title="Permalink to this equation">¶</a></span>\[\begin{align}
+<p><span class="math notranslate nohighlight">\(x - \frac{1}{x} = c\)</span> としたとき、<span class="math notranslate nohighlight">\(v_{1} = \frac{c}{2}\)</span>、<span class="math notranslate nohighlight">\(v_{3} = 1 + {v_{1}}^2 = 1 + (\frac{c}{2})^2\)</span>、<span class="math notranslate nohighlight">\(v_{4} = \sqrt{v_{3}} = \sqrt{1 + (\frac{c}{2})^2}\)</span> と置くと、次の連立方程式が成り立つ:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+  \begin{align}
     x &amp;= v_{4} + v_{1} \\
     \frac{1}{x} &amp;= v_{4} - v_{1}
-  \end{align}\]</div>
-<p>$$</p>
+  \end{align}
+\end{split}\]</div>
 <p><span class="math notranslate nohighlight">\(c = 1.5\)</span> なので、<span class="math notranslate nohighlight">\(v_{3} = 1 + (\frac{1.5}{2})^2 = 1.5625\)</span>、<span class="math notranslate nohighlight">\(v_{4} = \sqrt{v_{3}} = 1.25\)</span>、<span class="math notranslate nohighlight">\(v_{1} = \frac{1.5}{2} = 0.75\)</span> である。</p>
 <p><span class="math notranslate nohighlight">\(x = v_{4} + v_{1}\)</span> なので、<span class="math notranslate nohighlight">\(x = 1.25 + 0.752\)</span> である。このとき、等式 <span class="math notranslate nohighlight">\(\frac{1}{x} = v_{4} - v_{1}\)</span> についても <span class="math notranslate nohighlight">\(\frac{1}{x} = 1.25 - 0.75 = 0.5 = \frac{1}{2}\)</span> のように成り立っている。</p>
 <p><span class="math notranslate nohighlight">\(v_{1} = 1+\frac{c}{2}\)</span></p>
@@ -1039,24 +1046,23 @@ $$</p>
 <li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Rational_number">Rational number - Wikipedia</a></p></li>
 <li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Decimal_representation#Finite_decimal_representations">Decimal representation - Wikipedia</a></p></li>
 </ul>
-<p>連立方程式
-$$</p>
-<div class="amsmath math notranslate nohighlight" id="equation-c558c7d3-17bd-4a0b-9c42-f9fcddfd4a86">
-<span class="eqno">(2)<a class="headerlink" href="#equation-c558c7d3-17bd-4a0b-9c42-f9fcddfd4a86" title="Permalink to this equation">¶</a></span>\[\begin{align}
+<p>連立方程式</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+  \begin{align}
     x &amp;= v_{4} + v_{1} \\
     \frac{1}{x} &amp;= v_{4} - v_{1}
-  \end{align}\]</div>
+  \end{align}
+\end{split}\]</div>
+<p>を<span class="math notranslate nohighlight">\(v_{1}\)</span>, <span class="math notranslate nohighlight">\(v_{4}\)</span> について解くと、</p>
 <div class="math notranslate nohighlight">
-\[
-を$v_{1}$, $v_{4}$ について解くと、
-\]</div>
-<div class="amsmath math notranslate nohighlight" id="equation-0d249692-f642-4753-b4b5-2d1ea2ab05e9">
-<span class="eqno">(3)<a class="headerlink" href="#equation-0d249692-f642-4753-b4b5-2d1ea2ab05e9" title="Permalink to this equation">¶</a></span>\[\begin{align}
+\[\begin{split}
+  \begin{align}
     v_{1} &amp;= \frac{1}{2}(x-\frac{1}{x}) \\
     v_{4} &amp;= \frac{1}{2}(x+\frac{1}{x})
-  \end{align}\]</div>
-<p>$$
-である。</p>
+  \end{align}
+\end{split}\]</div>
+<p>である。</p>
 <p><span class="math notranslate nohighlight">\(v_{1}\)</span>, <span class="math notranslate nohighlight">\(1\)</span>, <span class="math notranslate nohighlight">\(v_{4}\)</span> はピタゴラスの三数であり、<span class="math notranslate nohighlight">\({v_{1}}^2 + 1^2 = {v_{4}}^2\)</span>が成り立つ。</p>
 <ul class="simple">
 <li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Pythagorean_triple">Pythagorean triple - Wikipedia</a></p></li>
