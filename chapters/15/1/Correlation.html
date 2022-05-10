@@ -49,8 +49,6 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../../../_static/sphinx-thebe.js"></script>
-    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
-    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="canonical" href="https://inferentialthinking.org/chapters/15/1/Correlation.html" />
     <link rel="shortcut icon" href="../../../_static/favicon.png"/>
     <link rel="index" title="Index" href="../../../genindex.html" />
@@ -104,6 +102,18 @@ const thebe_selector_output = ".output, .cell_output"
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
         <p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  2022/05/10
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../00/4/plimpton322_1.html">
+   Plimpton 322 (1)
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   2022/04/19
  </span>
@@ -471,27 +481,27 @@ const thebe_selector_output = ".output, .cell_output"
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../../08/1/Applying_a_Function_to_a_Column.html">
-     8.1. Applying Functions to Columns
+     8.5. Applying Functions to Columns
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../08/2/Classifying_by_One_Variable.html">
-     8.2. Classifying by One Variable
+     8.6. Classifying by One Variable
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../08/3/Cross-Classifying_by_More_than_One_Variable.html">
-     8.3. Cross-Classifying
+     8.7. Cross-Classifying
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../08/4/Joining_Tables_by_Columns.html">
-     8.4. Joining Tables by Columns
+     8.8. Joining Tables by Columns
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../08/5/Bike_Sharing_in_the_Bay_Area.html">
-     8.5. Bike Sharing in the Bay Area
+     8.9. Bike Sharing in the Bay Area
     </a>
    </li>
   </ul>
@@ -945,18 +955,12 @@ const thebe_selector_output = ".output, .cell_output"
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#calculating-r">
-   15.1.2. Calculating
-   <span class="math notranslate nohighlight">
-    \(r\)
-   </span>
+   15.1.2. Calculating $r$
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#properties-of-r">
-   15.1.3. Properties of
-   <span class="math notranslate nohighlight">
-    \(r\)
-   </span>
+   15.1.3. Properties of $r$
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -1026,18 +1030,12 @@ const thebe_selector_output = ".output, .cell_output"
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#calculating-r">
-   15.1.2. Calculating
-   <span class="math notranslate nohighlight">
-    \(r\)
-   </span>
+   15.1.2. Calculating $r$
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#properties-of-r">
-   15.1.3. Properties of
-   <span class="math notranslate nohighlight">
-    \(r\)
-   </span>
+   15.1.3. Properties of $r$
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -1254,16 +1252,16 @@ const thebe_selector_output = ".output, .cell_output"
 <div class="section" id="the-correlation-coefficient">
 <h2><span class="section-number">15.1.1. </span>The correlation coefficient<a class="headerlink" href="#the-correlation-coefficient" title="Permalink to this headline">¶</a></h2>
 <p>The <em>correlation coefficient</em> measures the strength of the linear relationship between two variables. Graphically, it measures how clustered the scatter diagram is around a straight line.</p>
-<p>The term <em>correlation coefficient</em> isn’t easy to say, so it is usually shortened to <em>correlation</em> and denoted by <span class="math notranslate nohighlight">\(r\)</span>.</p>
-<p>Here are some mathematical facts about <span class="math notranslate nohighlight">\(r\)</span> that we will just observe by simulation.</p>
+<p>The term <em>correlation coefficient</em> isn’t easy to say, so it is usually shortened to <em>correlation</em> and denoted by $r$.</p>
+<p>Here are some mathematical facts about $r$ that we will just observe by simulation.</p>
 <ul class="simple">
-<li><p>The correlation coefficient <span class="math notranslate nohighlight">\(r\)</span> is a number between <span class="math notranslate nohighlight">\(-1\)</span> and 1.</p></li>
-<li><p><span class="math notranslate nohighlight">\(r\)</span> measures the extent to which the scatter plot clusters around a straight line.</p></li>
-<li><p><span class="math notranslate nohighlight">\(r = 1\)</span> if the scatter diagram is a perfect straight line sloping upwards, and <span class="math notranslate nohighlight">\(r = -1\)</span> if the scatter diagram is a perfect straight line sloping downwards.</p></li>
+<li><p>The correlation coefficient $r$ is a number between $-1$ and 1.</p></li>
+<li><p>$r$ measures the extent to which the scatter plot clusters around a straight line.</p></li>
+<li><p>$r = 1$ if the scatter diagram is a perfect straight line sloping upwards, and $r = -1$ if the scatter diagram is a perfect straight line sloping downwards.</p></li>
 </ul>
-<p>The function <code class="docutils literal notranslate"><span class="pre">r_scatter</span></code> takes a value of <span class="math notranslate nohighlight">\(r\)</span> as its argument and simulates a scatter plot with a correlation very close to <span class="math notranslate nohighlight">\(r\)</span>. Because of randomness in the simulation, the correlation is not expected to be exactly equal to <span class="math notranslate nohighlight">\(r\)</span>.</p>
-<p>Call <code class="docutils literal notranslate"><span class="pre">r_scatter</span></code> a few times, with different values of <span class="math notranslate nohighlight">\(r\)</span> as the argument, and see how the scatter plot changes.</p>
-<p>When <span class="math notranslate nohighlight">\(r=1\)</span> the scatter plot is perfectly linear and slopes upward. When <span class="math notranslate nohighlight">\(r=-1\)</span>, the scatter plot is perfectly linear and slopes downward. When <span class="math notranslate nohighlight">\(r=0\)</span>, the scatter plot is a formless cloud around the horizontal axis, and the variables are said to be <em>uncorrelated</em>.</p>
+<p>The function <code class="docutils literal notranslate"><span class="pre">r_scatter</span></code> takes a value of $r$ as its argument and simulates a scatter plot with a correlation very close to $r$. Because of randomness in the simulation, the correlation is not expected to be exactly equal to $r$.</p>
+<p>Call <code class="docutils literal notranslate"><span class="pre">r_scatter</span></code> a few times, with different values of $r$ as the argument, and see how the scatter plot changes.</p>
+<p>When $r=1$ the scatter plot is perfectly linear and slopes upward. When $r=-1$, the scatter plot is perfectly linear and slopes downward. When $r=0$, the scatter plot is a formless cloud around the horizontal axis, and the variables are said to be <em>uncorrelated</em>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">r_scatter</span><span class="p">(</span><span class="mf">0.9</span><span class="p">)</span>
@@ -1306,11 +1304,11 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <div class="section" id="calculating-r">
-<h2><span class="section-number">15.1.2. </span>Calculating <span class="math notranslate nohighlight">\(r\)</span><a class="headerlink" href="#calculating-r" title="Permalink to this headline">¶</a></h2>
-<p>The formula for <span class="math notranslate nohighlight">\(r\)</span> is not apparent from our observations so far. It has a mathematical basis that is outside the scope of this class. However, as you will see, the calculation is straightforward and helps us understand several of the properties of <span class="math notranslate nohighlight">\(r\)</span>.</p>
-<p><strong>Formula for <span class="math notranslate nohighlight">\(r\)</span></strong>:</p>
-<p><strong><span class="math notranslate nohighlight">\(r\)</span> is the average of the products of the two variables, when both variables are measured in standard units.</strong></p>
-<p>Here are the steps in the calculation. We will apply the steps to a simple table of values of <span class="math notranslate nohighlight">\(x\)</span> and <span class="math notranslate nohighlight">\(y\)</span>.</p>
+<h2><span class="section-number">15.1.2. </span>Calculating $r$<a class="headerlink" href="#calculating-r" title="Permalink to this headline">¶</a></h2>
+<p>The formula for $r$ is not apparent from our observations so far. It has a mathematical basis that is outside the scope of this class. However, as you will see, the calculation is straightforward and helps us understand several of the properties of $r$.</p>
+<p><strong>Formula for $r$</strong>:</p>
+<p><strong>$r$ is the average of the products of the two variables, when both variables are measured in standard units.</strong></p>
+<p>Here are the steps in the calculation. We will apply the steps to a simple table of values of $x$ and $y$.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
@@ -1352,7 +1350,7 @@ const thebe_selector_output = ".output, .cell_output"
     </tbody>
 </table></div></div>
 </div>
-<p>Based on the scatter diagram, we expect that <span class="math notranslate nohighlight">\(r\)</span> will be positive but not equal to 1.</p>
+<p>Based on the scatter diagram, we expect that $r$ will be positive but not equal to 1.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">t</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">s</span><span class="o">=</span><span class="mi">30</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">)</span>
@@ -1440,7 +1438,7 @@ const thebe_selector_output = ".output, .cell_output"
     </tbody>
 </table></div></div>
 </div>
-<p><strong>Step 3.</strong> <span class="math notranslate nohighlight">\(r\)</span> is the average of the products computed in Step 2.</p>
+<p><strong>Step 3.</strong> $r$ is the average of the products computed in Step 2.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># r is the average of the products of standard units</span>
@@ -1456,15 +1454,15 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 </div>
-<p>As expected, <span class="math notranslate nohighlight">\(r\)</span> is positive but not equal to 1.</p>
+<p>As expected, $r$ is positive but not equal to 1.</p>
 </div>
 <div class="section" id="properties-of-r">
-<h2><span class="section-number">15.1.3. </span>Properties of <span class="math notranslate nohighlight">\(r\)</span><a class="headerlink" href="#properties-of-r" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">15.1.3. </span>Properties of $r$<a class="headerlink" href="#properties-of-r" title="Permalink to this headline">¶</a></h2>
 <p>The calculation shows that:</p>
 <ul class="simple">
-<li><p><span class="math notranslate nohighlight">\(r\)</span> is a pure number. It has no units. This is because <span class="math notranslate nohighlight">\(r\)</span> is based on standard units.</p></li>
-<li><p><span class="math notranslate nohighlight">\(r\)</span> is unaffected by changing the units on either axis. This too is because <span class="math notranslate nohighlight">\(r\)</span> is based on standard units.</p></li>
-<li><p><span class="math notranslate nohighlight">\(r\)</span> is unaffected by switching the axes. Algebraically, this is because the product of standard units does not depend on which variable is called <span class="math notranslate nohighlight">\(x\)</span> and which <span class="math notranslate nohighlight">\(y\)</span>. Geometrically, switching axes reflects the scatter plot about the line <span class="math notranslate nohighlight">\(y=x\)</span>, but does not change the amount of clustering nor the sign of the association.</p></li>
+<li><p>$r$ is a pure number. It has no units. This is because $r$ is based on standard units.</p></li>
+<li><p>$r$ is unaffected by changing the units on either axis. This too is because $r$ is based on standard units.</p></li>
+<li><p>$r$ is unaffected by switching the axes. Algebraically, this is because the product of standard units does not depend on which variable is called $x$ and which $y$. Geometrically, switching axes reflects the scatter plot about the line $y=x$, but does not change the amount of clustering nor the sign of the association.</p></li>
 </ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1479,7 +1477,7 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 <div class="section" id="the-correlation-function">
 <h2><span class="section-number">15.1.4. </span>The <code class="docutils literal notranslate"><span class="pre">correlation</span></code> function<a class="headerlink" href="#the-correlation-function" title="Permalink to this headline">¶</a></h2>
-<p>We are going to be calculating correlations repeatedly, so it will help to define a function that computes it by performing all the steps described above. Let’s define a function <code class="docutils literal notranslate"><span class="pre">correlation</span></code> that takes a table and the labels of two columns in the table. The function returns <span class="math notranslate nohighlight">\(r\)</span>, the mean of the products of those column values in standard units.</p>
+<p>We are going to be calculating correlations repeatedly, so it will help to define a function that computes it by performing all the steps described above. Let’s define a function <code class="docutils literal notranslate"><span class="pre">correlation</span></code> that takes a table and the labels of two columns in the table. The function returns $r$, the mean of the products of those column values in standard units.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">correlation</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
@@ -1488,7 +1486,7 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 </div>
-<p>Let’s call the function on the <code class="docutils literal notranslate"><span class="pre">x</span></code> and <code class="docutils literal notranslate"><span class="pre">y</span></code> columns of <code class="docutils literal notranslate"><span class="pre">t</span></code>. The function returns the same answer to the correlation between <span class="math notranslate nohighlight">\(x\)</span> and <span class="math notranslate nohighlight">\(y\)</span> as we got by direct application of the formula for <span class="math notranslate nohighlight">\(r\)</span>.</p>
+<p>Let’s call the function on the <code class="docutils literal notranslate"><span class="pre">x</span></code> and <code class="docutils literal notranslate"><span class="pre">y</span></code> columns of <code class="docutils literal notranslate"><span class="pre">t</span></code>. The function returns the same answer to the correlation between $x$ and $y$ as we got by direct application of the formula for $r$.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">correlation</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="s1">&#39;x&#39;</span><span class="p">,</span> <span class="s1">&#39;y&#39;</span><span class="p">)</span>
@@ -1544,7 +1542,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li><p>There is a negative association between price and efficiency, whereas the association between price and acceleration is positive.</p></li>
 <li><p>The linear relation between price and acceleration is a little weaker (correlation about 0.5) than between price and mileage (correlation about -0.67).</p></li>
 </ul>
-<p>Correlation is a simple and powerful concept, but it is sometimes misused. Before using <span class="math notranslate nohighlight">\(r\)</span>, it is important to be aware of what correlation does and does not measure.</p>
+<p>Correlation is a simple and powerful concept, but it is sometimes misused. Before using $r$, it is important to be aware of what correlation does and does not measure.</p>
 </div>
 <div class="section" id="association-is-not-causation">
 <h2><span class="section-number">15.1.5. </span>Association is not Causation<a class="headerlink" href="#association-is-not-causation" title="Permalink to this headline">¶</a></h2>
@@ -1552,7 +1550,7 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 <div class="section" id="correlation-measures-linear-association">
 <h2><span class="section-number">15.1.6. </span>Correlation Measures <em>Linear</em> Association<a class="headerlink" href="#correlation-measures-linear-association" title="Permalink to this headline">¶</a></h2>
-<p>Correlation measures only one kind of association – linear. Variables that have strong non-linear association might have very low correlation. Here is an example of variables that have a perfect quadratic relation <span class="math notranslate nohighlight">\(y = x^2\)</span> but have correlation equal to 0.</p>
+<p>Correlation measures only one kind of association – linear. Variables that have strong non-linear association might have very low correlation. Here is an example of variables that have a perfect quadratic relation $y = x^2$ but have correlation equal to 0.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">new_x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="o">-</span><span class="mi">4</span><span class="p">,</span> <span class="mf">4.1</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">)</span>
@@ -1583,7 +1581,7 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 <div class="section" id="correlation-is-affected-by-outliers">
 <h2><span class="section-number">15.1.7. </span>Correlation is Affected by Outliers<a class="headerlink" href="#correlation-is-affected-by-outliers" title="Permalink to this headline">¶</a></h2>
-<p>Outliers can have a big effect on correlation. Here is an example where a scatter plot for which <span class="math notranslate nohighlight">\(r\)</span> is equal to 1 is turned into a plot for which <span class="math notranslate nohighlight">\(r\)</span> is equal to 0, by the addition of just one outlying point.</p>
+<p>Outliers can have a big effect on correlation. Here is an example where a scatter plot for which $r$ is equal to 1 is turned into a plot for which $r$ is equal to 0, by the addition of just one outlying point.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">line</span> <span class="o">=</span> <span class="n">Table</span><span class="p">()</span><span class="o">.</span><span class="n">with_columns</span><span class="p">(</span>

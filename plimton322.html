@@ -103,6 +103,18 @@ const thebe_selector_output = ".output, .cell_output"
     <div class="bd-toc-item active">
         <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
+  2022/05/10
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="chapters/00/4/plimpton322_1.html">
+   Plimpton 322 (1)
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
   2022/04/19
  </span>
 </p>
@@ -1786,17 +1798,18 @@ Name: ÍB.SI8 of the width, dtype: object
 </div>
 <div class="section" id="plimpton-322">
 <h2>Plimpton 322の用途<a class="headerlink" href="#plimpton-322" title="Permalink to this headline">¶</a></h2>
-<p>問: 次の等式を満たす <span class="math notranslate nohighlight">\(x\)</span> を求めよ:
-$<span class="math notranslate nohighlight">\(x - \frac{1}{x} = 1.5\)</span>$</p>
-<p>解: <span class="math notranslate nohighlight">\(x = 2\)</span></p>
-<p><span class="math notranslate nohighlight">\(x - \frac{1}{x} = c\)</span> としたとき、<span class="math notranslate nohighlight">\(v_{1} = \frac{c}{2}\)</span>、<span class="math notranslate nohighlight">\(v_{3} = 1 + {v_{1}}^2 = 1 + (\frac{c}{2})^2\)</span>、<span class="math notranslate nohighlight">\(v_{4} = \sqrt{v_{3}} = \sqrt{1 + (\frac{c}{2})^2}\)</span> と置くと、次の公式が成り立つ:
-\begin{eqnarray}
-x &amp;=&amp; v_{4} + v_{1} \
+<p>問: 次の等式を満たす $x$ を求めよ:
+$$x - \frac{1}{x} = 1.5$$</p>
+<p>解: $x = 2$</p>
+<p>$x - \frac{1}{x} = c$ としたとき、$v_{1} = \frac{c}{2}$、$v_{3} = 1 + {v_{1}}^2 = 1 + (\frac{c}{2})^2$、$v_{4} = \sqrt{v_{3}} = \sqrt{1 + (\frac{c}{2})^2}$ と置くと、次の公式が成り立つ:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-5b56d08c-001a-4a3c-9681-c332219b4cf1">
+<span class="eqno">()<a class="headerlink" href="#equation-5b56d08c-001a-4a3c-9681-c332219b4cf1" title="Permalink to this equation">¶</a></span>\[\begin{eqnarray}
+x &amp;=&amp; v_{4} + v_{1} \\
 \frac{1}{x} &amp;=&amp; v_{4} - v_{1}
-\end{eqnarray}</p>
-<p><span class="math notranslate nohighlight">\(v_{3} = 1 + (\frac{1.5}{2})^2 = 1.5625\)</span>、<span class="math notranslate nohighlight">\(v_{4} = \sqrt{v_{3}} = 1.25\)</span>、<span class="math notranslate nohighlight">\(v_{1} = \frac{1.5}{2} = 0.75\)</span> なので、<span class="math notranslate nohighlight">\(x = v_{4} + v_{1} = 2\)</span> が成り立つ。なお、このとき <span class="math notranslate nohighlight">\(\frac{1}{x} = v_{4} - v_{1} = 0.5\)</span> も成り立っている。</p>
-<p>なお、<span class="math notranslate nohighlight">\(v_{3}\)</span> はPlimpton 322の1カラム目、<span class="math notranslate nohighlight">\(v_{1}\)</span> は2カラム目、<span class="math notranslate nohighlight">\(v_{4}\)</span> は3カラム目に対応する。</p>
-<p><span class="math notranslate nohighlight">\(v_{1} = \frac{1}{2}(x-\frac{1}{x})\)</span>, <span class="math notranslate nohighlight">\(1\)</span>, <span class="math notranslate nohighlight">\(v_{4} = \frac{1}{2}(x+\frac{1}{x})\)</span> はピタゴラスの三数である。</p>
+\end{eqnarray}\]</div>
+<p>$v_{3} = 1 + (\frac{1.5}{2})^2 = 1.5625$、$v_{4} = \sqrt{v_{3}} = 1.25$、$v_{1} = \frac{1.5}{2} = 0.75$ なので、$x = v_{4} + v_{1} = 2$ が成り立つ。なお、このとき $\frac{1}{x} = v_{4} - v_{1} = 0.5$ も成り立っている。</p>
+<p>なお、$v_{3}$ はPlimpton 322の1カラム目、$v_{1}$ は2カラム目、$v_{4}$ は3カラム目に対応する。</p>
+<p>$v_{1} = \frac{1}{2}(x-\frac{1}{x})$, $1$, $v_{4} = \frac{1}{2}(x+\frac{1}{x})$ はピタゴラスの三数である。</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># v1</span>
@@ -2093,7 +2106,7 @@ x &amp;=&amp; v_{4} + v_{1} \
 </table>
 </div></div></div>
 </div>
-<p><span class="math notranslate nohighlight">\(v_{3} = 1 + {v_{1}}^2 = 1 + (\frac{c}{2})^2\)</span></p>
+<p>$v_{3} = 1 + {v_{1}}^2 = 1 + (\frac{c}{2})^2$</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="mf">1.5</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span>
@@ -2106,9 +2119,9 @@ x &amp;=&amp; v_{4} + v_{1} \
 </div>
 </div>
 </div>
-<p>タブレットでは肝心の <span class="math notranslate nohighlight">\(x\)</span> の値のカラムが欠けているのではないか!?</p>
-<p>課題 1: Plimton 322の数の表の各列に対応する <span class="math notranslate nohighlight">\(x\)</span> の値を求めよ。</p>
-<p>課題2: Plimpton 322の数表の左端にカラムを追加し、<span class="math notranslate nohighlight">\(x\)</span> の値を計算して埋めよ。</p>
+<p>タブレットでは肝心の $x$ の値のカラムが欠けているのではないか!?</p>
+<p>課題 1: Plimton 322の数の表の各列に対応する $x$ の値を求めよ。</p>
+<p>課題2: Plimpton 322の数表の左端にカラムを追加し、$x$ の値を計算して埋めよ。</p>
 </div>
 </div>
 

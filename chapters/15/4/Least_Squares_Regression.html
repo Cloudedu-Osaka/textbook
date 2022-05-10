@@ -49,8 +49,6 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../../../_static/sphinx-thebe.js"></script>
-    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
-    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="canonical" href="https://inferentialthinking.org/chapters/15/4/Least_Squares_Regression.html" />
     <link rel="shortcut icon" href="../../../_static/favicon.png"/>
     <link rel="index" title="Index" href="../../../genindex.html" />
@@ -104,6 +102,18 @@ const thebe_selector_output = ".output, .cell_output"
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
         <p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  2022/05/10
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../00/4/plimpton322_1.html">
+   Plimpton 322 (1)
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   2022/04/19
  </span>
@@ -471,27 +481,27 @@ const thebe_selector_output = ".output, .cell_output"
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../../08/1/Applying_a_Function_to_a_Column.html">
-     8.1. Applying Functions to Columns
+     8.5. Applying Functions to Columns
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../08/2/Classifying_by_One_Variable.html">
-     8.2. Classifying by One Variable
+     8.6. Classifying by One Variable
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../08/3/Cross-Classifying_by_More_than_One_Variable.html">
-     8.3. Cross-Classifying
+     8.7. Cross-Classifying
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../08/4/Joining_Tables_by_Columns.html">
-     8.4. Joining Tables by Columns
+     8.8. Joining Tables by Columns
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../08/5/Bike_Sharing_in_the_Bay_Area.html">
-     8.5. Bike Sharing in the Bay Area
+     8.9. Bike Sharing in the Bay Area
     </a>
    </li>
   </ul>
@@ -1103,16 +1113,14 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 <p>These values are the same as those we got by using our formulas. To summarize:</p>
 <p><strong>No matter what the shape of the scatter plot, there is a unique line that minimizes the mean squared error of estimation. It is called the regression line, and its slope and intercept are given by</strong></p>
-<div class="math notranslate nohighlight">
-\[
+<p>$$
 \mathbf{\mbox{slope of the regression line}} ~=~ r \cdot
 \frac{\mbox{SD of }y}{\mbox{SD of }x}
-\]</div>
-<div class="math notranslate nohighlight">
-\[
+$$</p>
+<p>$$
 \mathbf{\mbox{intercept of the regression line}} ~=~
 \mbox{average of }y ~-~ \mbox{slope} \cdot \mbox{average of }x
-\]</div>
+$$</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fitted</span> <span class="o">=</span> <span class="n">fit</span><span class="p">(</span><span class="n">shotput</span><span class="p">,</span> <span class="s1">&#39;Weight Lifted&#39;</span><span class="p">,</span> <span class="s1">&#39;Shot Put Distance&#39;</span><span class="p">)</span>
@@ -1130,11 +1138,10 @@ const thebe_selector_output = ".output, .cell_output"
 <p>We have to find the best quadratic function among all quadratic functions, instead of the best straight line among all straight lines. The method of least squares allows us to do this.</p>
 <p>The mathematics of this minimization is complicated and not easy to see just by examining the scatter plot. But numerical minimization is just as easy as it was with linear predictors! We can get the best quadratic predictor by once again using <code class="docutils literal notranslate"><span class="pre">minimize</span></code>. Let’s see how this works.</p>
 <p>Recall that a quadratic function has the form</p>
-<div class="math notranslate nohighlight">
-\[
+<p>$$
 f(x) ~=~ ax^2 + bx + c
-\]</div>
-<p>for constants <span class="math notranslate nohighlight">\(a\)</span>, <span class="math notranslate nohighlight">\(b\)</span>, and <span class="math notranslate nohighlight">\(c\)</span>.</p>
+$$</p>
+<p>for constants $a$, $b$, and $c$.</p>
 <p>To find the best quadratic function to predict distance based on weight lifted, using the criterion of least squares, we will first write a function that takes the three constants as its arguments, calculates the fitted values by using the quadratic function above, and then returns the mean squared error.</p>
 <p>The function is called <code class="docutils literal notranslate"><span class="pre">shotput_quadratic_mse</span></code>. Notice that the definition is analogous to that of <code class="docutils literal notranslate"><span class="pre">lw_mse</span></code>, except that the fitted values are based on a quadratic function instead of linear.</p>
 <div class="cell docutils container">
@@ -1162,11 +1169,10 @@ f(x) ~=~ ax^2 + bx + c
 </div>
 </div>
 </div>
-<p>Our prediction of the shot put distance for an athlete who lifts <span class="math notranslate nohighlight">\(x\)</span> kilograms is about</p>
-<div class="math notranslate nohighlight">
-\[
+<p>Our prediction of the shot put distance for an athlete who lifts $x$ kilograms is about</p>
+<p>$$
 -0.00104x^2 ~+~ 0.2827x - 1.5318
-\]</div>
+$$</p>
 <p>meters. For example, if the athlete can lift 100 kilograms, the predicted distance is 16.33 meters. On the scatter plot, that’s near the center of a vertical strip around 100 kilograms.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">

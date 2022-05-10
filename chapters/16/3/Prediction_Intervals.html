@@ -49,8 +49,6 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../../../_static/sphinx-thebe.js"></script>
-    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
-    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="canonical" href="https://inferentialthinking.org/chapters/16/3/Prediction_Intervals.html" />
     <link rel="shortcut icon" href="../../../_static/favicon.png"/>
     <link rel="index" title="Index" href="../../../genindex.html" />
@@ -104,6 +102,18 @@ const thebe_selector_output = ".output, .cell_output"
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
         <p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  2022/05/10
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../00/4/plimpton322_1.html">
+   Plimpton 322 (1)
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   2022/04/19
  </span>
@@ -471,27 +481,27 @@ const thebe_selector_output = ".output, .cell_output"
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../../08/1/Applying_a_Function_to_a_Column.html">
-     8.1. Applying Functions to Columns
+     8.5. Applying Functions to Columns
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../08/2/Classifying_by_One_Variable.html">
-     8.2. Classifying by One Variable
+     8.6. Classifying by One Variable
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../08/3/Cross-Classifying_by_More_than_One_Variable.html">
-     8.3. Cross-Classifying
+     8.7. Cross-Classifying
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../08/4/Joining_Tables_by_Columns.html">
-     8.4. Joining Tables by Columns
+     8.8. Joining Tables by Columns
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../08/5/Bike_Sharing_in_the_Bay_Area.html">
-     8.5. Bike Sharing in the Bay Area
+     8.9. Bike Sharing in the Bay Area
     </a>
    </li>
   </ul>
@@ -1015,22 +1025,22 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 <div class="tex2jax_ignore mathjax_ignore section" id="prediction-intervals">
 <h1><span class="section-number">16.3. </span>Prediction Intervals<a class="headerlink" href="#prediction-intervals" title="Permalink to this headline">¶</a></h1>
-<p>One of the primary uses of regression is to make predictions for a new individual who was not part of our original sample but is similar to the sampled individuals. In the language of the model, we want to estimate <span class="math notranslate nohighlight">\(y\)</span> for a new value of <span class="math notranslate nohighlight">\(x\)</span>.</p>
-<p>Our estimate is the height of the true line at <span class="math notranslate nohighlight">\(x\)</span>. Of course, we don’t know the true line. What we have as a substitute is the regression line through our sample of points.</p>
-<p>The <strong>fitted value</strong> at a given value of <span class="math notranslate nohighlight">\(x\)</span> is the regression estimate of <span class="math notranslate nohighlight">\(y\)</span> based on that value of <span class="math notranslate nohighlight">\(x\)</span>. In other words, the fitted value at a given value of <span class="math notranslate nohighlight">\(x\)</span> is the height of the regression line at that <span class="math notranslate nohighlight">\(x\)</span>.</p>
+<p>One of the primary uses of regression is to make predictions for a new individual who was not part of our original sample but is similar to the sampled individuals. In the language of the model, we want to estimate $y$ for a new value of $x$.</p>
+<p>Our estimate is the height of the true line at $x$. Of course, we don’t know the true line. What we have as a substitute is the regression line through our sample of points.</p>
+<p>The <strong>fitted value</strong> at a given value of $x$ is the regression estimate of $y$ based on that value of $x$. In other words, the fitted value at a given value of $x$ is the height of the regression line at that $x$.</p>
 <div class="cell tag_remove-input docutils container">
 </div>
 <div class="cell tag_remove-input docutils container">
 </div>
 <p>Suppose we try to predict a baby’s birth weight based on the number of gestational days. As we saw in the previous section, the data fit the regression model fairly well and a 95% confidence interval for the slope of the true line doesn’t contain 0. So it seems reasonable to carry out our prediction.</p>
-<p>The figure below shows where the prediction lies on the regression line. The red line is at <span class="math notranslate nohighlight">\(x = 300\)</span>.</p>
+<p>The figure below shows where the prediction lies on the regression line. The red line is at $x = 300$.</p>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
 <img alt="../../../_images/Prediction_Intervals_6_0.png" src="../../../_images/Prediction_Intervals_6_0.png" />
 </div>
 </div>
 <p>The height of the point where the red line hits the regression line is the fitted value at 300 gestational days.</p>
-<p>The function <code class="docutils literal notranslate"><span class="pre">fitted_value</span></code> computes this height. Like the functions <code class="docutils literal notranslate"><span class="pre">correlation</span></code>, <code class="docutils literal notranslate"><span class="pre">slope</span></code>, and <code class="docutils literal notranslate"><span class="pre">intercept</span></code>, its arguments include the name of the table and the labels of the <span class="math notranslate nohighlight">\(x\)</span> and <span class="math notranslate nohighlight">\(y\)</span> columns. But it also requires a fourth argument, which is the value of <span class="math notranslate nohighlight">\(x\)</span> at which the estimate will be made.</p>
+<p>The function <code class="docutils literal notranslate"><span class="pre">fitted_value</span></code> computes this height. Like the functions <code class="docutils literal notranslate"><span class="pre">correlation</span></code>, <code class="docutils literal notranslate"><span class="pre">slope</span></code>, and <code class="docutils literal notranslate"><span class="pre">intercept</span></code>, its arguments include the name of the table and the labels of the $x$ and $y$ columns. But it also requires a fourth argument, which is the value of $x$ at which the estimate will be made.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">fitted_value</span><span class="p">(</span><span class="n">table</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">given_x</span><span class="p">):</span>
@@ -1120,10 +1130,10 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="simple">
 <li><p>the name of the table</p></li>
 <li><p>the column labels of the predictor and response variables, in that order</p></li>
-<li><p>the value of <span class="math notranslate nohighlight">\(x\)</span> at which to make the prediction</p></li>
+<li><p>the value of $x$ at which to make the prediction</p></li>
 <li><p>the desired number of bootstrap repetitions</p></li>
 </ul>
-<p>In each repetition, the function bootstraps the original scatter plot and finds the predicted value of <span class="math notranslate nohighlight">\(y\)</span> based on the specified value of <span class="math notranslate nohighlight">\(x\)</span>. Specifically, it calls the function <code class="docutils literal notranslate"><span class="pre">fitted_value</span></code> that we defined earlier in this section to find the fitted value at the specified <span class="math notranslate nohighlight">\(x\)</span>.</p>
+<p>In each repetition, the function bootstraps the original scatter plot and finds the predicted value of $y$ based on the specified value of $x$. Specifically, it calls the function <code class="docutils literal notranslate"><span class="pre">fitted_value</span></code> that we defined earlier in this section to find the fitted value at the specified $x$.</p>
 <p>Finally, it draws the empirical histogram of all the predicted values, and prints the interval consisting of the “middle 95%” of the predicted values. It also prints the predicted value based on the regression line through the original scatter plot.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1212,7 +1222,7 @@ Approximate 95%-confidence interval:
 </div>
 </div>
 <p>So 285 is nearer to the center of the distribution than 300 is. Typically, the regression lines based on the bootstrap samples are closer to each other near the center of the distribution of the predictor variable. Therefore all of the predicted values are closer together as well. This explains the narrower width of the prediction interval.</p>
-<p>You can see this in the figure below, which shows predictions at <span class="math notranslate nohighlight">\(x = 285\)</span> and <span class="math notranslate nohighlight">\(x = 300\)</span> for each of ten bootstrap replications. Typically, the lines are farther apart at <span class="math notranslate nohighlight">\(x = 300\)</span> than at <span class="math notranslate nohighlight">\(x = 285\)</span>, and therefore the predictions at <span class="math notranslate nohighlight">\(x = 300\)</span> are more variable.</p>
+<p>You can see this in the figure below, which shows predictions at $x = 285$ and $x = 300$ for each of ten bootstrap replications. Typically, the lines are farther apart at $x = 300$ than at $x = 285$, and therefore the predictions at $x = 300$ are more variable.</p>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
 <img alt="../../../_images/Prediction_Intervals_25_0.png" src="../../../_images/Prediction_Intervals_25_0.png" />
