@@ -49,8 +49,6 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../../../_static/sphinx-thebe.js"></script>
-    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
-    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="canonical" href="https://inferentialthinking.org/chapters/11/4/Error_Probabilities.html" />
     <link rel="shortcut icon" href="../../../_static/favicon.png"/>
     <link rel="index" title="Index" href="../../../genindex.html" />
@@ -104,6 +102,18 @@ const thebe_selector_output = ".output, .cell_output"
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
         <p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  2022/05/10
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../00/4/plimpton322_1.html">
+   Plimpton 322 (1)
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   2022/04/19
  </span>
@@ -471,27 +481,27 @@ const thebe_selector_output = ".output, .cell_output"
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../../08/1/Applying_a_Function_to_a_Column.html">
-     8.1. Applying Functions to Columns
+     8.5. Applying Functions to Columns
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../08/2/Classifying_by_One_Variable.html">
-     8.2. Classifying by One Variable
+     8.6. Classifying by One Variable
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../08/3/Cross-Classifying_by_More_than_One_Variable.html">
-     8.3. Cross-Classifying
+     8.7. Cross-Classifying
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../08/4/Joining_Tables_by_Columns.html">
-     8.4. Joining Tables by Columns
+     8.8. Joining Tables by Columns
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../08/5/Bike_Sharing_in_the_Bay_Area.html">
-     8.5. Bike Sharing in the Bay Area
+     8.9. Bike Sharing in the Bay Area
     </a>
    </li>
   </ul>
@@ -1066,10 +1076,9 @@ const thebe_selector_output = ".output, .cell_output"
 <p><strong>Null:</strong> The coin is fair. That is, the results are like draws made at random with replacement from <em>Heads, Tails</em>.</p>
 <p><strong>Alternative:</strong> The coin is not fair.</p>
 <p>Suppose you are going to test this hypothesis based on 2000 tosses of the coin. You would expect a fair coin to land heads 1000 times out of 2000, so a reasonable test statistic to use is</p>
-<div class="math notranslate nohighlight">
-\[
+<p>$$
 \text{test statistic} ~ = ~ \big{\vert} ~ \text{number of heads} - 1000 ~ \big{\vert}
-\]</div>
+$$</p>
 <p>Small values of this statistic favor the null hypothesis, and large values favor the alternative.</p>
 <p>We have simulated this statistic under the null hypothesis many times, and drawn its empirical distribution.</p>
 <div class="cell tag_remove-input docutils container">
@@ -1097,7 +1106,7 @@ const thebe_selector_output = ".output, .cell_output"
 <div class="section" id="the-cutoff-for-the-p-value-is-an-error-probability">
 <h2><span class="section-number">11.4.3. </span>The Cutoff for the p-value is an Error Probability<a class="headerlink" href="#the-cutoff-for-the-p-value-is-an-error-probability" title="Permalink to this headline">¶</a></h2>
 <p>The example above is a special case of a general fact:</p>
-<p><strong>If you use a <span class="math notranslate nohighlight">\(p\)</span>% cutoff for the p-value, and the null hypothesis happens to be true, then there is about a <span class="math notranslate nohighlight">\(p\)</span>% chance that your test will conclude that the alternative is true.</strong></p>
+<p><strong>If you use a $p$% cutoff for the p-value, and the null hypothesis happens to be true, then there is about a $p$% chance that your test will conclude that the alternative is true.</strong></p>
 <p>Here is the table of the four possible reality/test outcomes again. Probabilities in the top row are computed under the assumption that the null hypothesis is true. The p-value is the probability of the error shown in red.</p>
 <table class="colwidths-auto table">
 <thead>

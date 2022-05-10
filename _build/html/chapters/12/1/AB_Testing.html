@@ -49,8 +49,6 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../../../_static/sphinx-thebe.js"></script>
-    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
-    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="canonical" href="https://inferentialthinking.org/chapters/12/1/AB_Testing.html" />
     <link rel="shortcut icon" href="../../../_static/favicon.png"/>
     <link rel="index" title="Index" href="../../../genindex.html" />
@@ -104,6 +102,18 @@ const thebe_selector_output = ".output, .cell_output"
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
         <p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  2022/05/10
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../00/4/plimpton322_1.html">
+   Plimpton 322 (1)
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   2022/04/19
  </span>
@@ -471,27 +481,27 @@ const thebe_selector_output = ".output, .cell_output"
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../../08/1/Applying_a_Function_to_a_Column.html">
-     8.1. Applying Functions to Columns
+     8.5. Applying Functions to Columns
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../08/2/Classifying_by_One_Variable.html">
-     8.2. Classifying by One Variable
+     8.6. Classifying by One Variable
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../08/3/Cross-Classifying_by_More_than_One_Variable.html">
-     8.3. Cross-Classifying
+     8.7. Cross-Classifying
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../08/4/Joining_Tables_by_Columns.html">
-     8.4. Joining Tables by Columns
+     8.8. Joining Tables by Columns
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../08/5/Bike_Sharing_in_the_Bay_Area.html">
-     8.5. Bike Sharing in the Bay Area
+     8.9. Bike Sharing in the Bay Area
     </a>
    </li>
   </ul>
@@ -1151,8 +1161,8 @@ const thebe_selector_output = ".output, .cell_output"
 <div class="section" id="test-statistic">
 <h2><span class="section-number">12.1.3. </span>Test Statistic<a class="headerlink" href="#test-statistic" title="Permalink to this headline">¶</a></h2>
 <p>The alternative hypothesis compares the average birth weights of the two groups and says that the average for the mothers who smoke is smaller. Therefore it is reasonable for us to use the difference between the two group means as our statistic.</p>
-<p>We will do the subtraction in the order “average weight of the smoking group <span class="math notranslate nohighlight">\(-\)</span> average weight of the non-smoking group”. Small values (that is, large negative values) of this statistic will favor the alternative hypothesis.</p>
-<p>The observed value of the test statistic is about <span class="math notranslate nohighlight">\(-9.27\)</span> ounces.</p>
+<p>We will do the subtraction in the order “average weight of the smoking group $-$ average weight of the non-smoking group”. Small values (that is, large negative values) of this statistic will favor the alternative hypothesis.</p>
+<p>The observed value of the test statistic is about $-9.27$ ounces.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">means_table</span> <span class="o">=</span> <span class="n">smoking_and_birthweight</span><span class="o">.</span><span class="n">group</span><span class="p">(</span><span class="s1">&#39;Maternal Smoker&#39;</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">average</span><span class="p">)</span>
@@ -1463,7 +1473,7 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <p>Notice how the distribution is centered roughly around 0. This makes sense, because under the null hypothesis the two groups should have roughly the same average. Therefore the difference between the group averages should be around 0.</p>
-<p>The observed difference in the original sample is about <span class="math notranslate nohighlight">\(-9.27\)</span> ounces, which doesn’t even appear on the horizontal scale of the histogram. The observed value of the statistic and the predicted behavior of the statistic under the null hypothesis are inconsistent.</p>
+<p>The observed difference in the original sample is about $-9.27$ ounces, which doesn’t even appear on the horizontal scale of the histogram. The observed value of the statistic and the predicted behavior of the statistic under the null hypothesis are inconsistent.</p>
 <p>The conclusion of the test is that the data favor the alternative over the null. It supports the hypothesis that the average birth weight of babies born to mothers who smoke is less than the average birth weight of babies born to non-smokers.</p>
 <p>If you want to compute an empirical p-value, remember that low values of the statistic favor the alternative hypothesis.</p>
 <div class="cell docutils container">
@@ -1495,7 +1505,7 @@ const thebe_selector_output = ".output, .cell_output"
 <img alt="../../../_images/AB_Testing_41_0.png" src="../../../_images/AB_Testing_41_0.png" />
 </div>
 </div>
-<p>The observed difference between the average ages is about <span class="math notranslate nohighlight">\(-0.8\)</span> years.</p>
+<p>The observed difference between the average ages is about $-0.8$ years.</p>
 <p>Let’s rewrite the code that compared the birth weights so that it now compares the ages of the smokers and non-smokers.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">

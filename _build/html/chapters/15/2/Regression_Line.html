@@ -49,8 +49,6 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../../../_static/sphinx-thebe.js"></script>
-    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
-    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="canonical" href="https://inferentialthinking.org/chapters/15/2/Regression_Line.html" />
     <link rel="shortcut icon" href="../../../_static/favicon.png"/>
     <link rel="index" title="Index" href="../../../genindex.html" />
@@ -104,6 +102,18 @@ const thebe_selector_output = ".output, .cell_output"
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
         <p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  2022/05/10
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../00/4/plimpton322_1.html">
+   Plimpton 322 (1)
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   2022/04/19
  </span>
@@ -471,27 +481,27 @@ const thebe_selector_output = ".output, .cell_output"
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../../08/1/Applying_a_Function_to_a_Column.html">
-     8.1. Applying Functions to Columns
+     8.5. Applying Functions to Columns
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../08/2/Classifying_by_One_Variable.html">
-     8.2. Classifying by One Variable
+     8.6. Classifying by One Variable
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../08/3/Cross-Classifying_by_More_than_One_Variable.html">
-     8.3. Cross-Classifying
+     8.7. Cross-Classifying
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../08/4/Joining_Tables_by_Columns.html">
-     8.4. Joining Tables by Columns
+     8.8. Joining Tables by Columns
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../08/5/Bike_Sharing_in_the_Bay_Area.html">
-     8.5. Bike Sharing in the Bay Area
+     8.9. Bike Sharing in the Bay Area
     </a>
    </li>
   </ul>
@@ -1071,7 +1081,7 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 <div class="tex2jax_ignore mathjax_ignore section" id="the-regression-line">
 <h1><span class="section-number">15.2. </span>The Regression Line<a class="headerlink" href="#the-regression-line" title="Permalink to this headline">¶</a></h1>
-<p>The correlation coefficient <span class="math notranslate nohighlight">\(r\)</span> doesn’t just measure how clustered the points in a scatter plot are about a straight line. It also helps identify the straight line about which the points are clustered. In this section we will retrace the path that Galton and Pearson took to discover that line.</p>
+<p>The correlation coefficient $r$ doesn’t just measure how clustered the points in a scatter plot are about a straight line. It also helps identify the straight line about which the points are clustered. In this section we will retrace the path that Galton and Pearson took to discover that line.</p>
 <p>As we have seen, our dataset on the heights of parents and their adult children indicates a linear association between the two variables. The linearity was confirmed when our predictions of the children’s heights based on the midparent heights roughly followed a straight line.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1269,12 +1279,12 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 <p>Both lines go through the origin (0, 0). The green line goes through the centers of the vertical strips (at least roughly), and is <em>flatter</em> than the red 45 degree line.</p>
 <p>The slope of the 45 degree line is 1. So the slope of the green “graph of averages” line is a value that is positive but less than 1.</p>
-<p>What value could that be? You’ve guessed it – it’s <span class="math notranslate nohighlight">\(r\)</span>.</p>
+<p>What value could that be? You’ve guessed it – it’s $r$.</p>
 </div>
 <div class="section" id="the-regression-line-in-standard-units">
 <h2><span class="section-number">15.2.3. </span>The Regression Line, in Standard Units<a class="headerlink" href="#the-regression-line-in-standard-units" title="Permalink to this headline">¶</a></h2>
-<p>The green “graph of averages” line is called the <em>regression line</em>, for a reason that we will explain shortly. But first, let’s simulate some football shaped scatter plots with different values of <span class="math notranslate nohighlight">\(r\)</span>, and see how the line changes. In each case, the red 45 degree line has been drawn for comparison.</p>
-<p>The function that performs the simulation is called <code class="docutils literal notranslate"><span class="pre">regression_line</span></code> and takes <span class="math notranslate nohighlight">\(r\)</span> as its argument.</p>
+<p>The green “graph of averages” line is called the <em>regression line</em>, for a reason that we will explain shortly. But first, let’s simulate some football shaped scatter plots with different values of $r$, and see how the line changes. In each case, the red 45 degree line has been drawn for comparison.</p>
+<p>The function that performs the simulation is called <code class="docutils literal notranslate"><span class="pre">regression_line</span></code> and takes $r$ as its argument.</p>
 <div class="cell tag_remove-input docutils container">
 </div>
 <div class="cell docutils container">
@@ -1297,7 +1307,7 @@ const thebe_selector_output = ".output, .cell_output"
 <img alt="../../../_images/Regression_Line_27_0.png" src="../../../_images/Regression_Line_27_0.png" />
 </div>
 </div>
-<p>When <span class="math notranslate nohighlight">\(r\)</span> is close to 1, the scatter plot, the 45 degree line, and the regression line are all very close to each other. But for more moderate values of <span class="math notranslate nohighlight">\(r\)</span>, the regression line is noticeably flatter.</p>
+<p>When $r$ is close to 1, the scatter plot, the 45 degree line, and the regression line are all very close to each other. But for more moderate values of $r$, the regression line is noticeably flatter.</p>
 </div>
 <div class="section" id="the-regression-effect">
 <h2><span class="section-number">15.2.4. </span>The Regression Effect<a class="headerlink" href="#the-regression-effect" title="Permalink to this headline">¶</a></h2>
@@ -1309,32 +1319,28 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 <div class="section" id="the-equation-of-the-regression-line">
 <h2><span class="section-number">15.2.5. </span>The Equation of the Regression Line<a class="headerlink" href="#the-equation-of-the-regression-line" title="Permalink to this headline">¶</a></h2>
-<p>In regression, we use the value of one variable (which we will call <span class="math notranslate nohighlight">\(x\)</span>) to predict the value of another (which we will call <span class="math notranslate nohighlight">\(y\)</span>). When the variables <span class="math notranslate nohighlight">\(x\)</span> and <span class="math notranslate nohighlight">\(y\)</span> are measured in standard units, the regression line for predicting <span class="math notranslate nohighlight">\(y\)</span> based on <span class="math notranslate nohighlight">\(x\)</span> has slope <span class="math notranslate nohighlight">\(r\)</span> and passes through the origin. Thus the equation of the regression line can be written as:</p>
-<div class="math notranslate nohighlight">
-\[
+<p>In regression, we use the value of one variable (which we will call $x$) to predict the value of another (which we will call $y$). When the variables $x$ and $y$ are measured in standard units, the regression line for predicting $y$ based on $x$ has slope $r$ and passes through the origin. Thus the equation of the regression line can be written as:</p>
+<p>$$
 \mbox{estimate of }y ~=~ r \cdot x ~~~
 \mbox{when both variables are measured in standard units}
-\]</div>
+$$</p>
 <p>In the original units of the data, this becomes</p>
-<div class="math notranslate nohighlight">
-\[
+<p>$$
 \frac{\mbox{estimate of}~y ~-~\mbox{average of}~y}{\mbox{SD of}~y}
-~=~ r \times 
+~=~ r \times
 \frac{\mbox{the given}~x ~-~\mbox{average of}~x}{\mbox{SD of}~x}
-\]</div>
+$$</p>
 <p><img alt="regline" src="../../../_images/regline.png" /></p>
 <p>The slope and intercept of the regression line in original units can be derived from the diagram above.</p>
-<div class="math notranslate nohighlight">
-\[
+<p>$$
 \mathbf{\mbox{slope of the regression line}} ~=~ r \cdot
 \frac{\mbox{SD of }y}{\mbox{SD of }x}
-\]</div>
-<div class="math notranslate nohighlight">
-\[
+$$</p>
+<p>$$
 \mathbf{\mbox{intercept of the regression line}} ~=~
 \mbox{average of }y ~-~ \mbox{slope} \cdot \mbox{average of }x
-\]</div>
-<p>The three functions below compute the correlation, slope, and intercept. All of them take three arguments: the name of the table, the label of the column containing <span class="math notranslate nohighlight">\(x\)</span>, and the label of the column containing <span class="math notranslate nohighlight">\(y\)</span>.</p>
+$$</p>
+<p>The three functions below compute the correlation, slope, and intercept. All of them take three arguments: the name of the table, the label of the column containing $x$, and the label of the column containing $y$.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">correlation</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">label_x</span><span class="p">,</span> <span class="n">label_y</span><span class="p">):</span>
@@ -1383,11 +1389,10 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <p>The equation of the regression line is</p>
-<div class="math notranslate nohighlight">
-\[
-\mbox{estimate of child's height} ~=~ 0.64 \cdot \mbox{midparent height} ~+~ 22.64
-\]</div>
-<p>This is also known as the <em>regression equation.</em> The principal use of the regression equation is to predict <span class="math notranslate nohighlight">\(y\)</span> based on <span class="math notranslate nohighlight">\(x\)</span>.</p>
+<p>$$
+\mbox{estimate of child’s height} ~=~ 0.64 \cdot \mbox{midparent height} ~+~ 22.64
+$$</p>
+<p>This is also known as the <em>regression equation.</em> The principal use of the regression equation is to predict $y$ based on $x$.</p>
 <p>For example, for a midparent height of 70.48 inches, the regression equation predicts the child’s height to be 67.56 inches.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1495,7 +1500,7 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 <div class="section" id="fitted-values">
 <h2><span class="section-number">15.2.7. </span>Fitted Values<a class="headerlink" href="#fitted-values" title="Permalink to this headline">¶</a></h2>
-<p>The predictions all lie on the line and are known as the “fitted values”. The function <code class="docutils literal notranslate"><span class="pre">fit</span></code> takes the name of the table and the labels of <span class="math notranslate nohighlight">\(x\)</span> and <span class="math notranslate nohighlight">\(y\)</span>, and returns an array of fitted values, one fitted value for each point in the scatter plot.</p>
+<p>The predictions all lie on the line and are known as the “fitted values”. The function <code class="docutils literal notranslate"><span class="pre">fit</span></code> takes the name of the table and the labels of $x$ and $y$, and returns an array of fitted values, one fitted value for each point in the scatter plot.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">fit</span><span class="p">(</span><span class="n">table</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
@@ -1563,16 +1568,15 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <p>The slope of the regression line is <strong>3.57 pounds per inch</strong>. This means that for two women who are 1 inch apart in height, our prediction of pregnancy weight will differ by 3.57 pounds. For a woman who is 2 inches taller than another, our prediction of pregnancy weight will be</p>
-<div class="math notranslate nohighlight">
-\[
+<p>$$
 2 \times 3.57 ~=~ 7.14
-\]</div>
+$$</p>
 <p>pounds more than our prediction for the shorter woman.</p>
 <p>Notice that the successive vertical strips in the scatter plot are one inch apart, because the heights have been rounded to the nearest inch. Another way to think about the slope is to take any two consecutive strips (which are necessarily 1 inch apart), corresponding to two groups of women who are separated by 1 inch in height. The slope of 3.57 pounds per inch means that the average pregnancy weight of the taller group is about 3.57 pounds more than that of the shorter group.</p>
 </div>
 <div class="section" id="example">
 <h2><span class="section-number">15.2.9. </span>Example<a class="headerlink" href="#example" title="Permalink to this headline">¶</a></h2>
-<p>Suppose that our goal is to use regression to estimate the height of a basset hound based on its weight, using a sample that looks consistent with the regression model. Suppose the observed correlation <span class="math notranslate nohighlight">\(r\)</span> is 0.5, and that the summary statistics for the two variables are as in the table below:</p>
+<p>Suppose that our goal is to use regression to estimate the height of a basset hound based on its weight, using a sample that looks consistent with the regression model. Suppose the observed correlation $r$ is 0.5, and that the summary statistics for the two variables are as in the table below:</p>
 <table class="colwidths-auto table">
 <thead>
 <tr class="row-odd"><th class="text-align:right head"><p></p></th>
@@ -1592,25 +1596,22 @@ const thebe_selector_output = ".output, .cell_output"
 </tbody>
 </table>
 <p>To calculate the equation of the regression line, we need the slope and the intercept.</p>
-<div class="math notranslate nohighlight">
-\[
+<p>$$
 \mbox{slope} ~=~ \frac{r \cdot \mbox{SD of }y}{\mbox{SD of }x} ~=~
 \frac{0.5 \cdot 2 \mbox{ inches}}{5 \mbox{ pounds}} ~=~ 0.2 ~\mbox{inches per pound}
-\]</div>
-<div class="math notranslate nohighlight">
-\[
+$$</p>
+<p>$$
 \mbox{intercept} ~=~ \mbox{average of }y - \mbox{slope}\cdot \mbox{average of } x
 ~=~ 14 \mbox{ inches} ~-~ 0.2 \mbox{ inches per pound} \cdot 50 \mbox{ pounds}
 ~=~ 4 \mbox{ inches}
-\]</div>
+$$</p>
 <p>The equation of the regression line allows us to calculate the estimated height, in inches,
 based on a given weight in pounds:</p>
-<div class="math notranslate nohighlight">
-\[
+<p>$$
 \mbox{estimated height} ~=~ 0.2 \cdot \mbox{given weight} ~+~ 4
-\]</div>
-<p>The slope of the line is measures the increase in the estimated height per unit increase in weight. The slope is positive, and it is important to note that this does not mean that we think basset hounds get taller if they put on weight. The slope reflects the difference in the average heights of two groups of dogs that are 1 pound apart in weight. Specifically, consider a group of dogs whose weight is <span class="math notranslate nohighlight">\(w\)</span> pounds, and the group whose weight is <span class="math notranslate nohighlight">\(w+1\)</span> pounds. The second group is estimated to be 0.2 inches taller, on average. This is true for all values of <span class="math notranslate nohighlight">\(w\)</span> in the sample.</p>
-<p>In general, the slope of the regression line can be interpreted as the average increase in <span class="math notranslate nohighlight">\(y\)</span> per unit increase in <span class="math notranslate nohighlight">\(x\)</span>. Note that if the slope is negative, then for every unit increase in <span class="math notranslate nohighlight">\(x\)</span>, the average of <span class="math notranslate nohighlight">\(y\)</span> decreases.</p>
+$$</p>
+<p>The slope of the line is measures the increase in the estimated height per unit increase in weight. The slope is positive, and it is important to note that this does not mean that we think basset hounds get taller if they put on weight. The slope reflects the difference in the average heights of two groups of dogs that are 1 pound apart in weight. Specifically, consider a group of dogs whose weight is $w$ pounds, and the group whose weight is $w+1$ pounds. The second group is estimated to be 0.2 inches taller, on average. This is true for all values of $w$ in the sample.</p>
+<p>In general, the slope of the regression line can be interpreted as the average increase in $y$ per unit increase in $x$. Note that if the slope is negative, then for every unit increase in $x$, the average of $y$ decreases.</p>
 </div>
 <div class="section" id="endnote">
 <h2><span class="section-number">15.2.10. </span>Endnote<a class="headerlink" href="#endnote" title="Permalink to this headline">¶</a></h2>

@@ -105,6 +105,18 @@ const thebe_selector_output = ".output, .cell_output"
     <div class="bd-toc-item active">
         <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
+  2022/05/10
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../00/4/plimpton322_1.html">
+   Plimpton 322 (1)
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
   2022/04/19
  </span>
 </p>
@@ -471,27 +483,27 @@ const thebe_selector_output = ".output, .cell_output"
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../../08/1/Applying_a_Function_to_a_Column.html">
-     8.1. Applying Functions to Columns
+     8.5. Applying Functions to Columns
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../08/2/Classifying_by_One_Variable.html">
-     8.2. Classifying by One Variable
+     8.6. Classifying by One Variable
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../08/3/Cross-Classifying_by_More_than_One_Variable.html">
-     8.3. Cross-Classifying
+     8.7. Cross-Classifying
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../08/4/Joining_Tables_by_Columns.html">
-     8.4. Joining Tables by Columns
+     8.8. Joining Tables by Columns
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../08/5/Bike_Sharing_in_the_Bay_Area.html">
-     8.5. Bike Sharing in the Bay Area
+     8.9. Bike Sharing in the Bay Area
     </a>
    </li>
   </ul>
@@ -1144,28 +1156,28 @@ const thebe_selector_output = ".output, .cell_output"
 <p><strong>Prior probabilities.</strong> Before we knew the chosen student’s major declaration status, the chance that the student was a Second Year was 60% and the chance that the student was a Third Year was 40%. These are the <em>prior</em> probabilities of the two categories.</p>
 <p><strong>Likelihoods.</strong> These are the chances of the Major status, given the category of student; thus they can be read off the tree diagram. For example, the likelihood of Declared status given that the student is a Second Year is 0.5.</p>
 <p><strong>Posterior probabilities.</strong> These are the chances of the two Year categories, <em>after</em> we have taken into account information about the Major declaration status. We computed one of these:</p>
-<p>The <em>posterior probability</em> that the student is a Third Year, given that the student has Declared, is denoted <span class="math notranslate nohighlight">\(P(\text{Third Year} ~\big{\vert}~ \text{Declared})\)</span> and is calculated as follows.</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}
-\begin{align*}
+<p>The <em>posterior probability</em> that the student is a Third Year, given that the student has Declared, is denoted $P(\text{Third Year} ~\big{\vert}~ \text{Declared})$ and is calculated as follows.</p>
+<p>$$</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
 P(\mbox{Third Year} ~\big{\vert}~ \mbox{Declared}) 
 ~ &amp;=~ \frac{ 0.4 \times 0.8}{0.6 \times 0.5 ~+~ 0.4 \times  0.8} \\ \\
 &amp;=~ \frac{\mbox{(prior probability of Third Year)} \times
 \mbox{(likelihood of Declared given Third Year)}}
 {\mbox{total probability of Declared}}
-\end{align*}
-\end{split}\]</div>
+\end{align*}\]</div>
+<p>$$</p>
 <p>The other posterior probability is</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}
-\begin{align*}
+<p>$$</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
 P(\mbox{Second Year} ~\big{\vert}~ \mbox{Declared})
 ~ &amp;=~ \frac{ 0.6 \times 0.5}{0.6 \times 0.5 ~+~ 0.4 \times  0.8} \\ \\
 &amp;=~ \frac{\mbox{(prior probability of Second Year)} \times
 \mbox{(likelihood of Declared given Second Year)}}
 {\mbox{total probability of Declared}}
-\end{align*}
-\end{split}\]</div>
+\end{align*}\]</div>
+<p>$$</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="mf">0.6</span> <span class="o">*</span> <span class="mf">0.5</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="mf">0.6</span> <span class="o">*</span> <span class="mf">0.5</span>  <span class="o">+</span>  <span class="mf">0.4</span> <span class="o">*</span> <span class="mf">0.8</span><span class="p">)</span>
@@ -1181,10 +1193,9 @@ P(\mbox{Second Year} ~\big{\vert}~ \mbox{Declared})
 <p>That’s about 0.484, which is less than half, consistent with our classification of Third Year.</p>
 <p>Notice that both the posterior probabilities have the same denominator: the chance of the new information, which is that the student has Declared.</p>
 <p>Because of this, Bayes’ method is sometimes summarized as a statement about proportionality:</p>
-<div class="math notranslate nohighlight">
-\[
+<p>$$
 \mbox{posterior} ~ \propto ~ \mbox{prior} \times \mbox{likelihood}
-\]</div>
+$$</p>
 <p>Formulas are great for efficiently describing calculations. But in settings like our example about students, it is simpler not to think in terms of formulas. Just use the tree diagram.</p>
 </div>
 </div>

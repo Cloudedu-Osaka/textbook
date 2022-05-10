@@ -49,8 +49,6 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../../../_static/sphinx-thebe.js"></script>
-    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
-    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="canonical" href="https://inferentialthinking.org/chapters/16/1/Regression_Model.html" />
     <link rel="shortcut icon" href="../../../_static/favicon.png"/>
     <link rel="index" title="Index" href="../../../genindex.html" />
@@ -104,6 +102,18 @@ const thebe_selector_output = ".output, .cell_output"
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
         <p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  2022/05/10
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../00/4/plimpton322_1.html">
+   Plimpton 322 (1)
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   2022/04/19
  </span>
@@ -471,27 +481,27 @@ const thebe_selector_output = ".output, .cell_output"
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../../08/1/Applying_a_Function_to_a_Column.html">
-     8.1. Applying Functions to Columns
+     8.5. Applying Functions to Columns
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../08/2/Classifying_by_One_Variable.html">
-     8.2. Classifying by One Variable
+     8.6. Classifying by One Variable
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../08/3/Cross-Classifying_by_More_than_One_Variable.html">
-     8.3. Cross-Classifying
+     8.7. Cross-Classifying
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../08/4/Joining_Tables_by_Columns.html">
-     8.4. Joining Tables by Columns
+     8.8. Joining Tables by Columns
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../08/5/Bike_Sharing_in_the_Bay_Area.html">
-     8.5. Bike Sharing in the Bay Area
+     8.9. Bike Sharing in the Bay Area
     </a>
    </li>
   </ul>
@@ -958,12 +968,12 @@ const thebe_selector_output = ".output, .cell_output"
 <p>In brief, such models say that the underlying relation between the two variables is perfectly linear; this straight line is the <em>signal</em> that we would like to identify. However, we are not able to see the line clearly. What we see are points that are scattered around the line. In each of the points, the signal has been contaminated by <em>random noise</em>. Our inferential goal, therefore, is to separate the signal from the noise.</p>
 <p>In greater detail, the regression model specifies that the points in the scatter plot are generated at random as follows.</p>
 <ul class="simple">
-<li><p>The relation between <span class="math notranslate nohighlight">\(x\)</span> and <span class="math notranslate nohighlight">\(y\)</span> is perfectly linear. We cannot see this “true line” but it exists.</p></li>
+<li><p>The relation between $x$ and $y$ is perfectly linear. We cannot see this “true line” but it exists.</p></li>
 <li><p>The scatter plot is created by taking points on the line and pushing them off the line vertically, either above or below, as follows:</p>
 <ul>
-<li><p>For each <span class="math notranslate nohighlight">\(x\)</span>, find the corresponding point on the true line (that’s the signal), and then generate the noise or error.</p></li>
+<li><p>For each $x$, find the corresponding point on the true line (that’s the signal), and then generate the noise or error.</p></li>
 <li><p>The errors are drawn at random with replacement from a population of errors that has a normal distribution with mean 0.</p></li>
-<li><p>Create a point whose horizontal coordinate is <span class="math notranslate nohighlight">\(x\)</span> and whose vertical coordinate is “the height of the true line at <span class="math notranslate nohighlight">\(x\)</span>, plus the error”.</p></li>
+<li><p>Create a point whose horizontal coordinate is $x$ and whose vertical coordinate is “the height of the true line at $x$, plus the error”.</p></li>
 </ul>
 </li>
 <li><p>Finally, erase the true line from the scatter, and display just the points created.</p></li>

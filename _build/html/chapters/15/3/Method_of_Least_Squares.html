@@ -49,8 +49,6 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../../../_static/sphinx-thebe.js"></script>
-    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
-    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="canonical" href="https://inferentialthinking.org/chapters/15/3/Method_of_Least_Squares.html" />
     <link rel="shortcut icon" href="../../../_static/favicon.png"/>
     <link rel="index" title="Index" href="../../../genindex.html" />
@@ -104,6 +102,18 @@ const thebe_selector_output = ".output, .cell_output"
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
         <p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  2022/05/10
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../00/4/plimpton322_1.html">
+   Plimpton 322 (1)
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   2022/04/19
  </span>
@@ -471,27 +481,27 @@ const thebe_selector_output = ".output, .cell_output"
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../../08/1/Applying_a_Function_to_a_Column.html">
-     8.1. Applying Functions to Columns
+     8.5. Applying Functions to Columns
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../08/2/Classifying_by_One_Variable.html">
-     8.2. Classifying by One Variable
+     8.6. Classifying by One Variable
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../08/3/Cross-Classifying_by_More_than_One_Variable.html">
-     8.3. Cross-Classifying
+     8.7. Cross-Classifying
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../08/4/Joining_Tables_by_Columns.html">
-     8.4. Joining Tables by Columns
+     8.8. Joining Tables by Columns
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../08/5/Bike_Sharing_in_the_Bay_Area.html">
-     8.5. Bike Sharing in the Bay Area
+     8.9. Bike Sharing in the Bay Area
     </a>
    </li>
   </ul>
@@ -1026,7 +1036,7 @@ const thebe_selector_output = ".output, .cell_output"
 <div class="tex2jax_ignore mathjax_ignore section" id="the-method-of-least-squares">
 <h1><span class="section-number">15.3. </span>The Method of Least Squares<a class="headerlink" href="#the-method-of-least-squares" title="Permalink to this headline">¶</a></h1>
 <p>We have developed the equation of the regression line that runs through a football shaped scatter plot. But not all scatter plots are football shaped, not even linear ones. Does every scatter plot have a “best” line that goes through it? If so, can we still use the formulas for the slope and intercept developed in the previous section, or do we need new ones?</p>
-<p>To address these questions, we need a reasonable definition of “best”. Recall that the purpose of the line is to <em>predict</em> or <em>estimate</em> values of <span class="math notranslate nohighlight">\(y\)</span>, given values of <span class="math notranslate nohighlight">\(x\)</span>. Estimates typically aren’t perfect. Each one is off the true value by an <em>error</em>. A reasonable criterion for a line to be the “best” is for it to have the smallest possible overall error among all straight lines.</p>
+<p>To address these questions, we need a reasonable definition of “best”. Recall that the purpose of the line is to <em>predict</em> or <em>estimate</em> values of $y$, given values of $x$. Estimates typically aren’t perfect. Each one is off the true value by an <em>error</em>. A reasonable criterion for a line to be the “best” is for it to have the smallest possible overall error among all straight lines.</p>
 <p>In this section we will make this criterion precise and see if we can identify the best straight line under the criterion.</p>
 <div class="cell tag_remove-input docutils container">
 </div>
@@ -1215,7 +1225,7 @@ Intercept of Regression Line: 4745.0 characters
 <h2><span class="section-number">15.3.3. </span>Minimizing the Root Mean Squared Error<a class="headerlink" href="#minimizing-the-root-mean-squared-error" title="Permalink to this headline">¶</a></h2>
 <p>Our observations so far can be summarized as follows.</p>
 <ul class="simple">
-<li><p>To get estimates of <span class="math notranslate nohighlight">\(y\)</span> based on <span class="math notranslate nohighlight">\(x\)</span>, you can use any line you want.</p></li>
+<li><p>To get estimates of $y$ based on $x$, you can use any line you want.</p></li>
 <li><p>Every line has a root mean squared error of estimation.</p></li>
 <li><p>“Better” lines have smaller errors.</p></li>
 </ul>
@@ -1295,12 +1305,11 @@ Intercept of Regression Line: 4745.0 characters
 <div class="section" id="numerical-optimization">
 <h3><span class="section-number">15.3.3.1. </span>Numerical Optimization<a class="headerlink" href="#numerical-optimization" title="Permalink to this headline">¶</a></h3>
 <p>First note that a line that minimizes the root mean squared error is also a line that minimizes the squared error. The square root makes no difference to the minimization. So we will save ourselves a step of computation and just minimize the mean squared error (mse).</p>
-<p>We are trying to predict the number of characters (<span class="math notranslate nohighlight">\(y\)</span>) based on the number of periods (<span class="math notranslate nohighlight">\(x\)</span>) in chapters of Little Women. If we use the line</p>
-<div class="math notranslate nohighlight">
-\[
+<p>We are trying to predict the number of characters ($y$) based on the number of periods ($x$) in chapters of Little Women. If we use the line</p>
+<p>$$
 \mbox{prediction} ~=~ ax + b
-\]</div>
-<p>it will have an mse that depends on the slope <span class="math notranslate nohighlight">\(a\)</span> and the intercept <span class="math notranslate nohighlight">\(b\)</span>. The function <code class="docutils literal notranslate"><span class="pre">lw_mse</span></code> takes the slope and intercept as its arguments and returns the corresponding mse.</p>
+$$</p>
+<p>it will have an mse that depends on the slope $a$ and the intercept $b$. The function <code class="docutils literal notranslate"><span class="pre">lw_mse</span></code> takes the slope and intercept as its arguments and returns the corresponding mse.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">lw_mse</span><span class="p">(</span><span class="n">any_slope</span><span class="p">,</span> <span class="n">any_intercept</span><span class="p">):</span>
