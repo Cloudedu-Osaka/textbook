@@ -1,0 +1,103 @@
+# Tue, 19 Apr 2022 12:26:58
+from datascience import *
+from datascience.predicates import are
+path_data = '../../../../data/'
+import numpy as np
+import matplotlib
+matplotlib.use('Agg')
+get_ipython().run_line_magic('matplotlib', 'inline')
+import matplotlib.pyplot as plots
+plots.style.use('fivethirtyeight')
+import warnings
+warnings.simplefilter(action="ignore", category=FutureWarning)
+
+from urllib.request import urlopen 
+import re
+def read_url(url): 
+    return re.sub('\\s+', ' ', urlopen(url).read().decode())
+# Tue, 19 Apr 2022 12:27:07
+from datascience import *
+from datascience.predicates import are
+path_data = '../../../../data/'
+import numpy as np
+import matplotlib
+matplotlib.use('Agg')
+get_ipython().run_line_magic('matplotlib', 'inline')
+import matplotlib.pyplot as plots
+plots.style.use('fivethirtyeight')
+import warnings
+warnings.simplefilter(action="ignore", category=FutureWarning)
+
+from urllib.request import urlopen 
+import re
+def read_url(url): 
+    return re.sub('\\s+', ' ', urlopen(url).read().decode())
+# Tue, 19 Apr 2022 12:28:42
+get_ipython().run_line_magic('logstate', '')
+# Tue, 19 Apr 2022 12:30:57
+from datascience import *
+import numpy as np
+path_data = '../../../'
+import matplotlib
+matplotlib.use('Agg')
+get_ipython().run_line_magic('matplotlib', 'inline')
+import matplotlib.pyplot as plots
+plots.style.use('fivethirtyeight')
+import warnings
+warnings.simplefilter(action="ignore", category=FutureWarning)
+
+from urllib.request import urlopen 
+import re
+def read_url(url): 
+    return re.sub('\\s+', ' ', urlopen(url).read().decode())
+# Tue, 19 Apr 2022 12:30:58
+# Read two books, fast (again)!
+
+huck_finn_url = 'https://www.inferentialthinking.com/data/huck_finn.txt'
+huck_finn_text = read_url(huck_finn_url)
+huck_finn_chapters = huck_finn_text.split('CHAPTER ')[44:]
+
+little_women_url = 'https://www.inferentialthinking.com/data/little_women.txt'
+little_women_text = read_url(little_women_url)
+little_women_chapters = little_women_text.split('CHAPTER ')[1:]
+# Tue, 19 Apr 2022 12:31:04
+from datascience import *
+import numpy as np
+path_data = '../../../'
+import matplotlib
+matplotlib.use('Agg')
+get_ipython().run_line_magic('matplotlib', 'inline')
+import matplotlib.pyplot as plots
+plots.style.use('fivethirtyeight')
+import warnings
+warnings.simplefilter(action="ignore", category=FutureWarning)
+
+from urllib.request import urlopen 
+import re
+def read_url(url): 
+    return re.sub('\\s+', ' ', urlopen(url).read().decode())
+# Tue, 19 Apr 2022 12:31:06
+# Read two books, fast (again)!
+
+huck_finn_url = 'https://www.inferentialthinking.com/data/huck_finn.txt'
+huck_finn_text = read_url(huck_finn_url)
+huck_finn_chapters = huck_finn_text.split('CHAPTER ')[44:]
+
+little_women_url = 'https://www.inferentialthinking.com/data/little_women.txt'
+little_women_text = read_url(little_women_url)
+little_women_chapters = little_women_text.split('CHAPTER ')[1:]
+# Tue, 19 Apr 2022 12:31:12
+# Count how many times the names Jim, Tom, and Huck appear in each chapter.
+
+counts = Table().with_columns([
+        'Jim', np.char.count(huck_finn_chapters, 'Jim'),
+        'Tom', np.char.count(huck_finn_chapters, 'Tom'),
+        'Huck', np.char.count(huck_finn_chapters, 'Huck')
+    ])
+
+# Plot the cumulative counts:
+# how many times in Chapter 1, how many times in Chapters 1 and 2, and so on.
+
+cum_counts = counts.cumsum().with_column('Chapter', np.arange(1, 44, 1))
+cum_counts.plot(column_for_xticks=3)
+plots.title('Cumulative Number of Times Each Name Appears', y=1.08);

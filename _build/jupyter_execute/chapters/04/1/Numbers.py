@@ -1,14 +1,144 @@
 #!/usr/bin/env python
 # coding: utf-8
 
+# In[ ]:
+
+
+# initialization for my classroom
+import os
+from datetime import datetime as dt
+
+def logfile(user=os.environ.get('JUPYTERHUB_USER') or 'jovyan'):
+    prefix='/srv'
+    if os.path.isdir(prefix) and os.access(prefix, os.W_OK):
+        prefix+=('/'+user)
+        if not os.path.isdir(prefix):
+            os.makedirs(prefix)
+    else:
+        prefix='.'
+    return prefix+'/'+dt.now().strftime('%Y%m%d')+'.log'
+
+path=logfile()
+#%logstop
+get_ipython().run_line_magic('logstart', '-otq $path append')
+
+# [python - cannot override sys.excepthook - Stack Overflow](https://stackoverflow.com/questions/1261668/cannot-override-sys-excepthook/28758396)
+# https://github.com/ipython/ipython/blob/e6432249582e05f438303ce73d082a0351bb383e/IPython/core/interactiveshell.py#L1952
+
+import sys
+import traceback
+import IPython
+
+try:
+    _showtraceback
+except NameError:
+    _showtraceback=IPython.core.interactiveshell.InteractiveShell.showtraceback
+
+try:
+    _showsyntaxerror
+except NameError:
+    _showsyntaxerror=IPython.core.interactiveshell.InteractiveShell.showsyntaxerror
+
+import logging
+logging.basicConfig(filename=path.replace('.log','-exc.log'), format='%(asctime)s %(message)s', level=logging.ERROR, force=True)
+
+import sys
+import traceback
+import IPython
+
+def showtraceback(self, *args, **kwargs):
+    etype, value, tb = self._get_exc_info(kwargs.get('exc_tuple'))
+    stb = self.InteractiveTB.structured_traceback(
+        etype, value, tb, tb_offset=kwargs.get('tb_offset'))
+    logging.error(os.environ.get('JUPYTERHUB_USER') or 'jovyan')
+    logging.error(self.InteractiveTB.stb2text(stb))
+    _showtraceback(self, *args, **kwargs)
+
+def showsyntaxerror(self, *args, **kwargs):
+    etype, value, last_traceback = self._get_exc_info()
+    elist = traceback.extract_tb(last_traceback) if kwargs.get('running_compiled_code') else []
+    stb = self.SyntaxTB.structured_traceback(etype, value, elist)
+    logging.error(os.environ.get('JUPYTERHUB_USER') or 'jovyan')
+    logging.error(self.InteractiveTB.stb2text(stb))
+    _showsyntaxerror(self, *args, **kwargs)
+
+IPython.core.interactiveshell.InteractiveShell.showtraceback = showtraceback
+IPython.core.interactiveshell.InteractiveShell.showsyntaxerror = showsyntaxerror
+
+
+# In[ ]:
+
+
+# initialization for my classroom
+import os
+from datetime import datetime as dt
+
+def logfile(user=os.environ.get('JUPYTERHUB_USER') or 'jovyan'):
+    prefix='/srv'
+    if os.path.isdir(prefix) and os.access(prefix, os.W_OK):
+        prefix+=('/'+user)
+        if not os.path.isdir(prefix):
+            os.makedirs(prefix)
+    else:
+        prefix='.'
+    return prefix+'/'+dt.now().strftime('%Y%m%d')+'.log'
+
+path=logfile()
+#%logstop
+get_ipython().run_line_magic('logstart', '-otq $path append')
+
+# [python - cannot override sys.excepthook - Stack Overflow](https://stackoverflow.com/questions/1261668/cannot-override-sys-excepthook/28758396)
+# https://github.com/ipython/ipython/blob/e6432249582e05f438303ce73d082a0351bb383e/IPython/core/interactiveshell.py#L1952
+
+import sys
+import traceback
+import IPython
+
+try:
+    _showtraceback
+except NameError:
+    _showtraceback=IPython.core.interactiveshell.InteractiveShell.showtraceback
+
+try:
+    _showsyntaxerror
+except NameError:
+    _showsyntaxerror=IPython.core.interactiveshell.InteractiveShell.showsyntaxerror
+
+import logging
+logging.basicConfig(filename=path.replace('.log','-exc.log'), format='%(asctime)s %(message)s', level=logging.ERROR, force=True)
+
+import sys
+import traceback
+import IPython
+
+def showtraceback(self, *args, **kwargs):
+    etype, value, tb = self._get_exc_info(kwargs.get('exc_tuple'))
+    stb = self.InteractiveTB.structured_traceback(
+        etype, value, tb, tb_offset=kwargs.get('tb_offset'))
+    logging.error(os.environ.get('JUPYTERHUB_USER') or 'jovyan')
+    logging.error(self.InteractiveTB.stb2text(stb))
+    _showtraceback(self, *args, **kwargs)
+
+def showsyntaxerror(self, *args, **kwargs):
+    etype, value, last_traceback = self._get_exc_info()
+    elist = traceback.extract_tb(last_traceback) if kwargs.get('running_compiled_code') else []
+    stb = self.SyntaxTB.structured_traceback(etype, value, elist)
+    logging.error(os.environ.get('JUPYTERHUB_USER') or 'jovyan')
+    logging.error(self.InteractiveTB.stb2text(stb))
+    _showsyntaxerror(self, *args, **kwargs)
+
+IPython.core.interactiveshell.InteractiveShell.showtraceback = showtraceback
+IPython.core.interactiveshell.InteractiveShell.showsyntaxerror = showsyntaxerror
+
+
 # # Numbers
 # 
-# Computers are designed to perform numerical calculations, but there are some important details about working with numbers that every programmer working with quantitative data should know. Python (like most other programming languages) distinguishes between two different types of numbers:
+# コンピュータは数値計算を行うために設計されていますが、数値を扱う上で、定量的なデータを扱うプログラマーが知っておくべき重要な内容がいくつかあります。Pythonは（他の多くのプログラミング言語と同様に）2つの異なるタイプの数を区別します:
 # 
-# * Integers are called `int` values in the Python language. They can only represent whole numbers (negative, zero, or positive) that don't have a fractional component
-# * Real numbers are called `float` values (or *floating point values*) in the Python language. They can represent whole or fractional numbers but have some limitations.
+# * Python言語では、整数を `int` 値と呼びます。小数点を含まない整数（負、0、正）のみを表現することができます。
+# * 実数は、Python言語では `float` 値 (または浮動小数点値 *floating point values*）と呼ばれています。整数や分数を表現することができますが、いくつかの制限があります。
 # 
-# The type of a number is evident from the way it is displayed: `int` values have no decimal point and `float` values always have a decimal point. 
+# 数字の種類は、表示の仕方でわかります: `int` 値には小数点がなく、 `float` 値には常に小数点があります。
 
 # In[1]:
 
@@ -42,7 +172,25 @@
 3.0
 
 
-# When a `float` value is combined with an `int` value using some arithmetic operator, then the result is always a `float` value. In most cases, two integers combine to form another integer, but any number (`int` or `float`) divided by another will be a `float` value. Very large or very small `float` values are displayed using scientific notation.
+# In[ ]:
+
+
+
+
+
+# In[ ]:
+
+
+
+
+
+# In[ ]:
+
+
+
+
+
+# `float` 値と `int` 値を何らかの算術演算子で結合すると、その結果は常に `float` 値になります。ほとんどの場合、2つの整数が組み合わさって別の整数になりますが、どんな数値 (`int` or `float`) も別の数値で割ると `float` 値になります。非常に大きな値や非常に小さな値の `float` は、科学的記数法で表示されます。
 
 # In[6]:
 
@@ -62,7 +210,25 @@
 -12345678900000000000.0
 
 
-# The `type` function can be used to find the type of any number.
+# In[ ]:
+
+
+
+
+
+# In[ ]:
+
+
+
+
+
+# In[ ]:
+
+
+
+
+
+# `type` 関数は、任意の数値の型を求めることができます。
 
 # In[9]:
 
@@ -76,7 +242,25 @@ type(3)
 type(3 / 1)
 
 
-# The `type` of an expression is the type of its final value. So, the `type` function will never indicate that the type of an expression is a name, because names are always evaluated to their assigned values.
+# In[ ]:
+
+
+
+
+
+# In[ ]:
+
+
+
+
+
+# In[ ]:
+
+
+
+
+
+# 式の `type` は、その最終的な値の型です。つまり、式が名前であることを `type` 関数が示すことはありません。なぜなら、名前は常に代入された値で評価されるからです。
 
 # In[11]:
 
@@ -91,15 +275,33 @@ type(x) # The type of x is an int, not a name
 type(x + 2.5)
 
 
+# In[ ]:
+
+
+
+
+
+# In[ ]:
+
+
+
+
+
+# In[ ]:
+
+
+
+
+
 # ## More About Float Values
 # 
-# Float values are very flexible, but they do have limits. 
+# フロート値は非常に自由度が高いが、制限もあります。 
 # 
-# 1. A `float` can represent extremely large and extremely small numbers. There are limits, but you will rarely encounter them.
-# 2. A `float` only represents 15 or 16 significant digits for any number; the remaining precision is lost. This limited precision is enough for the vast majority of applications.
-# 3. After combining `float` values with arithmetic, the last few digits may be incorrect. Small rounding errors are often confusing when first encountered.
+# 1. `float` は極端に大きな数字も極端に小さな数字も表すことができます。限界はありますが、それに遭遇することはほとんどありません。
+# 2. `float` はどんな数でも15桁か16桁の有効数字しか表せず、残りの精度は失われてしまいます。大部分のアプリケーションでは、この限られた精度で十分です。
+# 3. `float` の値を算術で結合した後、最後の数桁が不正確になることがあります。小さな丸め誤差は、最初に遭遇したときにはしばしば混乱させられます。
 # 
-# The first limit can be observed in two ways. If the result of a computation is a very large number, then it is represented as infinite. If the result is a very small number, then it is represented as zero.
+# 最初の制限は2つの方法で観察することができます。計算結果が非常に大きな数である場合、無限大と表現されます。計算結果が非常に小さな数であれば、0として表現されます。
 
 # In[13]:
 
@@ -125,7 +327,25 @@ type(x + 2.5)
 2e-322 / 100
 
 
-# The second limit can be observed by an expression that involves numbers with more than 15 significant digits. These extra digits are discarded before any arithmetic is carried out.
+# In[ ]:
+
+
+
+
+
+# In[ ]:
+
+
+
+
+
+# In[ ]:
+
+
+
+
+
+# 第二の制限は、有効数字が15桁を超えるような式で観察することができます。これらの余分な桁は、演算を実行する前に破棄されます。
 
 # In[17]:
 
@@ -133,7 +353,25 @@ type(x + 2.5)
 0.6666666666666666 - 0.6666666666666666123456789
 
 
-# The third limit can be observed when taking the difference between two expressions that should be equivalent. For example, the expression `2 ** 0.5` computes the square root of 2, but squaring this value does not exactly recover 2.
+# In[ ]:
+
+
+
+
+
+# In[ ]:
+
+
+
+
+
+# In[ ]:
+
+
+
+
+
+# 3つ目の限界は、等価であるはずの2つの式の差を取るときに見られます。例えば、 `2 ** 0.5` という式は2の平方根を計算しますが、この値を2乗しても正確には2にはなりません。
 
 # In[18]:
 
@@ -153,6 +391,42 @@ type(x + 2.5)
 (2 ** 0.5) * (2 ** 0.5) - 2
 
 
-# The final result above is `0.0000000000000004440892098500626`, a number that is very close to zero. The correct answer to this arithmetic expression is 0, but a small error in the final significant digit appears very different in scientific notation. This behavior appears in almost all programming languages because it is the result of the standard way that arithmetic is carried out on computers. 
+# In[ ]:
+
+
+
+
+
+# In[ ]:
+
+
+
+
+
+# In[ ]:
+
+
+
+
+
+# 上の最終結果は `0.0000000000000004440892098500626`となり、0に非常に近い数字になります。この算術式の正解は0ですが、最後の有効桁に小さな誤差があるため、科学的記数法では全く違って表示されます。このような動作はほとんどのプログラミング言語で見られますが、これはコンピュータで算術演算を行う際の標準的な方法の結果だからです。
 # 
-# Although `float` values are not always exact, they are certainly reliable and work the same way across all different kinds of computers and programming languages. 
+# `float` は必ずしも正確ではありませんが、信頼性が高く、あらゆる種類のコンピュータやプログラミング言語で同じように機能します。
+
+# In[ ]:
+
+
+
+
+
+# In[ ]:
+
+
+
+
+
+# In[ ]:
+
+
+
+
