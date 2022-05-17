@@ -2,6 +2,17 @@ format: jb-book
 root: chapters/00/entry
 title: Introduction
 parts:
+- caption: 2022/05/17
+  numberd: false
+  chapters:
+  - file: chapters/00/5/assign_1.ipynb
+    title: Assignment (1)
+  - file: chapters/00/5/assign_2.ipynb
+    title: Assignment (2)
+  - file: chapters/00/5/assign_3.ipynb
+    title: Assignment (3)
+  - file: chapters/00/5/assign_4.ipynb
+    title: Assignment (4)
 - caption: 2022/05/10
   numberd: false
   chapters:

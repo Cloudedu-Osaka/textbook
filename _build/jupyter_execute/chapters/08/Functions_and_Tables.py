@@ -66,7 +66,7 @@ IPython.core.interactiveshell.InteractiveShell.showtraceback = showtraceback
 IPython.core.interactiveshell.InteractiveShell.showsyntaxerror = showsyntaxerror
 
 
-# In[3]:
+# In[2]:
 
 
 from datascience import *
@@ -113,7 +113,7 @@ def double(x):
 
 # ### 本体 (body)
 # * ここにあるすべてのコードは、この関数を呼び出すたびに実行されます。
-# * 特別なステートメント `return` は Python にこの関数の各呼び出しの値が何であるかを伝えます：それは `return` の後の式の値です。
+# * 特別なステートメント `return` は Python にこの関数の各呼び出しの戻り値が何であるかを伝えます：それは `return` の後の式の値です。
 # * 例えば、 `double(3)` の値は `6` です。(引数が `3` の場合、本体が `x=3` で始まっているようなものであることを忘れないでください。
 # 多くの場合、本体には `return` された値を計算するためのコードが何行にもわたって書かれています。ここには、他の場所に書けるようなPythonのコードを書くことができます。
 
