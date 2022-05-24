@@ -18,6 +18,8 @@ parts:
 - caption: 2022/05/17
   numberd: false
   chapters:
+  - file: chapters/00/5/long_division.ipynb
+    title: Long Division
   - file: chapters/00/5/assign_1.ipynb
     title: Assignment (1)
   - file: chapters/00/5/assign_2.ipynb
