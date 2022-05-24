@@ -104,6 +104,23 @@ const thebe_selector_output = ".output, .cell_output"
     <div class="bd-toc-item active">
         <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
+  2022/05/24
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="chapters/00/6/assign_1.html">
+   Assignment (1)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="chapters/00/6/assign_2.html">
+   Assignment (2)
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
   2022/05/17
  </span>
 </p>
@@ -1007,11 +1024,33 @@ const thebe_selector_output = ".output, .cell_output"
                 
   <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># initialization for my classroom</span>
-<span class="kn">import</span> <span class="nn">os</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sqlalchemy</span>
+<span class="n">engine</span> <span class="o">=</span> <span class="n">sqlalchemy</span><span class="o">.</span><span class="n">create_engine</span><span class="p">(</span><span class="s1">&#39;sqlite:///jovyan.db&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">inspector</span> <span class="o">=</span> <span class="n">sqlalchemy</span><span class="o">.</span><span class="n">inspect</span><span class="p">(</span><span class="n">engine</span><span class="p">)</span>
+<span class="n">inspector</span><span class="o">.</span><span class="n">get_table_names</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
 <span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">datetime</span> <span class="k">as</span> <span class="n">dt</span>
 
-<span class="k">def</span> <span class="nf">logfile</span><span class="p">(</span><span class="n">user</span><span class="o">=</span><span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;JUPYTERHUB_USER&#39;</span><span class="p">)</span> <span class="ow">or</span> <span class="s1">&#39;jovyan&#39;</span><span class="p">):</span>
+<span class="k">def</span> <span class="nf">logfile</span><span class="p">(</span><span class="n">user</span><span class="o">=</span><span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;JUPYTERHUB_USER&#39;</span><span class="p">)</span> <span class="ow">or</span> <span class="s1">&#39;jovyan&#39;</span><span class="p">,</span> 
+            <span class="n">date</span><span class="o">=</span><span class="n">dt</span><span class="o">.</span><span class="n">now</span><span class="p">()</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s1">&#39;%Y%m</span><span class="si">%d</span><span class="s1">&#39;</span><span class="p">),</span>
+            <span class="n">sfx</span><span class="o">=</span><span class="s1">&#39;.log&#39;</span><span class="p">):</span>
     <span class="n">prefix</span><span class="o">=</span><span class="s1">&#39;/srv&#39;</span>
     <span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">isdir</span><span class="p">(</span><span class="n">prefix</span><span class="p">)</span> <span class="ow">and</span> <span class="n">os</span><span class="o">.</span><span class="n">access</span><span class="p">(</span><span class="n">prefix</span><span class="p">,</span> <span class="n">os</span><span class="o">.</span><span class="n">W_OK</span><span class="p">):</span>
         <span class="n">prefix</span><span class="o">+=</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="o">+</span><span class="n">user</span><span class="p">)</span>
@@ -1019,8 +1058,7 @@ const thebe_selector_output = ".output, .cell_output"
             <span class="n">os</span><span class="o">.</span><span class="n">makedirs</span><span class="p">(</span><span class="n">prefix</span><span class="p">)</span>
     <span class="k">else</span><span class="p">:</span>
         <span class="n">prefix</span><span class="o">=</span><span class="s1">&#39;.&#39;</span>
-    <span class="k">return</span> <span class="n">prefix</span><span class="o">+</span><span class="s1">&#39;/&#39;</span><span class="o">+</span><span class="n">dt</span><span class="o">.</span><span class="n">now</span><span class="p">()</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s1">&#39;%Y%m</span><span class="si">%d</span><span class="s1">&#39;</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39;-nbg.log&#39;</span>
-    <span class="c1">#return prefix+&#39;/&#39;+&#39;20220516&#39;+&#39;-nbg.log&#39;</span>
+    <span class="k">return</span> <span class="n">prefix</span><span class="o">+</span><span class="s1">&#39;/&#39;</span><span class="o">+</span><span class="n">date</span><span class="o">+</span><span class="n">sfx</span>
 </pre></div>
 </div>
 </div>
@@ -1037,36 +1075,71 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">re</span>
-
-<span class="n">pat</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;(\d</span><span class="si">{4}</span><span class="s1">)-(\d</span><span class="si">{2}</span><span class="s1">)-(\d</span><span class="si">{2}</span><span class="s1">) (\d</span><span class="si">{2}</span><span class="s1">):(\d</span><span class="si">{2}</span><span class="s1">):(\d</span><span class="si">{2}</span><span class="s1">).*:summary: \((\d+), (\d+), (\d+)\)&#39;</span><span class="p">)</span>
-
-<span class="k">def</span> <span class="nf">activity</span><span class="p">(</span><span class="n">user</span><span class="o">=</span><span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;JUPYTERHUB_USER&#39;</span><span class="p">)</span> <span class="ow">or</span> <span class="s1">&#39;jovyan&#39;</span><span class="p">):</span>
-    <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">()</span>
-    <span class="k">try</span><span class="p">:</span>
-        <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">logfile</span><span class="p">(</span><span class="n">user</span><span class="p">),</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
-            <span class="k">for</span> <span class="n">l</span> <span class="ow">in</span> <span class="n">f</span><span class="p">:</span>
-                <span class="n">r</span> <span class="o">=</span> <span class="n">pat</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="n">l</span><span class="p">)</span>
-                <span class="k">if</span> <span class="n">r</span><span class="p">:</span>
-                    <span class="n">dy</span><span class="p">,</span> <span class="n">dm</span><span class="p">,</span> <span class="n">dd</span><span class="p">,</span> <span class="n">th</span><span class="p">,</span> <span class="n">tm</span><span class="p">,</span> <span class="n">ts</span><span class="p">,</span> <span class="n">c</span><span class="p">,</span> <span class="n">p</span><span class="p">,</span> <span class="n">f</span> <span class="o">=</span> <span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">s</span><span class="p">)</span> <span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="n">r</span><span class="o">.</span><span class="n">groups</span><span class="p">())</span>
-                    <span class="n">d</span> <span class="o">=</span> <span class="n">dt</span><span class="o">.</span><span class="n">combine</span><span class="p">(</span><span class="n">datetime</span><span class="o">.</span><span class="n">date</span><span class="p">(</span><span class="n">dy</span><span class="p">,</span> <span class="n">dm</span><span class="p">,</span> <span class="n">dd</span><span class="p">),</span>
-                                   <span class="n">datetime</span><span class="o">.</span><span class="n">time</span><span class="p">(</span><span class="n">th</span><span class="p">,</span> <span class="n">tm</span><span class="p">,</span> <span class="n">ts</span><span class="p">))</span>
-                    <span class="c1">#print(pd.Timestamp(d), c, p, f)</span>
-                    <span class="k">if</span> <span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">p</span><span class="p">)</span><span class="o">+</span><span class="nb">int</span><span class="p">(</span><span class="n">f</span><span class="p">))</span><span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
-                        <span class="n">df_new</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">([[</span><span class="mf">1.</span><span class="p">,(</span><span class="mi">3</span><span class="o">*</span><span class="n">p</span><span class="o">+</span><span class="n">f</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="n">p</span><span class="o">+</span><span class="n">f</span><span class="p">)]],</span> 
-                                              <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;y&quot;</span><span class="p">,</span> <span class="s2">&quot;pass&quot;</span><span class="p">],</span>
-                                              <span class="n">index</span><span class="o">=</span><span class="p">[</span><span class="n">pd</span><span class="o">.</span><span class="n">Timestamp</span><span class="p">(</span><span class="n">d</span><span class="p">)])</span>
-                        <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">df</span><span class="p">,</span><span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">df_new</span><span class="p">)])</span>
-    <span class="k">except</span><span class="p">:</span>
-        <span class="k">pass</span>
-    <span class="k">return</span> <span class="n">df</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dt</span><span class="o">.</span><span class="n">min</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>datetime.datetime(1, 1, 1, 0, 0)
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">activity</span><span class="p">()</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">re</span>
+
+<span class="n">pat</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;(\d</span><span class="si">{4}</span><span class="s1">)-(\d</span><span class="si">{2}</span><span class="s1">)-(\d</span><span class="si">{2}</span><span class="s1">) (\d</span><span class="si">{2}</span><span class="s1">):(\d</span><span class="si">{2}</span><span class="s1">):(\d</span><span class="si">{2}</span><span class="s1">).*:summary: \((\d+), (\d+), (\d+)\)&#39;</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">activity</span><span class="p">(</span><span class="n">user</span><span class="o">=</span><span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;JUPYTERHUB_USER&#39;</span><span class="p">)</span> <span class="ow">or</span> <span class="s1">&#39;jovyan&#39;</span><span class="p">):</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_sql</span><span class="p">(</span><span class="s1">&#39;&#39;&#39;select * from nbgrader&#39;&#39;&#39;</span><span class="p">,</span>
+                        <span class="n">engine</span><span class="p">,</span> <span class="n">parse_dates</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;index&#39;</span><span class="p">])</span>
+        <span class="n">df</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s1">&#39;index&#39;</span><span class="p">,</span> <span class="n">drop</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+        <span class="n">df</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="s1">&#39;time&#39;</span>
+        <span class="n">latest_index</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">to_pydatetime</span><span class="p">()[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+    <span class="k">except</span> <span class="n">sqlalchemy</span><span class="o">.</span><span class="n">exc</span><span class="o">.</span><span class="n">SQLAlchemyError</span><span class="p">:</span>
+        <span class="n">latest_index</span> <span class="o">=</span> <span class="n">dt</span><span class="o">.</span><span class="n">min</span>
+    
+    <span class="c1">#dt.now().strftime(&#39;%Y%m%d&#39;)</span>
+    <span class="k">for</span> <span class="n">date</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;20220516&#39;</span><span class="p">]:</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">logfile</span><span class="p">(</span><span class="n">user</span><span class="p">,</span> <span class="n">date</span><span class="p">,</span> <span class="s1">&#39;-nbg.log&#39;</span><span class="p">),</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+                <span class="k">for</span> <span class="n">l</span> <span class="ow">in</span> <span class="n">f</span><span class="p">:</span>
+                    <span class="n">r</span> <span class="o">=</span> <span class="n">pat</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="n">l</span><span class="p">)</span>
+                    <span class="k">if</span> <span class="n">r</span><span class="p">:</span>
+                        <span class="n">dy</span><span class="p">,</span> <span class="n">dm</span><span class="p">,</span> <span class="n">dd</span><span class="p">,</span> <span class="n">th</span><span class="p">,</span> <span class="n">tm</span><span class="p">,</span> <span class="n">ts</span><span class="p">,</span> <span class="n">c</span><span class="p">,</span> <span class="n">p</span><span class="p">,</span> <span class="n">f</span> <span class="o">=</span> <span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">s</span><span class="p">)</span> <span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="n">r</span><span class="o">.</span><span class="n">groups</span><span class="p">())</span>
+                        <span class="n">d</span> <span class="o">=</span> <span class="n">dt</span><span class="o">.</span><span class="n">combine</span><span class="p">(</span><span class="n">datetime</span><span class="o">.</span><span class="n">date</span><span class="p">(</span><span class="n">dy</span><span class="p">,</span> <span class="n">dm</span><span class="p">,</span> <span class="n">dd</span><span class="p">),</span>
+                                       <span class="n">datetime</span><span class="o">.</span><span class="n">time</span><span class="p">(</span><span class="n">th</span><span class="p">,</span> <span class="n">tm</span><span class="p">,</span> <span class="n">ts</span><span class="p">))</span>
+                        <span class="c1">#print(pd.Timestamp(d), c, p, f)</span>
+                        <span class="k">if</span> <span class="n">d</span> <span class="o">&gt;</span> <span class="n">latest_index</span> <span class="ow">and</span> <span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">p</span><span class="p">)</span><span class="o">+</span><span class="nb">int</span><span class="p">(</span><span class="n">f</span><span class="p">))</span><span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+                            <span class="n">ts_data</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">((</span><span class="mf">1.</span><span class="p">,(</span><span class="mi">3</span><span class="o">*</span><span class="n">p</span><span class="o">+</span><span class="n">f</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="n">p</span><span class="o">+</span><span class="n">f</span><span class="p">)))</span>
+                            <span class="n">df_new</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">([</span><span class="n">ts_data</span><span class="p">])</span>
+                            <span class="n">df_new</span><span class="o">.</span><span class="n">index</span> <span class="o">=</span> <span class="p">[</span><span class="n">pd</span><span class="o">.</span><span class="n">Timestamp</span><span class="p">(</span><span class="n">d</span><span class="p">)]</span>
+                            <span class="n">df_new</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">([[</span><span class="mf">1.</span><span class="p">,</span> <span class="p">(</span><span class="mi">3</span><span class="o">*</span><span class="n">p</span><span class="o">+</span><span class="n">f</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="n">p</span><span class="o">+</span><span class="n">f</span><span class="p">)]],</span> 
+                                                  <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;y&quot;</span><span class="p">,</span> <span class="s2">&quot;pass&quot;</span><span class="p">],</span>
+                                                  <span class="n">index</span><span class="o">=</span><span class="p">[</span><span class="n">pd</span><span class="o">.</span><span class="n">Timestamp</span><span class="p">(</span><span class="n">d</span><span class="p">)])</span>
+                            <span class="n">df_new</span><span class="o">.</span><span class="n">to_sql</span><span class="p">(</span><span class="s1">&#39;nbgrader&#39;</span><span class="p">,</span> <span class="n">engine</span><span class="p">,</span> <span class="n">if_exists</span><span class="o">=</span><span class="s1">&#39;append&#39;</span><span class="p">)</span>
+        <span class="k">except</span><span class="p">:</span>
+            <span class="k">pass</span>
+    <span class="c1">#return df</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">activity</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_sql</span><span class="p">(</span><span class="s1">&#39;&#39;&#39;select * from nbgrader&#39;&#39;&#39;</span><span class="p">,</span>
+                    <span class="n">engine</span><span class="p">,</span> <span class="n">parse_dates</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;index&#39;</span><span class="p">])</span>
+<span class="n">df</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s1">&#39;index&#39;</span><span class="p">,</span> <span class="n">drop</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">df</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="s1">&#39;time&#39;</span>
 <span class="n">df</span>
 </pre></div>
 </div>
@@ -1092,6 +1165,11 @@ const thebe_selector_output = ".output, .cell_output"
       <th></th>
       <th>y</th>
       <th>pass</th>
+    </tr>
+    <tr>
+      <th>time</th>
+      <th></th>
+      <th></th>
     </tr>
   </thead>
   <tbody>
@@ -1131,18 +1209,33 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">values</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([3., 3., 3., 3., 1., 3.])
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 <span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
 
 <span class="n">sns</span><span class="o">.</span><span class="n">set</span><span class="p">()</span>
 
 <span class="k">def</span> <span class="nf">plot_ax</span><span class="p">(</span><span class="n">ax</span><span class="p">,</span> <span class="n">user</span><span class="o">=</span><span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;JUPYTERHUB_USER&#39;</span><span class="p">)</span> <span class="ow">or</span> <span class="s1">&#39;jovyan&#39;</span><span class="p">):</span>
-    <span class="n">data</span> <span class="o">=</span> <span class="n">activity</span><span class="p">(</span><span class="n">user</span><span class="p">)</span><span class="o">.</span><span class="n">sort_index</span><span class="p">()</span>
-    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">data</span><span class="p">)</span><span class="o">&gt;</span><span class="mi">0</span><span class="p">:</span>
+    <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_sql</span><span class="p">(</span><span class="s1">&#39;&#39;&#39;select * from nbgrader&#39;&#39;&#39;</span><span class="p">,</span>
+                     <span class="n">engine</span><span class="p">,</span> <span class="n">parse_dates</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;index&#39;</span><span class="p">])</span>
+    <span class="n">df</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s1">&#39;index&#39;</span><span class="p">,</span> <span class="n">drop</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="n">df</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="s1">&#39;time&#39;</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">df</span><span class="p">)</span><span class="o">&gt;</span><span class="mi">0</span><span class="p">:</span>
         <span class="n">cmap</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">cm</span><span class="o">.</span><span class="n">Spectral</span>
         <span class="n">ax</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span>
-            <span class="n">x</span><span class="o">=</span><span class="n">data</span><span class="o">.</span><span class="n">index</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;y&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">,</span> 
-            <span class="n">c</span><span class="o">=</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;pass&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">,</span> <span class="n">s</span><span class="o">=</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;pass&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="o">*</span><span class="mi">500</span><span class="p">,</span>
+            <span class="n">x</span><span class="o">=</span><span class="n">df</span><span class="o">.</span><span class="n">index</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;y&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">,</span> 
+            <span class="n">c</span><span class="o">=</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;pass&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">,</span> <span class="n">s</span><span class="o">=</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;pass&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="o">*</span><span class="mi">500</span><span class="p">,</span>
             <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;Spectral&#39;</span><span class="p">,</span>
             <span class="n">alpha</span><span class="o">=</span><span class="mf">0.4</span><span class="p">,</span> <span class="n">edgecolor</span><span class="o">=</span><span class="s1">&#39;none&#39;</span>
         <span class="p">)</span>
@@ -1169,7 +1262,7 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/nbgrader-activity_5_0.png" src="_images/nbgrader-activity_5_0.png" />
+<img alt="_images/nbgrader-activity_10_0.png" src="_images/nbgrader-activity_10_0.png" />
 </div>
 </div>
 
