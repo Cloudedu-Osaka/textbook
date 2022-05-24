@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>16.3. Prediction Intervals &#8212; Computational and Inferential Thinking</title>
+    <title>分数を少数で表す &#8212; Computational and Inferential Thinking</title>
     
   <link href="../../../_static/css/theme.css" rel="stylesheet">
   <link href="../../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -52,14 +52,12 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../../../_static/sphinx-thebe.js"></script>
-    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
-    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <link rel="canonical" href="https://inferentialthinking.org/chapters/16/3/Prediction_Intervals.html" />
+    <link rel="canonical" href="https://inferentialthinking.org/chapters/00/5/long_division.html" />
     <link rel="shortcut icon" href="../../../_static/favicon.png"/>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="17. Classification" href="../../17/Classification.html" />
-    <link rel="prev" title="16.2. Inference for the True Slope" href="../2/Inference_for_the_True_Slope.html" />
+    <link rel="next" title="Assignment (1)" href="assign_1.html" />
+    <link rel="prev" title="課題-2) Plimpton 322 に記載された数表を生成する" href="../6/assign_2.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -113,27 +111,27 @@ const thebe_selector_output = ".output, .cell_output"
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="../../00/6/plimpton322_2.html">
+  <a class="reference internal" href="../6/plimpton322_2.html">
    Decoding Plimpton 322 (1)
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../../00/6/plimpton322_3.html">
+  <a class="reference internal" href="../6/plimpton322_3.html">
    Decoding Plimpton 322 (2)
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../../00/6/plimpton322_4.html">
+  <a class="reference internal" href="../6/plimpton322_4.html">
    Decoding Plimpton 322 (3)
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../../00/6/assign_1.html">
+  <a class="reference internal" href="../6/assign_1.html">
    Assignment (1)
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../../00/6/assign_2.html">
+  <a class="reference internal" href="../6/assign_2.html">
    Assignment (2)
   </a>
  </li>
@@ -143,29 +141,29 @@ const thebe_selector_output = ".output, .cell_output"
   2022/05/17
  </span>
 </p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../../00/5/long_division.html">
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
    Long Division
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../../00/5/assign_1.html">
+  <a class="reference internal" href="assign_1.html">
    Assignment (1)
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../../00/5/assign_2.html">
+  <a class="reference internal" href="assign_2.html">
    Assignment (2)
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../../00/5/assign_3.html">
+  <a class="reference internal" href="assign_3.html">
    Assignment (3)
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../../00/5/assign_4.html">
+  <a class="reference internal" href="assign_4.html">
    Assignment (4)
   </a>
  </li>
@@ -177,7 +175,7 @@ const thebe_selector_output = ".output, .cell_output"
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="../../00/4/plimpton322_1.html">
+  <a class="reference internal" href="../4/plimpton322_1.html">
    Plimpton 322 (1)
   </a>
  </li>
@@ -189,7 +187,7 @@ const thebe_selector_output = ".output, .cell_output"
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="../../00/3/intro_add_1.html">
+  <a class="reference internal" href="../3/intro_add_1.html">
    Notebook additional setting
   </a>
  </li>
@@ -201,7 +199,7 @@ const thebe_selector_output = ".output, .cell_output"
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../00/intro_add.html">
+  <a class="reference internal" href="../intro_add.html">
    Precautions
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
@@ -211,34 +209,34 @@ const thebe_selector_output = ".output, .cell_output"
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../../00/0/1/Receiving_invitation_mail.html">
+    <a class="reference internal" href="../0/1/Receiving_invitation_mail.html">
      Federated authentication
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../../00/0/1/Accessing_JupyterHub.html">
+    <a class="reference internal" href="../0/1/Accessing_JupyterHub.html">
      Application registration
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../../00/1/intro_add_1.html">
+    <a class="reference internal" href="../1/intro_add_1.html">
      Notebook execution
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../../00/1/intro_add_2.html">
+    <a class="reference internal" href="../1/intro_add_2.html">
      Notebook security
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../../00/1/intro_add_3.html">
+    <a class="reference internal" href="../1/intro_add_3.html">
      Notebook activity
     </a>
    </li>
   </ul>
  </li>
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../00/2/intro_add.html">
+  <a class="reference internal" href="../2/intro_add.html">
    Request for cooperation
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
@@ -248,17 +246,17 @@ const thebe_selector_output = ".output, .cell_output"
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../../00/2/intro_add_4.html">
+    <a class="reference internal" href="../2/intro_add_4.html">
      Experiment explanation
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../../00/2/intro_add_5.html">
+    <a class="reference internal" href="../2/intro_add_5.html">
      Informed concent
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../../00/2/intro_add_6.html">
+    <a class="reference internal" href="../2/intro_add_6.html">
      Withdrawal of concent
     </a>
    </li>
@@ -270,7 +268,7 @@ const thebe_selector_output = ".output, .cell_output"
   DATA 8
  </span>
 </p>
-<ul class="current nav bd-sidenav">
+<ul class="nav bd-sidenav">
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="../../01/what-is-data-science.html">
    1. Data Science
@@ -819,28 +817,28 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
   </ul>
  </li>
- <li class="toctree-l1 current active has-children">
-  <a class="reference internal" href="../Inference_for_Regression.html">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../16/Inference_for_Regression.html">
    16. Inference for Regression
   </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-22" name="toctree-checkbox-22" type="checkbox"/>
+  <input class="toctree-checkbox" id="toctree-checkbox-22" name="toctree-checkbox-22" type="checkbox"/>
   <label for="toctree-checkbox-22">
    <i class="fas fa-chevron-down">
    </i>
   </label>
-  <ul class="current">
+  <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../1/Regression_Model.html">
+    <a class="reference internal" href="../../16/1/Regression_Model.html">
      16.1. A Regression Model
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../2/Inference_for_the_True_Slope.html">
+    <a class="reference internal" href="../../16/2/Inference_for_the_True_Slope.html">
      16.2. Inference for the True Slope
     </a>
    </li>
-   <li class="toctree-l2 current active">
-    <a class="current reference internal" href="#">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../16/3/Prediction_Intervals.html">
      16.3. Prediction Intervals
     </a>
    </li>
@@ -951,7 +949,7 @@ const thebe_selector_output = ".output, .cell_output"
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../../../_sources/chapters/16/3/Prediction_Intervals.ipynb"><button type="button"
+        <a class="dropdown-buttons" href="../../../_sources/chapters/00/5/long_division.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
@@ -989,14 +987,14 @@ const thebe_selector_output = ".output, .cell_output"
         aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
     <div class="dropdown-buttons">
         
-        <a class="binder-button" href="https://mybinder.org/v2/gh/Cloudedu-Osaka/textbook/main?urlpath=tree/chapters/16/3/Prediction_Intervals.ipynb"><button type="button"
+        <a class="binder-button" href="https://mybinder.org/v2/gh/Cloudedu-Osaka/textbook/main?urlpath=tree/chapters/00/5/long_division.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
                 data-placement="left"><img class="binder-button-logo"
                     src="../../../_static/images/logo_binder.svg"
                     alt="Interact on binder">Binder</button></a>
         
         
-        <a class="jupyterhub-button" href="https://cloudedu-jhub.japaneast.cloudapp.azure.com/hub/user-redirect/git-pull?repo=https://github.com/Cloudedu-Osaka/textbook&urlpath=tree/textbook/chapters/16/3/Prediction_Intervals.ipynb&branch=main"><button type="button"
+        <a class="jupyterhub-button" href="https://cloudedu-jhub.japaneast.cloudapp.azure.com/hub/user-redirect/git-pull?repo=https://github.com/Cloudedu-Osaka/textbook&urlpath=tree/textbook/chapters/00/5/long_division.ipynb&branch=main"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Launch JupyterHub" data-toggle="tooltip"
                 data-placement="left"><img class="jupyterhub-button-logo"
                     src="../../../_static/images/logo_jupyterhub.svg"
@@ -1012,36 +1010,6 @@ const thebe_selector_output = ".output, .cell_output"
         <!-- Table of contents -->
         <div class="d-none d-md-block col-md-2 bd-toc show noprint">
             
-            <div class="tocsection onthispage pt-5 pb-3">
-                <i class="fas fa-list"></i> Contents
-            </div>
-            <nav id="bd-toc-nav" aria-label="Page">
-                <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#the-variability-of-the-prediction">
-   16.3.1. The Variability of the Prediction
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#bootstrap-prediction-interval">
-   16.3.2. Bootstrap Prediction Interval
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#the-effect-of-changing-the-value-of-the-predictor">
-   16.3.3. The Effect of Changing the Value of the Predictor
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#words-of-caution">
-     16.3.3.1. Words of caution
-    </a>
-   </li>
-  </ul>
- </li>
-</ul>
-
-            </nav>
         </div>
     </div>
 </div>
@@ -1049,259 +1017,158 @@ const thebe_selector_output = ".output, .cell_output"
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Prediction Intervals</h1>
+                <h1>分数を少数で表す</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
                         
-                        <div>
-                            <h2> Contents </h2>
-                        </div>
-                        <nav aria-label="Page">
-                            <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#the-variability-of-the-prediction">
-   16.3.1. The Variability of the Prediction
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#bootstrap-prediction-interval">
-   16.3.2. Bootstrap Prediction Interval
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#the-effect-of-changing-the-value-of-the-predictor">
-   16.3.3. The Effect of Changing the Value of the Predictor
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#words-of-caution">
-     16.3.3.1. Words of caution
-    </a>
-   </li>
-  </ul>
- </li>
-</ul>
-
-                        </nav>
                     </div>
                 </div>
             </div>
             
               <div>
                 
-  <div class="cell tag_remove-input docutils container">
-</div>
-<div class="tex2jax_ignore mathjax_ignore section" id="prediction-intervals">
-<h1><span class="section-number">16.3. </span>Prediction Intervals<a class="headerlink" href="#prediction-intervals" title="Permalink to this headline">¶</a></h1>
-<p>One of the primary uses of regression is to make predictions for a new individual who was not part of our original sample but is similar to the sampled individuals. In the language of the model, we want to estimate <span class="math notranslate nohighlight">\(y\)</span> for a new value of <span class="math notranslate nohighlight">\(x\)</span>.</p>
-<p>Our estimate is the height of the true line at <span class="math notranslate nohighlight">\(x\)</span>. Of course, we don’t know the true line. What we have as a substitute is the regression line through our sample of points.</p>
-<p>The <strong>fitted value</strong> at a given value of <span class="math notranslate nohighlight">\(x\)</span> is the regression estimate of <span class="math notranslate nohighlight">\(y\)</span> based on that value of <span class="math notranslate nohighlight">\(x\)</span>. In other words, the fitted value at a given value of <span class="math notranslate nohighlight">\(x\)</span> is the height of the regression line at that <span class="math notranslate nohighlight">\(x\)</span>.</p>
-<div class="cell tag_remove-input docutils container">
-</div>
-<div class="cell tag_remove-input docutils container">
-</div>
-<p>Suppose we try to predict a baby’s birth weight based on the number of gestational days. As we saw in the previous section, the data fit the regression model fairly well and a 95% confidence interval for the slope of the true line doesn’t contain 0. So it seems reasonable to carry out our prediction.</p>
-<p>The figure below shows where the prediction lies on the regression line. The red line is at <span class="math notranslate nohighlight">\(x = 300\)</span>.</p>
-<div class="cell tag_remove-input docutils container">
-<div class="cell_output docutils container">
-<img alt="../../../_images/Prediction_Intervals_6_0.png" src="../../../_images/Prediction_Intervals_6_0.png" />
-</div>
-</div>
-<p>The height of the point where the red line hits the regression line is the fitted value at 300 gestational days.</p>
-<p>The function <code class="docutils literal notranslate"><span class="pre">fitted_value</span></code> computes this height. Like the functions <code class="docutils literal notranslate"><span class="pre">correlation</span></code>, <code class="docutils literal notranslate"><span class="pre">slope</span></code>, and <code class="docutils literal notranslate"><span class="pre">intercept</span></code>, its arguments include the name of the table and the labels of the <span class="math notranslate nohighlight">\(x\)</span> and <span class="math notranslate nohighlight">\(y\)</span> columns. But it also requires a fourth argument, which is the value of <span class="math notranslate nohighlight">\(x\)</span> at which the estimate will be made.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">fitted_value</span><span class="p">(</span><span class="n">table</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">given_x</span><span class="p">):</span>
-    <span class="n">a</span> <span class="o">=</span> <span class="n">slope</span><span class="p">(</span><span class="n">table</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
-    <span class="n">b</span> <span class="o">=</span> <span class="n">intercept</span><span class="p">(</span><span class="n">table</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
-    <span class="k">return</span> <span class="n">a</span> <span class="o">*</span> <span class="n">given_x</span>  <span class="o">+</span> <span class="n">b</span>
-</pre></div>
-</div>
-</div>
-</div>
-<p>The fitted value at 300 gestational days is about 129.2 ounces. In other words, for a pregnancy that has a duration of 300 gestational days, our estimate for the baby’s weight is about 129.2 ounces.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fit_300</span> <span class="o">=</span> <span class="n">fitted_value</span><span class="p">(</span><span class="n">baby</span><span class="p">,</span> <span class="s1">&#39;Gestational Days&#39;</span><span class="p">,</span> <span class="s1">&#39;Birth Weight&#39;</span><span class="p">,</span> <span class="mi">300</span><span class="p">)</span>
-<span class="n">fit_300</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>129.2129241703143
-</pre></div>
-</div>
-</div>
-</div>
-<div class="section" id="the-variability-of-the-prediction">
-<h2><span class="section-number">16.3.1. </span>The Variability of the Prediction<a class="headerlink" href="#the-variability-of-the-prediction" title="Permalink to this headline">¶</a></h2>
-<p>We have developed a method making one prediction of a new baby’s birth weight based on the number of gestational days, using the data in our sample. But as data scientists, we know that the sample might have been different. Had the sample been different, the regression line would have been different too, and so would our prediction. To see how good our prediction is, we must get a sense of how variable the prediction can be.</p>
-<p>To do this, we must generate new samples. We can do that by bootstrapping the scatter plot as in the previous section. We will then fit the regression line to the scatter plot in each replication, and make a prediction based on each line. The figure below shows 10 such lines, and the corresponding predicted birth weight at 300 gestational days.</p>
-<div class="cell tag_remove-input docutils container">
-<div class="cell_output docutils container">
-<img alt="../../../_images/Prediction_Intervals_12_0.png" src="../../../_images/Prediction_Intervals_12_0.png" />
-</div>
-</div>
-<p>The predictions vary from one line to the next. The table below shows the slope and intercept of each of the 10 lines, along with the prediction.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">lines</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_html"><table border="1" class="dataframe">
-    <thead>
-        <tr>
-            <th>slope</th> <th>intercept</th> <th>prediction at x=300</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>0.431704</td> <td>-1.10973 </td> <td>128.402            </td>
-        </tr>
-        <tr>
-            <td>0.512942</td> <td>-23.6503 </td> <td>130.232            </td>
-        </tr>
-        <tr>
-            <td>0.450939</td> <td>-6.73161 </td> <td>128.55             </td>
-        </tr>
-        <tr>
-            <td>0.447632</td> <td>-5.68583 </td> <td>128.604            </td>
-        </tr>
-        <tr>
-            <td>0.353555</td> <td>20.1531  </td> <td>126.22             </td>
-        </tr>
-        <tr>
-            <td>0.469301</td> <td>-11.6276 </td> <td>129.163            </td>
-        </tr>
-        <tr>
-            <td>0.445023</td> <td>-5.01298 </td> <td>128.494            </td>
-        </tr>
-        <tr>
-            <td>0.540571</td> <td>-31.3711 </td> <td>130.8              </td>
-        </tr>
-        <tr>
-            <td>0.487377</td> <td>-16.8051 </td> <td>129.408            </td>
-        </tr>
-        <tr>
-            <td>0.451658</td> <td>-5.45954 </td> <td>130.038            </td>
-        </tr>
-    </tbody>
-</table></div></div>
-</div>
-</div>
-<div class="section" id="bootstrap-prediction-interval">
-<h2><span class="section-number">16.3.2. </span>Bootstrap Prediction Interval<a class="headerlink" href="#bootstrap-prediction-interval" title="Permalink to this headline">¶</a></h2>
-<p>If we increase the number of repetitions of the resampling process, we can generate an empirical histogram of the predictions. This will allow us to create an interval of predictions, using the same percentile method that we used create a bootstrap confidence interval for the slope.</p>
-<p>Let us define a function called <code class="docutils literal notranslate"><span class="pre">bootstrap_prediction</span></code> to do this. The function takes five arguments:</p>
+  <div class="tex2jax_ignore mathjax_ignore section" id="id1">
+<h1>分数を少数で表す<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
 <ul class="simple">
-<li><p>the name of the table</p></li>
-<li><p>the column labels of the predictor and response variables, in that order</p></li>
-<li><p>the value of <span class="math notranslate nohighlight">\(x\)</span> at which to make the prediction</p></li>
-<li><p>the desired number of bootstrap repetitions</p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Decimal_representation#:~:text=.-,Finite%20decimal%20representations,n%20are%20non%2Dnegative%20integers.">Decimal representation - Wikipedia</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Long_division">Long division - Wikipedia</a></p>
+<ul>
+<li><p>『12世紀から関連するアルゴリズムが存在していたが[2]、現代で使用されている特定のアルゴリズムは1600年頃にヘンリー・ブリッグスによって導入された[3]。』</p></li>
 </ul>
-<p>In each repetition, the function bootstraps the original scatter plot and finds the predicted value of <span class="math notranslate nohighlight">\(y\)</span> based on the specified value of <span class="math notranslate nohighlight">\(x\)</span>. Specifically, it calls the function <code class="docutils literal notranslate"><span class="pre">fitted_value</span></code> that we defined earlier in this section to find the fitted value at the specified <span class="math notranslate nohighlight">\(x\)</span>.</p>
-<p>Finally, it draws the empirical histogram of all the predicted values, and prints the interval consisting of the “middle 95%” of the predicted values. It also prints the predicted value based on the regression line through the original scatter plot.</p>
+</li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/John_Napier">John Napier - Wikipedia</a></p>
+<ul>
+<li><p>1550—1617</p></li>
+</ul>
+</li>
+</ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Bootstrap prediction of variable y at new_x</span>
-<span class="c1"># Data contained in table; prediction by regression of y based on x</span>
-<span class="c1"># repetitions = number of bootstrap replications of the original scatter plot</span>
-
-<span class="k">def</span> <span class="nf">bootstrap_prediction</span><span class="p">(</span><span class="n">table</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">new_x</span><span class="p">,</span> <span class="n">repetitions</span><span class="p">):</span>
-    
-    <span class="c1"># For each repetition:</span>
-    <span class="c1"># Bootstrap the scatter; </span>
-    <span class="c1"># get the regression prediction at new_x; </span>
-    <span class="c1"># augment the predictions list</span>
-    <span class="n">predictions</span> <span class="o">=</span> <span class="n">make_array</span><span class="p">()</span>
-    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="n">repetitions</span><span class="p">):</span>
-        <span class="n">bootstrap_sample</span> <span class="o">=</span> <span class="n">table</span><span class="o">.</span><span class="n">sample</span><span class="p">()</span>
-        <span class="n">bootstrap_prediction</span> <span class="o">=</span> <span class="n">fitted_value</span><span class="p">(</span><span class="n">bootstrap_sample</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">new_x</span><span class="p">)</span>
-        <span class="n">predictions</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">predictions</span><span class="p">,</span> <span class="n">bootstrap_prediction</span><span class="p">)</span>
-        
-    <span class="c1"># Find the ends of the approximate 95% prediction interval</span>
-    <span class="n">left</span> <span class="o">=</span> <span class="n">percentile</span><span class="p">(</span><span class="mf">2.5</span><span class="p">,</span> <span class="n">predictions</span><span class="p">)</span>
-    <span class="n">right</span> <span class="o">=</span> <span class="n">percentile</span><span class="p">(</span><span class="mf">97.5</span><span class="p">,</span> <span class="n">predictions</span><span class="p">)</span>
-    
-    <span class="c1"># Prediction based on original sample</span>
-    <span class="n">original</span> <span class="o">=</span> <span class="n">fitted_value</span><span class="p">(</span><span class="n">table</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">new_x</span><span class="p">)</span>
-    
-    <span class="c1"># Display results</span>
-    <span class="n">Table</span><span class="p">()</span><span class="o">.</span><span class="n">with_column</span><span class="p">(</span><span class="s1">&#39;Prediction&#39;</span><span class="p">,</span> <span class="n">predictions</span><span class="p">)</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">bins</span><span class="o">=</span><span class="mi">20</span><span class="p">)</span>
-    <span class="n">plots</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;predictions at x=&#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">new_x</span><span class="p">))</span>
-    <span class="n">plots</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">make_array</span><span class="p">(</span><span class="n">left</span><span class="p">,</span> <span class="n">right</span><span class="p">),</span> <span class="n">make_array</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;yellow&#39;</span><span class="p">,</span> <span class="n">lw</span><span class="o">=</span><span class="mi">8</span><span class="p">);</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Height of regression line at x=&#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">new_x</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39;:&#39;</span><span class="p">,</span> <span class="n">original</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Approximate 95</span><span class="si">%-c</span><span class="s1">onfidence interval:&#39;</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">left</span><span class="p">,</span> <span class="n">right</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">bootstrap_prediction</span><span class="p">(</span><span class="n">baby</span><span class="p">,</span> <span class="s1">&#39;Gestational Days&#39;</span><span class="p">,</span> <span class="s1">&#39;Birth Weight&#39;</span><span class="p">,</span> <span class="mi">300</span><span class="p">,</span> <span class="mi">5000</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mi">1</span><span class="o">/</span><span class="mi">4</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Height of regression line at x=300: 129.2129241703143
-Approximate 95%-confidence interval:
-127.30986480617071 131.3039886526053
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.25
 </pre></div>
 </div>
-<img alt="../../../_images/Prediction_Intervals_18_1.png" src="../../../_images/Prediction_Intervals_18_1.png" />
 </div>
 </div>
-<p>The figure above shows a bootstrap empirical histogram of the predicted birth weight of a baby at 300 gestational days, based on 5,000 repetitions of the bootstrap process. The empirical distribution is roughly normal.</p>
-<p>An approximate 95% prediction interval of scores has been constructed by taking the “middle 95%” of the predictions, that is, the interval from the 2.5th percentile to the 97.5th percentile of the predictions. The interval ranges from about 127 to about 131. The prediction based on the original sample was about 129, which is close to the center of the interval.</p>
-</div>
-<div class="section" id="the-effect-of-changing-the-value-of-the-predictor">
-<h2><span class="section-number">16.3.3. </span>The Effect of Changing the Value of the Predictor<a class="headerlink" href="#the-effect-of-changing-the-value-of-the-predictor" title="Permalink to this headline">¶</a></h2>
-<p>The figure below shows the histogram of 5,000 bootstrap predictions at 285 gestational days. The prediction based on the original sample is about 122 ounces, and the interval ranges from about 121 ounces to about 123 ounces.</p>
+<pre>
+  <u> 25</u>
+4)1<span style="color:red">0</span>
+   <u>8 </u>
+   2<span style="color:red">0</span>
+   <u>20 </u>
+    <span style="color:blue">0</span>
+</pre><ul class="simple">
+<li><p><a class="reference external" href="https://docs.python.org/3.9/library/functions.html#divmod">Built-in Functions — Python 3.9.12 documentation</a></p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">divmod(a,</span> <span class="pre">b)</span></code></p>
+<ul>
+<li><p>2つの数を引数として取り、整数の除算を行う場合は、その商 (quotient) と余り (remainder) からなる2つの数の組を返す。</p></li>
+<li><p>整数の場合、結果は <code class="docutils literal notranslate"><span class="pre">(a</span> <span class="pre">//</span> <span class="pre">b,</span> <span class="pre">a</span> <span class="pre">%</span> <span class="pre">b)</span></code> と同じである。</p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">bootstrap_prediction</span><span class="p">(</span><span class="n">baby</span><span class="p">,</span> <span class="s1">&#39;Gestational Days&#39;</span><span class="p">,</span> <span class="s1">&#39;Birth Weight&#39;</span><span class="p">,</span> <span class="mi">285</span><span class="p">,</span> <span class="mi">5000</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="mi">10</span><span class="o">//</span><span class="mi">4</span><span class="p">,</span> <span class="mi">10</span><span class="o">%</span><span class="k">4</span>)
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Height of regression line at x=285: 122.21457101607608
-Approximate 95%-confidence interval:
-121.15559627774567 123.29019769886106
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(2, 2)
 </pre></div>
 </div>
-<img alt="../../../_images/Prediction_Intervals_21_1.png" src="../../../_images/Prediction_Intervals_21_1.png" />
 </div>
 </div>
-<p>Notice that this interval is narrower than the prediction interval at 300 gestational days. Let us investigate the reason for this.</p>
-<p>The mean number of gestational days is about 279 days:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">baby</span><span class="o">.</span><span class="n">column</span><span class="p">(</span><span class="s1">&#39;Gestational Days&#39;</span><span class="p">))</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">divmod</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>279.1013628620102
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(2, 2)
 </pre></div>
 </div>
 </div>
 </div>
-<p>So 285 is nearer to the center of the distribution than 300 is. Typically, the regression lines based on the bootstrap samples are closer to each other near the center of the distribution of the predictor variable. Therefore all of the predicted values are closer together as well. This explains the narrower width of the prediction interval.</p>
-<p>You can see this in the figure below, which shows predictions at <span class="math notranslate nohighlight">\(x = 285\)</span> and <span class="math notranslate nohighlight">\(x = 300\)</span> for each of ten bootstrap replications. Typically, the lines are farther apart at <span class="math notranslate nohighlight">\(x = 300\)</span> than at <span class="math notranslate nohighlight">\(x = 285\)</span>, and therefore the predictions at <span class="math notranslate nohighlight">\(x = 300\)</span> are more variable.</p>
-<div class="cell tag_remove-input docutils container">
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">divmod</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
 <div class="cell_output docutils container">
-<img alt="../../../_images/Prediction_Intervals_25_0.png" src="../../../_images/Prediction_Intervals_25_0.png" />
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(5, 0)
+</pre></div>
 </div>
 </div>
-<div class="section" id="words-of-caution">
-<h3><span class="section-number">16.3.3.1. </span>Words of caution<a class="headerlink" href="#words-of-caution" title="Permalink to this headline">¶</a></h3>
-<p>All of the predictions and tests that we have performed in this chapter assume that the regression model holds. Specifically, the methods assume that the scatter plot resembles points generated by starting with points that are on a straight line and then pushing them off the line by adding random normal noise.</p>
-<p>If the scatter plot does not look like that, then perhaps the model does not hold for the data. If the model does not hold, then calculations that assume the model to be true are not valid.</p>
-<p>Therefore, we must first decide whether the regression model holds for our data, before we start making predictions based on the model or testing hypotheses about parameters of the model. A simple way is to do what we did in this section, which is to draw the scatter diagram of the two variables and see whether it looks roughly linear and evenly spread out around a line. We should also run the diagnostics we developed in the previous section using the residual plot.</p>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">remainder</span>   <span class="o">=</span> <span class="mi">1</span>
+<span class="n">denominator</span> <span class="o">=</span> <span class="mi">4</span>
+<span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
+    <span class="n">numerator</span> <span class="o">=</span> <span class="n">remainder</span> <span class="o">*</span> <span class="mi">10</span>
+    <span class="n">quotient</span><span class="p">,</span> <span class="n">remainder</span> <span class="o">=</span> <span class="nb">divmod</span><span class="p">(</span><span class="n">numerator</span><span class="p">,</span> <span class="n">denominator</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">quotient</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s1">&#39;, &#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2, 5, 0, 0, 0, 0, 0, 0, 0, 0, 
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mi">1</span><span class="o">/</span><span class="mi">7</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.14285714285714285
+</pre></div>
+</div>
+</div>
+</div>
+<pre>
+  <u> 142857</u>
+7)<span style="color:blue">1</span><span style="color:red">0</span>
+   <u>7 </u>
+   3<span style="color:red">0</span>
+   <u>28 </u>
+    2<span style="color:red">0</span>
+    <u>14 </u>
+     6<span style="color:red">0</span>
+     <u>56 </u>
+      4<span style="color:red">0</span>
+      <u>35 </u>
+       5<span style="color:red">0</span>
+       <u>49 </u>
+        <span style="color:blue">1</span>
+</pre><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">remainder</span>   <span class="o">=</span> <span class="mi">1</span>
+<span class="n">denominator</span> <span class="o">=</span> <span class="mi">7</span>
+<span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
+    <span class="n">numerator</span> <span class="o">=</span> <span class="n">remainder</span> <span class="o">*</span> <span class="mi">10</span>
+    <span class="n">quotient</span><span class="p">,</span> <span class="n">remainder</span> <span class="o">=</span> <span class="nb">divmod</span><span class="p">(</span><span class="n">numerator</span><span class="p">,</span> <span class="n">denominator</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">quotient</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s1">&#39;, &#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1, 4, 2, 8, 5, 7, 1, 4, 2, 8, 
+</pre></div>
+</div>
 </div>
 </div>
 </div>
@@ -1319,7 +1186,7 @@ Approximate 95%-confidence interval:
         },
         kernelOptions: {
             kernelName: "python3",
-            path: "./chapters/16/3"
+            path: "./chapters/00/5"
         },
         predefinedOutput: true
     }
@@ -1331,17 +1198,17 @@ Approximate 95%-confidence interval:
             
                 <!-- Previous / next buttons -->
 <div class='prev-next-area'> 
-    <a class='left-prev' id="prev-link" href="../2/Inference_for_the_True_Slope.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="../6/assign_2.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title"><span class="section-number">16.2. </span>Inference for the True Slope</p>
+            <p class="prev-next-title">課題-2) Plimpton 322 に記載された数表を生成する</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="../../17/Classification.html" title="next page">
+    <a class='right-next' id="next-link" href="assign_1.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">17. </span>Classification</p>
+        <p class="prev-next-title">Assignment (1)</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
