@@ -2,6 +2,19 @@ format: jb-book
 root: chapters/00/entry
 title: Introduction
 parts:
+- caption: 2022/05/24
+  numberd: false
+  chapters:
+  - file: chapters/00/6/plimton322_2.ipynb
+    title: Decoding Plimpton 322 (1)
+  - file: chapters/00/6/plimton322_3.ipynb
+    title: Decoding Plimpton 322 (2)
+  - file: chapters/00/6/plimton322_4.ipynb
+    title: Decoding Plimpton 322 (3)
+  - file: chapters/00/6/assign_1.ipynb
+    title: Assignment (1)
+  - file: chapters/00/6/assign_2.ipynb
+    title: Assignment (2)
 - caption: 2022/05/17
   numberd: false
   chapters:
