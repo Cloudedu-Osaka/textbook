@@ -58,7 +58,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="shortcut icon" href="../../../_static/favicon.png"/>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="Plimpton 322 を解読する (3)" href="plimpton322_4.html" />
+    <link rel="next" title="Plimpton 322 を解読する (2)" href="plimpton322_4.html" />
     <link rel="prev" title="Plimton 322 の解読 (1)" href="plimpton322_2.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
@@ -1123,12 +1123,53 @@ x - \frac{1}{x} = c
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>or</th>
+      <th>Short Side</th>
+      <th>Diagonal</th>
+      <th>Row #</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>10</th>
+      <td>(1).5625</td>
+      <td>45*</td>
+      <td>75*</td>
+      <td>11</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
 </div>
 <p>係数 <span class="math notranslate nohighlight">\(a\)</span> は 60進法の <span class="math notranslate nohighlight">\(1\ 0\)</span>:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">math</span>
 <span class="n">math</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">v4</span><span class="o">**</span><span class="mi">2</span> <span class="o">-</span> <span class="n">v1</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>60.0
 </pre></div>
 </div>
 </div>
@@ -1147,10 +1188,20 @@ x - \frac{1}{x} = c
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>90
+</pre></div>
+</div>
+</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="n">v1</span><span class="o">/</span><span class="mi">60</span><span class="p">),</span> <span class="p">(</span><span class="n">v4</span><span class="o">/</span><span class="mi">60</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(0.75, 1.25)
 </pre></div>
 </div>
 </div>
@@ -1161,11 +1212,21 @@ x - \frac{1}{x} = c
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(0.5625, 1.5625)
+</pre></div>
+</div>
+</div>
 </div>
 <p><span class="math notranslate nohighlight">\(x\)</span> と <span class="math notranslate nohighlight">\(\frac{1}{x}\)</span> を求める:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">v4</span><span class="o">+</span><span class="n">v1</span><span class="p">,</span> <span class="n">v4</span><span class="o">-</span><span class="n">v1</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(120, 30)
 </pre></div>
 </div>
 </div>
@@ -1194,6 +1255,11 @@ x - \frac{1}{x} = c
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">inverse</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">60</span><span class="p">),</span> <span class="n">inverse</span><span class="p">(</span><span class="mi">30</span><span class="p">,</span> <span class="mi">60</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>([30, 0], [2, 0])
 </pre></div>
 </div>
 </div>
@@ -1236,7 +1302,7 @@ x - \frac{1}{x} = c
     <a class='right-next' id="next-link" href="plimpton322_4.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Plimpton 322 を解読する (3)</p>
+        <p class="prev-next-title">Plimpton 322 を解読する (2)</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

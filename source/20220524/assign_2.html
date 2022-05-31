@@ -52,6 +52,8 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="canonical" href="https://inferentialthinking.org/source/20220524/assign_2.html" />
     <link rel="shortcut icon" href="../../_static/favicon.png"/>
     <link rel="index" title="Index" href="../../genindex.html" />
@@ -1080,7 +1082,7 @@ const thebe_selector_output = ".output, .cell_output"
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pq</span> <span class="o">=</span> <span class="p">[]</span>
 <span class="k">for</span> <span class="n">p</span><span class="p">,</span> <span class="n">q</span> <span class="ow">in</span> <span class="n">itertools</span><span class="o">.</span><span class="n">product</span><span class="p">(</span><span class="n">generate_p</span><span class="p">(),</span> <span class="n">repeat</span><span class="o">=</span><span class="mi">2</span><span class="p">):</span>
-    <span class="k">if</span> <span class="n">p</span> <span class="o">&gt;</span> <span class="n">q</span> <span class="ow">and</span> <span class="n">math</span><span class="o">.</span><span class="n">gcd</span><span class="p">(</span><span class="n">p</span><span class="p">,</span><span class="n">q</span><span class="p">)</span> <span class="o">==</span><span class="mi">1</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">p</span> <span class="o">&gt;</span> <span class="n">q</span> <span class="ow">and</span> <span class="n">math</span><span class="o">.</span><span class="n">gcd</span><span class="p">(</span><span class="n">p</span><span class="p">,</span><span class="n">q</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
         <span class="k">if</span> <span class="n">p</span><span class="o">/</span><span class="n">q</span> <span class="o">&gt;=</span> <span class="mi">9</span><span class="o">/</span><span class="mi">5</span> <span class="ow">and</span> <span class="n">p</span><span class="o">/</span><span class="n">q</span> <span class="o">&lt;=</span> <span class="mi">12</span><span class="o">/</span><span class="mi">5</span><span class="p">:</span>
             <span class="n">pq</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">p</span><span class="p">,</span><span class="n">q</span><span class="p">))</span>
 
@@ -1098,7 +1100,7 @@ const thebe_selector_output = ".output, .cell_output"
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pq</span> <span class="o">=</span> <span class="p">[]</span>
 <span class="k">for</span> <span class="n">p</span><span class="p">,</span> <span class="n">q</span> <span class="ow">in</span> <span class="n">itertools</span><span class="o">.</span><span class="n">product</span><span class="p">(</span><span class="n">generate_p</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">2</span><span class="p">),</span> <span class="n">repeat</span><span class="o">=</span><span class="mi">2</span><span class="p">):</span>
-    <span class="k">if</span> <span class="n">p</span> <span class="o">&gt;</span> <span class="n">q</span> <span class="ow">and</span> <span class="n">math</span><span class="o">.</span><span class="n">gcd</span><span class="p">(</span><span class="n">p</span><span class="p">,</span><span class="n">q</span><span class="p">)</span> <span class="o">==</span><span class="mi">1</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">p</span> <span class="o">&gt;</span> <span class="n">q</span> <span class="ow">and</span> <span class="n">math</span><span class="o">.</span><span class="n">gcd</span><span class="p">(</span><span class="n">p</span><span class="p">,</span><span class="n">q</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
         <span class="k">if</span> <span class="n">p</span><span class="o">/</span><span class="n">q</span> <span class="o">&gt;=</span> <span class="mi">9</span><span class="o">/</span><span class="mi">5</span> <span class="ow">and</span> <span class="n">p</span><span class="o">/</span><span class="n">q</span> <span class="o">&lt;=</span> <span class="mi">12</span><span class="o">/</span><span class="mi">5</span><span class="p">:</span>
             <span class="n">pq</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">p</span><span class="p">,</span><span class="n">q</span><span class="p">))</span>
 
@@ -1124,6 +1126,17 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 </div>
+<p>命題) Plimpton 322は、互いに素な正の整数 <span class="math notranslate nohighlight">\(p\)</span>, <span class="math notranslate nohighlight">\(q\)</span> のうち、</p>
+<div class="math notranslate nohighlight">
+\[
+  \frac{9}{5} \leq \frac{p}{q} \leq \frac{12}{5}
+\]</div>
+<p>を満たす組み合わせについて、</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{d}{a} = \frac{1}{2}\left(\frac{p}{q}+\frac{q}{p}\right)
+\]</div>
+<p>をキーとして降順に並べたものである。</p>
 <p>課題-2) Plimton 322の数表を求める関数 <code class="docutils literal notranslate"><span class="pre">plimpton322()</span></code> を定義せよ:</p>
 <ul class="simple">
 <li><p>引数 i_max, j_max, k_max を取り、デフォルト値はそれぞれ 2 とする</p></li>
@@ -1177,26 +1190,122 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 </div>
+<p>上で求めた整数の組 <span class="math notranslate nohighlight">\(p\)</span>, <span class="math notranslate nohighlight">\(q\)</span>, およびピタゴラスの三数 <span class="math notranslate nohighlight">\(a\)</span>, <span class="math notranslate nohighlight">\(b\)</span>, <span class="math notranslate nohighlight">\(d\)</span> と Plimpton 322の各列との関係は次の表の通りである:</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="text-align:center head"><p>#1</p></th>
+<th class="text-align:center head"><p>#2</p></th>
+<th class="text-align:center head"><p>#3</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-align:center"><p>$<span class="math notranslate nohighlight">\(\left(\frac{d}{a}\right)^2\)</span>$</p></td>
+<td class="text-align:center"><p>$<span class="math notranslate nohighlight">\(b\)</span>$</p></td>
+<td class="text-align:center"><p>$<span class="math notranslate nohighlight">\(d\)</span>$</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:center"><p>$<span class="math notranslate nohighlight">\(\frac{1}{4}\left(\frac{p}{q}+\frac{q}{p}\right)^2\)</span>$</p></td>
+<td class="text-align:center"><p>$<span class="math notranslate nohighlight">\(p^2-q^2\)</span>$</p></td>
+<td class="text-align:center"><p>$<span class="math notranslate nohighlight">\(p^2+q^2\)</span>$</p></td>
+</tr>
+</tbody>
+</table>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">p</span><span class="p">,</span> <span class="n">q</span> <span class="ow">in</span> <span class="n">plimpton322</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">2</span><span class="p">):</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+
+<span class="n">l</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">p</span><span class="p">,</span> <span class="n">q</span> <span class="ow">in</span> <span class="n">plimpton322</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">2</span><span class="p">):</span>
     <span class="n">a</span> <span class="o">=</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">p</span> <span class="o">*</span> <span class="n">q</span>
     <span class="n">b</span> <span class="o">=</span> <span class="n">p</span><span class="o">**</span><span class="mi">2</span> <span class="o">-</span> <span class="n">q</span><span class="o">**</span><span class="mi">2</span>
     <span class="n">d</span> <span class="o">=</span> <span class="n">p</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">q</span><span class="o">**</span><span class="mi">2</span>
-    <span class="nb">print</span><span class="p">((</span><span class="n">d</span><span class="o">/</span><span class="n">a</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">d</span><span class="p">)</span>
+    <span class="n">l</span><span class="o">.</span><span class="n">append</span><span class="p">(((</span><span class="n">d</span><span class="o">/</span><span class="n">a</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">d</span><span class="p">))</span>
+<span class="n">l</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1.983402777777778 119 169
-1.815007716049383 65 97
-1.7851929012345678 319 481
-1.5625 3 5
-1.450017361111111 161 289
-1.3871604938271607 56 106
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[(1.983402777777778, 119, 169),
+ (1.815007716049383, 65, 97),
+ (1.7851929012345678, 319, 481),
+ (1.5625, 3, 5),
+ (1.450017361111111, 161, 289),
+ (1.3871604938271607, 56, 106)]
 </pre></div>
 </div>
 </div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">l</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;(d/a)**2&#39;</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="s1">&#39;d&#39;</span><span class="p">])</span>
+<span class="n">df</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>(d/a)**2</th>
+      <th>b</th>
+      <th>d</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1.983403</td>
+      <td>119</td>
+      <td>169</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>1.815008</td>
+      <td>65</td>
+      <td>97</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>1.785193</td>
+      <td>319</td>
+      <td>481</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>1.562500</td>
+      <td>3</td>
+      <td>5</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>1.450017</td>
+      <td>161</td>
+      <td>289</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>1.387160</td>
+      <td>56</td>
+      <td>106</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
