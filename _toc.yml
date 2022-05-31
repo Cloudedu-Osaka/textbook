@@ -2,6 +2,19 @@ format: jb-book
 root: chapters/00/entry
 title: Introduction
 parts:
+- caption: 2022/05/31
+  numberd: false
+  chapters:
+  - file: chapters/00/7/pythagoras_1.ipynb
+    title: from Pythagoras to Einstein (1)
+  - file: chapters/00/7/pythagoras_2.ipynb
+    title: Plimpton 322 and YBC 7289
+  - file: chapters/00/7/pythagoras_3.ipynb
+    title: YBC 7289 (1)
+  - file: chapters/00/7/pythagoras_4.ipynb
+    title: YBC 7289 (2)
+  - file: chapters/00/7/pythagoras_5.ipynb
+    title: YBC 7289 (3)
 - caption: 2022/05/24
   numberd: false
   chapters:
@@ -15,6 +28,8 @@ parts:
     title: Assignment (1)
   - file: chapters/00/6/assign_2.ipynb
     title: Assignment (2)
+  - file: chapters/00/6/assign_3.ipynb
+    title: Assignment (3)
 - caption: 2022/05/17
   numberd: false
   chapters:
