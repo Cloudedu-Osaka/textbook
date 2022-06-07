@@ -104,6 +104,65 @@ const thebe_selector_output = ".output, .cell_output"
     <div class="bd-toc-item active">
         <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
+  2022/06/07
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="chapters/00/8/leibniz_1.html">
+   Japanese wordplay
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="chapters/00/8/leibniz_2.html">
+   Computer algebra
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="chapters/00/8/leibniz_3.html">
+   Leibniz
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="chapters/00/8/assign.html">
+   Assignment
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  2022/05/31
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="chapters/00/7/pythagoras_1.html">
+   from Pythagoras to Einstein (1)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="chapters/00/7/pythagoras_2.html">
+   Plimpton 322 and YBC 7289
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="chapters/00/7/pythagoras_3.html">
+   YBC 7289 (1)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="chapters/00/7/pythagoras_4.html">
+   YBC 7289 (2)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="chapters/00/7/pythagoras_5.html">
+   YBC 7289 (3)
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
   2022/05/24
  </span>
 </p>
@@ -131,6 +190,11 @@ const thebe_selector_output = ".output, .cell_output"
  <li class="toctree-l1">
   <a class="reference internal" href="chapters/00/6/assign_2.html">
    Assignment (2)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="chapters/00/6/assign_3.html">
+   Assignment (3)
   </a>
  </li>
 </ul>
@@ -1522,25 +1586,27 @@ const thebe_selector_output = ".output, .cell_output"
     <span class="n">ci</span> <span class="o">=</span> <span class="s1">&#39;0&#39;</span><span class="o">*</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">ci</span><span class="p">)</span><span class="o">%</span><span class="k">2</span>) + ci
     <span class="n">cf</span> <span class="o">=</span> <span class="n">cf</span> <span class="o">+</span> <span class="s1">&#39;0&#39;</span><span class="o">*</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">cf</span><span class="p">)</span><span class="o">%</span><span class="k">2</span>)
     
-    <span class="c1">#sl = itertools.chain(*[[sx[i:i+2] for i in range(0,len(sx),2)]</span>
-    <span class="c1">#                       for sx in (si, sf)])</span>
-    <span class="n">cl</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="n">cx</span><span class="p">[</span><span class="n">i</span><span class="p">:</span><span class="n">i</span><span class="o">+</span><span class="mi">2</span><span class="p">]</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="nb">len</span><span class="p">(</span><span class="n">cx</span><span class="p">),</span><span class="mi">2</span><span class="p">)]</span>
-                   <span class="k">for</span> <span class="n">cx</span> <span class="ow">in</span> <span class="p">(</span><span class="n">ci</span><span class="p">,</span> <span class="n">cf</span><span class="p">)])</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">ci</span><span class="p">,</span><span class="n">cf</span><span class="p">)</span>
 
-    <span class="nb">print</span><span class="p">(</span><span class="n">cl</span><span class="p">)</span>
-    
+    <span class="n">cl</span> <span class="o">=</span> <span class="n">itertools</span><span class="o">.</span><span class="n">chain</span><span class="p">(</span><span class="o">*</span><span class="p">[[</span><span class="nb">int</span><span class="p">(</span><span class="n">cx</span><span class="p">[</span><span class="n">i</span><span class="p">:</span><span class="n">i</span><span class="o">+</span><span class="mi">2</span><span class="p">])</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="nb">len</span><span class="p">(</span><span class="n">cx</span><span class="p">),</span><span class="mi">2</span><span class="p">)]</span>
+                           <span class="k">for</span> <span class="n">cx</span> <span class="ow">in</span> <span class="p">(</span><span class="n">ci</span><span class="p">,</span> <span class="n">cf</span><span class="p">)])</span>
+    <span class="c1">#cl = [[int(cx[i:i+2]) for i in range(0,len(cx),2)] for cx in (ci, cf)]</span>
+
     <span class="k">def</span> <span class="nf">cy</span><span class="p">(</span><span class="n">p</span><span class="p">,</span> <span class="n">px</span><span class="p">):</span>
-        <span class="k">return</span> <span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="p">(</span><span class="mi">10</span><span class="o">*</span><span class="n">p</span><span class="p">)</span><span class="o">+</span><span class="n">px</span><span class="p">)</span><span class="o">*</span><span class="n">px</span>
+        <span class="k">return</span> <span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">p</span><span class="p">)</span><span class="o">*</span><span class="n">px</span><span class="o">*</span><span class="mi">10</span> <span class="o">+</span> <span class="n">px</span><span class="o">**</span><span class="mi">2</span>
     
     <span class="n">p</span><span class="p">,</span> <span class="n">r</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span>
-    <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="nb">map</span><span class="p">(</span><span class="nb">int</span><span class="p">,</span> <span class="n">cl</span><span class="o">.</span><span class="n">flatten</span><span class="p">()):</span>
+    <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">cl</span><span class="p">:</span>
         <span class="n">c</span> <span class="o">+=</span> <span class="n">r</span><span class="o">*</span><span class="mi">100</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">c</span><span class="p">,</span><span class="mi">2</span><span class="o">*</span><span class="n">p</span><span class="p">)</span>
         <span class="n">px</span> <span class="o">=</span> <span class="mi">0</span>
         <span class="k">while</span> <span class="n">cy</span><span class="p">(</span><span class="n">p</span><span class="p">,</span> <span class="n">px</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span> <span class="o">&lt;=</span> <span class="n">c</span><span class="p">:</span>
             <span class="n">px</span><span class="o">+=</span><span class="mi">1</span>
         <span class="n">r</span> <span class="o">=</span> <span class="n">c</span> <span class="o">-</span> <span class="n">cy</span><span class="p">(</span><span class="n">p</span><span class="p">,</span> <span class="n">px</span><span class="p">)</span> <span class="c1"># r is &#39;remainder&#39;</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">cy</span><span class="p">(</span><span class="n">p</span><span class="p">,</span><span class="n">px</span><span class="p">),</span><span class="s2">&quot;@&quot;</span><span class="p">,</span><span class="n">px</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">r</span><span class="p">)</span>
         <span class="n">p</span> <span class="o">=</span> <span class="mi">10</span><span class="o">*</span><span class="n">p</span><span class="o">+</span><span class="n">px</span>       <span class="c1"># x is &#39;quotient&#39;</span>
-        <span class="nb">print</span><span class="p">(</span><span class="n">p</span><span class="p">,</span><span class="n">r</span><span class="p">)</span>
+        <span class="c1">#print(p)</span>
     <span class="k">return</span> <span class="n">p</span><span class="p">,</span> <span class="n">r</span>
 </pre></div>
 </div>
@@ -1548,20 +1614,106 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">square_root_by_long_division</span><span class="p">(</span><span class="mf">152.2756</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">matplotlib.patches</span> <span class="k">as</span> <span class="nn">patches</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">from</span> <span class="nn">matplotlib</span> <span class="kn">import</span> <span class="n">collections</span><span class="p">,</span> <span class="n">colors</span><span class="p">,</span> <span class="n">transforms</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">scoping</span> <span class="kn">import</span> <span class="n">scoping</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">14</span><span class="p">,</span> <span class="mi">8</span><span class="p">))</span>
+
+<span class="n">x</span><span class="o">=-</span><span class="mf">1.1</span>
+<span class="k">for</span> <span class="n">y</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">10</span><span class="p">):</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="o">*</span><span class="nb">zip</span><span class="p">((</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">),(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="o">+</span><span class="mi">1</span><span class="p">),(</span><span class="n">x</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span><span class="n">y</span><span class="o">+</span><span class="mi">1</span><span class="p">),(</span><span class="n">x</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span><span class="n">y</span><span class="p">),(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">)),</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="n">x</span><span class="o">+</span><span class="mf">.4</span><span class="p">,</span> <span class="n">y</span><span class="o">+</span><span class="mf">.7</span><span class="p">,</span> <span class="nb">str</span><span class="p">(</span><span class="n">y</span><span class="p">),</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">18</span><span class="p">)</span>
+
+<span class="c1">#with scoping():</span>
+<span class="k">def</span> <span class="nf">napier_bone</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="o">*</span><span class="nb">zip</span><span class="p">((</span><span class="n">x</span><span class="p">,</span><span class="mi">0</span><span class="p">),(</span><span class="n">x</span><span class="p">,</span><span class="mi">1</span><span class="p">),(</span><span class="n">x</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">),(</span><span class="n">x</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">),(</span><span class="n">x</span><span class="p">,</span><span class="mi">0</span><span class="p">)),</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="n">x</span><span class="o">+</span><span class="mf">.4</span><span class="p">,</span> <span class="mf">.7</span><span class="p">,</span> <span class="nb">str</span><span class="p">(</span><span class="n">n</span><span class="p">),</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">18</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">y</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">10</span><span class="p">):</span>
+        <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="o">*</span><span class="nb">zip</span><span class="p">((</span><span class="n">x</span><span class="p">,</span>  <span class="n">y</span><span class="p">),(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="o">+</span><span class="mi">1</span><span class="p">),(</span><span class="n">x</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span><span class="n">y</span>  <span class="p">),(</span><span class="n">x</span><span class="p">,</span>  <span class="n">y</span><span class="p">)),</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">)</span>
+        <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="o">*</span><span class="nb">zip</span><span class="p">((</span><span class="n">x</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span><span class="n">y</span><span class="p">),(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="o">+</span><span class="mi">1</span><span class="p">),(</span><span class="n">x</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span><span class="n">y</span><span class="o">+</span><span class="mi">1</span><span class="p">),(</span><span class="n">x</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span><span class="n">y</span><span class="p">)),</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">)</span>
+        <span class="n">d</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="si">{:02d}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">n</span><span class="o">*</span><span class="n">y</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">d</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">!=</span> <span class="s1">&#39;0&#39;</span><span class="p">:</span>
+            <span class="n">ax</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="n">x</span><span class="o">+</span><span class="mf">.1</span><span class="p">,</span> <span class="n">y</span><span class="o">+</span><span class="mf">.5</span><span class="p">,</span> <span class="nb">str</span><span class="p">(</span><span class="n">d</span><span class="p">[</span><span class="mi">0</span><span class="p">]),</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">14</span><span class="p">)</span>
+        <span class="n">ax</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="n">x</span><span class="o">+</span><span class="mf">.6</span><span class="p">,</span> <span class="n">y</span><span class="o">+</span><span class="mf">.8</span><span class="p">,</span> <span class="nb">str</span><span class="p">(</span><span class="n">d</span><span class="p">[</span><span class="mi">1</span><span class="p">]),</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">14</span><span class="p">)</span>
+
+<span class="n">napier_bone</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">napier_bone</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="mf">1.1</span><span class="p">)</span>
+<span class="n">napier_bone</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="mf">2.2</span><span class="p">)</span>
+<span class="n">napier_bone</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="mf">3.3</span><span class="p">)</span>
+<span class="n">napier_bone</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="mf">4.4</span><span class="p">)</span>
+<span class="n">napier_bone</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="mf">5.5</span><span class="p">)</span>
+<span class="n">napier_bone</span><span class="p">(</span><span class="mi">7</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="mf">6.6</span><span class="p">)</span>
+<span class="n">napier_bone</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="mf">7.7</span><span class="p">)</span>
+<span class="n">napier_bone</span><span class="p">(</span><span class="mi">9</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="mf">8.8</span><span class="p">)</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">set_aspect</span><span class="p">(</span><span class="s1">&#39;equal&#39;</span><span class="p">,</span> <span class="s1">&#39;datalim&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">axis</span><span class="p">(</span><span class="s1">&#39;off&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">gca</span><span class="p">()</span><span class="o">.</span><span class="n">invert_yaxis</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[&#39;01&#39; &#39;52&#39;]
- [&#39;27&#39; &#39;56&#39;]]
-1 0
-12 8
-123 98
-1234 0
+<img alt="_images/Untitled1_52_0.png" src="_images/Untitled1_52_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">square_root_by_long_division</span><span class="p">(</span><span class="s2">&quot;46785399.0000&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(1234, 0)
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>46785399 0000
+46 0
+36 @ 6
+10
+1078 12
+1024 @ 8
+54
+5453 136
+4089 @ 3
+1364
+136499 1366
+123021 @ 9
+13478
+1347800 13678
+1231101 @ 9
+116699
+11669900 136798
+10943904 @ 8
+725996
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(683998, 725996)
 </pre></div>
 </div>
 </div>
