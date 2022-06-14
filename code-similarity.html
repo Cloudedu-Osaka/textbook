@@ -104,6 +104,48 @@ const thebe_selector_output = ".output, .cell_output"
     <div class="bd-toc-item active">
         <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
+  2022/06/14
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="chapters/00/9/assign_1.html">
+   Assignment (1)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="chapters/00/9/assign_2.html">
+   Assignment (2)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="chapters/00/9/assign_3.html">
+   Assignment (3)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="chapters/00/9/assign_4.html">
+   Assignment (4)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="chapters/00/9/assign_5.html">
+   Assignment (5)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="chapters/00/9/assign_6.html">
+   Assignment (6)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="chapters/00/9/assign_7.html">
+   Assignment (7)
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
   2022/06/07
  </span>
 </p>
@@ -1187,10 +1229,10 @@ const thebe_selector_output = ".output, .cell_output"
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">s1</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
-<span class="s2">def x()</span>
+<span class="s2">def y():</span>
 <span class="s2">    pass</span>
 <span class="s2">if x:</span>
-<span class="s2">    return True</span>
+<span class="s2">    return False</span>
 <span class="s2">&quot;&quot;&quot;</span>
 
 <span class="n">s2</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
@@ -1201,28 +1243,6 @@ const thebe_selector_output = ".output, .cell_output"
 <span class="s2">&quot;&quot;&quot;</span>
 
 <span class="n">result</span> <span class="o">=</span> <span class="n">pycode_similar</span><span class="o">.</span><span class="n">detect</span><span class="p">([</span><span class="n">s1</span><span class="p">,</span> <span class="n">s2</span><span class="p">])</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="n">Traceback</span> <span class="p">(</span><span class="n">most</span> <span class="n">recent</span> <span class="n">call</span> <span class="n">last</span><span class="p">):</span>
-
-  <span class="n">File</span> <span class="o">~/.</span><span class="n">pyenv</span><span class="o">/</span><span class="n">versions</span><span class="o">/</span><span class="n">anaconda3</span><span class="o">-</span><span class="mf">2021.11</span><span class="o">/</span><span class="n">envs</span><span class="o">/</span><span class="n">jb</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">python3</span><span class="mf">.9</span><span class="o">/</span><span class="n">site</span><span class="o">-</span><span class="n">packages</span><span class="o">/</span><span class="n">IPython</span><span class="o">/</span><span class="n">core</span><span class="o">/</span><span class="n">interactiveshell</span><span class="o">.</span><span class="n">py</span><span class="p">:</span><span class="mi">3361</span> <span class="ow">in</span> <span class="n">run_code</span>
-    <span class="n">exec</span><span class="p">(</span><span class="n">code_obj</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">user_global_ns</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">user_ns</span><span class="p">)</span>
-
-  <span class="n">Input</span> <span class="n">In</span> <span class="p">[</span><span class="mi">581</span><span class="p">]</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">cell</span> <span class="n">line</span><span class="p">:</span> <span class="mi">15</span><span class="o">&gt;</span>
-    <span class="n">result</span> <span class="o">=</span> <span class="n">pycode_similar</span><span class="o">.</span><span class="n">detect</span><span class="p">([</span><span class="n">s1</span><span class="p">,</span> <span class="n">s2</span><span class="p">])</span>
-
-  <span class="n">File</span> <span class="o">~/.</span><span class="n">pyenv</span><span class="o">/</span><span class="n">versions</span><span class="o">/</span><span class="n">anaconda3</span><span class="o">-</span><span class="mf">2021.11</span><span class="o">/</span><span class="n">envs</span><span class="o">/</span><span class="n">jb</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">python3</span><span class="mf">.9</span><span class="o">/</span><span class="n">site</span><span class="o">-</span><span class="n">packages</span><span class="o">/</span><span class="n">pycode_similar</span><span class="o">.</span><span class="n">py</span><span class="p">:</span><span class="mi">502</span> <span class="ow">in</span> <span class="n">detect</span>
-    <span class="n">root_node</span> <span class="o">=</span> <span class="n">ast</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="n">code_str</span><span class="p">)</span>
-
-  <span class="n">File</span> <span class="o">~/.</span><span class="n">pyenv</span><span class="o">/</span><span class="n">versions</span><span class="o">/</span><span class="n">anaconda3</span><span class="o">-</span><span class="mf">2021.11</span><span class="o">/</span><span class="n">envs</span><span class="o">/</span><span class="n">jb</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">python3</span><span class="mf">.9</span><span class="o">/</span><span class="n">ast</span><span class="o">.</span><span class="n">py</span><span class="p">:</span><span class="mi">50</span> <span class="ow">in</span> <span class="n">parse</span>
-    <span class="k">return</span> <span class="nb">compile</span><span class="p">(</span><span class="n">source</span><span class="p">,</span> <span class="n">filename</span><span class="p">,</span> <span class="n">mode</span><span class="p">,</span> <span class="n">flags</span><span class="p">,</span>
-
-  <span class="n">File</span> <span class="o">&lt;</span><span class="n">unknown</span><span class="o">&gt;</span><span class="p">:</span><span class="mi">2</span>
-    <span class="k">def</span> <span class="nf">x</span><span class="p">()</span>
-           <span class="o">^</span>
-<span class="ne">SyntaxError</span>: invalid syntax
 </pre></div>
 </div>
 </div>
@@ -1244,32 +1264,251 @@ const thebe_selector_output = ".output, .cell_output"
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">ast</span>
 
 <span class="n">s1</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
-<span class="s2">def x()</span>
+<span class="s2">def x():</span>
 <span class="s2">    pass</span>
 <span class="s2">if x:</span>
-<span class="s2">    return True</span>
+<span class="s2">    return float(1)</span>
 <span class="s2">&quot;&quot;&quot;</span>
 
-<span class="n">ast</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="n">s1</span><span class="p">)</span>
+<span class="n">t</span> <span class="o">=</span> <span class="n">ast</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="n">s1</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ast</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="n">Traceback</span> <span class="p">(</span><span class="n">most</span> <span class="n">recent</span> <span class="n">call</span> <span class="n">last</span><span class="p">):</span>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&quot;Module(body=[FunctionDef(name=&#39;x&#39;, args=arguments(posonlyargs=[], args=[], kwonlyargs=[], kw_defaults=[], defaults=[]), body=[Pass()], decorator_list=[]), If(test=Name(id=&#39;x&#39;, ctx=Load()), body=[Return(value=Call(func=Name(id=&#39;float&#39;, ctx=Load()), args=[Constant(value=1)], keywords=[]))], orelse=[])], type_ignores=[])&quot;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ast</span><span class="o">.</span><span class="n">unparse</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;def x():\n    pass\nif x:\n    return float(1)&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">ast</span>
 
-  <span class="n">File</span> <span class="o">~/.</span><span class="n">pyenv</span><span class="o">/</span><span class="n">versions</span><span class="o">/</span><span class="n">anaconda3</span><span class="o">-</span><span class="mf">2021.11</span><span class="o">/</span><span class="n">envs</span><span class="o">/</span><span class="n">jb</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">python3</span><span class="mf">.9</span><span class="o">/</span><span class="n">site</span><span class="o">-</span><span class="n">packages</span><span class="o">/</span><span class="n">IPython</span><span class="o">/</span><span class="n">core</span><span class="o">/</span><span class="n">interactiveshell</span><span class="o">.</span><span class="n">py</span><span class="p">:</span><span class="mi">3361</span> <span class="ow">in</span> <span class="n">run_code</span>
-    <span class="n">exec</span><span class="p">(</span><span class="n">code_obj</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">user_global_ns</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">user_ns</span><span class="p">)</span>
+<span class="n">s1</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">l=[]</span>
+<span class="s2">for i in range(10):</span>
+<span class="s2">    l.append(i)</span>
+<span class="s2">l</span>
+<span class="s2">&quot;&quot;&quot;</span>
 
-  <span class="n">Input</span> <span class="n">In</span> <span class="p">[</span><span class="mi">542</span><span class="p">]</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">cell</span> <span class="n">line</span><span class="p">:</span> <span class="mi">10</span><span class="o">&gt;</span>
-    <span class="n">ast</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="n">s1</span><span class="p">)</span>
+<span class="n">t0</span> <span class="o">=</span> <span class="n">ast</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="n">s1</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">ast</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">t0</span><span class="p">,</span> <span class="n">indent</span><span class="o">=</span><span class="mi">4</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Module(
+    body=[
+        Assign(
+            targets=[
+                Name(id=&#39;l&#39;, ctx=Store())],
+            value=List(elts=[], ctx=Load())),
+        For(
+            target=Name(id=&#39;i&#39;, ctx=Store()),
+            iter=Call(
+                func=Name(id=&#39;range&#39;, ctx=Load()),
+                args=[
+                    Constant(value=10)],
+                keywords=[]),
+            body=[
+                Expr(
+                    value=Call(
+                        func=Attribute(
+                            value=Name(id=&#39;l&#39;, ctx=Load()),
+                            attr=&#39;append&#39;,
+                            ctx=Load()),
+                        args=[
+                            Name(id=&#39;i&#39;, ctx=Load())],
+                        keywords=[]))],
+            orelse=[]),
+        Expr(
+            value=Name(id=&#39;l&#39;, ctx=Load()))],
+    type_ignores=[])
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">ast</span><span class="o">.</span><span class="n">unparse</span><span class="p">(</span><span class="n">t0</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>l = []
+for i in range(10):
+    l.append(i)
+l
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">ast</span>
 
-  <span class="n">File</span> <span class="o">~/.</span><span class="n">pyenv</span><span class="o">/</span><span class="n">versions</span><span class="o">/</span><span class="n">anaconda3</span><span class="o">-</span><span class="mf">2021.11</span><span class="o">/</span><span class="n">envs</span><span class="o">/</span><span class="n">jb</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">python3</span><span class="mf">.9</span><span class="o">/</span><span class="n">ast</span><span class="o">.</span><span class="n">py</span><span class="p">:</span><span class="mi">50</span> <span class="ow">in</span> <span class="n">parse</span>
-    <span class="k">return</span> <span class="nb">compile</span><span class="p">(</span><span class="n">source</span><span class="p">,</span> <span class="n">filename</span><span class="p">,</span> <span class="n">mode</span><span class="p">,</span> <span class="n">flags</span><span class="p">,</span>
+<span class="n">s1</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">[i for i in range(10)]</span>
+<span class="s2">&quot;&quot;&quot;</span>
 
-  <span class="n">File</span> <span class="o">&lt;</span><span class="n">unknown</span><span class="o">&gt;</span><span class="p">:</span><span class="mi">2</span>
-    <span class="k">def</span> <span class="nf">x</span><span class="p">()</span>
-           <span class="o">^</span>
-<span class="ne">SyntaxError</span>: invalid syntax
+<span class="n">t1</span> <span class="o">=</span> <span class="n">ast</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="n">s1</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">ast</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">t1</span><span class="p">,</span> <span class="n">indent</span><span class="o">=</span><span class="mi">4</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Module(
+    body=[
+        Expr(
+            value=ListComp(
+                elt=Name(id=&#39;i&#39;, ctx=Load()),
+                generators=[
+                    comprehension(
+                        target=Name(id=&#39;i&#39;, ctx=Store()),
+                        iter=Call(
+                            func=Name(id=&#39;range&#39;, ctx=Load()),
+                            args=[
+                                Constant(value=10)],
+                            keywords=[]),
+                        ifs=[],
+                        is_async=0)]))],
+    type_ignores=[])
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">ast</span><span class="o">.</span><span class="n">unparse</span><span class="p">(</span><span class="n">t1</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[i for i in range(10)]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">difflib</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ast</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">t0</span><span class="p">,</span><span class="n">indent</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;Module(&#39;,
+ &#39;body=[&#39;,
+ &#39;Assign(&#39;,
+ &#39;targets=[&#39;,
+ &quot;Name(id=&#39;l&#39;, ctx=Store())],&quot;,
+ &#39;value=List(elts=[], ctx=Load())),&#39;,
+ &#39;For(&#39;,
+ &quot;target=Name(id=&#39;i&#39;, ctx=Store()),&quot;,
+ &#39;iter=Call(&#39;,
+ &quot;func=Name(id=&#39;range&#39;, ctx=Load()),&quot;,
+ &#39;args=[&#39;,
+ &#39;Constant(value=10)],&#39;,
+ &#39;keywords=[]),&#39;,
+ &#39;body=[&#39;,
+ &#39;Expr(&#39;,
+ &#39;value=Call(&#39;,
+ &#39;func=Attribute(&#39;,
+ &quot;value=Name(id=&#39;l&#39;, ctx=Load()),&quot;,
+ &quot;attr=&#39;append&#39;,&quot;,
+ &#39;ctx=Load()),&#39;,
+ &#39;args=[&#39;,
+ &quot;Name(id=&#39;i&#39;, ctx=Load())],&quot;,
+ &#39;keywords=[]))],&#39;,
+ &#39;orelse=[]),&#39;,
+ &#39;Expr(&#39;,
+ &quot;value=Name(id=&#39;l&#39;, ctx=Load()))],&quot;,
+ &#39;type_ignores=[])&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">difflib</span><span class="o">.</span><span class="n">unified_diff</span><span class="p">(</span><span class="n">ast</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">t0</span><span class="p">,</span><span class="n">indent</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">),</span><span class="n">ast</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">t1</span><span class="p">,</span><span class="n">indent</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">),</span><span class="n">lineterm</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">)))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>--- 
++++ 
+@@ -1,27 +1,16 @@
+ Module(
+ body=[
+-Assign(
+-targets=[
+-Name(id=&#39;l&#39;, ctx=Store())],
+-value=List(elts=[], ctx=Load())),
+-For(
++Expr(
++value=ListComp(
++elt=Name(id=&#39;i&#39;, ctx=Load()),
++generators=[
++comprehension(
+ target=Name(id=&#39;i&#39;, ctx=Store()),
+ iter=Call(
+ func=Name(id=&#39;range&#39;, ctx=Load()),
+ args=[
+ Constant(value=10)],
+ keywords=[]),
+-body=[
+-Expr(
+-value=Call(
+-func=Attribute(
+-value=Name(id=&#39;l&#39;, ctx=Load()),
+-attr=&#39;append&#39;,
+-ctx=Load()),
+-args=[
+-Name(id=&#39;i&#39;, ctx=Load())],
+-keywords=[]))],
+-orelse=[]),
+-Expr(
+-value=Name(id=&#39;l&#39;, ctx=Load()))],
++ifs=[],
++is_async=0)]))],
+ type_ignores=[])
 </pre></div>
 </div>
 </div>
@@ -1574,22 +1813,6 @@ len ( s )
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">t0</span><span class="o">=</span><span class="n">_tokenize</span><span class="p">(</span><span class="s1">&#39;[len(s) for s in huck_finn_chapters]&#39;</span><span class="p">)</span>
 <span class="n">t1</span><span class="o">=</span><span class="n">_tokenize</span><span class="p">(</span><span class="s1">&#39;&#39;&#39;for s in huck_finn_chapters:</span>
 <span class="s1">    print(len(s))&#39;&#39;&#39;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="n">huck_finn_chapters</span><span class="p">:</span>
-    <span class="nb">len</span><span class="p">(</span><span class="n">s</span><span class="p">)]</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span>  <span class="n">Input</span> <span class="n">In</span> <span class="p">[</span><span class="mi">634</span><span class="p">]</span>
-    <span class="p">[</span><span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="n">huck_finn_chapters</span><span class="p">:</span>
-     <span class="o">^</span>
-<span class="ne">SyntaxError</span>: invalid syntax
 </pre></div>
 </div>
 </div>

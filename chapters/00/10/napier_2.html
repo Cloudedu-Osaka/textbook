@@ -1,0 +1,2560 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Napier’s Logarithms: 九九のない世界 &#8212; Computational and Inferential Thinking</title>
+    
+  <link href="../../../_static/css/theme.css" rel="stylesheet">
+  <link href="../../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/book.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../../../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/clipboard.min.js"></script>
+    <script src="../../../_static/copybutton.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../../../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="canonical" href="https://inferentialthinking.org/chapters/00/10/napier_2.html" />
+    <link rel="shortcut icon" href="../../../_static/favicon.png"/>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+<script async="" src="https://www.google-analytics.com/analytics.js"></script>
+<script>
+                        window.ga = window.ga || function () {
+                            (ga.q = ga.q || []).push(arguments) };
+                        ga.l = +new Date;
+                        ga('create', 'UA-148221575-1', 'auto');
+                        ga('set', 'anonymizeIp', true);
+                        ga('send', 'pageview');
+                    </script>
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../../../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../../../_static/favicon.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Computational and Inferential Thinking</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  2022/06/14
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../9/assign_1.html">
+   Assignment (1)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../9/assign_2.html">
+   Assignment (2)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../9/assign_3.html">
+   Assignment (3)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../9/assign_4.html">
+   Assignment (4)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../9/assign_5.html">
+   Assignment (5)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../9/assign_6.html">
+   Assignment (6)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../9/assign_7.html">
+   Assignment (7)
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  2022/06/07
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../8/leibniz_1.html">
+   Japanese wordplay
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../8/leibniz_2.html">
+   Computer algebra
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../8/leibniz_3.html">
+   Leibniz
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../8/assign.html">
+   Assignment
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  2022/05/31
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../7/pythagoras_1.html">
+   from Pythagoras to Einstein (1)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../7/pythagoras_2.html">
+   Plimpton 322 and YBC 7289
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../7/pythagoras_3.html">
+   YBC 7289 (1)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../7/pythagoras_4.html">
+   YBC 7289 (2)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../7/pythagoras_5.html">
+   YBC 7289 (3)
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  2022/05/24
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../6/plimpton322_2.html">
+   Decoding Plimpton 322 (1)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../6/plimpton322_3.html">
+   Decoding Plimpton 322 (2)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../6/plimpton322_4.html">
+   Decoding Plimpton 322 (3)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../6/assign_1.html">
+   Assignment (1)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../6/assign_2.html">
+   Assignment (2)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../6/assign_3.html">
+   Assignment (3)
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  2022/05/17
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../5/long_division.html">
+   Long Division
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../5/assign_1.html">
+   Assignment (1)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../5/assign_2.html">
+   Assignment (2)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../5/assign_3.html">
+   Assignment (3)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../5/assign_4.html">
+   Assignment (4)
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  2022/05/10
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../4/plimpton322_1.html">
+   Plimpton 322 (1)
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  2022/04/19
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../3/intro_add_1.html">
+   Notebook additional setting
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  2022/04/12
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../intro_add.html">
+   Precautions
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../0/1/Receiving_invitation_mail.html">
+     Federated authentication
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../0/1/Accessing_JupyterHub.html">
+     Application registration
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../1/intro_add_1.html">
+     Notebook execution
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../1/intro_add_2.html">
+     Notebook security
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../1/intro_add_3.html">
+     Notebook activity
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../2/intro_add.html">
+   Request for cooperation
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../2/intro_add_4.html">
+     Experiment explanation
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../2/intro_add_5.html">
+     Informed concent
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../2/intro_add_6.html">
+     Withdrawal of concent
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  DATA 8
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../01/what-is-data-science.html">
+   1. Data Science
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../../01/1/intro.html">
+     1.1. Introduction
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+    <label for="toctree-checkbox-4">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../01/1/1/computational-tools.html">
+       1.1.1. Computational Tools
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../01/1/2/statistical-techniques.html">
+       1.1.2. Statistical Techniques
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../01/2/why-data-science.html">
+     1.2. Why Data Science?
+    </a>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../../01/3/Plotting_the_Classics.html">
+     1.3. Plotting the Classics
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+    <label for="toctree-checkbox-5">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../01/3/1/Literary_Characters.html">
+       1.3.1. Literary Characters
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../01/3/2/Another_Kind_Of_Character.html">
+       1.3.2. Another Kind of Character
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../02/causality-and-experiments.html">
+   2. Causality and Experiments
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../02/1/observation-and-visualization-john-snow-and-the-broad-street-pump.html">
+     2.1. John Snow and the Broad Street Pump
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../02/2/snow-s-grand-experiment.html">
+     2.2. Snow’s “Grand Experiment”
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../02/3/establishing-causality.html">
+     2.3. Establishing Causality
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../02/4/randomization.html">
+     2.4. Randomization
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../02/5/endnote.html">
+     2.5. Endnote
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../03/programming-in-python.html">
+   3. Programming in Python
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+  <label for="toctree-checkbox-7">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../03/1/Expressions.html">
+     3.1. Expressions
+    </a>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../../03/2/Names.html">
+     3.2. Names
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+    <label for="toctree-checkbox-8">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../03/2/1/Growth.html">
+       3.2.1. Example: Growth Rates
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../03/3/Calls.html">
+     3.3. Call Expressions
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../03/4/Introduction_to_Tables.html">
+     3.4. Introduction to Tables
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../04/Data_Types.html">
+   4. Data Types
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
+  <label for="toctree-checkbox-9">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../04/1/Numbers.html">
+     4.1. Numbers
+    </a>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../../04/2/Strings.html">
+     4.2. Strings
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
+    <label for="toctree-checkbox-10">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../04/2/1/String_Methods.html">
+       4.2.1. String Methods
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../04/3/Comparison.html">
+     4.3. Comparisons
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../05/Sequences.html">
+   5. Sequences
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/>
+  <label for="toctree-checkbox-11">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../05/1/Arrays.html">
+     5.1. Arrays
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../05/2/Ranges.html">
+     5.2. Ranges
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../05/3/More_on_Arrays.html">
+     5.3. More on Arrays
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../06/Tables.html">
+   6. Tables
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/>
+  <label for="toctree-checkbox-12">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../06/1/Sorting_Rows.html">
+     6.1. Sorting Rows
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../06/2/Selecting_Rows.html">
+     6.2. Selecting Rows
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../06/3/Example_Population_Trends.html">
+     6.3. Example: Population Trends
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../06/4/Example_Sex_Ratios.html">
+     6.4. Example: Sex Ratios
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../07/Visualization.html">
+   7. Visualization
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" type="checkbox"/>
+  <label for="toctree-checkbox-13">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../07/1/Visualizing_Categorical_Distributions.html">
+     7.1. Categorical Distributions
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../07/2/Visualizing_Numerical_Distributions.html">
+     7.2. Numerical Distributions
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../07/3/Overlaid_Graphs.html">
+     7.3. Overlaid Graphs
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../08/Functions_and_Tables.html">
+   8. Functions and Tables
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" type="checkbox"/>
+  <label for="toctree-checkbox-14">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../08/1/Applying_a_Function_to_a_Column.html">
+     8.5. Applying Functions to Columns
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../08/2/Classifying_by_One_Variable.html">
+     8.6. Classifying by One Variable
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../08/3/Cross-Classifying_by_More_than_One_Variable.html">
+     8.7. Cross-Classifying
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../08/4/Joining_Tables_by_Columns.html">
+     8.8. Joining Tables by Columns
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../08/5/Bike_Sharing_in_the_Bay_Area.html">
+     8.9. Bike Sharing in the Bay Area
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../09/Randomness.html">
+   9. Randomness
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" type="checkbox"/>
+  <label for="toctree-checkbox-15">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../09/1/Conditional_Statements.html">
+     9.1. Conditional Statements
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../09/2/Iteration.html">
+     9.2. Iteration
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../09/3/Simulation.html">
+     9.3. Simulation
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../09/4/Monty_Hall_Problem.html">
+     9.4. The Monty Hall Problem
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../09/5/Finding_Probabilities.html">
+     9.5. Finding Probabilities
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../10/Sampling_and_Empirical_Distributions.html">
+   10. Sampling and Empirical Distributions
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-16" name="toctree-checkbox-16" type="checkbox"/>
+  <label for="toctree-checkbox-16">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../10/1/Empirical_Distributions.html">
+     10.1. Empirical Distributions
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../10/2/Sampling_from_a_Population.html">
+     10.2. Sampling from a Population
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../10/3/Empirical_Distribution_of_a_Statistic.html">
+     10.3. Empirical Distibution of a Statistic
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../10/4/Random_Sampling_in_Python.html">
+     10.4. Random Sampling in Python
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../11/Testing_Hypotheses.html">
+   11. Testing Hypotheses
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-17" name="toctree-checkbox-17" type="checkbox"/>
+  <label for="toctree-checkbox-17">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../11/1/Assessing_a_Model.html">
+     11.1. Assessing a Model
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../11/2/Multiple_Categories.html">
+     11.2. Multiple Categories
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../11/3/Decisions_and_Uncertainty.html">
+     11.3. Decisions and Uncertainty
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../11/4/Error_Probabilities.html">
+     11.4. Error Probabilities
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../12/Comparing_Two_Samples.html">
+   12. Comparing Two Samples
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-18" name="toctree-checkbox-18" type="checkbox"/>
+  <label for="toctree-checkbox-18">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../12/1/AB_Testing.html">
+     12.1. A/B Testing
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../12/2/Causality.html">
+     12.2. Causality
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../12/3/Deflategate.html">
+     12.3. Deflategate
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../13/Estimation.html">
+   13. Estimation
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-19" name="toctree-checkbox-19" type="checkbox"/>
+  <label for="toctree-checkbox-19">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../13/1/Percentiles.html">
+     13.1. Percentiles
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../13/2/Bootstrap.html">
+     13.2. The Bootstrap
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../13/3/Confidence_Intervals.html">
+     13.3. Confidence Intervals
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../13/4/Using_Confidence_Intervals.html">
+     13.4. Using Confidence Intervals
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../14/Why_the_Mean_Matters.html">
+   14. Why the Mean Matters
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-20" name="toctree-checkbox-20" type="checkbox"/>
+  <label for="toctree-checkbox-20">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../14/1/Properties_of_the_Mean.html">
+     14.1. Properties of the Mean
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../14/2/Variability.html">
+     14.2. Variability
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../14/3/SD_and_the_Normal_Curve.html">
+     14.3. The SD and the Normal Curve
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../14/4/Central_Limit_Theorem.html">
+     14.4. The Central Limit Theorem
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../14/5/Variability_of_the_Sample_Mean.html">
+     14.5. The Variability of the Sample Mean
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../14/6/Choosing_a_Sample_Size.html">
+     14.6. Choosing a Sample Size
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../15/Prediction.html">
+   15. Prediction
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-21" name="toctree-checkbox-21" type="checkbox"/>
+  <label for="toctree-checkbox-21">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../15/1/Correlation.html">
+     15.1. Correlation
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../15/2/Regression_Line.html">
+     15.2. The Regression Line
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../15/3/Method_of_Least_Squares.html">
+     15.3. The Method of Least Squares
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../15/4/Least_Squares_Regression.html">
+     15.4. Least Squares Regression
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../15/5/Visual_Diagnostics.html">
+     15.5. Visual Diagnostics
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../15/6/Numerical_Diagnostics.html">
+     15.6. Numerical Diagnostics
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../16/Inference_for_Regression.html">
+   16. Inference for Regression
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-22" name="toctree-checkbox-22" type="checkbox"/>
+  <label for="toctree-checkbox-22">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../16/1/Regression_Model.html">
+     16.1. A Regression Model
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../16/2/Inference_for_the_True_Slope.html">
+     16.2. Inference for the True Slope
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../16/3/Prediction_Intervals.html">
+     16.3. Prediction Intervals
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../17/Classification.html">
+   17. Classification
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-23" name="toctree-checkbox-23" type="checkbox"/>
+  <label for="toctree-checkbox-23">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../17/1/Nearest_Neighbors.html">
+     17.1. Nearest Neighbors
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../17/2/Training_and_Testing.html">
+     17.2. Training and Testing
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../17/3/Rows_of_Tables.html">
+     17.3. Rows of Tables
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../17/4/Implementing_the_Classifier.html">
+     17.4. Implementing the Classifier
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../17/5/Accuracy_of_the_Classifier.html">
+     17.5. The Accuracy of the Classifier
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../17/6/Multiple_Regression.html">
+     17.6. Multiple Regression
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../18/Updating_Predictions.html">
+   18. Updating Predictions
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-24" name="toctree-checkbox-24" type="checkbox"/>
+  <label for="toctree-checkbox-24">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../18/1/More_Likely_than_Not_Binary_Classifier.html">
+     18.1. A "More Likely Than Not" Binary Classifier
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../18/2/Making_Decisions.html">
+     18.2. Making Decisions
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../../_sources/chapters/00/10/napier_2.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/Cloudedu-Osaka/textbook"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/Cloudedu-Osaka/textbook/main?urlpath=tree/chapters/00/10/napier_2.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../../../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        <a class="jupyterhub-button" href="https://cloudedu-jhub.japaneast.cloudapp.azure.com/hub/user-redirect/git-pull?repo=https://github.com/Cloudedu-Osaka/textbook&urlpath=tree/textbook/chapters/00/10/napier_2.ipynb&branch=main"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch JupyterHub" data-toggle="tooltip"
+                data-placement="left"><img class="jupyterhub-button-logo"
+                    src="../../../_static/images/logo_jupyterhub.svg"
+                    alt="Interact on JupyterHub">JupyterHub</button></a>
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id1">
+   表を作る
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id2">
+   計算する
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id3">
+     九九のない世界
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id4">
+     計算量を減らす: 自乗
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#r-7-10-000-000">
+     そもそも R=7 (10,000,000) の話だった
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id5">
+     10進法で切りのいい近似値
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Napier’s Logarithms: 九九のない世界</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id1">
+   表を作る
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id2">
+   計算する
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id3">
+     九九のない世界
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id4">
+     計算量を減らす: 自乗
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#r-7-10-000-000">
+     そもそも R=7 (10,000,000) の話だった
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id5">
+     10進法で切りのいい近似値
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="napier-s-logarithms">
+<h1>Napier’s Logarithms: 九九のない世界<a class="headerlink" href="#napier-s-logarithms" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="id1">
+<h2>表を作る<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">astropy.coordinates</span> <span class="kn">import</span> <span class="n">Angle</span>
+<span class="kn">from</span> <span class="nn">astropy</span> <span class="kn">import</span> <span class="n">units</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Angle</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">{:d}</span><span class="s1">°</span><span class="si">{:d}</span><span class="s1">′</span><span class="si">{:d}</span><span class="s1">″&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">))</span><span class="o">.</span><span class="n">radian</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.018049613347708025
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">math</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">from</span> <span class="nn">scoping</span> <span class="kn">import</span> <span class="n">scoping</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">napier</span><span class="p">(</span><span class="n">dms_d</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">r</span><span class="o">=</span><span class="mi">7</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">dms_m</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">60</span><span class="p">):</span>
+        <span class="n">a</span> <span class="o">=</span> <span class="n">Angle</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">{:d}</span><span class="s1">°</span><span class="si">{:d}</span><span class="s1">′</span><span class="si">{:d}</span><span class="s1">″&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">dms_d</span><span class="p">,</span><span class="n">dms_m</span><span class="p">,</span><span class="mi">0</span><span class="p">))</span>
+        <span class="k">yield</span> <span class="p">(</span><span class="n">a</span><span class="p">,</span>
+               <span class="s2">&quot;</span><span class="si">{:8.0f}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">a</span><span class="o">.</span><span class="n">radian</span><span class="p">)</span><span class="o">*</span><span class="mi">10</span><span class="o">**</span><span class="n">r</span><span class="p">),</span>
+               <span class="s2">&quot;</span><span class="si">{:8.0f}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">a</span><span class="o">.</span><span class="n">radian</span><span class="p">),</span> <span class="mi">1</span><span class="o">-</span><span class="mi">1</span><span class="o">/</span><span class="p">(</span><span class="mi">10</span><span class="o">**</span><span class="n">r</span><span class="p">))</span> <span class="k">if</span> <span class="n">a</span><span class="o">.</span><span class="n">radian</span> <span class="k">else</span> <span class="nb">float</span><span class="p">(</span><span class="s1">&#39;inf&#39;</span><span class="p">)),</span>
+               <span class="s2">&quot;</span><span class="si">{:8.0f}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">tan</span><span class="p">(</span><span class="n">a</span><span class="o">.</span><span class="n">radian</span><span class="p">),</span> <span class="mi">1</span><span class="o">-</span><span class="mi">1</span><span class="o">/</span><span class="p">(</span><span class="mi">10</span><span class="o">**</span><span class="n">r</span><span class="p">))</span> <span class="k">if</span> <span class="n">a</span><span class="o">.</span><span class="n">radian</span> <span class="k">else</span> <span class="nb">float</span><span class="p">(</span><span class="s1">&#39;inf&#39;</span><span class="p">)),</span>
+               <span class="s2">&quot;</span><span class="si">{:8.0f}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">a</span><span class="o">.</span><span class="n">radian</span><span class="p">),</span> <span class="mi">1</span><span class="o">-</span><span class="mi">1</span><span class="o">/</span><span class="p">(</span><span class="mi">10</span><span class="o">**</span><span class="n">r</span><span class="p">))),</span>
+               <span class="s2">&quot;</span><span class="si">{:8.0f}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">a</span><span class="o">.</span><span class="n">radian</span><span class="p">)</span><span class="o">*</span><span class="mi">10</span><span class="o">**</span><span class="n">r</span><span class="p">),</span>
+               <span class="n">Angle</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">{:d}</span><span class="s1">°</span><span class="si">{:d}</span><span class="s1">′</span><span class="si">{:d}</span><span class="s1">″&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="mi">90</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">))</span><span class="o">-</span><span class="n">Angle</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">{:d}</span><span class="s1">°</span><span class="si">{:d}</span><span class="s1">′</span><span class="si">{:d}</span><span class="s1">″&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">dms_d</span><span class="p">,</span><span class="n">dms_m</span><span class="p">,</span><span class="mi">0</span><span class="p">)))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">napier</span><span class="p">(</span><span class="n">dms_d</span><span class="o">=</span><span class="mi">0</span><span class="p">),</span> <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;d&#39;</span><span class="p">,</span><span class="s1">&#39;sin&#39;</span><span class="p">,</span><span class="s1">&#39;log(sin(d))&#39;</span><span class="p">,</span><span class="s1">&#39;log(tan(d))&#39;</span><span class="p">,</span><span class="s1">&#39;log(cos(d))&#39;</span><span class="p">,</span> <span class="s1">&#39;cos(d)&#39;</span><span class="p">,</span> <span class="s1">&#39;90-d&#39;</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>d</th>
+      <th>sin</th>
+      <th>log(sin(d))</th>
+      <th>log(tan(d))</th>
+      <th>log(cos(d))</th>
+      <th>cos(d)</th>
+      <th>90-d</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>0d00m00s</td>
+      <td>0</td>
+      <td>inf</td>
+      <td>inf</td>
+      <td>-0</td>
+      <td>10000000</td>
+      <td>90d00m00s</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>0d01m00s</td>
+      <td>2909</td>
+      <td>81425711</td>
+      <td>81425711</td>
+      <td>0</td>
+      <td>10000000</td>
+      <td>89d59m00s</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>0d02m00s</td>
+      <td>5818</td>
+      <td>74494240</td>
+      <td>74494239</td>
+      <td>2</td>
+      <td>9999998</td>
+      <td>89d58m00s</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>0d03m00s</td>
+      <td>8727</td>
+      <td>70439590</td>
+      <td>70439586</td>
+      <td>4</td>
+      <td>9999996</td>
+      <td>89d57m00s</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>0d04m00s</td>
+      <td>11636</td>
+      <td>67562771</td>
+      <td>67562764</td>
+      <td>7</td>
+      <td>9999993</td>
+      <td>89d56m00s</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>0d05m00s</td>
+      <td>14544</td>
+      <td>65331336</td>
+      <td>65331326</td>
+      <td>11</td>
+      <td>9999989</td>
+      <td>89d55m00s</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>0d06m00s</td>
+      <td>17453</td>
+      <td>63508123</td>
+      <td>63508107</td>
+      <td>15</td>
+      <td>9999985</td>
+      <td>89d54m00s</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>0d07m00s</td>
+      <td>20362</td>
+      <td>61966618</td>
+      <td>61966597</td>
+      <td>21</td>
+      <td>9999979</td>
+      <td>89d53m00s</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>0d08m00s</td>
+      <td>23271</td>
+      <td>60631306</td>
+      <td>60631279</td>
+      <td>27</td>
+      <td>9999973</td>
+      <td>89d52m00s</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>0d09m00s</td>
+      <td>26180</td>
+      <td>59453478</td>
+      <td>59453444</td>
+      <td>34</td>
+      <td>9999966</td>
+      <td>89d51m00s</td>
+    </tr>
+    <tr>
+      <th>10</th>
+      <td>0d10m00s</td>
+      <td>29089</td>
+      <td>58399876</td>
+      <td>58399833</td>
+      <td>42</td>
+      <td>9999958</td>
+      <td>89d50m00s</td>
+    </tr>
+    <tr>
+      <th>11</th>
+      <td>0d11m00s</td>
+      <td>31998</td>
+      <td>57446777</td>
+      <td>57446726</td>
+      <td>51</td>
+      <td>9999949</td>
+      <td>89d49m00s</td>
+    </tr>
+    <tr>
+      <th>12</th>
+      <td>0d12m00s</td>
+      <td>34907</td>
+      <td>56576666</td>
+      <td>56576605</td>
+      <td>61</td>
+      <td>9999939</td>
+      <td>89d48m00s</td>
+    </tr>
+    <tr>
+      <th>13</th>
+      <td>0d13m00s</td>
+      <td>37815</td>
+      <td>55776243</td>
+      <td>55776171</td>
+      <td>72</td>
+      <td>9999928</td>
+      <td>89d47m00s</td>
+    </tr>
+    <tr>
+      <th>14</th>
+      <td>0d14m00s</td>
+      <td>40724</td>
+      <td>55035167</td>
+      <td>55035084</td>
+      <td>83</td>
+      <td>9999917</td>
+      <td>89d46m00s</td>
+    </tr>
+    <tr>
+      <th>15</th>
+      <td>0d15m00s</td>
+      <td>43633</td>
+      <td>54345242</td>
+      <td>54345147</td>
+      <td>95</td>
+      <td>9999905</td>
+      <td>89d45m00s</td>
+    </tr>
+    <tr>
+      <th>16</th>
+      <td>0d16m00s</td>
+      <td>46542</td>
+      <td>53699861</td>
+      <td>53699753</td>
+      <td>108</td>
+      <td>9999892</td>
+      <td>89d44m00s</td>
+    </tr>
+    <tr>
+      <th>17</th>
+      <td>0d17m00s</td>
+      <td>49451</td>
+      <td>53093620</td>
+      <td>53093498</td>
+      <td>122</td>
+      <td>9999878</td>
+      <td>89d43m00s</td>
+    </tr>
+    <tr>
+      <th>18</th>
+      <td>0d18m00s</td>
+      <td>52360</td>
+      <td>52522041</td>
+      <td>52521904</td>
+      <td>137</td>
+      <td>9999863</td>
+      <td>89d42m00s</td>
+    </tr>
+    <tr>
+      <th>19</th>
+      <td>0d19m00s</td>
+      <td>55268</td>
+      <td>51981374</td>
+      <td>51981221</td>
+      <td>153</td>
+      <td>9999847</td>
+      <td>89d41m00s</td>
+    </tr>
+    <tr>
+      <th>20</th>
+      <td>0d20m00s</td>
+      <td>58177</td>
+      <td>51468446</td>
+      <td>51468277</td>
+      <td>169</td>
+      <td>9999831</td>
+      <td>89d40m00s</td>
+    </tr>
+    <tr>
+      <th>21</th>
+      <td>0d21m00s</td>
+      <td>61086</td>
+      <td>50980551</td>
+      <td>50980364</td>
+      <td>187</td>
+      <td>9999813</td>
+      <td>89d39m00s</td>
+    </tr>
+    <tr>
+      <th>22</th>
+      <td>0d22m00s</td>
+      <td>63995</td>
+      <td>50515356</td>
+      <td>50515152</td>
+      <td>205</td>
+      <td>9999795</td>
+      <td>89d38m00s</td>
+    </tr>
+    <tr>
+      <th>23</th>
+      <td>0d23m00s</td>
+      <td>66904</td>
+      <td>50070845</td>
+      <td>50070621</td>
+      <td>224</td>
+      <td>9999776</td>
+      <td>89d37m00s</td>
+    </tr>
+    <tr>
+      <th>24</th>
+      <td>0d24m00s</td>
+      <td>69813</td>
+      <td>49645256</td>
+      <td>49645012</td>
+      <td>244</td>
+      <td>9999756</td>
+      <td>89d36m00s</td>
+    </tr>
+    <tr>
+      <th>25</th>
+      <td>0d25m00s</td>
+      <td>72721</td>
+      <td>49237043</td>
+      <td>49236778</td>
+      <td>264</td>
+      <td>9999736</td>
+      <td>89d35m00s</td>
+    </tr>
+    <tr>
+      <th>26</th>
+      <td>0d26m00s</td>
+      <td>75630</td>
+      <td>48844843</td>
+      <td>48844557</td>
+      <td>286</td>
+      <td>9999714</td>
+      <td>89d34m00s</td>
+    </tr>
+    <tr>
+      <th>27</th>
+      <td>0d27m00s</td>
+      <td>78539</td>
+      <td>48467447</td>
+      <td>48467139</td>
+      <td>308</td>
+      <td>9999692</td>
+      <td>89d33m00s</td>
+    </tr>
+    <tr>
+      <th>28</th>
+      <td>0d28m00s</td>
+      <td>81448</td>
+      <td>48103778</td>
+      <td>48103447</td>
+      <td>332</td>
+      <td>9999668</td>
+      <td>89d32m00s</td>
+    </tr>
+    <tr>
+      <th>29</th>
+      <td>0d29m00s</td>
+      <td>84357</td>
+      <td>47752873</td>
+      <td>47752517</td>
+      <td>356</td>
+      <td>9999644</td>
+      <td>89d31m00s</td>
+    </tr>
+    <tr>
+      <th>30</th>
+      <td>0d30m00s</td>
+      <td>87265</td>
+      <td>47413866</td>
+      <td>47413485</td>
+      <td>381</td>
+      <td>9999619</td>
+      <td>89d30m00s</td>
+    </tr>
+    <tr>
+      <th>31</th>
+      <td>0d31m00s</td>
+      <td>90174</td>
+      <td>47085976</td>
+      <td>47085570</td>
+      <td>407</td>
+      <td>9999593</td>
+      <td>89d29m00s</td>
+    </tr>
+    <tr>
+      <th>32</th>
+      <td>0d32m00s</td>
+      <td>93083</td>
+      <td>46768498</td>
+      <td>46768065</td>
+      <td>433</td>
+      <td>9999567</td>
+      <td>89d28m00s</td>
+    </tr>
+    <tr>
+      <th>33</th>
+      <td>0d33m00s</td>
+      <td>95992</td>
+      <td>46460791</td>
+      <td>46460330</td>
+      <td>461</td>
+      <td>9999539</td>
+      <td>89d27m00s</td>
+    </tr>
+    <tr>
+      <th>34</th>
+      <td>0d34m00s</td>
+      <td>98900</td>
+      <td>46162271</td>
+      <td>46161782</td>
+      <td>489</td>
+      <td>9999511</td>
+      <td>89d26m00s</td>
+    </tr>
+    <tr>
+      <th>35</th>
+      <td>0d35m00s</td>
+      <td>101809</td>
+      <td>45872405</td>
+      <td>45871887</td>
+      <td>518</td>
+      <td>9999482</td>
+      <td>89d25m00s</td>
+    </tr>
+    <tr>
+      <th>36</th>
+      <td>0d36m00s</td>
+      <td>104718</td>
+      <td>45590706</td>
+      <td>45590158</td>
+      <td>548</td>
+      <td>9999452</td>
+      <td>89d24m00s</td>
+    </tr>
+    <tr>
+      <th>37</th>
+      <td>0d37m00s</td>
+      <td>107627</td>
+      <td>45316727</td>
+      <td>45316148</td>
+      <td>579</td>
+      <td>9999421</td>
+      <td>89d23m00s</td>
+    </tr>
+    <tr>
+      <th>38</th>
+      <td>0d38m00s</td>
+      <td>110535</td>
+      <td>45050055</td>
+      <td>45049444</td>
+      <td>611</td>
+      <td>9999389</td>
+      <td>89d22m00s</td>
+    </tr>
+    <tr>
+      <th>39</th>
+      <td>0d39m00s</td>
+      <td>113444</td>
+      <td>44790311</td>
+      <td>44789668</td>
+      <td>644</td>
+      <td>9999357</td>
+      <td>89d21m00s</td>
+    </tr>
+    <tr>
+      <th>40</th>
+      <td>0d40m00s</td>
+      <td>116353</td>
+      <td>44537144</td>
+      <td>44536467</td>
+      <td>677</td>
+      <td>9999323</td>
+      <td>89d20m00s</td>
+    </tr>
+    <tr>
+      <th>41</th>
+      <td>0d41m00s</td>
+      <td>119261</td>
+      <td>44290229</td>
+      <td>44289518</td>
+      <td>711</td>
+      <td>9999289</td>
+      <td>89d19m00s</td>
+    </tr>
+    <tr>
+      <th>42</th>
+      <td>0d42m00s</td>
+      <td>122170</td>
+      <td>44049266</td>
+      <td>44048519</td>
+      <td>746</td>
+      <td>9999254</td>
+      <td>89d18m00s</td>
+    </tr>
+    <tr>
+      <th>43</th>
+      <td>0d43m00s</td>
+      <td>125079</td>
+      <td>43813973</td>
+      <td>43813190</td>
+      <td>782</td>
+      <td>9999218</td>
+      <td>89d17m00s</td>
+    </tr>
+    <tr>
+      <th>44</th>
+      <td>0d44m00s</td>
+      <td>127987</td>
+      <td>43584090</td>
+      <td>43583271</td>
+      <td>819</td>
+      <td>9999181</td>
+      <td>89d16m00s</td>
+    </tr>
+    <tr>
+      <th>45</th>
+      <td>0d45m00s</td>
+      <td>130896</td>
+      <td>43359374</td>
+      <td>43358517</td>
+      <td>857</td>
+      <td>9999143</td>
+      <td>89d15m00s</td>
+    </tr>
+    <tr>
+      <th>46</th>
+      <td>0d46m00s</td>
+      <td>133805</td>
+      <td>43139598</td>
+      <td>43138702</td>
+      <td>895</td>
+      <td>9999105</td>
+      <td>89d14m00s</td>
+    </tr>
+    <tr>
+      <th>47</th>
+      <td>0d47m00s</td>
+      <td>136713</td>
+      <td>42924549</td>
+      <td>42923614</td>
+      <td>935</td>
+      <td>9999065</td>
+      <td>89d13m00s</td>
+    </tr>
+    <tr>
+      <th>48</th>
+      <td>0d48m00s</td>
+      <td>139622</td>
+      <td>42714028</td>
+      <td>42713053</td>
+      <td>975</td>
+      <td>9999025</td>
+      <td>89d12m00s</td>
+    </tr>
+    <tr>
+      <th>49</th>
+      <td>0d49m00s</td>
+      <td>142530</td>
+      <td>42507849</td>
+      <td>42506833</td>
+      <td>1016</td>
+      <td>9998984</td>
+      <td>89d11m00s</td>
+    </tr>
+    <tr>
+      <th>50</th>
+      <td>0d50m00s</td>
+      <td>145439</td>
+      <td>42305836</td>
+      <td>42304778</td>
+      <td>1058</td>
+      <td>9998942</td>
+      <td>89d10m00s</td>
+    </tr>
+    <tr>
+      <th>51</th>
+      <td>0d51m00s</td>
+      <td>148348</td>
+      <td>42107824</td>
+      <td>42106723</td>
+      <td>1100</td>
+      <td>9998900</td>
+      <td>89d09m00s</td>
+    </tr>
+    <tr>
+      <th>52</th>
+      <td>0d52m00s</td>
+      <td>151256</td>
+      <td>41913657</td>
+      <td>41912513</td>
+      <td>1144</td>
+      <td>9998856</td>
+      <td>89d08m00s</td>
+    </tr>
+    <tr>
+      <th>53</th>
+      <td>0d53m00s</td>
+      <td>154165</td>
+      <td>41723190</td>
+      <td>41722002</td>
+      <td>1188</td>
+      <td>9998812</td>
+      <td>89d07m00s</td>
+    </tr>
+    <tr>
+      <th>54</th>
+      <td>0d54m00s</td>
+      <td>157073</td>
+      <td>41536284</td>
+      <td>41535050</td>
+      <td>1234</td>
+      <td>9998766</td>
+      <td>89d06m00s</td>
+    </tr>
+    <tr>
+      <th>55</th>
+      <td>0d55m00s</td>
+      <td>159982</td>
+      <td>41352808</td>
+      <td>41351528</td>
+      <td>1280</td>
+      <td>9998720</td>
+      <td>89d05m00s</td>
+    </tr>
+    <tr>
+      <th>56</th>
+      <td>0d56m00s</td>
+      <td>162890</td>
+      <td>41172639</td>
+      <td>41171312</td>
+      <td>1327</td>
+      <td>9998673</td>
+      <td>89d04m00s</td>
+    </tr>
+    <tr>
+      <th>57</th>
+      <td>0d57m00s</td>
+      <td>165799</td>
+      <td>40995659</td>
+      <td>40994284</td>
+      <td>1375</td>
+      <td>9998625</td>
+      <td>89d03m00s</td>
+    </tr>
+    <tr>
+      <th>58</th>
+      <td>0d58m00s</td>
+      <td>168707</td>
+      <td>40821758</td>
+      <td>40820334</td>
+      <td>1423</td>
+      <td>9998577</td>
+      <td>89d02m00s</td>
+    </tr>
+    <tr>
+      <th>59</th>
+      <td>0d59m00s</td>
+      <td>171616</td>
+      <td>40650830</td>
+      <td>40649357</td>
+      <td>1473</td>
+      <td>9998527</td>
+      <td>89d01m00s</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+</div>
+<div class="section" id="id2">
+<h2>計算する<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/John_Napier">John Napier - Wikipedia</a></p>
+<ul>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Napierian_logarithm#:~:text=The%20term%20Napierian%20logarithm%20or,it%20is%20named%20after%20him.">Napierian logarithm - Wikipedia</a></p></li>
+<li><p><a class="reference external" href="https://www.maa.org/press/periodicals/convergence/logarithms-the-early-history-of-a-familiar-function-john-napier-introduces-logarithms">Logarithms: The Early History of a Familiar Function - John Napier Introduces Logarithms | Mathematical Association of America</a></p></li>
+</ul>
+</li>
+</ul>
+<div class="math notranslate nohighlight">
+\[
+  \frac{N}{10^R} = \left(1-\frac{1}{10^{R}}\right)^{L}
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+  L = log_{1-10^{-R}} \frac{N}{10^R} = \frac{\log_{e}\frac{N}{10^R}}{\log_{e}(1-10^{-R})} \approx -10^R \log_{e}\frac{N}{10^R}
+\]</div>
+<p><span class="math notranslate nohighlight">\(R=7\)</span> の場合の数表を作成した。</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">math</span>
+<span class="mi">1</span><span class="o">/</span><span class="n">math</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="mi">10</span><span class="o">**-</span><span class="mi">7</span><span class="p">),</span> <span class="o">-</span><span class="mi">10</span><span class="o">**</span><span class="mi">7</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(-9999999.50526355, -10000000)
+</pre></div>
+</div>
+</div>
+</div>
+<ul class="simple">
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/E_%28mathematical_constant%29">e (mathematical constant) - Wikipedia</a></p></li>
+</ul>
+<p><span class="math notranslate nohighlight">\(R\)</span> を大きくすると、後にEulerが導入した <span class="math notranslate nohighlight">\(e\)</span> を底とする自然対数と一致する。</p>
+<div class="math notranslate nohighlight">
+\[
+  \lim_{n\rightarrow\infty} \left( 1-\frac{1}{n} \right)^n = \frac{1}{e}
+\]</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sympy</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">Symbol</span><span class="p">(</span><span class="s1">&#39;x&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">series</span><span class="p">(</span><span class="n">E</span><span class="o">**</span><span class="n">x</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle 1 + x + \frac{x^{2}}{2} + \frac{x^{3}}{6} + \frac{x^{4}}{24} + \frac{x^{5}}{120} + \frac{x^{6}}{720} + \frac{x^{7}}{5040} + \frac{x^{8}}{40320} + \frac{x^{9}}{362880} + O\left(x^{10}\right)\]</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">float</span><span class="p">(</span><span class="n">series</span><span class="p">(</span><span class="n">E</span><span class="o">**</span><span class="n">x</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span><span class="o">.</span><span class="n">removeO</span><span class="p">()</span><span class="o">.</span><span class="n">subs</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2.7182815255731922
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">series</span><span class="p">(</span><span class="n">log</span><span class="p">(</span><span class="mi">1</span><span class="o">+</span><span class="n">x</span><span class="p">),</span> <span class="n">x</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle x - \frac{x^{2}}{2} + \frac{x^{3}}{3} - \frac{x^{4}}{4} + \frac{x^{5}}{5} - \frac{x^{6}}{6} + \frac{x^{7}}{7} - \frac{x^{8}}{8} + \frac{x^{9}}{9} + O\left(x^{10}\right)\]</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">series</span><span class="p">(</span><span class="n">sin</span><span class="p">(</span><span class="n">x</span><span class="p">),</span> <span class="n">x</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle x - \frac{x^{3}}{6} + \frac{x^{5}}{120} - \frac{x^{7}}{5040} + \frac{x^{9}}{362880} + O\left(x^{10}\right)\]</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">series</span><span class="p">(</span><span class="n">cos</span><span class="p">(</span><span class="n">x</span><span class="p">),</span> <span class="n">x</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle 1 - \frac{x^{2}}{2} + \frac{x^{4}}{24} - \frac{x^{6}}{720} + \frac{x^{8}}{40320} + O\left(x^{10}\right)\]</div>
+</div>
+</div>
+<ul class="simple">
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Euler%27s_formula">Euler’s formula - Wikipedia</a></p></li>
+</ul>
+<p>自乗すると <span class="math notranslate nohighlight">\(-1\)</span> となる数 <span class="math notranslate nohighlight">\(i\)</span> を導入する: <span class="math notranslate nohighlight">\(i^2 = -1\)</span>
+$<span class="math notranslate nohighlight">\(
+  e^{i \phi} = \cos \phi + i \sin \phi
+\)</span>$</p>
+<p><img alt="fig-1" src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/Euler%27s_formula.svg/1920px-Euler%27s_formula.svg.png" /></p>
+<p><span class="math notranslate nohighlight">\(p_{n}\)</span> を次の数列として定義したとき、</p>
+<div class="math notranslate nohighlight">
+\[
+  p_{n+1} = p_{n} \left(1-\frac{1}{10^7}\right)\quad \text{where}\ p_{0} = 10^7
+\]</div>
+<div class="math notranslate nohighlight">
+\[p_{1} = 10^7 \left(1-\frac{1}{10^7} \right)= 10^7 \times 0.9999999 = 9999999\]</div>
+<p>数列の添字 <span class="math notranslate nohighlight">\(n\)</span> は <span class="math notranslate nohighlight">\(p_{n}\)</span> の (Napierが定義した <span class="math notranslate nohighlight">\(1-10^{-7}\)</span> を底とする) 対数である。</p>
+<div class="math notranslate nohighlight">
+\[
+  n = \log_{1-10^{-7}}(p_{n})
+\]</div>
+<p>Naperはこの数列を技巧を凝らして計算したが、単純に計算すると膨大な計算量となるため、まず <span class="math notranslate nohighlight">\(R=5\)</span> の場合を計算する。</p>
+<div class="math notranslate nohighlight">
+\[
+  p_{n+1} = p_{n} \left(1-\frac{1}{10^5}\right)\quad \text{where}\ p_{0} = 10^5
+\]</div>
+<div class="math notranslate nohighlight">
+\[p_{1} = 10^5 \left(1-\frac{1}{10^5} \right)= 10^5 \times 0.99999 = 99999\]</div>
+<p>底の変換によって、<span class="math notranslate nohighlight">\(R=7\)</span> の場合を効率よく近似できるため、計算は無駄にならない:</p>
+<div class="math notranslate nohighlight">
+\[
+  \log_{1-10^{-5}} \frac{N}{10^5} = \frac{\log_{1-10^{-7}}\frac{N}{10^5}}{\log_{1-10^{-7}}(1-10^{-5})} \approx \frac{1}{100}\log_{1-10^{-7}}\frac{N}{10^5} = \frac{1}{100} L(N \times 100)
+\]</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">math</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="mi">10</span><span class="o">**-</span><span class="mi">5</span><span class="p">,</span> <span class="mi">1</span><span class="o">-</span><span class="mi">10</span><span class="o">**-</span><span class="mi">7</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>100.00049505548901
+</pre></div>
+</div>
+</div>
+</div>
+<p>関数を繰り返し適用する (数列の値を次々に求める) Python関数を定義する:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">nest_list</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="mi">1</span><span class="p">):</span>
+    <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+        <span class="k">yield</span> <span class="n">x</span>
+        <span class="n">x</span> <span class="o">=</span> <span class="n">f</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="n">c</span><span class="p">:</span>
+            <span class="k">break</span>
+    <span class="k">yield</span> <span class="n">x</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mi">10</span><span class="o">**</span><span class="mi">5</span><span class="p">,</span> <span class="mi">1</span><span class="o">-</span><span class="mi">10</span><span class="o">**</span><span class="p">(</span><span class="o">-</span><span class="mi">5</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(100000, 0.99999)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">nest_list</span><span class="p">(</span><span class="k">lambda</span> <span class="n">l</span><span class="p">:</span> <span class="n">l</span><span class="o">*</span><span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="mi">10</span><span class="o">**</span><span class="p">(</span><span class="o">-</span><span class="mi">5</span><span class="p">)),</span> <span class="mi">10</span><span class="o">**</span><span class="mi">5</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;generator object nest_list at 0x120242900&gt;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">n</span> <span class="o">=</span> <span class="n">nest_list</span><span class="p">(</span><span class="k">lambda</span> <span class="n">l</span><span class="p">:</span> <span class="n">l</span><span class="o">*</span><span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="mi">10</span><span class="o">**</span><span class="p">(</span><span class="o">-</span><span class="mi">5</span><span class="p">)),</span> <span class="mi">10</span><span class="o">**</span><span class="mi">5</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="nb">next</span><span class="p">(</span><span class="n">n</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>100000
+99999.0
+99998.00001
+99997.00002999991
+99996.00005999961
+99995.00009999902
+99994.00014999801
+99993.00020999652
+99992.00027999442
+99991.00035999162
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">n</span> <span class="o">=</span> <span class="n">nest_list</span><span class="p">(</span><span class="k">lambda</span> <span class="n">l</span><span class="p">:</span> <span class="n">l</span><span class="o">*</span><span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="mi">10</span><span class="o">**</span><span class="p">(</span><span class="o">-</span><span class="mi">5</span><span class="p">)),</span> <span class="mi">10</span><span class="o">**</span><span class="mi">5</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">{:5.0f}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">next</span><span class="p">(</span><span class="n">n</span><span class="p">)))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>100000
+99999
+99998
+99997
+99996
+99995
+99994
+99993
+99992
+99991
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">napier5</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="n">nest_list</span><span class="p">(</span><span class="k">lambda</span> <span class="n">l</span><span class="p">:</span> <span class="n">l</span><span class="o">*</span><span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="mi">10</span><span class="o">**</span><span class="p">(</span><span class="o">-</span><span class="mi">5</span><span class="p">)),</span> <span class="mi">10</span><span class="o">**</span><span class="mi">5</span><span class="p">,</span> <span class="mi">1</span><span class="p">)))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">napier5</span><span class="o">.</span><span class="n">size</span><span class="p">,</span> <span class="n">napier5</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(1151288, 0.9999979002909413)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">napier5</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">100</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([100000.        ,  99999.        ,  99998.00001   ,  99997.00003   ,
+        99996.00006   ,  99995.0001    ,  99994.00015   ,  99993.00021   ,
+        99992.00027999,  99991.00035999,  99990.00044999,  99989.00054998,
+        99988.00065998,  99987.00077997,  99986.00090996,  99985.00104995,
+        99984.00119994,  99983.00135993,  99982.00152992,  99981.0017099 ,
+        99980.00189989,  99979.00209987,  99978.00230985,  99977.00252982,
+        99976.0027598 ,  99975.00299977,  99974.00324974,  99973.00350971,
+        99972.00377967,  99971.00405963,  99970.00434959,  99969.00464955,
+        99968.0049595 ,  99967.00527945,  99966.0056094 ,  99965.00594935,
+        99964.00629929,  99963.00665922,  99962.00702916,  99961.00740909,
+        99960.00779901,  99959.00819893,  99958.00860885,  99957.00902877,
+        99956.00945868,  99955.00989858,  99954.01034848,  99953.01080838,
+        99952.01127827,  99951.01175816,  99950.01224804,  99949.01274792,
+        99948.01325779,  99947.01377766,  99946.01430752,  99945.01484738,
+        99944.01539723,  99943.01595707,  99942.01652692,  99941.01710675,
+        99940.01769658,  99939.0182964 ,  99938.01890622,  99937.01952603,
+        99936.02015583,  99935.02079563,  99934.02144543,  99933.02210521,
+        99932.02277499,  99931.02345476,  99930.02414453,  99929.02484429,
+        99928.02555404,  99927.02627378,  99926.02700352,  99925.02774325,
+        99924.02849297,  99923.02925269,  99922.03002239,  99921.03080209,
+        99920.03159179,  99919.03239147,  99918.03320115,  99917.03402081,
+        99916.03485047,  99915.03569013,  99914.03653977,  99913.0373994 ,
+        99912.03826903,  99911.03914865,  99910.04003825,  99909.04093785,
+        99908.04184745,  99907.04276703,  99906.0436966 ,  99905.04463616,
+        99904.04558572,  99903.04654526,  99902.04751479,  99901.04849432])
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="n">napier5</span><span class="o">.</span><span class="n">size</span><span class="p">,</span><span class="n">num</span><span class="o">=</span><span class="n">napier5</span><span class="o">.</span><span class="n">size</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">napier5</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x120182a00&gt;]
+</pre></div>
+</div>
+<img alt="../../../_images/napier_2_52_1.png" src="../../../_images/napier_2_52_1.png" />
+</div>
+</div>
+<div class="section" id="id3">
+<h3>九九のない世界<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">out_len</span><span class="o">=</span><span class="nb">len</span><span class="p">(</span><span class="n">Out</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">index</span><span class="p">,</span><span class="n">n</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">Out</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">index</span><span class="o">==</span><span class="n">out_len</span><span class="o">-</span><span class="mi">1</span><span class="p">:</span>   <span class="n">_</span><span class="o">=</span><span class="n">Out</span><span class="p">[</span><span class="n">n</span><span class="p">]</span>
+    <span class="k">if</span> <span class="n">index</span><span class="o">==</span><span class="n">out_len</span><span class="o">-</span><span class="mi">2</span><span class="p">:</span>  <span class="n">__</span><span class="o">=</span><span class="n">Out</span><span class="p">[</span><span class="n">n</span><span class="p">]</span>
+    <span class="k">if</span> <span class="n">index</span><span class="o">==</span><span class="n">out_len</span><span class="o">-</span><span class="mi">3</span><span class="p">:</span> <span class="n">___</span><span class="o">=</span><span class="n">Out</span><span class="p">[</span><span class="n">n</span><span class="p">]</span>
+    <span class="k">if</span> <span class="n">index</span><span class="o">==</span><span class="n">out_len</span><span class="o">-</span><span class="mi">4</span><span class="p">:</span><span class="n">____</span><span class="o">=</span><span class="n">Out</span><span class="p">[</span><span class="n">n</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>上で求めた配列 <code class="docutils literal notranslate"><span class="pre">napier5</span></code> を検索し、対数を求める: <span class="math notranslate nohighlight">\(n = \log_{1-10^{-5}}(p_{n})\)</span></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">napier5</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">napier5</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(100000.0, 0.9999979002909413)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">n_log</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="n">napier5</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="ow">and</span> <span class="n">x</span> <span class="o">&gt;</span> <span class="n">napier5</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]:</span>
+        <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">searchsorted</span><span class="p">(</span><span class="o">-</span><span class="n">napier5</span><span class="p">,</span> <span class="o">-</span><span class="n">x</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">IndexError</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">n_log</span><span class="p">(</span><span class="mi">1234</span><span class="p">),</span> <span class="n">n_log</span><span class="p">(</span><span class="mi">56789</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(439489, 56583)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">sum</span><span class="p">(</span><span class="n">_</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>496072
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">napier5</span><span class="p">[</span><span class="n">_</span><span class="p">]</span> <span class="o">*</span> <span class="mi">10</span><span class="o">**</span><span class="mi">5</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>70077065.22354518
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mi">1234</span><span class="o">*</span><span class="mi">5678</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>7006652
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">n_times</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">napier5</span><span class="p">[</span><span class="n">n_log</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="o">+</span><span class="n">n_log</span><span class="p">(</span><span class="n">y</span><span class="p">)]</span> <span class="o">*</span> <span class="mi">10</span><span class="o">**</span><span class="mi">5</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">n_times</span><span class="p">(</span><span class="mi">1234</span><span class="p">,</span> <span class="mi">5678</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>7006610.457565
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="id4">
+<h3>計算量を減らす: 自乗<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
+<div class="math notranslate nohighlight">
+\[
+  p_{n^2} = \frac{{p_{n}}^2}{10^5}\quad \text{where}\ p_{0} = 10^5 \left(1-\frac{1}{10^5}\right)
+\]</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">napier5_powered</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="n">nest_list</span><span class="p">(</span><span class="k">lambda</span> <span class="n">l</span><span class="p">:</span> <span class="n">l</span><span class="o">*</span><span class="n">l</span><span class="o">/</span><span class="mi">10</span><span class="o">**</span><span class="mi">5</span><span class="p">,</span> <span class="mi">10</span><span class="o">**</span><span class="mi">5</span><span class="o">*</span><span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="mi">10</span><span class="o">**</span><span class="p">(</span><span class="o">-</span><span class="mi">5</span><span class="p">)),</span> <span class="mi">1</span><span class="p">)))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">with</span> <span class="n">np</span><span class="o">.</span><span class="n">printoptions</span><span class="p">(</span><span class="n">formatter</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;float&#39;</span><span class="p">:</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="s1">&#39;</span><span class="si">{:7.0f}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">x</span><span class="p">)}):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">napier5_powered</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[  99999   99998   99996   99992   99984   99968   99936   99872   99744
+   99489   98981   97973   95987   92135   84888   72059   51925   26962
+    7270     528       3       0]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">napier5_powered</span><span class="o">.</span><span class="n">size</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>22
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mi">2</span><span class="o">**</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">21</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([      1,       2,       4,       8,      16,      32,      64,
+           128,     256,     512,    1024,    2048,    4096,    8192,
+         16384,   32768,   65536,  131072,  262144,  524288, 1048576])
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">with</span> <span class="n">np</span><span class="o">.</span><span class="n">printoptions</span><span class="p">(</span><span class="n">formatter</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;float&#39;</span><span class="p">:</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="s1">&#39;</span><span class="si">{:7.0f}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">x</span><span class="p">)}):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="n">napier5</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="mi">2</span><span class="o">**</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">21</span><span class="p">)]))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[  99999   99998   99996   99992   99984   99968   99936   99872   99744
+   99489   98981   97973   95987   92135   84888   72059   51925   26962
+    7270     528       3]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="n">napier5</span><span class="o">.</span><span class="n">size</span><span class="p">,</span><span class="n">num</span><span class="o">=</span><span class="n">napier5</span><span class="o">.</span><span class="n">size</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">napier5</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="mi">2</span><span class="o">**</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">21</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="n">napier5</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="mi">2</span><span class="o">**</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">21</span><span class="p">)]),</span> <span class="s1">&#39;o&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">.5</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x1201b08e0&gt;]
+</pre></div>
+</div>
+<img alt="../../../_images/napier_2_73_1.png" src="../../../_images/napier_2_73_1.png" />
+</div>
+</div>
+<p>減りすぎ・・・</p>
+</div>
+<div class="section" id="r-7-10-000-000">
+<h3>そもそも R=7 (10,000,000) の話だった<a class="headerlink" href="#r-7-10-000-000" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">napier7</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="n">nest_list</span><span class="p">(</span><span class="k">lambda</span> <span class="n">l</span><span class="p">:</span> <span class="n">l</span><span class="o">*</span><span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="mi">10</span><span class="o">**</span><span class="p">(</span><span class="o">-</span><span class="mi">7</span><span class="p">)),</span> <span class="mi">10</span><span class="o">**</span><span class="mi">7</span><span class="p">,</span> <span class="mi">10</span><span class="o">**</span><span class="mi">6</span><span class="p">)))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">napier5</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="n">napier7</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(0.9999979002909413, 999999.9790768364)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">napier5</span><span class="o">.</span><span class="n">size</span><span class="p">,</span> <span class="n">napier7</span><span class="o">.</span><span class="n">size</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(1151288, 23025851)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="n">napier5</span><span class="o">.</span><span class="n">size</span><span class="p">,</span><span class="n">num</span><span class="o">=</span><span class="n">napier5</span><span class="o">.</span><span class="n">size</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">napier5</span><span class="o">*</span><span class="mi">10</span><span class="o">**-</span><span class="mi">5</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">napier7</span><span class="p">[:</span><span class="n">napier5</span><span class="o">.</span><span class="n">size</span><span class="p">]</span><span class="o">*</span><span class="mi">10</span><span class="o">**-</span><span class="mi">7</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x14cc7d250&gt;]
+</pre></div>
+</div>
+<img alt="../../../_images/napier_2_81_1.png" src="../../../_images/napier_2_81_1.png" />
+</div>
+</div>
+</div>
+<div class="section" id="id5">
+<h3>10進法で切りのいい近似値<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h3>
+<div class="math notranslate nohighlight">
+\[
+  L = log_{1-10^{-7}} \frac{N}{10^7}
+\]</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="mi">1</span><span class="o">/</span><span class="mi">2000</span><span class="p">),</span> <span class="n">math</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="mi">1</span><span class="o">/</span><span class="mi">2000</span><span class="p">,</span> <span class="mi">1</span><span class="o">-</span><span class="mi">10</span><span class="o">**-</span><span class="mi">7</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(0.9995, 5001.250169392341)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="math notranslate nohighlight">
+\[
+  \log_{1-10^7}\left(1-\frac{1}{2000}\right) = \log_{1-10^7}0.9995 = \log_{1-10^7} \left(\frac{999500}{10^7}\right) \approx 5001.25
+\]</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="mi">1</span><span class="o">/</span><span class="mi">2000</span><span class="p">)</span><span class="o">**</span><span class="mi">20</span><span class="p">,</span> <span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="mi">1</span><span class="o">/</span><span class="mi">2000</span><span class="p">)</span><span class="o">**</span><span class="mi">20</span><span class="p">,</span> <span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="mi">1</span><span class="o">/</span><span class="mi">100</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(0.9900473578023297, 0.9900473578023297, 0.99)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="math notranslate nohighlight">
+\[
+  \left(1-\frac{1}{2000}\right)^{20} \approx 1-\frac{1}{100} = 0.99
+\]</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="mi">1</span><span class="o">/</span><span class="mi">100</span><span class="p">),</span> <span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="mi">1</span><span class="o">/</span><span class="mi">100</span><span class="p">)</span><span class="o">**</span><span class="mi">68</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(0.99, 0.5048858887870696)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="math notranslate nohighlight">
+\[
+  \left(1-\frac{1}{100}\right)^{68} \approx 0.50
+\]</div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./chapters/00/10"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      By Ani Adhikari and John DeNero and David Wagner<br/>
+    
+        &copy; Copyright 2021.<br/>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../../../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>
