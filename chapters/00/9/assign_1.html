@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>近代数学とプログラミング &#8212; Computational and Inferential Thinking</title>
+    <title>近代数学とプログラミング (1) &#8212; Computational and Inferential Thinking</title>
     
   <link href="../../../_static/css/theme.css" rel="stylesheet">
   <link href="../../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -58,7 +58,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="shortcut icon" href="../../../_static/favicon.png"/>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="近代数学とプログラミング" href="assign_2.html" />
+    <link rel="next" title="近代数学とプログラミング (2)" href="assign_2.html" />
     <link rel="prev" title="プログラミングで遡る科学史" href="../entry.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
@@ -1161,7 +1161,7 @@ const thebe_selector_output = ".output, .cell_output"
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>近代数学とプログラミング</h1>
+                <h1>近代数学とプログラミング (1)</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -1208,74 +1208,10 @@ const thebe_selector_output = ".output, .cell_output"
             
               <div>
                 
-  <div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># initialization for my classroom</span>
-<span class="kn">import</span> <span class="nn">os</span>
-<span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">datetime</span> <span class="k">as</span> <span class="n">dt</span>
-
-<span class="k">def</span> <span class="nf">logfile</span><span class="p">(</span><span class="n">user</span><span class="o">=</span><span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;JUPYTERHUB_USER&#39;</span><span class="p">)</span> <span class="ow">or</span> <span class="s1">&#39;jovyan&#39;</span><span class="p">):</span>
-    <span class="n">prefix</span><span class="o">=</span><span class="s1">&#39;/srv&#39;</span>
-    <span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">isdir</span><span class="p">(</span><span class="n">prefix</span><span class="p">)</span> <span class="ow">and</span> <span class="n">os</span><span class="o">.</span><span class="n">access</span><span class="p">(</span><span class="n">prefix</span><span class="p">,</span> <span class="n">os</span><span class="o">.</span><span class="n">W_OK</span><span class="p">):</span>
-        <span class="n">prefix</span><span class="o">+=</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="o">+</span><span class="n">user</span><span class="p">)</span>
-        <span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">isdir</span><span class="p">(</span><span class="n">prefix</span><span class="p">):</span>
-            <span class="n">os</span><span class="o">.</span><span class="n">makedirs</span><span class="p">(</span><span class="n">prefix</span><span class="p">)</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="n">prefix</span><span class="o">=</span><span class="s1">&#39;.&#39;</span>
-    <span class="k">return</span> <span class="n">prefix</span><span class="o">+</span><span class="s1">&#39;/&#39;</span><span class="o">+</span><span class="n">dt</span><span class="o">.</span><span class="n">now</span><span class="p">()</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s1">&#39;%Y%m</span><span class="si">%d</span><span class="s1">&#39;</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39;.log&#39;</span>
-
-<span class="n">path</span><span class="o">=</span><span class="n">logfile</span><span class="p">()</span>
-<span class="c1">#%logstop</span>
-<span class="o">%</span><span class="k">logstart</span> -otq $path append
-
-<span class="c1"># [python - cannot override sys.excepthook - Stack Overflow](https://stackoverflow.com/questions/1261668/cannot-override-sys-excepthook/28758396)</span>
-<span class="c1"># https://github.com/ipython/ipython/blob/e6432249582e05f438303ce73d082a0351bb383e/IPython/core/interactiveshell.py#L1952</span>
-
-<span class="kn">import</span> <span class="nn">sys</span>
-<span class="kn">import</span> <span class="nn">traceback</span>
-<span class="kn">import</span> <span class="nn">IPython</span>
-
-<span class="k">try</span><span class="p">:</span>
-    <span class="n">_showtraceback</span>
-<span class="k">except</span> <span class="ne">NameError</span><span class="p">:</span>
-    <span class="n">_showtraceback</span><span class="o">=</span><span class="n">IPython</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">interactiveshell</span><span class="o">.</span><span class="n">InteractiveShell</span><span class="o">.</span><span class="n">showtraceback</span>
-
-<span class="k">try</span><span class="p">:</span>
-    <span class="n">_showsyntaxerror</span>
-<span class="k">except</span> <span class="ne">NameError</span><span class="p">:</span>
-    <span class="n">_showsyntaxerror</span><span class="o">=</span><span class="n">IPython</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">interactiveshell</span><span class="o">.</span><span class="n">InteractiveShell</span><span class="o">.</span><span class="n">showsyntaxerror</span>
-
-<span class="kn">import</span> <span class="nn">logging</span>
-<span class="n">logging</span><span class="o">.</span><span class="n">basicConfig</span><span class="p">(</span><span class="n">filename</span><span class="o">=</span><span class="n">path</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;.log&#39;</span><span class="p">,</span><span class="s1">&#39;-exc.log&#39;</span><span class="p">),</span> <span class="nb">format</span><span class="o">=</span><span class="s1">&#39;</span><span class="si">%(asctime)s</span><span class="s1"> </span><span class="si">%(message)s</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">level</span><span class="o">=</span><span class="n">logging</span><span class="o">.</span><span class="n">ERROR</span><span class="p">,</span> <span class="n">force</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-
-<span class="kn">import</span> <span class="nn">sys</span>
-<span class="kn">import</span> <span class="nn">traceback</span>
-<span class="kn">import</span> <span class="nn">IPython</span>
-
-<span class="k">def</span> <span class="nf">showtraceback</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
-    <span class="n">etype</span><span class="p">,</span> <span class="n">value</span><span class="p">,</span> <span class="n">tb</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_exc_info</span><span class="p">(</span><span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;exc_tuple&#39;</span><span class="p">))</span>
-    <span class="n">stb</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">InteractiveTB</span><span class="o">.</span><span class="n">structured_traceback</span><span class="p">(</span>
-        <span class="n">etype</span><span class="p">,</span> <span class="n">value</span><span class="p">,</span> <span class="n">tb</span><span class="p">,</span> <span class="n">tb_offset</span><span class="o">=</span><span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;tb_offset&#39;</span><span class="p">))</span>
-    <span class="n">logging</span><span class="o">.</span><span class="n">error</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;JUPYTERHUB_USER&#39;</span><span class="p">)</span> <span class="ow">or</span> <span class="s1">&#39;jovyan&#39;</span><span class="p">)</span>
-    <span class="n">logging</span><span class="o">.</span><span class="n">error</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">InteractiveTB</span><span class="o">.</span><span class="n">stb2text</span><span class="p">(</span><span class="n">stb</span><span class="p">))</span>
-    <span class="n">_showtraceback</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
-
-<span class="k">def</span> <span class="nf">showsyntaxerror</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
-    <span class="n">etype</span><span class="p">,</span> <span class="n">value</span><span class="p">,</span> <span class="n">last_traceback</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_exc_info</span><span class="p">()</span>
-    <span class="n">elist</span> <span class="o">=</span> <span class="n">traceback</span><span class="o">.</span><span class="n">extract_tb</span><span class="p">(</span><span class="n">last_traceback</span><span class="p">)</span> <span class="k">if</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;running_compiled_code&#39;</span><span class="p">)</span> <span class="k">else</span> <span class="p">[]</span>
-    <span class="n">stb</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">SyntaxTB</span><span class="o">.</span><span class="n">structured_traceback</span><span class="p">(</span><span class="n">etype</span><span class="p">,</span> <span class="n">value</span><span class="p">,</span> <span class="n">elist</span><span class="p">)</span>
-    <span class="n">logging</span><span class="o">.</span><span class="n">error</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;JUPYTERHUB_USER&#39;</span><span class="p">)</span> <span class="ow">or</span> <span class="s1">&#39;jovyan&#39;</span><span class="p">)</span>
-    <span class="n">logging</span><span class="o">.</span><span class="n">error</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">InteractiveTB</span><span class="o">.</span><span class="n">stb2text</span><span class="p">(</span><span class="n">stb</span><span class="p">))</span>
-    <span class="n">_showsyntaxerror</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
-
-<span class="n">IPython</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">interactiveshell</span><span class="o">.</span><span class="n">InteractiveShell</span><span class="o">.</span><span class="n">showtraceback</span> <span class="o">=</span> <span class="n">showtraceback</span>
-<span class="n">IPython</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">interactiveshell</span><span class="o">.</span><span class="n">InteractiveShell</span><span class="o">.</span><span class="n">showsyntaxerror</span> <span class="o">=</span> <span class="n">showsyntaxerror</span>
-</pre></div>
-</div>
-</div>
+  <div class="cell tag_remove-input docutils container">
 </div>
 <div class="tex2jax_ignore mathjax_ignore section" id="id1">
-<h1>近代数学とプログラミング<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
+<h1>近代数学とプログラミング (1)<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
 <p>無限の対象を扱います。プログラムが無限ループに陥ることがあるかもしれません。実行したセルが <code class="docutils literal notranslate"><span class="pre">In</span> <span class="pre">[*]:</span> </code> の状態から戻らないときは、メニューの <code class="docutils literal notranslate"><span class="pre">Kernel</span></code> から <code class="docutils literal notranslate"><span class="pre">Interrupt</span></code> を選択して下さい。</p>
 <div class="section" id="natural-number-mathbb-z">
 <h2>natural number: <span class="math notranslate nohighlight">\(\mathbb{Z}\)</span><a class="headerlink" href="#natural-number-mathbb-z" title="Permalink to this headline">¶</a></h2>
@@ -1324,9 +1260,16 @@ const thebe_selector_output = ".output, .cell_output"
 <li><p>For all natural numbers <span class="math notranslate nohighlight">\(m\)</span> and <span class="math notranslate nohighlight">\(n\)</span>, <span class="math notranslate nohighlight">\(m = n\)</span> if and only if <span class="math notranslate nohighlight">\(S(m) = S(n)\)</span>. That is, <span class="math notranslate nohighlight">\(S\)</span> is an <em>injection</em>.</p></li>
 <li><p>For every natural number <span class="math notranslate nohighlight">\(n\)</span>, <span class="math notranslate nohighlight">\(S(n) = 0\)</span> is false. That is, there is no natural number whose successor is <span class="math notranslate nohighlight">\(0\)</span>.</p></li>
 </ol>
-<p>後者関数 <code class="docutils literal notranslate"><span class="pre">succ</span></code> で自然数を生成する。関数外では参照しないので、関数内で定義する。
-関数の戻り値を <code class="docutils literal notranslate"><span class="pre">return</span></code> ではなく <code class="docutils literal notranslate"><span class="pre">yield</span></code> を使うことで、関数は生成子 (generator) を返す。
-関数 <code class="docutils literal notranslate"><span class="pre">next()</span></code> で繰り返して次の値を取り出せるようになる。</p>
+<p>後者関数 <code class="docutils literal notranslate"><span class="pre">succ</span></code> で自然数を生成する:</p>
+<ul class="simple">
+<li><p>関数外では参照しないので、関数内で定義する。</p></li>
+<li><p>関数の戻り値を <code class="docutils literal notranslate"><span class="pre">return</span></code> ではなく <code class="docutils literal notranslate"><span class="pre">yield</span></code> で返す。</p>
+<ul>
+<li><p>関数は生成子 (generator) を返す。</p></li>
+<li><p>関数 <code class="docutils literal notranslate"><span class="pre">next()</span></code> で繰り返して次の値を取り出せるようになる。</p></li>
+</ul>
+</li>
+</ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">natural_numbers</span><span class="p">():</span>
@@ -1405,9 +1348,11 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="simple">
 <li><p><a class="reference external" href="https://docs.python.org/3/howto/functional.html">Functional Programming HOWTO — Python 3.10.5 documentation</a></p></li>
 </ul>
-<p><code class="docutils literal notranslate"><span class="pre">lambda</span></code> 式を使うと、変数に格納可能な匿名関数を定義することができる。
-Pythonの匿名関数の本文は、ひとつの式しか持つことがず、その式の戻り値を返す。<code class="docutils literal notranslate"><span class="pre">return</span></code> は使えない。
-<code class="docutils literal notranslate"><span class="pre">lambda</span></code> 式は、関数に式を渡して、関数の実行時にその振る舞いを変えるときに使う。</p>
+<p><code class="docutils literal notranslate"><span class="pre">lambda</span></code> 式を使うと、変数に格納可能な匿名関数を定義することができる。<code class="docutils literal notranslate"><span class="pre">lambda</span></code> 式は、関数に式を渡して、関数の実行時にその振る舞いを変えるときに使う。</p>
+<ul class="simple">
+<li><p>Pythonの匿名関数の本文は、ひとつの式しか持つことがず、その式の戻り値を返す。</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">return</span></code> は使えない。</p></li>
+</ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">natural_numbers</span><span class="p">(</span><span class="n">succ</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">n</span><span class="p">:</span> <span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="p">):</span>
@@ -1474,14 +1419,8 @@ Pythonの匿名関数の本文は、ひとつの式しか持つことがず、�
 </div>
 </div>
 </div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>---
-以下、採点用のセルにつき編集できない:
-</pre></div>
-</div>
-</div>
-</div>
+<hr class="docutils" />
+<p>以下、採点用のセルにつき編集できない:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">nose.tools</span> <span class="kn">import</span> <span class="n">assert_equal</span><span class="p">,</span> <span class="n">assert_true</span>
@@ -1535,7 +1474,7 @@ Pythonの匿名関数の本文は、ひとつの式しか持つことがず、�
     <a class='right-next' id="next-link" href="assign_2.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">近代数学とプログラミング</p>
+        <p class="prev-next-title">近代数学とプログラミング (2)</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
