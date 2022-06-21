@@ -2,6 +2,17 @@ format: jb-book
 root: chapters/00/entry
 title: Introduction
 parts:
+- caption: 2022/06/21
+  numberd: false
+  chapters:
+  - file: chapters/00/9/assign_6.ipynb
+    title: Assignment (6)
+  - file: chapters/00/9/assign_5.ipynb
+    title: Assignment (5)
+  - file: chapters/00/8/leibniz_3.ipynb
+    title: Leibniz (1)
+  - file: chapters/00/10/leibniz_4.ipynb
+    title: Leibniz (2)
 - caption: 2022/06/14
   numberd: false
   chapters:
@@ -13,10 +24,6 @@ parts:
     title: Assignment (3)
   - file: chapters/00/9/assign_4.ipynb
     title: Assignment (4)
-  - file: chapters/00/9/assign_5.ipynb
-    title: Assignment (5)
-  - file: chapters/00/9/assign_6.ipynb
-    title: Assignment (6)
   - file: chapters/00/9/assign_7.ipynb
     title: Assignment (7)
 - caption: 2022/06/07
@@ -26,8 +33,6 @@ parts:
     title: Japanese wordplay
   - file: chapters/00/8/leibniz_2.ipynb
     title: Computer algebra
-  - file: chapters/00/8/leibniz_3.ipynb
-    title: Leibniz
   - file: chapters/00/8/assign.ipynb
     title: Assignment
 - caption: 2022/05/31
