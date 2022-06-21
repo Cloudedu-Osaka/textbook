@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>&lt;no title&gt; &#8212; Computational and Inferential Thinking</title>
+    <title>long addition &#8212; Computational and Inferential Thinking</title>
     
   <link href="../../../_static/css/theme.css" rel="stylesheet">
   <link href="../../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -52,10 +52,14 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../../../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="canonical" href="https://inferentialthinking.org/chapters/00/10/leibniz_4.html" />
     <link rel="shortcut icon" href="../../../_static/favicon.png"/>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="近代数学とプログラミング (1)" href="../9/assign_1.html" />
+    <link rel="prev" title="ライプニッツによる九九のない世界" href="../8/leibniz_3.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -104,6 +108,33 @@ const thebe_selector_output = ".output, .cell_output"
     <div class="bd-toc-item active">
         <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
+  2022/06/21
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../9/assign_6.html">
+   Assignment (6)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../9/assign_5.html">
+   Assignment (5)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../8/leibniz_3.html">
+   Leibniz (1)
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Leibniz (2)
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
   2022/06/14
  </span>
 </p>
@@ -129,16 +160,6 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../9/assign_5.html">
-   Assignment (5)
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../9/assign_6.html">
-   Assignment (6)
-  </a>
- </li>
- <li class="toctree-l1">
   <a class="reference internal" href="../9/assign_7.html">
    Assignment (7)
   </a>
@@ -158,11 +179,6 @@ const thebe_selector_output = ".output, .cell_output"
  <li class="toctree-l1">
   <a class="reference internal" href="../8/leibniz_2.html">
    Computer algebra
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../8/leibniz_3.html">
-   Leibniz
   </a>
  </li>
  <li class="toctree-l1">
@@ -1118,7 +1134,36 @@ const thebe_selector_output = ".output, .cell_output"
                 <i class="fas fa-list"></i> Contents
             </div>
             <nav id="bd-toc-nav" aria-label="Page">
-                <ul class="simple visible nav section-nav flex-column">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id1">
+   10進数の筆算
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id2">
+     桁を揃えて下位の桁から計算する準備をする
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id3">
+   2進法の筆算
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#leibniz">
+     Leibnizによる九九のない世界
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#boole">
+     Booleによる四則演算のない世界
+    </a>
+   </li>
+  </ul>
+ </li>
 </ul>
 
             </nav>
@@ -1129,7 +1174,7 @@ const thebe_selector_output = ".output, .cell_output"
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1><no title></h1>
+                <h1>long addition</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -1138,7 +1183,36 @@ const thebe_selector_output = ".output, .cell_output"
                             <h2> Contents </h2>
                         </div>
                         <nav aria-label="Page">
-                            <ul class="simple visible nav section-nav flex-column">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id1">
+   10進数の筆算
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id2">
+     桁を揃えて下位の桁から計算する準備をする
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id3">
+   2進法の筆算
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#leibniz">
+     Leibnizによる九九のない世界
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#boole">
+     Booleによる四則演算のない世界
+    </a>
+   </li>
+  </ul>
+ </li>
 </ul>
 
                         </nav>
@@ -1148,443 +1222,38 @@ const thebe_selector_output = ".output, .cell_output"
             
               <div>
                 
-  <div class="cell docutils container">
+  <div class="cell tag_remove-input docutils container">
+</div>
+<div class="tex2jax_ignore mathjax_ignore section" id="long-addition">
+<h1>long addition<a class="headerlink" href="#long-addition" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="id1">
+<h2>10進数の筆算<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(1234+567\)</span> を筆算で計算する:</p>
+<ul>
+<li><p>桁を揃える</p></li>
+<li><p>下位の桁から加算し、繰り上げを行う</p></li>
+</ul>
+</li>
+</ul>
+<div class="section" id="id2">
+<h3>桁を揃えて下位の桁から計算する準備をする<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>整数を文字列に変換し逆順に並べ替える: <code class="docutils literal notranslate"><span class="pre">str()</span></code>, <code class="docutils literal notranslate"><span class="pre">reversed()</span></code></p>
+<ul>
+<li><p>一桁の加算を行うため、文字列から整数に戻す: <code class="docutils literal notranslate"><span class="pre">map(int,</span> <span class="pre">...)</span></code></p></li>
+</ul>
+</li>
+<li><p>下位の桁からペアを作り、桁数が揃わない上位の桁は <span class="math notranslate nohighlight">\(0\)</span> で埋める: <code class="docutils literal notranslate"><span class="pre">zip()</span></code>, <code class="docutils literal notranslate"><span class="pre">zip_longest(fillvalue=0)</span></code></p></li>
+</ul>
+<div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">q</span> <span class="o">=</span> <span class="mi">1024</span>
-<span class="k">while</span> <span class="n">q</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
-    <span class="n">q</span><span class="p">,</span><span class="n">r</span><span class="o">=</span><span class="nb">divmod</span><span class="p">(</span><span class="n">q</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">q</span><span class="p">,</span><span class="n">r</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">list</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="nb">int</span><span class="p">,</span><span class="nb">reversed</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="mi">1234</span><span class="p">)))),</span> <span class="nb">list</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="nb">int</span><span class="p">,</span><span class="nb">reversed</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="mi">567</span><span class="p">))))</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>512 0
-256 0
-128 0
-64 0
-32 0
-16 0
-8 0
-4 0
-2 0
-1 0
-0 1
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">int</span><span class="p">(</span><span class="s2">&quot;101&quot;</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>5
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">bin</span><span class="p">(</span><span class="mi">1023</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;0b1111111111&#39;
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">bin</span><span class="p">(</span><span class="mi">1023</span><span class="p">)[</span><span class="mi">2</span><span class="p">:]</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;1111111111&#39;
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="mi">1023</span><span class="p">)</span><span class="o">.</span><span class="n">bit_length</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>10
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mi">1</span><span class="o">&lt;&lt;</span><span class="p">(</span><span class="mi">1023</span><span class="p">)</span><span class="o">.</span><span class="n">bit_length</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1024
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">d</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="k">for</span> <span class="n">b</span> <span class="ow">in</span> <span class="nb">bin</span><span class="p">(</span><span class="mi">1023</span><span class="p">)[</span><span class="mi">2</span><span class="p">:]:</span>
-    <span class="n">d</span> <span class="o">=</span> <span class="n">d</span><span class="o">*</span><span class="mi">2</span><span class="o">+</span><span class="nb">int</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="nb">bin</span><span class="p">(</span><span class="n">d</span><span class="p">))</span>
-<span class="n">d</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0b1
-0b11
-0b111
-0b1111
-0b11111
-0b111111
-0b1111111
-0b11111111
-0b111111111
-0b1111111111
-</pre></div>
-</div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1023
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">list</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="nb">int</span><span class="p">,</span><span class="nb">list</span><span class="p">(</span><span class="nb">bin</span><span class="p">(</span><span class="mi">1024</span><span class="p">)[</span><span class="mi">2</span><span class="p">:])))</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="nb">int</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">bin</span><span class="p">(</span><span class="mi">1024</span><span class="p">)[</span><span class="mi">2</span><span class="p">:]]</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">int</span><span class="p">(</span><span class="nb">bin</span><span class="p">(</span><span class="mi">1023</span><span class="p">)[</span><span class="mi">2</span><span class="p">:],</span><span class="mi">2</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1023
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">int</span><span class="p">(</span><span class="nb">bin</span><span class="p">(</span><span class="mi">1023</span><span class="p">),</span><span class="mi">2</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1023
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="k">for</span> <span class="n">b</span> <span class="ow">in</span> <span class="nb">reversed</span><span class="p">([</span><span class="nb">int</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">bin</span><span class="p">(</span><span class="mi">1023</span><span class="p">)[</span><span class="mi">2</span><span class="p">:]]):</span>
-    <span class="n">x</span><span class="o">+=</span><span class="n">b</span><span class="o">*</span><span class="mi">2</span><span class="o">**</span><span class="n">i</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
-    <span class="n">i</span><span class="o">+=</span><span class="mi">1</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1
-3
-7
-15
-31
-63
-127
-255
-511
-1023
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="nb">reversed</span><span class="p">([</span><span class="nb">int</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">bin</span><span class="p">(</span><span class="mi">1023</span><span class="p">)[</span><span class="mi">2</span><span class="p">:]])))</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span><span class="o">.</span><span class="n">shape</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(10,)
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mi">2</span><span class="o">**</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mi">2</span><span class="o">**</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([  1,   2,   4,   8,  16,  32,  64, 128, 256, 512])
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span><span class="nd">@a</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1023
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mi">2</span><span class="o">**</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([1, 2, 4])
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="nb">int</span><span class="p">,</span><span class="nb">list</span><span class="p">(</span><span class="s1">&#39;11111111&#39;</span><span class="p">))))</span> <span class="o">@</span> <span class="mi">2</span><span class="o">**</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">8</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>255
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mi">1</span> <span class="ow">and</span> <span class="mi">1</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mi">1</span> <span class="ow">and</span> <span class="mi">0</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mi">1</span> <span class="o">^</span> <span class="mi">1</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">itertools</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">p</span> <span class="o">^</span> <span class="n">q</span> <span class="k">for</span> <span class="n">p</span><span class="p">,</span> <span class="n">q</span> <span class="ow">in</span> <span class="n">itertools</span><span class="o">.</span><span class="n">product</span><span class="p">((</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">),</span> <span class="n">repeat</span><span class="o">=</span><span class="mi">2</span><span class="p">)]</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[0, 1, 1, 0]
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">operator</span> <span class="kn">import</span> <span class="n">xor</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mi">1</span> <span class="n">xor</span> <span class="mi">1</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span>  <span class="n">Input</span> <span class="n">In</span> <span class="p">[</span><span class="mi">39</span><span class="p">]</span>
-<span class="g g-Whitespace">    </span><span class="mi">1</span> <span class="n">xor</span> <span class="mi">1</span>
-      <span class="o">^</span>
-<span class="ne">SyntaxError</span>: invalid syntax
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mi">3</span> <span class="o">^</span> <span class="mi">3</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">xor</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mi">1</span><span class="o">&amp;</span><span class="mi">1</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kc">True</span> <span class="o">&amp;</span> <span class="kc">False</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>False
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">~</span><span class="kc">True</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-2
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">bin</span><span class="p">(</span><span class="o">~</span><span class="mi">1</span><span class="o">&amp;</span><span class="mi">1023</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;0b1111111110&#39;
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">n</span> <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">str</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="mi">1234</span><span class="p">))]</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;1&#39;, &#39;2&#39;, &#39;3&#39;, &#39;4&#39;]
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">reversed</span><span class="p">(</span><span class="s2">&quot;1234&quot;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;reversed at 0x10ce1f1c0&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>([4, 3, 2, 1], [7, 6, 5])
 </pre></div>
 </div>
 </div>
@@ -1592,12 +1261,42 @@ const thebe_selector_output = ".output, .cell_output"
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">itertools</span> <span class="kn">import</span> <span class="n">zip_longest</span>
-<span class="p">[(</span><span class="n">n</span><span class="p">,</span><span class="n">m</span><span class="p">)</span> <span class="k">for</span> <span class="n">n</span><span class="p">,</span><span class="n">m</span> <span class="ow">in</span> <span class="n">zip_longest</span><span class="p">(</span><span class="nb">reversed</span><span class="p">(</span><span class="s2">&quot;1234&quot;</span><span class="p">),</span> <span class="nb">reversed</span><span class="p">(</span><span class="s2">&quot;567&quot;</span><span class="p">),</span> <span class="n">fillvalue</span><span class="o">=</span><span class="s1">&#39;0&#39;</span><span class="p">)]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">[(</span><span class="n">n</span><span class="p">,</span><span class="n">m</span><span class="p">)</span> <span class="k">for</span> <span class="n">n</span><span class="p">,</span><span class="n">m</span> <span class="ow">in</span> <span class="n">zip_longest</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="nb">int</span><span class="p">,</span><span class="nb">reversed</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="mi">1234</span><span class="p">))),</span> <span class="nb">map</span><span class="p">(</span><span class="nb">int</span><span class="p">,</span><span class="nb">reversed</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="mi">567</span><span class="p">))),</span> <span class="n">fillvalue</span><span class="o">=</span><span class="mi">0</span><span class="p">)]</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[(&#39;4&#39;, &#39;7&#39;), (&#39;3&#39;, &#39;6&#39;), (&#39;2&#39;, &#39;5&#39;), (&#39;1&#39;, &#39;0&#39;)]
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[(4, 7), (3, 6), (2, 5), (1, 0)]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="nb">divmod</span><span class="p">(</span><span class="n">n</span><span class="o">+</span><span class="n">m</span><span class="p">,</span><span class="mi">10</span><span class="p">)</span> <span class="k">for</span> <span class="n">n</span><span class="p">,</span><span class="n">m</span> <span class="ow">in</span> <span class="n">zip_longest</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="nb">int</span><span class="p">,</span><span class="nb">reversed</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="mi">1234</span><span class="p">))),</span> <span class="nb">map</span><span class="p">(</span><span class="nb">int</span><span class="p">,</span><span class="nb">reversed</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="mi">567</span><span class="p">))),</span> <span class="n">fillvalue</span><span class="o">=</span><span class="mi">0</span><span class="p">)]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[(1, 1), (0, 9), (0, 7), (0, 1)]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">list</span><span class="p">(</span><span class="nb">zip</span><span class="p">(</span><span class="o">*</span><span class="p">[</span><span class="nb">divmod</span><span class="p">(</span><span class="n">n</span><span class="o">+</span><span class="n">m</span><span class="p">,</span><span class="mi">10</span><span class="p">)</span> <span class="k">for</span> <span class="n">n</span><span class="p">,</span><span class="n">m</span> <span class="ow">in</span> <span class="n">zip_longest</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="nb">int</span><span class="p">,</span><span class="nb">reversed</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="mi">1234</span><span class="p">))),</span> <span class="nb">map</span><span class="p">(</span><span class="nb">int</span><span class="p">,</span><span class="nb">reversed</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="mi">567</span><span class="p">))),</span> <span class="n">fillvalue</span><span class="o">=</span><span class="mi">0</span><span class="p">)]))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[(1, 0, 0, 0), (1, 9, 7, 1)]
 </pre></div>
 </div>
 </div>
@@ -1619,29 +1318,78 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">int</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="nb">reversed</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="n">long_addition</span><span class="p">(</span><span class="mi">9876</span><span class="p">,</span><span class="mi">5432</span><span class="p">)))))</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">list</span><span class="p">(</span><span class="n">long_addition</span><span class="p">(</span><span class="mi">1234</span><span class="p">,</span> <span class="mi">567</span><span class="p">))</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>15308
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;1&#39;, &#39;0&#39;, &#39;8&#39;, &#39;1&#39;]
 </pre></div>
 </div>
 </div>
 </div>
-<p>machikane-312#1</p>
-<p>掛け算も足し算もない世界:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">long_addition2</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">):</span>
-    <span class="n">a</span> <span class="o">=</span> <span class="nb">map</span><span class="p">(</span><span class="nb">int</span><span class="p">,</span><span class="nb">reversed</span><span class="p">(</span><span class="nb">bin</span><span class="p">(</span><span class="n">a</span><span class="p">)[</span><span class="mi">2</span><span class="p">:]))</span>
-    <span class="n">b</span> <span class="o">=</span> <span class="nb">map</span><span class="p">(</span><span class="nb">int</span><span class="p">,</span><span class="nb">reversed</span><span class="p">(</span><span class="nb">bin</span><span class="p">(</span><span class="n">b</span><span class="p">)[</span><span class="mi">2</span><span class="p">:]))</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">list</span><span class="p">(</span><span class="nb">reversed</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="n">long_addition</span><span class="p">(</span><span class="mi">1234</span><span class="p">,</span> <span class="mi">567</span><span class="p">))))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;1&#39;, &#39;8&#39;, &#39;0&#39;, &#39;1&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="s1">&#39;&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="nb">reversed</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="n">long_addition</span><span class="p">(</span><span class="mi">1234</span><span class="p">,</span> <span class="mi">567</span><span class="p">))))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;1801&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">int</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="nb">reversed</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="n">long_addition</span><span class="p">(</span><span class="mi">1234</span><span class="p">,</span> <span class="mi">567</span><span class="p">)))))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1801
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mi">1234</span><span class="o">+</span><span class="mi">567</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1801
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="id3">
+<h2>2進法の筆算<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="leibniz">
+<h3>Leibnizによる九九のない世界<a class="headerlink" href="#leibniz" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">long_addition</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">):</span>
+    <span class="n">a</span> <span class="o">=</span> <span class="nb">map</span><span class="p">(</span><span class="nb">int</span><span class="p">,</span><span class="nb">reversed</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">a</span><span class="p">)))</span>
+    <span class="n">b</span> <span class="o">=</span> <span class="nb">map</span><span class="p">(</span><span class="nb">int</span><span class="p">,</span><span class="nb">reversed</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">b</span><span class="p">)))</span>
     <span class="n">q</span><span class="o">=</span><span class="mi">0</span>
     <span class="k">for</span> <span class="n">n</span><span class="p">,</span><span class="n">m</span> <span class="ow">in</span> <span class="n">zip_longest</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">fillvalue</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
-        <span class="nb">print</span><span class="p">(</span><span class="n">n</span><span class="p">,</span><span class="n">m</span><span class="p">)</span>
-        <span class="c1">#q, r = divmod(q+n+m,2)</span>
-        <span class="n">r</span> <span class="o">=</span> <span class="n">q</span> <span class="o">^</span> <span class="n">n</span> <span class="o">^</span> <span class="n">m</span>
-        <span class="n">q</span> <span class="o">=</span> <span class="n">q</span> <span class="o">&amp;</span> <span class="n">n</span> <span class="o">|</span> <span class="n">q</span> <span class="o">&amp;</span> <span class="n">m</span> <span class="o">|</span> <span class="n">n</span> <span class="o">&amp;</span> <span class="n">m</span>
+        <span class="n">q</span><span class="p">,</span> <span class="n">r</span> <span class="o">=</span> <span class="nb">divmod</span><span class="p">(</span><span class="n">q</span><span class="o">+</span><span class="n">n</span><span class="o">+</span><span class="n">m</span><span class="p">,</span><span class="mi">10</span><span class="p">)</span>
         <span class="k">yield</span> <span class="nb">str</span><span class="p">(</span><span class="n">r</span><span class="p">)</span>
     <span class="k">if</span> <span class="n">q</span><span class="p">:</span>
         <span class="k">yield</span> <span class="nb">str</span><span class="p">(</span><span class="n">q</span><span class="p">)</span>
@@ -1651,53 +1399,128 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">int</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="nb">reversed</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="n">long_addition2</span><span class="p">(</span><span class="mi">9876</span><span class="p">,</span><span class="mi">5432</span><span class="p">)))),</span><span class="mi">2</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">bin</span><span class="p">(</span><span class="mi">1234</span><span class="p">)[</span><span class="mi">2</span><span class="p">:],</span> <span class="nb">bin</span><span class="p">(</span><span class="mi">567</span><span class="p">)[</span><span class="mi">2</span><span class="p">:],</span> <span class="nb">bin</span><span class="p">(</span><span class="mi">1234</span><span class="o">+</span><span class="mi">567</span><span class="p">)[</span><span class="mi">2</span><span class="p">:]</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0 0
-0 0
-1 0
-0 1
-1 1
-0 1
-0 0
-1 0
-0 1
-1 0
-1 1
-0 0
-0 1
-1 0
-</pre></div>
-</div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>15308
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(&#39;10011010010&#39;, &#39;1000110111&#39;, &#39;11100001001&#39;)
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">list</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="nb">int</span><span class="p">,</span><span class="nb">str</span><span class="p">(</span><span class="mi">1234</span><span class="p">)[::</span><span class="o">-</span><span class="mi">1</span><span class="p">]))</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[4, 3, 2, 1]
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">long_addition2</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">):</span>
+    <span class="n">a</span> <span class="o">=</span> <span class="nb">map</span><span class="p">(</span><span class="nb">int</span><span class="p">,</span><span class="nb">reversed</span><span class="p">(</span><span class="nb">bin</span><span class="p">(</span><span class="n">a</span><span class="p">)[</span><span class="mi">2</span><span class="p">:]))</span>
+    <span class="n">b</span> <span class="o">=</span> <span class="nb">map</span><span class="p">(</span><span class="nb">int</span><span class="p">,</span><span class="nb">reversed</span><span class="p">(</span><span class="nb">bin</span><span class="p">(</span><span class="n">b</span><span class="p">)[</span><span class="mi">2</span><span class="p">:]))</span>
+    <span class="n">q</span><span class="o">=</span><span class="mi">0</span>
+    <span class="k">for</span> <span class="n">n</span><span class="p">,</span><span class="n">m</span> <span class="ow">in</span> <span class="n">zip_longest</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">fillvalue</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
+        <span class="n">q</span><span class="p">,</span> <span class="n">r</span> <span class="o">=</span> <span class="nb">divmod</span><span class="p">(</span><span class="n">q</span><span class="o">+</span><span class="n">n</span><span class="o">+</span><span class="n">m</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">{:d}</span><span class="s2">+</span><span class="si">{:d}</span><span class="s2">+</span><span class="si">{:d}</span><span class="s2">=</span><span class="si">{:d}{:d}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">q</span><span class="p">,</span><span class="n">n</span><span class="p">,</span><span class="n">m</span><span class="p">,</span> <span class="n">q</span><span class="p">,</span><span class="n">r</span><span class="p">))</span>
+        <span class="k">yield</span> <span class="nb">str</span><span class="p">(</span><span class="n">r</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">q</span><span class="p">:</span>
+        <span class="k">yield</span> <span class="nb">str</span><span class="p">(</span><span class="n">q</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="s1">&#39;&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="nb">str</span><span class="p">,[</span><span class="mi">4</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">]))</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">list</span><span class="p">(</span><span class="n">long_addition2</span><span class="p">(</span><span class="mi">1234</span><span class="p">,</span><span class="mi">567</span><span class="p">))</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;4321&#39;
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0+0+1=01
+1+1+1=10
+1+0+1=10
+0+0+0=01
+1+1+1=10
+1+0+1=10
+1+1+0=10
+1+1+0=10
+0+0+0=01
+0+0+1=01
+0+1+0=01
 </pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;1&#39;, &#39;0&#39;, &#39;0&#39;, &#39;1&#39;, &#39;0&#39;, &#39;0&#39;, &#39;0&#39;, &#39;0&#39;, &#39;1&#39;, &#39;1&#39;, &#39;1&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">int</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="nb">reversed</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="n">long_addition2</span><span class="p">(</span><span class="mi">1234</span><span class="p">,</span> <span class="mi">567</span><span class="p">)))))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>11100001001
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">int</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="nb">reversed</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="n">long_addition2</span><span class="p">(</span><span class="mi">1234</span><span class="p">,</span> <span class="mi">567</span><span class="p">)))),</span><span class="mi">2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1801
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="boole">
+<h3>Booleによる四則演算のない世界<a class="headerlink" href="#boole" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">long_addition2</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">):</span>
+    <span class="n">a</span> <span class="o">=</span> <span class="nb">map</span><span class="p">(</span><span class="nb">int</span><span class="p">,</span><span class="nb">reversed</span><span class="p">(</span><span class="nb">bin</span><span class="p">(</span><span class="n">a</span><span class="p">)[</span><span class="mi">2</span><span class="p">:]))</span>
+    <span class="n">b</span> <span class="o">=</span> <span class="nb">map</span><span class="p">(</span><span class="nb">int</span><span class="p">,</span><span class="nb">reversed</span><span class="p">(</span><span class="nb">bin</span><span class="p">(</span><span class="n">b</span><span class="p">)[</span><span class="mi">2</span><span class="p">:]))</span>
+    <span class="n">q</span><span class="o">=</span><span class="mi">0</span>
+    <span class="k">for</span> <span class="n">n</span><span class="p">,</span><span class="n">m</span> <span class="ow">in</span> <span class="n">zip_longest</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">fillvalue</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
+        <span class="c1">#q, r = divmod(q+n+m,2)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">{:d}</span><span class="s2">+</span><span class="si">{:d}</span><span class="s2">+</span><span class="si">{:d}</span><span class="s2">=(</span><span class="si">{:d}</span><span class="s2">&amp;</span><span class="si">{:d}</span><span class="s2">|</span><span class="si">{:d}</span><span class="s2">&amp;</span><span class="si">{:d}</span><span class="s2">|</span><span class="si">{:d}</span><span class="s2">&amp;</span><span class="si">{:d}</span><span class="s2">)(</span><span class="si">{:d}</span><span class="s2">|</span><span class="si">{:d}</span><span class="s2">|</span><span class="si">{:d}</span><span class="s2">)&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">q</span><span class="p">,</span><span class="n">n</span><span class="p">,</span><span class="n">m</span><span class="p">,</span> <span class="n">q</span><span class="p">,</span><span class="n">n</span><span class="p">,</span><span class="n">q</span><span class="p">,</span><span class="n">m</span><span class="p">,</span><span class="n">n</span><span class="p">,</span><span class="n">m</span><span class="p">,</span> <span class="n">q</span><span class="p">,</span><span class="n">n</span><span class="p">,</span><span class="n">m</span><span class="p">),</span> <span class="n">end</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
+        <span class="n">r</span> <span class="o">=</span> <span class="n">q</span> <span class="o">^</span> <span class="n">n</span> <span class="o">^</span> <span class="n">m</span>
+        <span class="n">q</span> <span class="o">=</span> <span class="n">q</span> <span class="o">&amp;</span> <span class="n">n</span> <span class="o">|</span> <span class="n">q</span> <span class="o">&amp;</span> <span class="n">m</span> <span class="o">|</span> <span class="n">n</span> <span class="o">&amp;</span> <span class="n">m</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;=</span><span class="si">{:d}{:d}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">q</span><span class="p">,</span><span class="n">r</span><span class="p">))</span>
+        <span class="k">yield</span> <span class="nb">str</span><span class="p">(</span><span class="n">r</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">q</span><span class="p">:</span>
+        <span class="k">yield</span> <span class="nb">str</span><span class="p">(</span><span class="n">q</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">int</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="nb">reversed</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="n">long_addition2</span><span class="p">(</span><span class="mi">1234</span><span class="p">,</span> <span class="mi">567</span><span class="p">)))),</span><span class="mi">2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0+0+1=(0&amp;0|0&amp;1|0&amp;1)(0|0|1)=01
+0+1+1=(0&amp;1|0&amp;1|1&amp;1)(0|1|1)=10
+1+0+1=(1&amp;0|1&amp;1|0&amp;1)(1|0|1)=10
+1+0+0=(1&amp;0|1&amp;0|0&amp;0)(1|0|0)=01
+0+1+1=(0&amp;1|0&amp;1|1&amp;1)(0|1|1)=10
+1+0+1=(1&amp;0|1&amp;1|0&amp;1)(1|0|1)=10
+1+1+0=(1&amp;1|1&amp;0|1&amp;0)(1|1|0)=10
+1+1+0=(1&amp;1|1&amp;0|1&amp;0)(1|1|0)=10
+1+0+0=(1&amp;0|1&amp;0|0&amp;0)(1|0|0)=01
+0+0+1=(0&amp;0|0&amp;1|0&amp;1)(0|0|1)=01
+0+1+0=(0&amp;1|0&amp;0|1&amp;0)(0|1|0)=01
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1801
+</pre></div>
+</div>
+</div>
+</div>
 </div>
 </div>
 </div>
@@ -1726,7 +1549,21 @@ const thebe_selector_output = ".output, .cell_output"
               
             
                 <!-- Previous / next buttons -->
-<div class='prev-next-area'>
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="../8/leibniz_3.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">ライプニッツによる九九のない世界</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="../9/assign_1.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">近代数学とプログラミング (1)</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
 </div>
             
         </div>
