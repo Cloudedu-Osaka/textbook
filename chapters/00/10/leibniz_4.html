@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>long addition &#8212; Computational and Inferential Thinking</title>
+    <title>プログラミングのない世界 (3) &#8212; Computational and Inferential Thinking</title>
     
   <link href="../../../_static/css/theme.css" rel="stylesheet">
   <link href="../../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -58,8 +58,8 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="shortcut icon" href="../../../_static/favicon.png"/>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="近代数学とプログラミング (1)" href="../9/assign_1.html" />
-    <link rel="prev" title="ライプニッツによる九九のない世界" href="../8/leibniz_3.html" />
+    <link rel="next" title="プログラミングのない世界 (1)" href="leibniz_5.html" />
+    <link rel="prev" title="プログラミングで遡る科学史" href="../entry.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -108,10 +108,37 @@ const thebe_selector_output = ".output, .cell_output"
     <div class="bd-toc-item active">
         <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
-  2022/06/21
+  2022/06/28
  </span>
 </p>
 <ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   プログラミングのない世界 (3)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="leibniz_5.html">
+   Leibniz (3)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="leibniz_6.html">
+   Leibniz (4)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="leibniz_7.html">
+   Leibniz (5)
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  2022/06/21
+ </span>
+</p>
+<ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../9/assign_6.html">
    Assignment (6)
@@ -125,11 +152,6 @@ const thebe_selector_output = ".output, .cell_output"
  <li class="toctree-l1">
   <a class="reference internal" href="../8/leibniz_3.html">
    Leibniz (1)
-  </a>
- </li>
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
-   Leibniz (2)
   </a>
  </li>
 </ul>
@@ -1135,32 +1157,44 @@ const thebe_selector_output = ".output, .cell_output"
             </div>
             <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#id1">
-   10進数の筆算
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   プログラミングのない世界 (3)
   </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#id2">
-     桁を揃えて下位の桁から計算する準備をする
-    </a>
-   </li>
-  </ul>
  </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#id3">
-   2進法の筆算
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#long-addition">
+   long addition
   </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#leibniz">
-     Leibnizによる九九のない世界
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id2">
+     10進数の筆算
     </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id3">
+       桁を揃えて下位の桁から計算する準備をする
+      </a>
+     </li>
+    </ul>
    </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#boole">
-     Booleによる四則演算のない世界
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id4">
+     2進法の筆算
     </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#leibniz">
+       Leibnizによる九九のない世界
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#boole">
+       Booleによる四則演算のない世界
+      </a>
+     </li>
+    </ul>
    </li>
   </ul>
  </li>
@@ -1174,7 +1208,7 @@ const thebe_selector_output = ".output, .cell_output"
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>long addition</h1>
+                <h1>プログラミングのない世界 (3)</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -1184,32 +1218,44 @@ const thebe_selector_output = ".output, .cell_output"
                         </div>
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#id1">
-   10進数の筆算
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   プログラミングのない世界 (3)
   </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#id2">
-     桁を揃えて下位の桁から計算する準備をする
-    </a>
-   </li>
-  </ul>
  </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#id3">
-   2進法の筆算
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#long-addition">
+   long addition
   </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#leibniz">
-     Leibnizによる九九のない世界
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id2">
+     10進数の筆算
     </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id3">
+       桁を揃えて下位の桁から計算する準備をする
+      </a>
+     </li>
+    </ul>
    </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#boole">
-     Booleによる四則演算のない世界
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id4">
+     2進法の筆算
     </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#leibniz">
+       Leibnizによる九九のない世界
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#boole">
+       Booleによる四則演算のない世界
+      </a>
+     </li>
+    </ul>
    </li>
   </ul>
  </li>
@@ -1224,10 +1270,13 @@ const thebe_selector_output = ".output, .cell_output"
                 
   <div class="cell tag_remove-input docutils container">
 </div>
+<div class="tex2jax_ignore mathjax_ignore section" id="id1">
+<h1>プログラミングのない世界 (3)<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
+</div>
 <div class="tex2jax_ignore mathjax_ignore section" id="long-addition">
 <h1>long addition<a class="headerlink" href="#long-addition" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="id1">
-<h2>10進数の筆算<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id2">
+<h2>10進数の筆算<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><p><span class="math notranslate nohighlight">\(1234+567\)</span> を筆算で計算する:</p>
 <ul>
@@ -1236,8 +1285,8 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 </li>
 </ul>
-<div class="section" id="id2">
-<h3>桁を揃えて下位の桁から計算する準備をする<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id3">
+<h3>桁を揃えて下位の桁から計算する準備をする<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><p>整数を文字列に変換し逆順に並べ替える: <code class="docutils literal notranslate"><span class="pre">str()</span></code>, <code class="docutils literal notranslate"><span class="pre">reversed()</span></code></p>
 <ul>
@@ -1378,8 +1427,8 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 </div>
-<div class="section" id="id3">
-<h2>2進法の筆算<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id4">
+<h2>2進法の筆算<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="leibniz">
 <h3>Leibnizによる九九のない世界<a class="headerlink" href="#leibniz" title="Permalink to this headline">¶</a></h3>
 <div class="cell docutils container">
@@ -1550,17 +1599,17 @@ const thebe_selector_output = ".output, .cell_output"
             
                 <!-- Previous / next buttons -->
 <div class='prev-next-area'> 
-    <a class='left-prev' id="prev-link" href="../8/leibniz_3.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="../entry.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">ライプニッツによる九九のない世界</p>
+            <p class="prev-next-title">プログラミングで遡る科学史</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="../9/assign_1.html" title="next page">
+    <a class='right-next' id="next-link" href="leibniz_5.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">近代数学とプログラミング (1)</p>
+        <p class="prev-next-title">プログラミングのない世界 (1)</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
