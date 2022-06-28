@@ -2,6 +2,17 @@ format: jb-book
 root: chapters/00/entry
 title: Introduction
 parts:
+- caption: 2022/06/28
+  numberd: false
+  chapters:
+  - file: chapters/00/10/leibniz_4.ipynb
+    title: Leibniz (2)
+  - file: chapters/00/10/leibniz_5.ipynb
+    title: Leibniz (3)
+  - file: chapters/00/10/leibniz_6.ipynb
+    title: Leibniz (4)
+  - file: chapters/00/10/leibniz_7.ipynb
+    title: Leibniz (5)
 - caption: 2022/06/21
   numberd: false
   chapters:
@@ -11,8 +22,6 @@ parts:
     title: Assignment (5)
   - file: chapters/00/8/leibniz_3.ipynb
     title: Leibniz (1)
-  - file: chapters/00/10/leibniz_4.ipynb
-    title: Leibniz (2)
 - caption: 2022/06/14
   numberd: false
   chapters:
