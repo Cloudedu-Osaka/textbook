@@ -1185,36 +1185,14 @@ const thebe_selector_output = ".output, .cell_output"
             <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#id1">
-   表を作る
+  <a class="reference internal nav-link" href="#napier">
+   Napierの対数表を作る
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#id2">
-   計算する
+  <a class="reference internal nav-link" href="#id1">
+   Napierの対数を計算する
   </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#id3">
-     九九のない世界
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#id4">
-     計算量を減らす: 自乗
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#r-7-10-000-000">
-     そもそも R=7 (10,000,000) の話だった
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#id5">
-     10進法で切りのいい近似値
-    </a>
-   </li>
-  </ul>
  </li>
 </ul>
 
@@ -1237,36 +1215,14 @@ const thebe_selector_output = ".output, .cell_output"
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#id1">
-   表を作る
+  <a class="reference internal nav-link" href="#napier">
+   Napierの対数表を作る
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#id2">
-   計算する
+  <a class="reference internal nav-link" href="#id1">
+   Napierの対数を計算する
   </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#id3">
-     九九のない世界
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#id4">
-     計算量を減らす: 自乗
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#r-7-10-000-000">
-     そもそも R=7 (10,000,000) の話だった
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#id5">
-     10進法で切りのいい近似値
-    </a>
-   </li>
-  </ul>
  </li>
 </ul>
 
@@ -1281,8 +1237,25 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 <div class="tex2jax_ignore mathjax_ignore section" id="napier-s-logarithms">
 <h1>Napier’s Logarithms: 九九のない世界<a class="headerlink" href="#napier-s-logarithms" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="id1">
-<h2>表を作る<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/John_Napier">John Napier - Wikipedia</a></p>
+<ul>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Napierian_logarithm#:~:text=The%20term%20Napierian%20logarithm%20or,it%20is%20named%20after%20him.">Napierian logarithm - Wikipedia</a></p></li>
+<li><p><a class="reference external" href="https://www.maa.org/press/periodicals/convergence/logarithms-the-early-history-of-a-familiar-function-john-napier-introduces-logarithms">Logarithms: The Early History of a Familiar Function - John Napier Introduces Logarithms | Mathematical Association of America</a></p></li>
+</ul>
+</li>
+</ul>
+<div class="section" id="napier">
+<h2>Napierの対数表を作る<a class="headerlink" href="#napier" title="Permalink to this headline">¶</a></h2>
+<div class="math notranslate nohighlight">
+\[
+  \frac{N}{10^R} = \left(1-\frac{1}{10^{R}}\right)^{L}
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+  L = log_{1-10^{-R}} \frac{N}{10^R} = \frac{\log_{e}\frac{N}{10^R}}{\log_{e}(1-10^{-R})} \approx -10^R \log_{e}\frac{N}{10^R}
+\]</div>
+<p><span class="math notranslate nohighlight">\(R=7\)</span> の場合の数表を作成した。</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">astropy.coordinates</span> <span class="kn">import</span> <span class="n">Angle</span>
@@ -1969,16 +1942,8 @@ const thebe_selector_output = ".output, .cell_output"
 </div></div></div>
 </div>
 </div>
-<div class="section" id="id2">
-<h2>計算する<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
-<ul class="simple">
-<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/John_Napier">John Napier - Wikipedia</a></p>
-<ul>
-<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Napierian_logarithm#:~:text=The%20term%20Napierian%20logarithm%20or,it%20is%20named%20after%20him.">Napierian logarithm - Wikipedia</a></p></li>
-<li><p><a class="reference external" href="https://www.maa.org/press/periodicals/convergence/logarithms-the-early-history-of-a-familiar-function-john-napier-introduces-logarithms">Logarithms: The Early History of a Familiar Function - John Napier Introduces Logarithms | Mathematical Association of America</a></p></li>
-</ul>
-</li>
-</ul>
+<div class="section" id="id1">
+<h2>Napierの対数を計算する<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
 <div class="math notranslate nohighlight">
 \[
   \frac{N}{10^R} = \left(1-\frac{1}{10^{R}}\right)^{L}
@@ -1996,19 +1961,21 @@ const thebe_selector_output = ".output, .cell_output"
 \]</div>
 <div class="math notranslate nohighlight">
 \[p_{1} = 10^7 \left(1-\frac{1}{10^7} \right)= 10^7 \times 0.9999999 = 9999999\]</div>
-<p>数列の添字 <span class="math notranslate nohighlight">\(n\)</span> は <span class="math notranslate nohighlight">\(p_{n}\)</span> の対数である (Napierが定義した <span class="math notranslate nohighlight">\(1-10^{-7}\)</span> を底とする対数)。</p>
+<p>数列の添字 <span class="math notranslate nohighlight">\(n\)</span> が <span class="math notranslate nohighlight">\(p_{n}\)</span> のNapier対数である:</p>
 <div class="math notranslate nohighlight">
 \[
   n = \log_{1-10^{-7}}\left(\frac{p_{n}}{10^7}\right)
 \]</div>
-<p>Naperはこの数列を技巧を凝らして計算したが、単純に計算すると膨大な計算量となるため、まず <span class="math notranslate nohighlight">\(R=5\)</span> の場合を計算する。</p>
+<p>Naperはこの数列を延々と技巧を凝らして計算した。</p>
+<hr class="docutils" />
+<p>単純に計算すると膨大な計算量となるため、まず <span class="math notranslate nohighlight">\(R=5\)</span> の場合を計算する。</p>
 <div class="math notranslate nohighlight">
 \[
   p_{n+1} = p_{n} \left(1-\frac{1}{10^5}\right) = p_{n} \times 0.99999\quad \text{where}\ p_{0} = 10^5
 \]</div>
 <div class="math notranslate nohighlight">
 \[p_{1} = 10^5 \left(1-\frac{1}{10^5} \right)= 10^5 \times 0.99999 = 99999\]</div>
-<p>底の変換によって、<span class="math notranslate nohighlight">\(R=7\)</span> の場合を効率よく近似できるため、計算は無駄にならない:</p>
+<p>底の変換式によって、<span class="math notranslate nohighlight">\(R=7\)</span> の場合を効率よく近似できるため、計算は無駄にならない:</p>
 <div class="math notranslate nohighlight">
 \[
   \log_{1-10^{-5}} \frac{N}{10^5} = \frac{\log_{1-10^{-7}}\frac{N}{10^5}}{\log_{1-10^{-7}}(1-10^{-5})} \approx \frac{1}{100}\log_{1-10^{-7}}\frac{N}{10^5} = \frac{1}{100} L(N \times 100)
@@ -2109,6 +2076,11 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 </div>
+<p>終了条件を定義しているので無限列にはならない:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>        <span class="k">if</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="n">c</span><span class="p">:</span>
+            <span class="k">break</span>
+</pre></div>
+</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">napier5</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="n">nest_list</span><span class="p">(</span><span class="k">lambda</span> <span class="n">l</span><span class="p">:</span> <span class="n">l</span><span class="o">*</span><span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="mi">10</span><span class="o">**</span><span class="p">(</span><span class="o">-</span><span class="mi">5</span><span class="p">)),</span> <span class="mi">10</span><span class="o">**</span><span class="mi">5</span><span class="p">,</span> <span class="mi">1</span><span class="p">)))</span>
@@ -2177,297 +2149,8 @@ const thebe_selector_output = ".output, .cell_output"
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x120182a00&gt;]
 </pre></div>
 </div>
-<img alt="../../../_images/napier_3_38_1.png" src="../../../_images/napier_3_38_1.png" />
+<img alt="../../../_images/napier_3_45_1.png" src="../../../_images/napier_3_45_1.png" />
 </div>
-</div>
-<div class="section" id="id3">
-<h3>九九のない世界<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
-<p>上で求めた配列 <code class="docutils literal notranslate"><span class="pre">napier5</span></code> を検索し、対数を求める: <span class="math notranslate nohighlight">\(n = \log_{1-10^{-5}}(p_{n})\)</span></p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">napier5</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">napier5</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(100000.0, 0.9999979002909413)
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">n_log</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
-    <span class="k">if</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="n">napier5</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="ow">and</span> <span class="n">x</span> <span class="o">&gt;</span> <span class="n">napier5</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]:</span>
-        <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">searchsorted</span><span class="p">(</span><span class="o">-</span><span class="n">napier5</span><span class="p">,</span> <span class="o">-</span><span class="n">x</span><span class="p">)</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="k">raise</span> <span class="ne">IndexError</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">n_log</span><span class="p">(</span><span class="mi">1234</span><span class="p">),</span> <span class="n">n_log</span><span class="p">(</span><span class="mi">56789</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(439489, 56583)
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">sum</span><span class="p">(</span><span class="n">_</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>496072
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">napier5</span><span class="p">[</span><span class="n">_</span><span class="p">]</span> <span class="o">*</span> <span class="mi">10</span><span class="o">**</span><span class="mi">5</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>70077065.22354518
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mi">1234</span><span class="o">*</span><span class="mi">5678</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>7006652
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">n_times</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
-    <span class="k">return</span> <span class="n">napier5</span><span class="p">[</span><span class="n">n_log</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="o">+</span><span class="n">n_log</span><span class="p">(</span><span class="n">y</span><span class="p">)]</span> <span class="o">*</span> <span class="mi">10</span><span class="o">**</span><span class="mi">5</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">n_times</span><span class="p">(</span><span class="mi">1234</span><span class="p">,</span> <span class="mi">5678</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>7006610.457565
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="section" id="id4">
-<h3>計算量を減らす: 自乗<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
-<div class="math notranslate nohighlight">
-\[
-  p_{n^2} = \frac{{p_{n}}^2}{10^5}\quad \text{where}\ p_{0} = 10^5 \left(1-\frac{1}{10^5}\right)
-\]</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">napier5_powered</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="n">nest_list</span><span class="p">(</span><span class="k">lambda</span> <span class="n">l</span><span class="p">:</span> <span class="n">l</span><span class="o">*</span><span class="n">l</span><span class="o">/</span><span class="mi">10</span><span class="o">**</span><span class="mi">5</span><span class="p">,</span> <span class="mi">10</span><span class="o">**</span><span class="mi">5</span><span class="o">*</span><span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="mi">10</span><span class="o">**</span><span class="p">(</span><span class="o">-</span><span class="mi">5</span><span class="p">)),</span> <span class="mi">1</span><span class="p">)))</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">with</span> <span class="n">np</span><span class="o">.</span><span class="n">printoptions</span><span class="p">(</span><span class="n">formatter</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;float&#39;</span><span class="p">:</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="s1">&#39;</span><span class="si">{:7.0f}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">x</span><span class="p">)}):</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">napier5_powered</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[  99999   99998   99996   99992   99984   99968   99936   99872   99744
-   99489   98981   97973   95987   92135   84888   72059   51925   26962
-    7270     528       3       0]
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">napier5_powered</span><span class="o">.</span><span class="n">size</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>22
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mi">2</span><span class="o">**</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">21</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([      1,       2,       4,       8,      16,      32,      64,
-           128,     256,     512,    1024,    2048,    4096,    8192,
-         16384,   32768,   65536,  131072,  262144,  524288, 1048576])
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">with</span> <span class="n">np</span><span class="o">.</span><span class="n">printoptions</span><span class="p">(</span><span class="n">formatter</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;float&#39;</span><span class="p">:</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="s1">&#39;</span><span class="si">{:7.0f}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">x</span><span class="p">)}):</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="n">napier5</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="mi">2</span><span class="o">**</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">21</span><span class="p">)]))</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[  99999   99998   99996   99992   99984   99968   99936   99872   99744
-   99489   98981   97973   95987   92135   84888   72059   51925   26962
-    7270     528       3]
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
-
-<span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="n">napier5</span><span class="o">.</span><span class="n">size</span><span class="p">,</span><span class="n">num</span><span class="o">=</span><span class="n">napier5</span><span class="o">.</span><span class="n">size</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">napier5</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="mi">2</span><span class="o">**</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">21</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="n">napier5</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="mi">2</span><span class="o">**</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">21</span><span class="p">)]),</span> <span class="s1">&#39;o&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">.5</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x1201b08e0&gt;]
-</pre></div>
-</div>
-<img alt="../../../_images/napier_3_58_1.png" src="../../../_images/napier_3_58_1.png" />
-</div>
-</div>
-<p>減りすぎ・・・</p>
-</div>
-<div class="section" id="r-7-10-000-000">
-<h3>そもそも R=7 (10,000,000) の話だった<a class="headerlink" href="#r-7-10-000-000" title="Permalink to this headline">¶</a></h3>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">napier7</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="n">nest_list</span><span class="p">(</span><span class="k">lambda</span> <span class="n">l</span><span class="p">:</span> <span class="n">l</span><span class="o">*</span><span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="mi">10</span><span class="o">**</span><span class="p">(</span><span class="o">-</span><span class="mi">7</span><span class="p">)),</span> <span class="mi">10</span><span class="o">**</span><span class="mi">7</span><span class="p">,</span> <span class="mi">10</span><span class="o">**</span><span class="mi">6</span><span class="p">)))</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">napier5</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="n">napier7</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(0.9999979002909413, 999999.9790768364)
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">napier5</span><span class="o">.</span><span class="n">size</span><span class="p">,</span> <span class="n">napier7</span><span class="o">.</span><span class="n">size</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(1151288, 23025851)
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
-
-<span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="n">napier5</span><span class="o">.</span><span class="n">size</span><span class="p">,</span><span class="n">num</span><span class="o">=</span><span class="n">napier5</span><span class="o">.</span><span class="n">size</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">napier5</span><span class="o">*</span><span class="mi">10</span><span class="o">**-</span><span class="mi">5</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">napier7</span><span class="p">[:</span><span class="n">napier5</span><span class="o">.</span><span class="n">size</span><span class="p">]</span><span class="o">*</span><span class="mi">10</span><span class="o">**-</span><span class="mi">7</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x14cc7d250&gt;]
-</pre></div>
-</div>
-<img alt="../../../_images/napier_3_66_1.png" src="../../../_images/napier_3_66_1.png" />
-</div>
-</div>
-</div>
-<div class="section" id="id5">
-<h3>10進法で切りのいい近似値<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h3>
-<div class="math notranslate nohighlight">
-\[
-  L = log_{1-10^{-7}} \frac{N}{10^7}
-\]</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="mi">1</span><span class="o">/</span><span class="mi">2000</span><span class="p">),</span> <span class="n">math</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="mi">1</span><span class="o">/</span><span class="mi">2000</span><span class="p">,</span> <span class="mi">1</span><span class="o">-</span><span class="mi">10</span><span class="o">**-</span><span class="mi">7</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(0.9995, 5001.250169392341)
-</pre></div>
-</div>
-</div>
-</div>
-<div class="math notranslate nohighlight">
-\[
-  \log_{1-10^7}\left(1-\frac{1}{2000}\right) = \log_{1-10^7}0.9995 = \log_{1-10^7} \left(\frac{999500}{10^7}\right) \approx 5001.25
-\]</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="mi">1</span><span class="o">/</span><span class="mi">2000</span><span class="p">)</span><span class="o">**</span><span class="mi">20</span><span class="p">,</span> <span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="mi">1</span><span class="o">/</span><span class="mi">2000</span><span class="p">)</span><span class="o">**</span><span class="mi">20</span><span class="p">,</span> <span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="mi">1</span><span class="o">/</span><span class="mi">100</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(0.9900473578023297, 0.9900473578023297, 0.99)
-</pre></div>
-</div>
-</div>
-</div>
-<div class="math notranslate nohighlight">
-\[
-  \left(1-\frac{1}{2000}\right)^{20} \approx 1-\frac{1}{100} = 0.99
-\]</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="mi">1</span><span class="o">/</span><span class="mi">100</span><span class="p">),</span> <span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="mi">1</span><span class="o">/</span><span class="mi">100</span><span class="p">)</span><span class="o">**</span><span class="mi">68</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(0.99, 0.5048858887870696)
-</pre></div>
-</div>
-</div>
-</div>
-<div class="math notranslate nohighlight">
-\[
-  \left(1-\frac{1}{100}\right)^{68} \approx 0.50
-\]</div>
 </div>
 </div>
 </div>
