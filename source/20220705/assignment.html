@@ -1478,7 +1478,9 @@ n = \log_{1-10^{-5}}\left( \frac{p_{n}}{10^5} \right)
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">napier5_times</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
+    <span class="c1">### BEGIN SOLUTION</span>
     <span class="k">return</span> <span class="n">napier5</span><span class="p">[</span><span class="n">napier5_log</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="o">+</span><span class="n">napier5_log</span><span class="p">(</span><span class="n">y</span><span class="p">)]</span> <span class="o">*</span> <span class="mi">10</span><span class="o">**</span><span class="mi">5</span>
+    <span class="c1">### END SOLUTION</span>
 </pre></div>
 </div>
 </div>
