@@ -2,17 +2,28 @@ format: jb-book
 root: chapters/00/entry
 title: Introduction
 parts:
+- caption: 2022/07/05
+  numberd: false
+  chapters:
+  - file: chapters/00/10/leibniz_7.ipynb
+    title: Leibniz (5)
+  - file: chapters/00/10/napier_1.ipynb
+    title: Napier (1)
+  - file: chapters/00/10/napier_2.ipynb
+    title: Napier (2)
+  - file: chapters/00/10/napier_3.ipynb
+    title: Napier (3)
+  - file: chapters/00/10/assignment.ipynb
+    title: Assignment
 - caption: 2022/06/28
   numberd: false
   chapters:
-  - file: chapters/00/10/leibniz_4.ipynb
-    title: Leibniz (2)
   - file: chapters/00/10/leibniz_5.ipynb
-    title: Leibniz (3)
+    title: Leibniz (2)
   - file: chapters/00/10/leibniz_6.ipynb
+    title: Leibniz (3)
+  - file: chapters/00/10/leibniz_4.ipynb
     title: Leibniz (4)
-  - file: chapters/00/10/leibniz_7.ipynb
-    title: Leibniz (5)
 - caption: 2022/06/21
   numberd: false
   chapters:
