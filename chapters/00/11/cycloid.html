@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>&lt;no title&gt; &#8212; Computational and Inferential Thinking</title>
+    <title>サイクロイドのアニメーション作成 &#8212; Computational and Inferential Thinking</title>
     
   <link href="../../../_static/css/theme.css" rel="stylesheet">
   <link href="../../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -56,6 +56,8 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="shortcut icon" href="../../../_static/favicon.png"/>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Napier’s Logarithms: 九九のない世界" href="../10/napier_3.html" />
+    <link rel="prev" title="ケプラーの法則" href="kepler.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -104,6 +106,38 @@ const thebe_selector_output = ".output, .cell_output"
     <div class="bd-toc-item active">
         <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
+  2022/07/12
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="tycho.html">
+   Tycho Brahe
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="kepler.html">
+   Johannes Kepler
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Isacc Newton
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../10/napier_3.html">
+   Napier (3)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../10/assignment.html">
+   Assignment
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
   2022/07/05
  </span>
 </p>
@@ -121,16 +155,6 @@ const thebe_selector_output = ".output, .cell_output"
  <li class="toctree-l1">
   <a class="reference internal" href="../10/napier_2.html">
    Napier (2)
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../10/napier_3.html">
-   Napier (3)
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../10/assignment.html">
-   Assignment
   </a>
  </li>
 </ul>
@@ -1175,14 +1199,6 @@ const thebe_selector_output = ".output, .cell_output"
         <!-- Table of contents -->
         <div class="d-none d-md-block col-md-2 bd-toc show noprint">
             
-            <div class="tocsection onthispage pt-5 pb-3">
-                <i class="fas fa-list"></i> Contents
-            </div>
-            <nav id="bd-toc-nav" aria-label="Page">
-                <ul class="simple visible nav section-nav flex-column">
-</ul>
-
-            </nav>
         </div>
     </div>
 </div>
@@ -1190,26 +1206,26 @@ const thebe_selector_output = ".output, .cell_output"
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1><no title></h1>
+                <h1>サイクロイドのアニメーション作成</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
                         
-                        <div>
-                            <h2> Contents </h2>
-                        </div>
-                        <nav aria-label="Page">
-                            <ul class="simple visible nav section-nav flex-column">
-</ul>
-
-                        </nav>
                     </div>
                 </div>
             </div>
             
               <div>
                 
-  <div class="cell docutils container">
+  <div class="cell tag_remove-input docutils container">
+</div>
+<div class="tex2jax_ignore mathjax_ignore section" id="id1">
+<h1>サイクロイドのアニメーション作成<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li><p><a class="reference external" href="https://pythonmatplotlibtips.blogspot.com/2017/12/cycloid-animation-artistanimation.html">Python Matplotlib Tips: Draw cycloid animation using matplotlib.animation.ArtistAnimation</a></p></li>
+<li><p><a class="reference external" href="https://sabopy.com/py/matplotlib-animation-13/">[matplotlib animation] 13. サイクロイド(cycloid) – サボテンパイソン</a></p></li>
+</ul>
+<div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
@@ -1244,6 +1260,7 @@ const thebe_selector_output = ".output, .cell_output"
 <span class="n">ax</span><span class="o">.</span><span class="n">set_aspect</span><span class="p">(</span><span class="s1">&#39;equal&#39;</span><span class="p">)</span>
 
 <span class="c1">#plot data</span>
+<span class="c1">#e = 0.0167 # earth</span>
 <span class="c1">#e = 0.0935 # mars</span>
 <span class="c1">#e = 0.9673 # 1P/Halley</span>
 <span class="n">e</span><span class="o">=</span><span class="mf">0.6</span>
@@ -5563,7 +5580,8 @@ c3RjbwAAAAAAAAABAAAAMAAAAGJ1ZHRhAAAAWm1ldGEAAAAAAAAAIWhkbHIAAAAAAAAAAG1kaXJh
 cHBsAAAAAAAAAAAAAAAALWlsc3QAAAAlqXRvbwAAAB1kYXRhAAAAAQAAAABMYXZmNTkuMTYuMTAw
 ">
   Your browser does not support the video tag.
-</video></div><img alt="../../../_images/cycloid_0_1.png" src="../../../_images/cycloid_0_1.png" />
+</video></div><img alt="../../../_images/cycloid_3_1.png" src="../../../_images/cycloid_3_1.png" />
+</div>
 </div>
 </div>
 
@@ -5591,7 +5609,21 @@ cHBsAAAAAAAAAAAAAAAALWlsc3QAAAAlqXRvbwAAAB1kYXRhAAAAAQAAAABMYXZmNTkuMTYuMTAw
               
             
                 <!-- Previous / next buttons -->
-<div class='prev-next-area'>
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="kepler.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">ケプラーの法則</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="../10/napier_3.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Napier’s Logarithms: 九九のない世界</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
 </div>
             
         </div>

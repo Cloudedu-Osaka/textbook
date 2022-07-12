@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>&lt;no title&gt; &#8212; Computational and Inferential Thinking</title>
+    <title>ケプラーの法則 &#8212; Computational and Inferential Thinking</title>
     
   <link href="../../../_static/css/theme.css" rel="stylesheet">
   <link href="../../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -58,6 +58,8 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="shortcut icon" href="../../../_static/favicon.png"/>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="サイクロイドのアニメーション作成" href="cycloid.html" />
+    <link rel="prev" title="チコの天体観測" href="tycho.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -106,6 +108,38 @@ const thebe_selector_output = ".output, .cell_output"
     <div class="bd-toc-item active">
         <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
+  2022/07/12
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="tycho.html">
+   Tycho Brahe
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Johannes Kepler
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="cycloid.html">
+   Isacc Newton
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../10/napier_3.html">
+   Napier (3)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../10/assignment.html">
+   Assignment
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
   2022/07/05
  </span>
 </p>
@@ -123,16 +157,6 @@ const thebe_selector_output = ".output, .cell_output"
  <li class="toctree-l1">
   <a class="reference internal" href="../10/napier_2.html">
    Napier (2)
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../10/napier_3.html">
-   Napier (3)
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../10/assignment.html">
-   Assignment
   </a>
  </li>
 </ul>
@@ -1181,7 +1205,34 @@ const thebe_selector_output = ".output, .cell_output"
                 <i class="fas fa-list"></i> Contents
             </div>
             <nav id="bd-toc-nav" aria-label="Page">
-                <ul class="simple visible nav section-nav flex-column">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id2">
+   ニュートンによるケプラー方程式の証明
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id3">
+     火星の公転角速度の変化
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id4">
+     地球の公転角速度の変化
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id5">
+   ニュートンの運動方程式
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id6">
+   参考) ケプラー方程式を解く
+  </a>
+ </li>
 </ul>
 
             </nav>
@@ -1192,7 +1243,7 @@ const thebe_selector_output = ".output, .cell_output"
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1><no title></h1>
+                <h1>ケプラーの法則</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -1201,7 +1252,34 @@ const thebe_selector_output = ".output, .cell_output"
                             <h2> Contents </h2>
                         </div>
                         <nav aria-label="Page">
-                            <ul class="simple visible nav section-nav flex-column">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id2">
+   ニュートンによるケプラー方程式の証明
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id3">
+     火星の公転角速度の変化
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id4">
+     地球の公転角速度の変化
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id5">
+   ニュートンの運動方程式
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id6">
+   参考) ケプラー方程式を解く
+  </a>
+ </li>
 </ul>
 
                         </nav>
@@ -1211,7 +1289,16 @@ const thebe_selector_output = ".output, .cell_output"
             
               <div>
                 
-  <ul class="simple">
+  <div class="cell tag_remove-input docutils container">
+</div>
+<div class="tex2jax_ignore mathjax_ignore section" id="id1">
+<h1>ケプラーの法則<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li><p>(1473 – 1543) <a class="reference external" href="https://en.wikipedia.org/wiki/Nicolaus_Copernicus">Nicolaus Copernicus - Wikipedia</a></p></li>
+<li><p>(1546 – 1601) <a class="reference external" href="https://en.wikipedia.org/wiki/Tycho_Brahe">Tycho Brahe - Wikipedia</a></p></li>
+<li><p>(1571 – 1630) <a class="reference external" href="https://en.wikipedia.org/wiki/Johannes_Kepler">Johannes Kepler - Wikipedia</a></p></li>
+</ul>
+<ul class="simple">
 <li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Kepler%27s_laws_of_planetary_motion#:~:text=The%20three%20laws%20state%20that,major%20axis%20of%20its%20orbit.">Kepler’s laws of planetary motion - Wikipedia</a></p>
 <ol class="simple">
 <li><p>(1609) 惑星の軌道は、太陽を2つの焦点のうちの1つとする楕円である。</p></li>
@@ -1221,11 +1308,6 @@ const thebe_selector_output = ".output, .cell_output"
 </li>
 </ul>
 <p>「Keplerは、円軌道を仮定したCopernicus的太陽系モデルを信じていたが、Braheの高精度な観測と火星の円軌道の適合がうまくいかず、火星は水星以外の惑星の中で最も離心率が高いことがわかった。」</p>
-<ul class="simple">
-<li><p>(1473 – 1543) <a class="reference external" href="https://en.wikipedia.org/wiki/Nicolaus_Copernicus">Nicolaus Copernicus - Wikipedia</a></p></li>
-<li><p>(1546 – 1601) <a class="reference external" href="https://en.wikipedia.org/wiki/Tycho_Brahe">Tycho Brahe - Wikipedia</a></p></li>
-<li><p>(1571 – 1630) <a class="reference external" href="https://en.wikipedia.org/wiki/Johannes_Kepler">Johannes Kepler - Wikipedia</a></p></li>
-</ul>
 <ul class="simple">
 <li><p><a class="reference external" href="https://en.m.wikipedia.org/wiki/Kepler%27s_equation#See_also">Kepler’s equation - Wikipedia</a></p>
 <ul>
@@ -1238,11 +1320,13 @@ const thebe_selector_output = ".output, .cell_output"
   M = E - e \sin E
 \]</div>
 <ul class="simple">
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Mean_anomaly">Mean anomaly - Wikipedia</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Eccentric_anomaly">Eccentric anomaly - Wikipedia</a></p></li>
+</ul>
+<ul class="simple">
 <li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Transcendental_equation">Transcendental equation - Wikipedia</a></p></li>
 </ul>
 <ul class="simple">
-<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Mean_anomaly">Mean anomaly - Wikipedia</a></p></li>
-<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Eccentric_anomaly">Eccentric anomaly - Wikipedia</a></p></li>
 <li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Eccentricity_%28mathematics%29">Eccentricity (mathematics) - Wikipedia</a></p></li>
 </ul>
 <div class="math notranslate nohighlight">
@@ -1270,9 +1354,9 @@ const thebe_selector_output = ".output, .cell_output"
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">theta</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
-<span class="c1">#epsilon = 0.6</span>
+<span class="n">epsilon</span> <span class="o">=</span> <span class="mf">0.6</span>
 <span class="c1">#epsilon = 0.9673 # 1P/Halley</span>
-<span class="n">epsilon</span> <span class="o">=</span> <span class="mf">0.0935</span> <span class="c1"># mars</span>
+<span class="c1">#epsilon = 0.0935 # mars</span>
 <span class="c1">#epsilon = 0.0167 # earth</span>
 <span class="n">a</span><span class="o">=</span><span class="mi">1</span>
 <span class="n">b</span><span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">a</span><span class="o">**</span><span class="mi">2</span><span class="o">-</span><span class="n">epsilon</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
@@ -1302,12 +1386,17 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1 0.9956192796445839 0.0935
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1 0.8 0.6
 </pre></div>
 </div>
 <img alt="../../../_images/kepler_14_1.png" src="../../../_images/kepler_14_1.png" />
 </div>
 </div>
+<div class="section" id="id2">
+<h2>ニュートンによるケプラー方程式の証明<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Philosophi%C3%A6_Naturalis_Principia_Mathematica">Philosophiæ Naturalis Principia Mathematica - Wikipedia</a></p></li>
+</ul>
 <div class="math notranslate nohighlight">
 \[
   M = E - e \sin E
@@ -1377,12 +1466,37 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[35.94653859 33.85827002 30.84781135 28.07926617 26.12558095 25.14253292]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[97.83899242 32.38159667 17.46700796 12.46664204 10.34259764  9.50316326]
 </pre></div>
 </div>
 <img alt="../../../_images/kepler_17_1.png" src="../../../_images/kepler_17_1.png" />
 </div>
 </div>
+<div class="section" id="id3">
+<h3>火星の公転角速度の変化<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">XY</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">((</span><span class="n">a</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">X4</span><span class="p">),</span> <span class="n">b</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">X4</span><span class="p">)))</span><span class="o">.</span><span class="n">T</span>
+<span class="n">Y9</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">arctan2</span><span class="p">(</span><span class="o">*</span><span class="p">(</span><span class="n">XY</span><span class="o">-</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">((</span><span class="n">epsilon</span><span class="p">,</span><span class="mi">0</span><span class="p">)))</span><span class="o">.</span><span class="n">T</span><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span><span class="o">*</span><span class="mi">180</span><span class="o">/</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span>
+<span class="n">Y8</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">diff</span><span class="p">(</span><span class="n">Y9</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">Y8</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="nb">len</span><span class="p">(</span><span class="n">Y8</span><span class="p">)),</span><span class="n">Y8</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylim</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span><span class="mi">60</span><span class="p">])</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[35.94653859 33.85827002 30.84781135 28.07926617 26.12558095 25.14253292]
+</pre></div>
+</div>
+<img alt="../../../_images/kepler_19_1.png" src="../../../_images/kepler_19_1.png" />
+</div>
+</div>
+</div>
+<div class="section" id="id4">
+<h3>地球の公転角速度の変化<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">XY</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">((</span><span class="n">a</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">X4</span><span class="p">),</span> <span class="n">b</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">X4</span><span class="p">)))</span><span class="o">.</span><span class="n">T</span>
@@ -1400,19 +1514,26 @@ const thebe_selector_output = ".output, .cell_output"
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[30.97439563 30.70013329 30.23879445 29.72662134 29.29985015 29.06020514]
 </pre></div>
 </div>
-<img alt="../../../_images/kepler_18_1.png" src="../../../_images/kepler_18_1.png" />
+<img alt="../../../_images/kepler_21_1.png" src="../../../_images/kepler_21_1.png" />
 </div>
 </div>
 <ul class="simple">
 <li><p><a class="reference external" href="http://fnorio.com/0158Kepler_equation/Kepler_equation.html#3-2">楕円軌道とケプラー方程式(Kepler equation)</a></p></li>
 </ul>
-<ul class="simple">
-<li><p><a class="reference external" href="https://stackoverflow.com/questions/43047463/find-root-of-a-transcendental-equation-with-python">numpy - Find root of a transcendental equation with python - Stack Overflow</a></p></li>
-</ul>
+</div>
+</div>
+<div class="section" id="id5">
+<h2>ニュートンの運動方程式<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><p><a class="reference external" href="https://manabitimes.jp/math/1263">地球の公転軌道が楕円であることの導出 | 高校数学の美しい物語</a></p></li>
 <li><p><a class="reference external" href="https://w3e.kanazawa-it.ac.jp/math/physics/category/mechanics/masspoint_mechanics/simple_harmonic_motion/henkan-tex.cgi?target=/math/physics/category/mechanics/masspoint_mechanics/simple_harmonic_motion/shm_equation_of_motion.html">単振動：運動方程式</a></p></li>
 <li><p><a class="reference external" href="https://w3e.kanazawa-it.ac.jp/math/physics/category/mechanics/masspoint_mechanics/simple_harmonic_motion/henkan-tex.cgi?target=/math/physics/category/mechanics/masspoint_mechanics/simple_harmonic_motion/shm_solution.html">単振動：微分方程式の解法</a></p></li>
+</ul>
+</div>
+<div class="section" id="id6">
+<h2>参考) ケプラー方程式を解く<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://stackoverflow.com/questions/43047463/find-root-of-a-transcendental-equation-with-python">numpy - Find root of a transcendental equation with python - Stack Overflow</a></p></li>
 </ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1467,7 +1588,7 @@ const thebe_selector_output = ".output, .cell_output"
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x11c159100&gt;]
 </pre></div>
 </div>
-<img alt="../../../_images/kepler_32_1.png" src="../../../_images/kepler_32_1.png" />
+<img alt="../../../_images/kepler_35_1.png" src="../../../_images/kepler_35_1.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -1528,6 +1649,8 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 </div>
+</div>
+</div>
 
     <script type="text/x-thebe-config">
     {
@@ -1553,7 +1676,21 @@ const thebe_selector_output = ".output, .cell_output"
               
             
                 <!-- Previous / next buttons -->
-<div class='prev-next-area'>
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="tycho.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">チコの天体観測</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="cycloid.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">サイクロイドのアニメーション作成</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
 </div>
             
         </div>
