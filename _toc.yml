@@ -2,6 +2,19 @@ format: jb-book
 root: chapters/00/entry
 title: Introduction
 parts:
+- caption: 2022/07/12
+  numberd: false
+  chapters:
+  - file: chapters/00/11/tycho.ipynb
+    title: Tycho Brahe
+  - file: chapters/00/11/kepler.ipynb
+    title: Johannes Kepler
+  - file: chapters/00/11/cycloid.ipynb
+    title: Isacc Newton
+  - file: chapters/00/10/napier_3.ipynb
+    title: Napier (3)
+  - file: chapters/00/10/assignment.ipynb
+    title: Assignment
 - caption: 2022/07/05
   numberd: false
   chapters:
@@ -11,10 +24,6 @@ parts:
     title: Napier (1)
   - file: chapters/00/10/napier_2.ipynb
     title: Napier (2)
-  - file: chapters/00/10/napier_3.ipynb
-    title: Napier (3)
-  - file: chapters/00/10/assignment.ipynb
-    title: Assignment
 - caption: 2022/06/28
   numberd: false
   chapters:
