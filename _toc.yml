@@ -2,6 +2,19 @@ format: jb-book
 root: chapters/00/entry
 title: Introduction
 parts:
+- caption: 2022/07/19
+  numberd: false
+  chapters:
+  - file: chapters/00/12/00-bio.ipynb
+    title: Bioinformatics (1)
+  - file: chapters/00/12/01-bio.ipynb
+    title: Bioinformatics (2)
+  - file: chapters/00/12/02-bio.ipynb
+    title: Bioinformatics (3)
+  - file: chapters/00/12/03-bio.ipynb
+    title: Bioinformatics (4)
+  - file: chapters/00/12/04-bio.ipynb
+    title: Bioinformatics (5)
 - caption: 2022/07/12
   numberd: false
   chapters:
