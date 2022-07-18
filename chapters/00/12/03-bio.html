@@ -1,0 +1,2069 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Central dogma &#8212; Computational and Inferential Thinking</title>
+    
+  <link href="../../../_static/css/theme.css" rel="stylesheet">
+  <link href="../../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/book.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../../../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/clipboard.min.js"></script>
+    <script src="../../../_static/copybutton.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../../../_static/sphinx-thebe.js"></script>
+    <link rel="canonical" href="https://inferentialthinking.org/chapters/00/12/03-bio.html" />
+    <link rel="shortcut icon" href="../../../_static/favicon.png"/>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Genetic recombination" href="04-bio.html" />
+    <link rel="prev" title="Central dogma" href="02-bio.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+<script async="" src="https://www.google-analytics.com/analytics.js"></script>
+<script>
+                        window.ga = window.ga || function () {
+                            (ga.q = ga.q || []).push(arguments) };
+                        ga.l = +new Date;
+                        ga('create', 'UA-148221575-1', 'auto');
+                        ga('set', 'anonymizeIp', true);
+                        ga('send', 'pageview');
+                    </script>
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../../../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../../../_static/favicon.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Computational and Inferential Thinking</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  2022/07/19
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="00-bio.html">
+   Bioinfomatics
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="01-bio.html">
+   Inheritance
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="02-bio.html">
+   Central dogma
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Central dogma
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="04-bio.html">
+   Genetic recombination
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  2022/07/12
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../11/tycho.html">
+   Tycho Brahe
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../11/kepler.html">
+   Johannes Kepler
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../11/cycloid.html">
+   Isacc Newton
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../10/napier_3.html">
+   Napier (3)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../10/assignment.html">
+   Assignment
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  2022/07/05
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../10/leibniz_7.html">
+   Leibniz (5)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../10/napier_1.html">
+   Napier (1)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../10/napier_2.html">
+   Napier (2)
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  2022/06/28
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../10/leibniz_5.html">
+   Leibniz (2)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../10/leibniz_6.html">
+   Leibniz (3)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../10/leibniz_4.html">
+   プログラミングのない世界 (3)
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  2022/06/21
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../9/assign_6.html">
+   Assignment (6)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../9/assign_5.html">
+   Assignment (5)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../8/leibniz_3.html">
+   Leibniz (1)
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  2022/06/14
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../9/assign_1.html">
+   Assignment (1)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../9/assign_2.html">
+   Assignment (2)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../9/assign_3.html">
+   Assignment (3)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../9/assign_4.html">
+   Assignment (4)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../9/assign_7.html">
+   Assignment (7)
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  2022/06/07
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../8/leibniz_1.html">
+   Japanese wordplay
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../8/leibniz_2.html">
+   Computer algebra
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../8/assign.html">
+   Assignment
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  2022/05/31
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../7/pythagoras_1.html">
+   from Pythagoras to Einstein (1)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../7/pythagoras_2.html">
+   Plimpton 322 and YBC 7289
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../7/pythagoras_3.html">
+   YBC 7289 (1)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../7/pythagoras_4.html">
+   YBC 7289 (2)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../7/pythagoras_5.html">
+   YBC 7289 (3)
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  2022/05/24
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../6/plimpton322_2.html">
+   Decoding Plimpton 322 (1)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../6/plimpton322_3.html">
+   Decoding Plimpton 322 (2)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../6/plimpton322_4.html">
+   Decoding Plimpton 322 (3)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../6/assign_1.html">
+   Assignment (1)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../6/assign_2.html">
+   Assignment (2)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../6/assign_3.html">
+   Assignment (3)
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  2022/05/17
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../5/long_division.html">
+   Long Division
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../5/assign_1.html">
+   Assignment (1)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../5/assign_2.html">
+   Assignment (2)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../5/assign_3.html">
+   Assignment (3)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../5/assign_4.html">
+   Assignment (4)
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  2022/05/10
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../4/plimpton322_1.html">
+   Plimpton 322 (1)
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  2022/04/19
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../3/intro_add_1.html">
+   Notebook additional setting
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  2022/04/12
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../intro_add.html">
+   Precautions
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../0/1/Receiving_invitation_mail.html">
+     Federated authentication
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../0/1/Accessing_JupyterHub.html">
+     Application registration
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../1/intro_add_1.html">
+     Notebook execution
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../1/intro_add_2.html">
+     Notebook security
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../1/intro_add_3.html">
+     Notebook activity
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../2/intro_add.html">
+   Request for cooperation
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../2/intro_add_4.html">
+     Experiment explanation
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../2/intro_add_5.html">
+     Informed concent
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../2/intro_add_6.html">
+     Withdrawal of concent
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  DATA 8
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../01/what-is-data-science.html">
+   1. Data Science
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../../01/1/intro.html">
+     1.1. Introduction
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+    <label for="toctree-checkbox-4">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../01/1/1/computational-tools.html">
+       1.1.1. Computational Tools
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../01/1/2/statistical-techniques.html">
+       1.1.2. Statistical Techniques
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../01/2/why-data-science.html">
+     1.2. Why Data Science?
+    </a>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../../01/3/Plotting_the_Classics.html">
+     1.3. Plotting the Classics
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+    <label for="toctree-checkbox-5">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../01/3/1/Literary_Characters.html">
+       1.3.1. Literary Characters
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../01/3/2/Another_Kind_Of_Character.html">
+       1.3.2. Another Kind of Character
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../02/causality-and-experiments.html">
+   2. Causality and Experiments
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../02/1/observation-and-visualization-john-snow-and-the-broad-street-pump.html">
+     2.1. John Snow and the Broad Street Pump
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../02/2/snow-s-grand-experiment.html">
+     2.2. Snow’s “Grand Experiment”
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../02/3/establishing-causality.html">
+     2.3. Establishing Causality
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../02/4/randomization.html">
+     2.4. Randomization
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../02/5/endnote.html">
+     2.5. Endnote
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../03/programming-in-python.html">
+   3. Programming in Python
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+  <label for="toctree-checkbox-7">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../03/1/Expressions.html">
+     3.1. Expressions
+    </a>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../../03/2/Names.html">
+     3.2. Names
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+    <label for="toctree-checkbox-8">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../03/2/1/Growth.html">
+       3.2.1. Example: Growth Rates
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../03/3/Calls.html">
+     3.3. Call Expressions
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../03/4/Introduction_to_Tables.html">
+     3.4. Introduction to Tables
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../04/Data_Types.html">
+   4. Data Types
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
+  <label for="toctree-checkbox-9">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../04/1/Numbers.html">
+     4.1. Numbers
+    </a>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../../04/2/Strings.html">
+     4.2. Strings
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
+    <label for="toctree-checkbox-10">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../04/2/1/String_Methods.html">
+       4.2.1. String Methods
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../04/3/Comparison.html">
+     4.3. Comparisons
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../05/Sequences.html">
+   5. Sequences
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/>
+  <label for="toctree-checkbox-11">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../05/1/Arrays.html">
+     5.1. Arrays
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../05/2/Ranges.html">
+     5.2. Ranges
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../05/3/More_on_Arrays.html">
+     5.3. More on Arrays
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../06/Tables.html">
+   6. Tables
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/>
+  <label for="toctree-checkbox-12">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../06/1/Sorting_Rows.html">
+     6.1. Sorting Rows
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../06/2/Selecting_Rows.html">
+     6.2. Selecting Rows
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../06/3/Example_Population_Trends.html">
+     6.3. Example: Population Trends
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../06/4/Example_Sex_Ratios.html">
+     6.4. Example: Sex Ratios
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../07/Visualization.html">
+   7. Visualization
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" type="checkbox"/>
+  <label for="toctree-checkbox-13">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../07/1/Visualizing_Categorical_Distributions.html">
+     7.1. Categorical Distributions
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../07/2/Visualizing_Numerical_Distributions.html">
+     7.2. Numerical Distributions
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../07/3/Overlaid_Graphs.html">
+     7.3. Overlaid Graphs
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../08/Functions_and_Tables.html">
+   8. Functions and Tables
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" type="checkbox"/>
+  <label for="toctree-checkbox-14">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../08/1/Applying_a_Function_to_a_Column.html">
+     8.5. Applying Functions to Columns
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../08/2/Classifying_by_One_Variable.html">
+     8.6. Classifying by One Variable
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../08/3/Cross-Classifying_by_More_than_One_Variable.html">
+     8.7. Cross-Classifying
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../08/4/Joining_Tables_by_Columns.html">
+     8.8. Joining Tables by Columns
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../08/5/Bike_Sharing_in_the_Bay_Area.html">
+     8.9. Bike Sharing in the Bay Area
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../09/Randomness.html">
+   9. Randomness
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" type="checkbox"/>
+  <label for="toctree-checkbox-15">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../09/1/Conditional_Statements.html">
+     9.1. Conditional Statements
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../09/2/Iteration.html">
+     9.2. Iteration
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../09/3/Simulation.html">
+     9.3. Simulation
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../09/4/Monty_Hall_Problem.html">
+     9.4. The Monty Hall Problem
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../09/5/Finding_Probabilities.html">
+     9.5. Finding Probabilities
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../10/Sampling_and_Empirical_Distributions.html">
+   10. Sampling and Empirical Distributions
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-16" name="toctree-checkbox-16" type="checkbox"/>
+  <label for="toctree-checkbox-16">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../10/1/Empirical_Distributions.html">
+     10.1. Empirical Distributions
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../10/2/Sampling_from_a_Population.html">
+     10.2. Sampling from a Population
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../10/3/Empirical_Distribution_of_a_Statistic.html">
+     10.3. Empirical Distibution of a Statistic
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../10/4/Random_Sampling_in_Python.html">
+     10.4. Random Sampling in Python
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../11/Testing_Hypotheses.html">
+   11. Testing Hypotheses
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-17" name="toctree-checkbox-17" type="checkbox"/>
+  <label for="toctree-checkbox-17">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../11/1/Assessing_a_Model.html">
+     11.1. Assessing a Model
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../11/2/Multiple_Categories.html">
+     11.2. Multiple Categories
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../11/3/Decisions_and_Uncertainty.html">
+     11.3. Decisions and Uncertainty
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../11/4/Error_Probabilities.html">
+     11.4. Error Probabilities
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../12/Comparing_Two_Samples.html">
+   12. Comparing Two Samples
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-18" name="toctree-checkbox-18" type="checkbox"/>
+  <label for="toctree-checkbox-18">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../12/1/AB_Testing.html">
+     12.1. A/B Testing
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../12/2/Causality.html">
+     12.2. Causality
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../12/3/Deflategate.html">
+     12.3. Deflategate
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../13/Estimation.html">
+   13. Estimation
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-19" name="toctree-checkbox-19" type="checkbox"/>
+  <label for="toctree-checkbox-19">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../13/1/Percentiles.html">
+     13.1. Percentiles
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../13/2/Bootstrap.html">
+     13.2. The Bootstrap
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../13/3/Confidence_Intervals.html">
+     13.3. Confidence Intervals
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../13/4/Using_Confidence_Intervals.html">
+     13.4. Using Confidence Intervals
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../14/Why_the_Mean_Matters.html">
+   14. Why the Mean Matters
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-20" name="toctree-checkbox-20" type="checkbox"/>
+  <label for="toctree-checkbox-20">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../14/1/Properties_of_the_Mean.html">
+     14.1. Properties of the Mean
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../14/2/Variability.html">
+     14.2. Variability
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../14/3/SD_and_the_Normal_Curve.html">
+     14.3. The SD and the Normal Curve
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../14/4/Central_Limit_Theorem.html">
+     14.4. The Central Limit Theorem
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../14/5/Variability_of_the_Sample_Mean.html">
+     14.5. The Variability of the Sample Mean
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../14/6/Choosing_a_Sample_Size.html">
+     14.6. Choosing a Sample Size
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../15/Prediction.html">
+   15. Prediction
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-21" name="toctree-checkbox-21" type="checkbox"/>
+  <label for="toctree-checkbox-21">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../15/1/Correlation.html">
+     15.1. Correlation
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../15/2/Regression_Line.html">
+     15.2. The Regression Line
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../15/3/Method_of_Least_Squares.html">
+     15.3. The Method of Least Squares
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../15/4/Least_Squares_Regression.html">
+     15.4. Least Squares Regression
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../15/5/Visual_Diagnostics.html">
+     15.5. Visual Diagnostics
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../15/6/Numerical_Diagnostics.html">
+     15.6. Numerical Diagnostics
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../16/Inference_for_Regression.html">
+   16. Inference for Regression
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-22" name="toctree-checkbox-22" type="checkbox"/>
+  <label for="toctree-checkbox-22">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../16/1/Regression_Model.html">
+     16.1. A Regression Model
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../16/2/Inference_for_the_True_Slope.html">
+     16.2. Inference for the True Slope
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../16/3/Prediction_Intervals.html">
+     16.3. Prediction Intervals
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../17/Classification.html">
+   17. Classification
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-23" name="toctree-checkbox-23" type="checkbox"/>
+  <label for="toctree-checkbox-23">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../17/1/Nearest_Neighbors.html">
+     17.1. Nearest Neighbors
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../17/2/Training_and_Testing.html">
+     17.2. Training and Testing
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../17/3/Rows_of_Tables.html">
+     17.3. Rows of Tables
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../17/4/Implementing_the_Classifier.html">
+     17.4. Implementing the Classifier
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../17/5/Accuracy_of_the_Classifier.html">
+     17.5. The Accuracy of the Classifier
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../17/6/Multiple_Regression.html">
+     17.6. Multiple Regression
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../18/Updating_Predictions.html">
+   18. Updating Predictions
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-24" name="toctree-checkbox-24" type="checkbox"/>
+  <label for="toctree-checkbox-24">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../18/1/More_Likely_than_Not_Binary_Classifier.html">
+     18.1. A "More Likely Than Not" Binary Classifier
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../18/2/Making_Decisions.html">
+     18.2. Making Decisions
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../../_sources/chapters/00/12/03-bio.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/Cloudedu-Osaka/textbook"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/Cloudedu-Osaka/textbook/main?urlpath=tree/chapters/00/12/03-bio.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../../../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        <a class="jupyterhub-button" href="https://cloudedu-jhub.japaneast.cloudapp.azure.com/hub/user-redirect/git-pull?repo=https://github.com/Cloudedu-Osaka/textbook&urlpath=tree/textbook/chapters/00/12/03-bio.ipynb&branch=main"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch JupyterHub" data-toggle="tooltip"
+                data-placement="left"><img class="jupyterhub-button-logo"
+                    src="../../../_static/images/logo_jupyterhub.svg"
+                    alt="Interact on JupyterHub">JupyterHub</button></a>
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   Central dogma
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#replication">
+   Replication
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#dnapcr-polymerase-chain-reaction">
+     DNAポリメラーゼとPCR (Polymerase Chain Reaction)
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#origin-of-replication">
+     Origin of replication
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#oric-origin-of-chromosome">
+       oriC (origin of Chromosome)
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#dnaa-box-9-mers">
+     DnaA-box (9-mers)
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#due-l-m-r-13-mers">
+       DUE-L,M,R (13-mers)
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Central dogma</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   Central dogma
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#replication">
+   Replication
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#dnapcr-polymerase-chain-reaction">
+     DNAポリメラーゼとPCR (Polymerase Chain Reaction)
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#origin-of-replication">
+     Origin of replication
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#oric-origin-of-chromosome">
+       oriC (origin of Chromosome)
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#dnaa-box-9-mers">
+     DnaA-box (9-mers)
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#due-l-m-r-13-mers">
+       DUE-L,M,R (13-mers)
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <div class="cell tag_remove-input docutils container">
+</div>
+<div class="tex2jax_ignore mathjax_ignore section" id="central-dogma">
+<h1>Central dogma<a class="headerlink" href="#central-dogma" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Central_dogma_of_molecular_biology">Central dogma of molecular biology - Wikipedia</a></p>
+<ul>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/DNA_replication">DNA replication - Wikipedia</a> (複製)</p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Transcription_%28biology%29">Transcription (biology) - Wikipedia</a> (転写)</p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Translation_%28biology%29#:~:text=In%20molecular%20biology%20and%20genetics,process%20is%20called%20gene%20expression.">Translation (biology) - Wikipedia</a> (翻訳)</p></li>
+</ul>
+</li>
+</ul>
+<p><img alt="fig-4" src="https://upload.wikimedia.org/wikipedia/commons/6/68/Central_Dogma_of_Molecular_Biochemistry_with_Enzymes.jpg" /></p>
+</div>
+<div class="tex2jax_ignore mathjax_ignore section" id="replication">
+<h1>Replication<a class="headerlink" href="#replication" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li><p>DNA</p>
+<ul>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/DNA_replication">DNA replication - Wikipedia</a></p>
+<ul>
+<li><p><a class="reference external" href="https://pdb101.rcsb.org/motm/3#:~:text=DNA%20polymerase%20plays%20the%20central,copy%20to%20each%20daughter%20cell.">PDB-101: Molecule of the Month: DNA Polymerase</a></p>
+<ul>
+<li><p><a class="reference external" href="https://catalog.takara-bio.co.jp/product/basic_info.php?unitid=U100003181">TaKaRa Taq｜タカラバイオ株式会社</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/DNA_polymerase">DNA polymerase - Wikipedia</a></p></li>
+<li><p>Chain reaction</p>
+<ul>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Polymerase_chain_reaction">Polymerase chain reaction - Wikipedia</a></p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>Chromosome (Cell nucleus, Cell)</p>
+<ul>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Chromatid">Chromatid - Wikipedia</a>, <a class="reference external" href="https://en.wikipedia.org/wiki/Sister_chromatids">Sister chromatids - Wikipedia</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Cell_division">Cell division - Wikipedia</a></p>
+<ul>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Mitosis">Mitosis - Wikipedia</a> (有糸分裂)</p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Meiosis">Meiosis - Wikipedia</a> (減数分裂)</p></li>
+</ul>
+</li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Chromosomal_crossover">Chromosomal crossover - Wikipedia</a></p></li>
+</ul>
+</li>
+</ul>
+<div class="section" id="dnapcr-polymerase-chain-reaction">
+<h2>DNAポリメラーゼとPCR (Polymerase Chain Reaction)<a class="headerlink" href="#dnapcr-polymerase-chain-reaction" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://pdb101.rcsb.org/motm/3">PDB-101: Molecule of the Month: DNA Polymerase</a></p></li>
+<li><p><a class="reference external" href="https://numon.pdbj.org/mom/003?lang=ja&amp;l=ja">DNAポリメラーゼ (DNA Polymerase) | 今月の分子 | PDBj 入門</a></p>
+<ul>
+<li><p>“A small sample of DNA is multiplied using PCR (the polymerase chain reaction), creating a large sample that may be easily analyzed. “</p>
+<ul>
+<li><p>“The tiny sample is placed in a test tube, and DNA polymerase is added to make a copy. “</p></li>
+<li><p>“Then the sample is heated up momentarily, and the two strands of DNA separate. Then DNA polymerase builds a new double helix from each strand.”</p></li>
+<li><p>“These two copies are then heated, and duplicated, yielding four copies. After repeating this many times, many identical DNA strands are produced.</p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p><img alt="fig-10" src="https://cdn.rcsb.org/pdb101/motm/3/1tau.gif" /></p>
+</div>
+<div class="section" id="origin-of-replication">
+<h2>Origin of replication<a class="headerlink" href="#origin-of-replication" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Origin_of_replication">Origin of replication - Wikipedia</a></p></li>
+</ul>
+<div class="section" id="oric-origin-of-chromosome">
+<h3>oriC (origin of Chromosome)<a class="headerlink" href="#oric-origin-of-chromosome" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><a class="reference external" href="https://www.brh.co.jp/publication/journal/031/ss_3">Special Story バクテリアゲノムの複製開始点 | JT生命誌研究館</a></p></li>
+</ul>
+<p><img alt="fig-1" src="https://upload.wikimedia.org/wikipedia/commons/6/61/Origins_of_DNA_replication_Figure_2.jpg" /></p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/DNA_unwinding_element">DNA unwinding element - Wikipedia</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/DnaA">DnaA - Wikipedia</a></p>
+<ul>
+<li><p>“9-mer”</p></li>
+<li><p>“13-mer” in DUE</p></li>
+</ul>
+</li>
+<li><p><a class="reference external" href="https://www.frontiersin.org/articles/10.3389/fmicb.2017.02496/full">Frontiers | The DnaA Cycle in Escherichia coli: Activation, Function and Inactivation of the Initiator Protein</a></p></li>
+</ul>
+<ul class="simple">
+<li><p>EcoCyc</p>
+<ul>
+<li><p><a class="reference external" href="https://ecocyc.org/ECOLI/NEW-IMAGE?type=EXTRAGENIC-SITE&amp;object=G0-10506">Escherichia coli K-12 substr. MG1655 oriC</a></p></li>
+<li><p><a class="reference external" href="https://ecocyc.org/gene?orgid=ECOLI&amp;id=MONOMER0-160">Escherichia coli K-12 substr. MG1655 DnaA-ATP DNA-binding transcriptional dual regulator</a></p></li>
+</ul>
+</li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">gzip</span>
+<span class="kn">from</span> <span class="nn">urllib.request</span> <span class="kn">import</span> <span class="n">urlopen</span>
+<span class="kn">from</span> <span class="nn">io</span> <span class="kn">import</span> <span class="n">StringIO</span>
+
+<span class="n">res</span> <span class="o">=</span> <span class="n">urlopen</span><span class="p">(</span><span class="s2">&quot;https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/005/845/GCF_000005845.2_ASM584v2/GCF_000005845.2_ASM584v2_genomic.fna.gz&quot;</span><span class="p">)</span>
+<span class="n">sio</span> <span class="o">=</span> <span class="n">StringIO</span><span class="p">(</span><span class="n">gzip</span><span class="o">.</span><span class="n">decompress</span><span class="p">(</span><span class="n">res</span><span class="o">.</span><span class="n">read</span><span class="p">())</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s2">&quot;utf-8&quot;</span><span class="p">))</span>
+
+<span class="kn">from</span> <span class="nn">Bio</span> <span class="kn">import</span> <span class="n">SeqIO</span>
+<span class="kn">from</span> <span class="nn">Bio.Seq</span> <span class="kn">import</span> <span class="n">Seq</span>
+<span class="n">seq</span> <span class="o">=</span> <span class="n">SeqIO</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="n">sio</span><span class="p">,</span> <span class="s2">&quot;fasta&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># only one sequence</span>
+<span class="n">seq0</span> <span class="o">=</span> <span class="nb">next</span><span class="p">(</span><span class="n">seq</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">seq0</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>SeqRecord(seq=Seq(&#39;AGCTTTTCATTCTGACTGCAACGGGCAATATGTCTCTGTGTGGATTAAAAAAAG...TTC&#39;), id=&#39;NC_000913.3&#39;, name=&#39;NC_000913.3&#39;, description=&#39;NC_000913.3 Escherichia coli str. K-12 substr. MG1655, complete genome&#39;, dbxrefs=[])
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">oriC</span><span class="o">=</span><span class="nb">str</span><span class="p">(</span><span class="n">seq0</span><span class="o">.</span><span class="n">seq</span><span class="p">)[</span><span class="mi">3925743</span><span class="p">:</span><span class="mi">3925975</span><span class="p">]</span>
+<span class="n">oriC</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;GATCTATTTATTTAGAGATCTGTTCTATTGTGATCTCTTATTAGGATCGCACTGCCCTGTGGATAACAAGGATCCGGCTTTTAAGATCAACAACCTGGAAAGGATCATTAACTGTGAATGATCGGTGATCCTGGACCGTATAAGCTGGGATCAGAATGAGGGGTTATACACAACTCAAAAACTGAACAACAGTTGTTCTTTGGATAACTACCGGTTGATCCAAGCTTCCTGA&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">len</span><span class="p">(</span><span class="n">oriC</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>232
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="dnaa-box-9-mers">
+<h2>DnaA-box (9-mers)<a class="headerlink" href="#dnaa-box-9-mers" title="Permalink to this headline">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">difflib</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># complement</span>
+<span class="n">box</span> <span class="o">=</span> <span class="s2">&quot;TTATCCACA&quot;</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">oriC</span><span class="p">)</span><span class="o">-</span><span class="mi">9</span><span class="p">):</span>
+    <span class="n">frg</span> <span class="o">=</span> <span class="n">Seq</span><span class="p">(</span><span class="n">oriC</span><span class="p">[</span><span class="n">i</span><span class="p">:</span><span class="n">i</span><span class="o">+</span><span class="mi">9</span><span class="p">])</span>
+    <span class="n">rtp</span> <span class="o">=</span> <span class="n">difflib</span><span class="o">.</span><span class="n">SequenceMatcher</span><span class="p">(</span><span class="kc">None</span><span class="p">,</span> <span class="n">box</span><span class="p">,</span> <span class="n">frg</span><span class="p">)</span><span class="o">.</span><span class="n">ratio</span><span class="p">()</span>
+    <span class="n">rtm</span> <span class="o">=</span> <span class="n">difflib</span><span class="o">.</span><span class="n">SequenceMatcher</span><span class="p">(</span><span class="kc">None</span><span class="p">,</span> <span class="n">box</span><span class="p">,</span> <span class="n">frg</span><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span><span class="o">.</span><span class="n">ratio</span><span class="p">()</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">frg</span><span class="p">,</span> <span class="s2">&quot;</span><span class="si">{:.2f}</span><span class="s2"> </span><span class="si">{:.2f}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">rtm</span><span class="p">,</span><span class="n">rtp</span><span class="p">),</span> <span class="n">end</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">{:&gt;10s}</span><span class="s2">|</span><span class="si">{:&lt;10s}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="s1">&#39;=&#39;</span><span class="o">*</span><span class="nb">int</span><span class="p">(</span><span class="n">rtm</span><span class="o">*</span><span class="mi">10</span><span class="p">),</span><span class="s1">&#39;=&#39;</span><span class="o">*</span><span class="nb">int</span><span class="p">(</span><span class="n">rtp</span><span class="o">*</span><span class="mi">10</span><span class="p">)),</span> <span class="n">end</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
+    <span class="n">rtp</span> <span class="o">=</span> <span class="n">difflib</span><span class="o">.</span><span class="n">SequenceMatcher</span><span class="p">(</span><span class="kc">None</span><span class="p">,</span> <span class="n">Seq</span><span class="p">(</span><span class="n">box</span><span class="p">)</span><span class="o">.</span><span class="n">complement</span><span class="p">(),</span> <span class="n">frg</span><span class="p">)</span><span class="o">.</span><span class="n">ratio</span><span class="p">()</span>
+    <span class="n">rtm</span> <span class="o">=</span> <span class="n">difflib</span><span class="o">.</span><span class="n">SequenceMatcher</span><span class="p">(</span><span class="kc">None</span><span class="p">,</span> <span class="n">Seq</span><span class="p">(</span><span class="n">box</span><span class="p">)</span><span class="o">.</span><span class="n">complement</span><span class="p">(),</span> <span class="n">frg</span><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span><span class="o">.</span><span class="n">ratio</span><span class="p">()</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">{:.2f}</span><span class="s2"> </span><span class="si">{:.2f}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">rtm</span><span class="p">,</span><span class="n">rtp</span><span class="p">),</span> <span class="n">end</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">{:&gt;10s}</span><span class="s2">|</span><span class="si">{:&lt;10s}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="s1">&#39;=&#39;</span><span class="o">*</span><span class="nb">int</span><span class="p">(</span><span class="n">rtm</span><span class="o">*</span><span class="mi">10</span><span class="p">),</span><span class="s1">&#39;=&#39;</span><span class="o">*</span><span class="nb">int</span><span class="p">(</span><span class="n">rtp</span><span class="o">*</span><span class="mi">10</span><span class="p">)))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>GATCTATTT 0.67 0.44    ======|====      0.44 0.56      ====|=====     
+ATCTATTTA 0.67 0.33    ======|===       0.56 0.56     =====|=====     
+TCTATTTAT 0.56 0.44     =====|====      0.56 0.44     =====|====      
+CTATTTATT 0.56 0.44     =====|====      0.44 0.56      ====|=====     
+TATTTATTT 0.56 0.44     =====|====      0.44 0.56      ====|=====     
+ATTTATTTA 0.56 0.56     =====|=====     0.56 0.56     =====|=====     
+TTTATTTAG 0.44 0.56      ====|=====     0.56 0.44     =====|====      
+TTATTTAGA 0.44 0.67      ====|======    0.67 0.44    ======|====      
+TATTTAGAG 0.44 0.44      ====|====      0.56 0.56     =====|=====     
+ATTTAGAGA 0.33 0.56       ===|=====     0.44 0.56      ====|=====     
+TTTAGAGAT 0.33 0.44       ===|====      0.67 0.56    ======|=====     
+TTAGAGATC 0.22 0.56        ==|=====     0.67 0.56    ======|=====     
+TAGAGATCT 0.44 0.44      ====|====      0.56 0.67     =====|======    
+AGAGATCTG 0.56 0.33     =====|===       0.44 0.56      ====|=====     
+GAGATCTGT 0.44 0.33      ====|===       0.44 0.67      ====|======    
+AGATCTGTT 0.67 0.33    ======|===       0.33 0.67       ===|======    
+GATCTGTTC 0.56 0.44     =====|====      0.33 0.56       ===|=====     
+ATCTGTTCT 0.56 0.44     =====|====      0.44 0.56      ====|=====     
+TCTGTTCTA 0.44 0.33      ====|===       0.56 0.44     =====|====      
+CTGTTCTAT 0.56 0.44     =====|====      0.56 0.33     =====|===       
+TGTTCTATT 0.56 0.44     =====|====      0.56 0.33     =====|===       
+GTTCTATTG 0.56 0.44     =====|====      0.44 0.44      ====|====      
+TTCTATTGT 0.56 0.44     =====|====      0.33 0.56       ===|=====     
+TCTATTGTG 0.56 0.44     =====|====      0.44 0.56      ====|=====     
+CTATTGTGA 0.56 0.44     =====|====      0.56 0.56     =====|=====     
+TATTGTGAT 0.44 0.44      ====|====      0.67 0.67    ======|======    
+ATTGTGATC 0.33 0.56       ===|=====     0.67 0.67    ======|======    
+TTGTGATCT 0.22 0.56        ==|=====     0.67 0.56    ======|=====     
+TGTGATCTC 0.44 0.67      ====|======    0.67 0.56    ======|=====     
+GTGATCTCT 0.44 0.56      ====|=====     0.56 0.44     =====|====      
+TGATCTCTT 0.56 0.56     =====|=====     0.44 0.44      ====|====      
+GATCTCTTA 0.56 0.33     =====|===       0.44 0.33      ====|===       
+ATCTCTTAT 0.67 0.44    ======|====      0.33 0.44       ===|====      
+TCTCTTATT 0.67 0.44    ======|====      0.44 0.33      ====|===       
+CTCTTATTA 0.67 0.56    ======|=====     0.56 0.33     =====|===       
+TCTTATTAG 0.56 0.56     =====|=====     0.56 0.44     =====|====      
+CTTATTAGG 0.56 0.56     =====|=====     0.56 0.56     =====|=====     
+TTATTAGGA 0.44 0.67      ====|======    0.56 0.56     =====|=====     
+TATTAGGAT 0.44 0.44      ====|====      0.67 0.67    ======|======    
+ATTAGGATC 0.33 0.56       ===|=====     0.67 0.67    ======|======    
+TTAGGATCG 0.22 0.56        ==|=====     0.67 0.67    ======|======    
+TAGGATCGC 0.33 0.56       ===|=====     0.56 0.67     =====|======    
+AGGATCGCA 0.33 0.56       ===|=====     0.56 0.56     =====|=====     
+GGATCGCAC 0.44 0.67      ====|======    0.56 0.33     =====|===       
+GATCGCACT 0.56 0.67     =====|======    0.44 0.44      ====|====      
+ATCGCACTG 0.56 0.67     =====|======    0.33 0.56       ===|=====     
+TCGCACTGC 0.44 0.56      ====|=====     0.44 0.33      ====|===       
+CGCACTGCC 0.44 0.44      ====|====      0.33 0.33       ===|===       
+GCACTGCCC 0.44 0.33      ====|===       0.33 0.33       ===|===       
+CACTGCCCT 0.56 0.33     =====|===       0.33 0.44       ===|====      
+ACTGCCCTG 0.56 0.44     =====|====      0.44 0.44      ====|====      
+CTGCCCTGT 0.56 0.44     =====|====      0.33 0.56       ===|=====     
+TGCCCTGTG 0.56 0.44     =====|====      0.44 0.56      ====|=====     
+GCCCTGTGG 0.56 0.33     =====|===       0.56 0.44     =====|====      
+CCCTGTGGA 0.56 0.33     =====|===       0.67 0.44    ======|====      
+CCTGTGGAT 0.56 0.44     =====|====      0.78 0.56   =======|=====     
+CTGTGGATA 0.44 0.33      ====|===       0.89 0.33  ========|===       
+TGTGGATAA 0.33 0.44       ===|====      1.00 0.33==========|===       
+GTGGATAAC 0.33 0.56       ===|=====     0.89 0.33  ========|===       
+TGGATAACA 0.33 0.67       ===|======    0.78 0.33   =======|===       
+GGATAACAA 0.44 0.56      ====|=====     0.67 0.33    ======|===       
+GATAACAAG 0.44 0.56      ====|=====     0.56 0.44     =====|====      
+ATAACAAGG 0.44 0.56      ====|=====     0.44 0.56      ====|=====     
+TAACAAGGA 0.44 0.56      ====|=====     0.33 0.56       ===|=====     
+AACAAGGAT 0.56 0.44     =====|====      0.44 0.67      ====|======    
+ACAAGGATC 0.56 0.33     =====|===       0.44 0.67      ====|======    
+CAAGGATCC 0.44 0.44      ====|====      0.44 0.56      ====|=====     
+AAGGATCCG 0.44 0.44      ====|====      0.44 0.67      ====|======    
+AGGATCCGG 0.33 0.44       ===|====      0.44 0.56      ====|=====     
+GGATCCGGC 0.22 0.56        ==|=====     0.44 0.44      ====|====      
+GATCCGGCT 0.33 0.56       ===|=====     0.33 0.56       ===|=====     
+ATCCGGCTT 0.56 0.56     =====|=====     0.22 0.67        ==|======    
+TCCGGCTTT 0.67 0.44    ======|====      0.44 0.56      ====|=====     
+CCGGCTTTT 0.67 0.33    ======|===       0.33 0.44       ===|====      
+CGGCTTTTA 0.56 0.33     =====|===       0.44 0.22      ====|==        
+GGCTTTTAA 0.44 0.44      ====|====      0.56 0.22     =====|==        
+GCTTTTAAG 0.44 0.44      ====|====      0.44 0.33      ====|===       
+CTTTTAAGA 0.44 0.56      ====|=====     0.56 0.33     =====|===       
+TTTTAAGAT 0.33 0.44       ===|====      0.56 0.33     =====|===       
+TTTAAGATC 0.33 0.56       ===|=====     0.56 0.33     =====|===       
+TTAAGATCA 0.22 0.67        ==|======    0.44 0.44      ====|====      
+TAAGATCAA 0.33 0.67       ===|======    0.33 0.44       ===|====      
+AAGATCAAC 0.44 0.56      ====|=====     0.56 0.44     =====|====      
+AGATCAACA 0.33 0.67       ===|======    0.56 0.33     =====|===       
+GATCAACAA 0.44 0.67      ====|======    0.56 0.33     =====|===       
+ATCAACAAC 0.44 0.67      ====|======    0.44 0.33      ====|===       
+TCAACAACC 0.56 0.56     =====|=====     0.33 0.33       ===|===       
+CAACAACCT 0.67 0.44    ======|====      0.33 0.33       ===|===       
+AACAACCTG 0.67 0.44    ======|====      0.33 0.56       ===|=====     
+ACAACCTGG 0.67 0.33    ======|===       0.33 0.56       ===|=====     
+CAACCTGGA 0.67 0.44    ======|====      0.44 0.56      ====|=====     
+AACCTGGAA 0.67 0.56    ======|=====     0.56 0.56     =====|=====     
+ACCTGGAAA 0.56 0.56     =====|=====     0.67 0.33    ======|===       
+CCTGGAAAG 0.44 0.44      ====|====      0.67 0.44    ======|====      
+CTGGAAAGG 0.33 0.44       ===|====      0.67 0.56    ======|=====     
+TGGAAAGGA 0.11 0.44         =|====      0.67 0.56    ======|=====     
+GGAAAGGAT 0.44 0.22      ====|==        0.56 0.67     =====|======    
+GAAAGGATC 0.44 0.33      ====|===       0.56 0.67     =====|======    
+AAAGGATCA 0.44 0.44      ====|====      0.56 0.67     =====|======    
+AAGGATCAT 0.56 0.44     =====|====      0.56 0.67     =====|======    
+AGGATCATT 0.67 0.44    ======|====      0.56 0.56     =====|=====     
+GGATCATTA 0.56 0.33     =====|===       0.67 0.56    ======|=====     
+GATCATTAA 0.56 0.44     =====|====      0.56 0.22     =====|==        
+ATCATTAAC 0.56 0.56     =====|=====     0.56 0.22     =====|==        
+TCATTAACT 0.44 0.56      ====|=====     0.56 0.33     =====|===       
+CATTAACTG 0.44 0.56      ====|=====     0.44 0.44      ====|====      
+ATTAACTGT 0.33 0.56       ===|=====     0.44 0.56      ====|=====     
+TTAACTGTG 0.22 0.56        ==|=====     0.44 0.67      ====|======    
+TAACTGTGA 0.44 0.56      ====|=====     0.56 0.67     =====|======    
+AACTGTGAA 0.56 0.44     =====|====      0.67 0.67    ======|======    
+ACTGTGAAT 0.56 0.44     =====|====      0.67 0.33    ======|===       
+CTGTGAATG 0.44 0.44      ====|====      0.67 0.44    ======|====      
+TGTGAATGA 0.33 0.56       ===|=====     0.67 0.44    ======|====      
+GTGAATGAT 0.56 0.44     =====|====      0.67 0.56    ======|=====     
+TGAATGATC 0.56 0.56     =====|=====     0.56 0.56     =====|=====     
+GAATGATCG 0.56 0.44     =====|====      0.44 0.56      ====|=====     
+AATGATCGG 0.56 0.44     =====|====      0.44 0.67      ====|======    
+ATGATCGGT 0.56 0.44     =====|====      0.44 0.67      ====|======    
+TGATCGGTG 0.44 0.44      ====|====      0.44 0.67      ====|======    
+GATCGGTGA 0.33 0.44       ===|====      0.44 0.67      ====|======    
+ATCGGTGAT 0.56 0.44     =====|====      0.67 0.78    ======|=======   
+TCGGTGATC 0.44 0.56      ====|=====     0.67 0.67    ======|======    
+CGGTGATCC 0.44 0.56      ====|=====     0.56 0.56     =====|=====     
+GGTGATCCT 0.44 0.56      ====|=====     0.56 0.56     =====|=====     
+GTGATCCTG 0.44 0.56      ====|=====     0.56 0.44     =====|====      
+TGATCCTGG 0.44 0.56      ====|=====     0.44 0.44      ====|====      
+GATCCTGGA 0.56 0.56     =====|=====     0.56 0.44     =====|====      
+ATCCTGGAC 0.56 0.67     =====|======    0.56 0.44     =====|====      
+TCCTGGACC 0.44 0.56      ====|=====     0.56 0.33     =====|===       
+CCTGGACCG 0.44 0.44      ====|====      0.44 0.44      ====|====      
+CTGGACCGT 0.56 0.44     =====|====      0.56 0.56     =====|=====     
+TGGACCGTA 0.56 0.33     =====|===       0.67 0.33    ======|===       
+GGACCGTAT 0.67 0.33    ======|===       0.56 0.33     =====|===       
+GACCGTATA 0.67 0.44    ======|====      0.56 0.44     =====|====      
+ACCGTATAA 0.67 0.56    ======|=====     0.67 0.44    ======|====      
+CCGTATAAG 0.56 0.56     =====|=====     0.67 0.44    ======|====      
+CGTATAAGC 0.44 0.44      ====|====      0.67 0.44    ======|====      
+GTATAAGCT 0.44 0.44      ====|====      0.67 0.56    ======|=====     
+TATAAGCTG 0.44 0.44      ====|====      0.56 0.67     =====|======    
+ATAAGCTGG 0.33 0.33       ===|===       0.44 0.56      ====|=====     
+TAAGCTGGG 0.33 0.33       ===|===       0.33 0.67       ===|======    
+AAGCTGGGA 0.56 0.22     =====|==        0.56 0.67     =====|======    
+AGCTGGGAT 0.56 0.33     =====|===       0.67 0.33    ======|===       
+GCTGGGATC 0.44 0.44      ====|====      0.67 0.22    ======|==        
+CTGGGATCA 0.44 0.56      ====|=====     0.78 0.33   =======|===       
+TGGGATCAG 0.33 0.56       ===|=====     0.78 0.44   =======|====      
+GGGATCAGA 0.22 0.56        ==|=====     0.78 0.44   =======|====      
+GGATCAGAA 0.22 0.56        ==|=====     0.67 0.22    ======|==        
+GATCAGAAT 0.56 0.56     =====|=====     0.56 0.33     =====|===       
+ATCAGAATG 0.56 0.56     =====|=====     0.44 0.44      ====|====      
+TCAGAATGA 0.44 0.44      ====|====      0.33 0.44       ===|====      
+CAGAATGAG 0.44 0.33      ====|===       0.33 0.56       ===|=====     
+AGAATGAGG 0.44 0.33      ====|===       0.33 0.67       ===|======    
+GAATGAGGG 0.33 0.33       ===|===       0.33 0.78       ===|=======   
+AATGAGGGG 0.33 0.33       ===|===       0.22 0.78        ==|=======   
+ATGAGGGGT 0.33 0.33       ===|===       0.33 0.78       ===|=======   
+TGAGGGGTT 0.44 0.22      ====|==        0.44 0.67      ====|======    
+GAGGGGTTA 0.33 0.33       ===|===       0.44 0.56      ====|=====     
+AGGGGTTAT 0.44 0.44      ====|====      0.56 0.56     =====|=====     
+GGGGTTATA 0.33 0.56       ===|=====     0.67 0.33    ======|===       
+GGGTTATAC 0.33 0.67       ===|======    0.67 0.33    ======|===       
+GGTTATACA 0.33 0.78       ===|=======   0.67 0.33    ======|===       
+GTTATACAC 0.44 0.78      ====|=======   0.67 0.33    ======|===       
+TTATACACA 0.56 0.89     =====|========  0.67 0.33    ======|===       
+TATACACAA 0.56 0.78     =====|=======   0.56 0.33     =====|===       
+ATACACAAC 0.56 0.67     =====|======    0.44 0.33      ====|===       
+TACACAACT 0.67 0.67    ======|======    0.33 0.33       ===|===       
+ACACAACTC 0.67 0.56    ======|=====     0.33 0.33       ===|===       
+CACAACTCA 0.67 0.44    ======|====      0.33 0.44       ===|====      
+ACAACTCAA 0.67 0.33    ======|===       0.44 0.44      ====|====      
+CAACTCAAA 0.56 0.56     =====|=====     0.44 0.44      ====|====      
+AACTCAAAA 0.56 0.56     =====|=====     0.44 0.44      ====|====      
+ACTCAAAAA 0.44 0.56      ====|=====     0.44 0.33      ====|===       
+CTCAAAAAC 0.33 0.44       ===|====      0.33 0.33       ===|===       
+TCAAAAACT 0.44 0.44      ====|====      0.33 0.33       ===|===       
+CAAAAACTG 0.44 0.33      ====|===       0.33 0.56       ===|=====     
+AAAAACTGA 0.56 0.44     =====|====      0.33 0.56       ===|=====     
+AAAACTGAA 0.56 0.44     =====|====      0.44 0.56      ====|=====     
+AAACTGAAC 0.56 0.44     =====|====      0.44 0.56      ====|=====     
+AACTGAACA 0.33 0.56       ===|=====     0.44 0.44      ====|====      
+ACTGAACAA 0.44 0.56      ====|=====     0.56 0.33     =====|===       
+CTGAACAAC 0.44 0.56      ====|=====     0.56 0.33     =====|===       
+TGAACAACA 0.33 0.56       ===|=====     0.56 0.33     =====|===       
+GAACAACAG 0.33 0.44       ===|====      0.44 0.44      ====|====      
+AACAACAGT 0.44 0.44      ====|====      0.33 0.56       ===|=====     
+ACAACAGTT 0.56 0.33     =====|===       0.33 0.67       ===|======    
+CAACAGTTG 0.56 0.44     =====|====      0.22 0.67        ==|======    
+AACAGTTGT 0.56 0.44     =====|====      0.33 0.78       ===|=======   
+ACAGTTGTT 0.67 0.33    ======|===       0.44 0.67      ====|======    
+CAGTTGTTC 0.56 0.44     =====|====      0.44 0.56      ====|=====     
+AGTTGTTCT 0.33 0.44       ===|====      0.44 0.56      ====|=====     
+GTTGTTCTT 0.33 0.44       ===|====      0.44 0.44      ====|====      
+TTGTTCTTT 0.44 0.44      ====|====      0.44 0.44      ====|====      
+TGTTCTTTG 0.44 0.33      ====|===       0.44 0.33      ====|===       
+GTTCTTTGG 0.44 0.33      ====|===       0.44 0.33      ====|===       
+TTCTTTGGA 0.44 0.33      ====|===       0.56 0.33     =====|===       
+TCTTTGGAT 0.44 0.44      ====|====      0.67 0.22    ======|==        
+CTTTGGATA 0.44 0.56      ====|=====     0.78 0.33   =======|===       
+TTTGGATAA 0.33 0.67       ===|======    0.89 0.33  ========|===       
+TTGGATAAC 0.22 0.67        ==|======    0.89 0.33  ========|===       
+TGGATAACT 0.44 0.56      ====|=====     0.78 0.44   =======|====      
+GGATAACTA 0.56 0.56     =====|=====     0.67 0.44    ======|====      
+GATAACTAC 0.56 0.56     =====|=====     0.56 0.44     =====|====      
+ATAACTACC 0.56 0.56     =====|=====     0.44 0.44      ====|====      
+TAACTACCG 0.56 0.56     =====|=====     0.33 0.56       ===|=====     
+AACTACCGG 0.56 0.44     =====|====      0.22 0.67        ==|======    
+ACTACCGGT 0.56 0.44     =====|====      0.33 0.67       ===|======    
+CTACCGGTT 0.56 0.22     =====|==        0.22 0.67        ==|======    
+TACCGGTTG 0.56 0.22     =====|==        0.22 0.67        ==|======    
+ACCGGTTGA 0.56 0.33     =====|===       0.44 0.56      ====|=====     
+CCGGTTGAT 0.44 0.44      ====|====      0.56 0.56     =====|=====     
+CGGTTGATC 0.33 0.56       ===|=====     0.56 0.56     =====|=====     
+GGTTGATCC 0.22 0.67        ==|======    0.56 0.56     =====|=====     
+GTTGATCCA 0.22 0.78        ==|=======   0.67 0.33    ======|===       
+TTGATCCAA 0.22 0.89        ==|========  0.78 0.22   =======|==        
+TGATCCAAG 0.33 0.78       ===|=======   0.67 0.33    ======|===       
+GATCCAAGC 0.22 0.67        ==|======    0.56 0.33     =====|===       
+ATCCAAGCT 0.33 0.67       ===|======    0.44 0.33      ====|===       
+TCCAAGCTT 0.56 0.56     =====|=====     0.33 0.44       ===|====      
+CCAAGCTTC 0.56 0.44     =====|====      0.22 0.44        ==|====      
+CAAGCTTCC 0.56 0.44     =====|====      0.22 0.44        ==|====      
+AAGCTTCCT 0.56 0.44     =====|====      0.22 0.56        ==|=====     
+AGCTTCCTG 0.44 0.44      ====|====      0.33 0.44       ===|====      
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="due-l-m-r-13-mers">
+<h3>DUE-L,M,R (13-mers)<a class="headerlink" href="#due-l-m-r-13-mers" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#box = &quot;GATCTATTTATTT&quot;</span>
+<span class="c1">#box = &quot;GATCTGTTCTATT&quot;</span>
+<span class="n">box</span> <span class="o">=</span>  <span class="s2">&quot;GATCTCTTATTAG&quot;</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">oriC</span><span class="p">)</span><span class="o">-</span><span class="mi">13</span><span class="p">):</span>
+    <span class="n">frg</span> <span class="o">=</span> <span class="n">Seq</span><span class="p">(</span><span class="n">oriC</span><span class="p">[</span><span class="n">i</span><span class="p">:</span><span class="n">i</span><span class="o">+</span><span class="mi">13</span><span class="p">])</span>
+    <span class="n">rtp</span> <span class="o">=</span> <span class="n">difflib</span><span class="o">.</span><span class="n">SequenceMatcher</span><span class="p">(</span><span class="kc">None</span><span class="p">,</span> <span class="n">box</span><span class="p">,</span> <span class="n">frg</span><span class="p">)</span><span class="o">.</span><span class="n">ratio</span><span class="p">()</span>
+    <span class="n">rtm</span> <span class="o">=</span> <span class="n">difflib</span><span class="o">.</span><span class="n">SequenceMatcher</span><span class="p">(</span><span class="kc">None</span><span class="p">,</span> <span class="n">box</span><span class="p">,</span> <span class="n">frg</span><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span><span class="o">.</span><span class="n">ratio</span><span class="p">()</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">frg</span><span class="p">,</span> <span class="s2">&quot;</span><span class="si">{:.2f}</span><span class="s2"> </span><span class="si">{:.2f}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">rtm</span><span class="p">,</span><span class="n">rtp</span><span class="p">),</span> <span class="n">end</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">{:&gt;10s}</span><span class="s2">|</span><span class="si">{:&lt;10s}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="s1">&#39;=&#39;</span><span class="o">*</span><span class="nb">int</span><span class="p">(</span><span class="n">rtm</span><span class="o">*</span><span class="mi">10</span><span class="p">),</span><span class="s1">&#39;=&#39;</span><span class="o">*</span><span class="nb">int</span><span class="p">(</span><span class="n">rtp</span><span class="o">*</span><span class="mi">10</span><span class="p">)),</span> <span class="n">end</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>GATCTATTTATTT 0.62 0.77    ======|=======   
+ATCTATTTATTTA 0.62 0.77    ======|=======   
+TCTATTTATTTAG 0.69 0.77    ======|=======   
+CTATTTATTTAGA 0.69 0.69    ======|======    
+TATTTATTTAGAG 0.69 0.69    ======|======    
+ATTTATTTAGAGA 0.69 0.69    ======|======    
+TTTATTTAGAGAT 0.62 0.62    ======|======    
+TTATTTAGAGATC 0.62 0.54    ======|=====     
+TATTTAGAGATCT 0.54 0.38     =====|===       
+ATTTAGAGATCTG 0.46 0.46      ====|====      
+TTTAGAGATCTGT 0.38 0.46       ===|====      
+TTAGAGATCTGTT 0.31 0.54       ===|=====     
+TAGAGATCTGTTC 0.23 0.54        ==|=====     
+AGAGATCTGTTCT 0.62 0.54    ======|=====     
+GAGATCTGTTCTA 0.62 0.62    ======|======    
+AGATCTGTTCTAT 0.62 0.69    ======|======    
+GATCTGTTCTATT 0.62 0.77    ======|=======   
+ATCTGTTCTATTG 0.62 0.77    ======|=======   
+TCTGTTCTATTGT 0.54 0.69     =====|======    
+CTGTTCTATTGTG 0.46 0.62      ====|======    
+TGTTCTATTGTGA 0.54 0.62     =====|======    
+GTTCTATTGTGAT 0.54 0.62     =====|======    
+TTCTATTGTGATC 0.46 0.31      ====|===       
+TCTATTGTGATCT 0.38 0.38       ===|===       
+CTATTGTGATCTC 0.54 0.46     =====|====      
+TATTGTGATCTCT 0.62 0.54    ======|=====     
+ATTGTGATCTCTT 0.69 0.62    ======|======    
+TTGTGATCTCTTA 0.69 0.69    ======|======    
+TGTGATCTCTTAT 0.62 0.77    ======|=======   
+GTGATCTCTTATT 0.62 0.85    ======|========  
+TGATCTCTTATTA 0.62 0.92    ======|========= 
+GATCTCTTATTAG 0.69 1.00    ======|==========
+ATCTCTTATTAGG 0.62 0.92    ======|========= 
+TCTCTTATTAGGA 0.54 0.85     =====|========  
+CTCTTATTAGGAT 0.54 0.77     =====|=======   
+TCTTATTAGGATC 0.54 0.69     =====|======    
+CTTATTAGGATCG 0.54 0.62     =====|======    
+TTATTAGGATCGC 0.54 0.54     =====|=====     
+TATTAGGATCGCA 0.46 0.46      ====|====      
+ATTAGGATCGCAC 0.54 0.38     =====|===       
+TTAGGATCGCACT 0.31 0.46       ===|====      
+TAGGATCGCACTG 0.23 0.54        ==|=====     
+AGGATCGCACTGC 0.54 0.54     =====|=====     
+GGATCGCACTGCC 0.54 0.54     =====|=====     
+GATCGCACTGCCC 0.54 0.54     =====|=====     
+ATCGCACTGCCCT 0.46 0.46      ====|====      
+TCGCACTGCCCTG 0.46 0.46      ====|====      
+CGCACTGCCCTGT 0.54 0.54     =====|=====     
+GCACTGCCCTGTG 0.54 0.62     =====|======    
+CACTGCCCTGTGG 0.46 0.54      ====|=====     
+ACTGCCCTGTGGA 0.46 0.15      ====|=         
+CTGCCCTGTGGAT 0.23 0.23        ==|==        
+TGCCCTGTGGATA 0.31 0.31       ===|===       
+GCCCTGTGGATAA 0.38 0.38       ===|===       
+CCCTGTGGATAAC 0.38 0.31       ===|===       
+CCTGTGGATAACA 0.46 0.38      ====|===       
+CTGTGGATAACAA 0.46 0.46      ====|====      
+TGTGGATAACAAG 0.54 0.54     =====|=====     
+GTGGATAACAAGG 0.54 0.54     =====|=====     
+TGGATAACAAGGA 0.54 0.54     =====|=====     
+GGATAACAAGGAT 0.23 0.46        ==|====      
+GATAACAAGGATC 0.31 0.31       ===|===       
+ATAACAAGGATCC 0.38 0.38       ===|===       
+TAACAAGGATCCG 0.46 0.46      ====|====      
+AACAAGGATCCGG 0.46 0.46      ====|====      
+ACAAGGATCCGGC 0.46 0.46      ====|====      
+CAAGGATCCGGCT 0.46 0.46      ====|====      
+AAGGATCCGGCTT 0.46 0.54      ====|=====     
+AGGATCCGGCTTT 0.46 0.62      ====|======    
+GGATCCGGCTTTT 0.46 0.69      ====|======    
+GATCCGGCTTTTA 0.38 0.77       ===|=======   
+ATCCGGCTTTTAA 0.38 0.69       ===|======    
+TCCGGCTTTTAAG 0.46 0.69      ====|======    
+CCGGCTTTTAAGA 0.46 0.62      ====|======    
+CGGCTTTTAAGAT 0.46 0.23      ====|==        
+GGCTTTTAAGATC 0.46 0.31      ====|===       
+GCTTTTAAGATCA 0.46 0.38      ====|===       
+CTTTTAAGATCAA 0.38 0.46       ===|====      
+TTTTAAGATCAAC 0.38 0.38       ===|===       
+TTTAAGATCAACA 0.38 0.46       ===|====      
+TTAAGATCAACAA 0.38 0.54       ===|=====     
+TAAGATCAACAAC 0.46 0.54      ====|=====     
+AAGATCAACAACC 0.46 0.54      ====|=====     
+AGATCAACAACCT 0.54 0.46     =====|====      
+GATCAACAACCTG 0.62 0.54    ======|=====     
+ATCAACAACCTGG 0.46 0.46      ====|====      
+TCAACAACCTGGA 0.38 0.15       ===|=         
+CAACAACCTGGAA 0.46 0.23      ====|==        
+AACAACCTGGAAA 0.46 0.31      ====|===       
+ACAACCTGGAAAG 0.54 0.38     =====|===       
+CAACCTGGAAAGG 0.54 0.38     =====|===       
+AACCTGGAAAGGA 0.54 0.38     =====|===       
+ACCTGGAAAGGAT 0.23 0.23        ==|==        
+CCTGGAAAGGATC 0.31 0.31       ===|===       
+CTGGAAAGGATCA 0.38 0.38       ===|===       
+TGGAAAGGATCAT 0.38 0.46       ===|====      
+GGAAAGGATCATT 0.46 0.54      ====|=====     
+GAAAGGATCATTA 0.38 0.62       ===|======    
+AAAGGATCATTAA 0.46 0.62      ====|======    
+AAGGATCATTAAC 0.46 0.62      ====|======    
+AGGATCATTAACT 0.54 0.62     =====|======    
+GGATCATTAACTG 0.62 0.69    ======|======    
+GATCATTAACTGT 0.62 0.69    ======|======    
+ATCATTAACTGTG 0.54 0.62     =====|======    
+TCATTAACTGTGA 0.54 0.54     =====|=====     
+CATTAACTGTGAA 0.54 0.46     =====|====      
+ATTAACTGTGAAT 0.54 0.38     =====|===       
+TTAACTGTGAATG 0.54 0.54     =====|=====     
+TAACTGTGAATGA 0.23 0.38        ==|===       
+AACTGTGAATGAT 0.23 0.23        ==|==        
+ACTGTGAATGATC 0.31 0.31       ===|===       
+CTGTGAATGATCG 0.38 0.38       ===|===       
+TGTGAATGATCGG 0.38 0.38       ===|===       
+GTGAATGATCGGT 0.38 0.38       ===|===       
+TGAATGATCGGTG 0.46 0.46      ====|====      
+GAATGATCGGTGA 0.46 0.46      ====|====      
+AATGATCGGTGAT 0.23 0.54        ==|=====     
+ATGATCGGTGATC 0.31 0.46       ===|====      
+TGATCGGTGATCC 0.38 0.46       ===|====      
+GATCGGTGATCCT 0.46 0.54      ====|=====     
+ATCGGTGATCCTG 0.54 0.54     =====|=====     
+TCGGTGATCCTGG 0.54 0.54     =====|=====     
+CGGTGATCCTGGA 0.54 0.54     =====|=====     
+GGTGATCCTGGAC 0.54 0.54     =====|=====     
+GTGATCCTGGACC 0.54 0.54     =====|=====     
+TGATCCTGGACCG 0.62 0.62    ======|======    
+GATCCTGGACCGT 0.62 0.54    ======|=====     
+ATCCTGGACCGTA 0.38 0.54       ===|=====     
+TCCTGGACCGTAT 0.38 0.54       ===|=====     
+CCTGGACCGTATA 0.46 0.62      ====|======    
+CTGGACCGTATAA 0.46 0.62      ====|======    
+TGGACCGTATAAG 0.54 0.69     =====|======    
+GGACCGTATAAGC 0.54 0.69     =====|======    
+GACCGTATAAGCT 0.54 0.69     =====|======    
+ACCGTATAAGCTG 0.46 0.46      ====|====      
+CCGTATAAGCTGG 0.46 0.46      ====|====      
+CGTATAAGCTGGG 0.46 0.46      ====|====      
+GTATAAGCTGGGA 0.46 0.46      ====|====      
+TATAAGCTGGGAT 0.38 0.23       ===|==        
+ATAAGCTGGGATC 0.31 0.31       ===|===       
+TAAGCTGGGATCA 0.38 0.38       ===|===       
+AAGCTGGGATCAG 0.46 0.46      ====|====      
+AGCTGGGATCAGA 0.46 0.46      ====|====      
+GCTGGGATCAGAA 0.46 0.46      ====|====      
+CTGGGATCAGAAT 0.46 0.46      ====|====      
+TGGGATCAGAATG 0.46 0.54      ====|=====     
+GGGATCAGAATGA 0.46 0.54      ====|=====     
+GGATCAGAATGAG 0.54 0.62     =====|======    
+GATCAGAATGAGG 0.54 0.62     =====|======    
+ATCAGAATGAGGG 0.46 0.54      ====|=====     
+TCAGAATGAGGGG 0.38 0.46       ===|====      
+CAGAATGAGGGGT 0.46 0.46      ====|====      
+AGAATGAGGGGTT 0.46 0.38      ====|===       
+GAATGAGGGGTTA 0.38 0.46       ===|====      
+AATGAGGGGTTAT 0.46 0.46      ====|====      
+ATGAGGGGTTATA 0.54 0.54     =====|=====     
+TGAGGGGTTATAC 0.54 0.54     =====|=====     
+GAGGGGTTATACA 0.62 0.54    ======|=====     
+AGGGGTTATACAC 0.54 0.46     =====|====      
+GGGGTTATACACA 0.62 0.46    ======|====      
+GGGTTATACACAA 0.62 0.46    ======|====      
+GGTTATACACAAC 0.62 0.46    ======|====      
+GTTATACACAACT 0.62 0.46    ======|====      
+TTATACACAACTC 0.54 0.38     =====|===       
+TATACACAACTCA 0.54 0.46     =====|====      
+ATACACAACTCAA 0.46 0.54      ====|=====     
+TACACAACTCAAA 0.46 0.46      ====|====      
+ACACAACTCAAAA 0.46 0.46      ====|====      
+CACAACTCAAAAA 0.46 0.46      ====|====      
+ACAACTCAAAAAC 0.46 0.46      ====|====      
+CAACTCAAAAACT 0.46 0.38      ====|===       
+AACTCAAAAACTG 0.54 0.46     =====|====      
+ACTCAAAAACTGA 0.46 0.46      ====|====      
+CTCAAAAACTGAA 0.38 0.46       ===|====      
+TCAAAAACTGAAC 0.38 0.23       ===|==        
+CAAAAACTGAACA 0.31 0.31       ===|===       
+AAAAACTGAACAA 0.38 0.38       ===|===       
+AAAACTGAACAAC 0.38 0.31       ===|===       
+AAACTGAACAACA 0.38 0.38       ===|===       
+AACTGAACAACAG 0.46 0.46      ====|====      
+ACTGAACAACAGT 0.38 0.46       ===|====      
+CTGAACAACAGTT 0.31 0.46       ===|====      
+TGAACAACAGTTG 0.54 0.54     =====|=====     
+GAACAACAGTTGT 0.54 0.54     =====|=====     
+AACAACAGTTGTT 0.46 0.38      ====|===       
+ACAACAGTTGTTC 0.46 0.23      ====|==        
+CAACAGTTGTTCT 0.54 0.31     =====|===       
+AACAGTTGTTCTT 0.62 0.46    ======|====      
+ACAGTTGTTCTTT 0.62 0.54    ======|=====     
+CAGTTGTTCTTTG 0.69 0.62    ======|======    
+AGTTGTTCTTTGG 0.69 0.62    ======|======    
+GTTGTTCTTTGGA 0.69 0.54    ======|=====     
+TTGTTCTTTGGAT 0.62 0.62    ======|======    
+TGTTCTTTGGATA 0.54 0.69     =====|======    
+GTTCTTTGGATAA 0.54 0.69     =====|======    
+TTCTTTGGATAAC 0.46 0.62      ====|======    
+TCTTTGGATAACT 0.31 0.54       ===|=====     
+CTTTGGATAACTA 0.54 0.46     =====|====      
+TTTGGATAACTAC 0.54 0.46     =====|====      
+TTGGATAACTACC 0.54 0.46     =====|====      
+TGGATAACTACCG 0.62 0.54    ======|=====     
+GGATAACTACCGG 0.62 0.54    ======|=====     
+GATAACTACCGGT 0.62 0.54    ======|=====     
+ATAACTACCGGTT 0.46 0.54      ====|=====     
+TAACTACCGGTTG 0.46 0.54      ====|=====     
+AACTACCGGTTGA 0.46 0.15      ====|=         
+ACTACCGGTTGAT 0.38 0.23       ===|==        
+CTACCGGTTGATC 0.31 0.31       ===|===       
+TACCGGTTGATCC 0.38 0.38       ===|===       
+ACCGGTTGATCCA 0.46 0.46      ====|====      
+CCGGTTGATCCAA 0.46 0.54      ====|=====     
+CGGTTGATCCAAG 0.54 0.62     =====|======    
+GGTTGATCCAAGC 0.54 0.62     =====|======    
+GTTGATCCAAGCT 0.54 0.46     =====|====      
+TTGATCCAAGCTT 0.54 0.54     =====|=====     
+TGATCCAAGCTTC 0.54 0.54     =====|=====     
+GATCCAAGCTTCC 0.62 0.54    ======|=====     
+ATCCAAGCTTCCT 0.62 0.54    ======|=====     
+TCCAAGCTTCCTG 0.62 0.54    ======|=====     
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./chapters/00/12"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="02-bio.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Central dogma</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="04-bio.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Genetic recombination</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      By Ani Adhikari and John DeNero and David Wagner<br/>
+    
+        &copy; Copyright 2021.<br/>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../../../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>

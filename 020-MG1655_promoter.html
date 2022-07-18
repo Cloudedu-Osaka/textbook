@@ -1,0 +1,4330 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>&lt;no title&gt; &#8212; Computational and Inferential Thinking</title>
+    
+  <link href="_static/css/theme.css" rel="stylesheet">
+  <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/book.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="canonical" href="https://inferentialthinking.org/020-MG1655_promoter.html" />
+    <link rel="shortcut icon" href="_static/favicon.png"/>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+<script async="" src="https://www.google-analytics.com/analytics.js"></script>
+<script>
+                        window.ga = window.ga || function () {
+                            (ga.q = ga.q || []).push(arguments) };
+                        ga.l = +new Date;
+                        ga('create', 'UA-148221575-1', 'auto');
+                        ga('set', 'anonymizeIp', true);
+                        ga('send', 'pageview');
+                    </script>
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="_static/favicon.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Computational and Inferential Thinking</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  2022/07/19
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="chapters/00/12/00-bio.html">
+   Bioinfomatics
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="chapters/00/12/01-bio.html">
+   Inheritance
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="chapters/00/12/02-bio.html">
+   Central dogma
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="chapters/00/12/03-bio.html">
+   Central dogma
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="chapters/00/12/04-bio.html">
+   Genetic recombination
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  2022/07/12
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="chapters/00/11/tycho.html">
+   Tycho Brahe
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="chapters/00/11/kepler.html">
+   Johannes Kepler
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="chapters/00/11/cycloid.html">
+   Isacc Newton
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="chapters/00/10/napier_3.html">
+   Napier (3)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="chapters/00/10/assignment.html">
+   Assignment
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  2022/07/05
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="chapters/00/10/leibniz_7.html">
+   Leibniz (5)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="chapters/00/10/napier_1.html">
+   Napier (1)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="chapters/00/10/napier_2.html">
+   Napier (2)
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  2022/06/28
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="chapters/00/10/leibniz_5.html">
+   Leibniz (2)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="chapters/00/10/leibniz_6.html">
+   Leibniz (3)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="chapters/00/10/leibniz_4.html">
+   プログラミングのない世界 (3)
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  2022/06/21
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="chapters/00/9/assign_6.html">
+   Assignment (6)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="chapters/00/9/assign_5.html">
+   Assignment (5)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="chapters/00/8/leibniz_3.html">
+   Leibniz (1)
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  2022/06/14
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="chapters/00/9/assign_1.html">
+   Assignment (1)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="chapters/00/9/assign_2.html">
+   Assignment (2)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="chapters/00/9/assign_3.html">
+   Assignment (3)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="chapters/00/9/assign_4.html">
+   Assignment (4)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="chapters/00/9/assign_7.html">
+   Assignment (7)
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  2022/06/07
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="chapters/00/8/leibniz_1.html">
+   Japanese wordplay
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="chapters/00/8/leibniz_2.html">
+   Computer algebra
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="chapters/00/8/assign.html">
+   Assignment
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  2022/05/31
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="chapters/00/7/pythagoras_1.html">
+   from Pythagoras to Einstein (1)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="chapters/00/7/pythagoras_2.html">
+   Plimpton 322 and YBC 7289
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="chapters/00/7/pythagoras_3.html">
+   YBC 7289 (1)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="chapters/00/7/pythagoras_4.html">
+   YBC 7289 (2)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="chapters/00/7/pythagoras_5.html">
+   YBC 7289 (3)
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  2022/05/24
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="chapters/00/6/plimpton322_2.html">
+   Decoding Plimpton 322 (1)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="chapters/00/6/plimpton322_3.html">
+   Decoding Plimpton 322 (2)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="chapters/00/6/plimpton322_4.html">
+   Decoding Plimpton 322 (3)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="chapters/00/6/assign_1.html">
+   Assignment (1)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="chapters/00/6/assign_2.html">
+   Assignment (2)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="chapters/00/6/assign_3.html">
+   Assignment (3)
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  2022/05/17
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="chapters/00/5/long_division.html">
+   Long Division
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="chapters/00/5/assign_1.html">
+   Assignment (1)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="chapters/00/5/assign_2.html">
+   Assignment (2)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="chapters/00/5/assign_3.html">
+   Assignment (3)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="chapters/00/5/assign_4.html">
+   Assignment (4)
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  2022/05/10
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="chapters/00/4/plimpton322_1.html">
+   Plimpton 322 (1)
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  2022/04/19
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="chapters/00/3/intro_add_1.html">
+   Notebook additional setting
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  2022/04/12
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="chapters/00/intro_add.html">
+   Precautions
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="chapters/00/0/1/Receiving_invitation_mail.html">
+     Federated authentication
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="chapters/00/0/1/Accessing_JupyterHub.html">
+     Application registration
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="chapters/00/1/intro_add_1.html">
+     Notebook execution
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="chapters/00/1/intro_add_2.html">
+     Notebook security
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="chapters/00/1/intro_add_3.html">
+     Notebook activity
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="chapters/00/2/intro_add.html">
+   Request for cooperation
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="chapters/00/2/intro_add_4.html">
+     Experiment explanation
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="chapters/00/2/intro_add_5.html">
+     Informed concent
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="chapters/00/2/intro_add_6.html">
+     Withdrawal of concent
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  DATA 8
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="chapters/01/what-is-data-science.html">
+   1. Data Science
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="chapters/01/1/intro.html">
+     1.1. Introduction
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+    <label for="toctree-checkbox-4">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="chapters/01/1/1/computational-tools.html">
+       1.1.1. Computational Tools
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="chapters/01/1/2/statistical-techniques.html">
+       1.1.2. Statistical Techniques
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="chapters/01/2/why-data-science.html">
+     1.2. Why Data Science?
+    </a>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="chapters/01/3/Plotting_the_Classics.html">
+     1.3. Plotting the Classics
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+    <label for="toctree-checkbox-5">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="chapters/01/3/1/Literary_Characters.html">
+       1.3.1. Literary Characters
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="chapters/01/3/2/Another_Kind_Of_Character.html">
+       1.3.2. Another Kind of Character
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="chapters/02/causality-and-experiments.html">
+   2. Causality and Experiments
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="chapters/02/1/observation-and-visualization-john-snow-and-the-broad-street-pump.html">
+     2.1. John Snow and the Broad Street Pump
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="chapters/02/2/snow-s-grand-experiment.html">
+     2.2. Snow’s “Grand Experiment”
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="chapters/02/3/establishing-causality.html">
+     2.3. Establishing Causality
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="chapters/02/4/randomization.html">
+     2.4. Randomization
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="chapters/02/5/endnote.html">
+     2.5. Endnote
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="chapters/03/programming-in-python.html">
+   3. Programming in Python
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+  <label for="toctree-checkbox-7">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="chapters/03/1/Expressions.html">
+     3.1. Expressions
+    </a>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="chapters/03/2/Names.html">
+     3.2. Names
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+    <label for="toctree-checkbox-8">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="chapters/03/2/1/Growth.html">
+       3.2.1. Example: Growth Rates
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="chapters/03/3/Calls.html">
+     3.3. Call Expressions
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="chapters/03/4/Introduction_to_Tables.html">
+     3.4. Introduction to Tables
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="chapters/04/Data_Types.html">
+   4. Data Types
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
+  <label for="toctree-checkbox-9">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="chapters/04/1/Numbers.html">
+     4.1. Numbers
+    </a>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="chapters/04/2/Strings.html">
+     4.2. Strings
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
+    <label for="toctree-checkbox-10">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="chapters/04/2/1/String_Methods.html">
+       4.2.1. String Methods
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="chapters/04/3/Comparison.html">
+     4.3. Comparisons
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="chapters/05/Sequences.html">
+   5. Sequences
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/>
+  <label for="toctree-checkbox-11">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="chapters/05/1/Arrays.html">
+     5.1. Arrays
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="chapters/05/2/Ranges.html">
+     5.2. Ranges
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="chapters/05/3/More_on_Arrays.html">
+     5.3. More on Arrays
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="chapters/06/Tables.html">
+   6. Tables
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/>
+  <label for="toctree-checkbox-12">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="chapters/06/1/Sorting_Rows.html">
+     6.1. Sorting Rows
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="chapters/06/2/Selecting_Rows.html">
+     6.2. Selecting Rows
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="chapters/06/3/Example_Population_Trends.html">
+     6.3. Example: Population Trends
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="chapters/06/4/Example_Sex_Ratios.html">
+     6.4. Example: Sex Ratios
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="chapters/07/Visualization.html">
+   7. Visualization
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" type="checkbox"/>
+  <label for="toctree-checkbox-13">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="chapters/07/1/Visualizing_Categorical_Distributions.html">
+     7.1. Categorical Distributions
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="chapters/07/2/Visualizing_Numerical_Distributions.html">
+     7.2. Numerical Distributions
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="chapters/07/3/Overlaid_Graphs.html">
+     7.3. Overlaid Graphs
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="chapters/08/Functions_and_Tables.html">
+   8. Functions and Tables
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" type="checkbox"/>
+  <label for="toctree-checkbox-14">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="chapters/08/1/Applying_a_Function_to_a_Column.html">
+     8.5. Applying Functions to Columns
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="chapters/08/2/Classifying_by_One_Variable.html">
+     8.6. Classifying by One Variable
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="chapters/08/3/Cross-Classifying_by_More_than_One_Variable.html">
+     8.7. Cross-Classifying
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="chapters/08/4/Joining_Tables_by_Columns.html">
+     8.8. Joining Tables by Columns
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="chapters/08/5/Bike_Sharing_in_the_Bay_Area.html">
+     8.9. Bike Sharing in the Bay Area
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="chapters/09/Randomness.html">
+   9. Randomness
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" type="checkbox"/>
+  <label for="toctree-checkbox-15">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="chapters/09/1/Conditional_Statements.html">
+     9.1. Conditional Statements
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="chapters/09/2/Iteration.html">
+     9.2. Iteration
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="chapters/09/3/Simulation.html">
+     9.3. Simulation
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="chapters/09/4/Monty_Hall_Problem.html">
+     9.4. The Monty Hall Problem
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="chapters/09/5/Finding_Probabilities.html">
+     9.5. Finding Probabilities
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="chapters/10/Sampling_and_Empirical_Distributions.html">
+   10. Sampling and Empirical Distributions
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-16" name="toctree-checkbox-16" type="checkbox"/>
+  <label for="toctree-checkbox-16">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="chapters/10/1/Empirical_Distributions.html">
+     10.1. Empirical Distributions
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="chapters/10/2/Sampling_from_a_Population.html">
+     10.2. Sampling from a Population
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="chapters/10/3/Empirical_Distribution_of_a_Statistic.html">
+     10.3. Empirical Distibution of a Statistic
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="chapters/10/4/Random_Sampling_in_Python.html">
+     10.4. Random Sampling in Python
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="chapters/11/Testing_Hypotheses.html">
+   11. Testing Hypotheses
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-17" name="toctree-checkbox-17" type="checkbox"/>
+  <label for="toctree-checkbox-17">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="chapters/11/1/Assessing_a_Model.html">
+     11.1. Assessing a Model
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="chapters/11/2/Multiple_Categories.html">
+     11.2. Multiple Categories
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="chapters/11/3/Decisions_and_Uncertainty.html">
+     11.3. Decisions and Uncertainty
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="chapters/11/4/Error_Probabilities.html">
+     11.4. Error Probabilities
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="chapters/12/Comparing_Two_Samples.html">
+   12. Comparing Two Samples
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-18" name="toctree-checkbox-18" type="checkbox"/>
+  <label for="toctree-checkbox-18">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="chapters/12/1/AB_Testing.html">
+     12.1. A/B Testing
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="chapters/12/2/Causality.html">
+     12.2. Causality
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="chapters/12/3/Deflategate.html">
+     12.3. Deflategate
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="chapters/13/Estimation.html">
+   13. Estimation
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-19" name="toctree-checkbox-19" type="checkbox"/>
+  <label for="toctree-checkbox-19">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="chapters/13/1/Percentiles.html">
+     13.1. Percentiles
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="chapters/13/2/Bootstrap.html">
+     13.2. The Bootstrap
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="chapters/13/3/Confidence_Intervals.html">
+     13.3. Confidence Intervals
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="chapters/13/4/Using_Confidence_Intervals.html">
+     13.4. Using Confidence Intervals
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="chapters/14/Why_the_Mean_Matters.html">
+   14. Why the Mean Matters
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-20" name="toctree-checkbox-20" type="checkbox"/>
+  <label for="toctree-checkbox-20">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="chapters/14/1/Properties_of_the_Mean.html">
+     14.1. Properties of the Mean
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="chapters/14/2/Variability.html">
+     14.2. Variability
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="chapters/14/3/SD_and_the_Normal_Curve.html">
+     14.3. The SD and the Normal Curve
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="chapters/14/4/Central_Limit_Theorem.html">
+     14.4. The Central Limit Theorem
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="chapters/14/5/Variability_of_the_Sample_Mean.html">
+     14.5. The Variability of the Sample Mean
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="chapters/14/6/Choosing_a_Sample_Size.html">
+     14.6. Choosing a Sample Size
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="chapters/15/Prediction.html">
+   15. Prediction
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-21" name="toctree-checkbox-21" type="checkbox"/>
+  <label for="toctree-checkbox-21">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="chapters/15/1/Correlation.html">
+     15.1. Correlation
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="chapters/15/2/Regression_Line.html">
+     15.2. The Regression Line
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="chapters/15/3/Method_of_Least_Squares.html">
+     15.3. The Method of Least Squares
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="chapters/15/4/Least_Squares_Regression.html">
+     15.4. Least Squares Regression
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="chapters/15/5/Visual_Diagnostics.html">
+     15.5. Visual Diagnostics
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="chapters/15/6/Numerical_Diagnostics.html">
+     15.6. Numerical Diagnostics
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="chapters/16/Inference_for_Regression.html">
+   16. Inference for Regression
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-22" name="toctree-checkbox-22" type="checkbox"/>
+  <label for="toctree-checkbox-22">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="chapters/16/1/Regression_Model.html">
+     16.1. A Regression Model
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="chapters/16/2/Inference_for_the_True_Slope.html">
+     16.2. Inference for the True Slope
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="chapters/16/3/Prediction_Intervals.html">
+     16.3. Prediction Intervals
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="chapters/17/Classification.html">
+   17. Classification
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-23" name="toctree-checkbox-23" type="checkbox"/>
+  <label for="toctree-checkbox-23">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="chapters/17/1/Nearest_Neighbors.html">
+     17.1. Nearest Neighbors
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="chapters/17/2/Training_and_Testing.html">
+     17.2. Training and Testing
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="chapters/17/3/Rows_of_Tables.html">
+     17.3. Rows of Tables
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="chapters/17/4/Implementing_the_Classifier.html">
+     17.4. Implementing the Classifier
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="chapters/17/5/Accuracy_of_the_Classifier.html">
+     17.5. The Accuracy of the Classifier
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="chapters/17/6/Multiple_Regression.html">
+     17.6. Multiple Regression
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="chapters/18/Updating_Predictions.html">
+   18. Updating Predictions
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-24" name="toctree-checkbox-24" type="checkbox"/>
+  <label for="toctree-checkbox-24">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="chapters/18/1/More_Likely_than_Not_Binary_Classifier.html">
+     18.1. A "More Likely Than Not" Binary Classifier
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="chapters/18/2/Making_Decisions.html">
+     18.2. Making Decisions
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/020-MG1655_promoter.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/Cloudedu-Osaka/textbook"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/Cloudedu-Osaka/textbook/main?urlpath=tree/020-MG1655_promoter.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        <a class="jupyterhub-button" href="https://cloudedu-jhub.japaneast.cloudapp.azure.com/hub/user-redirect/git-pull?repo=https://github.com/Cloudedu-Osaka/textbook&urlpath=tree/textbook/020-MG1655_promoter.ipynb&branch=main"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch JupyterHub" data-toggle="tooltip"
+                data-placement="left"><img class="jupyterhub-button-logo"
+                    src="_static/images/logo_jupyterhub.svg"
+                    alt="Interact on JupyterHub">JupyterHub</button></a>
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="simple visible nav section-nav flex-column">
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1><no title></h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="simple visible nav section-nav flex-column">
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <ul class="simple">
+<li><p>Promoter:</p>
+<ul>
+<li><p>lacZp1</p>
+<ul>
+<li><p>Absolute Position of Transcription Start Site: 366343 base pairs</p></li>
+<li><p>Position relative to start of first gene (lacZ): -38</p>
+<ul>
+<li><p><span class="math notranslate nohighlight">\(\sigma^{70}\)</span>: -10, -35</p></li>
+<li><p>-10: “TATGTT”</p></li>
+<li><p>-35: “TTTACA”</p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>Activator:</p>
+<ul>
+<li><p>Site 10 (<span class="math notranslate nohighlight">\(\rm{Crp}^{10}\)</span>):</p>
+<ul>
+<li><p>Position of Site Center Relative to Transcription Start Site (bp): 61.5</p></li>
+<li><p>“TAATGTGAGTTAGCTCACTCAT”</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>Repressor:</p>
+<ul>
+<li><p>Site 1 (<span class="math notranslate nohighlight">\(\rm{LacI}^{1}\)</span>):</p>
+<ul>
+<li><p>Position of Site Center Relative to Transcription Start Site (bp): 412</p></li>
+<li><p>“GGTTGTTACTCGCTCACATTT”</p></li>
+</ul>
+</li>
+<li><p>Site 4 (<span class="math notranslate nohighlight">\(\rm{LacI}^{4}\)</span>):</p>
+<ul>
+<li><p>Position of Site Center Relative to Transcription Start Site (bp): 11</p></li>
+<li><p>“AATTGTGAGCGGATAACAATT”</p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">difflib</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">difflib</span><span class="o">.</span><span class="n">SequenceMatcher</span><span class="p">(</span><span class="kc">None</span><span class="p">,</span> <span class="s2">&quot;TATAAT&quot;</span><span class="p">,</span> <span class="s2">&quot;TTGACA&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">ratio</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.5
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">gzip</span>
+<span class="kn">from</span> <span class="nn">urllib.request</span> <span class="kn">import</span> <span class="n">urlopen</span>
+<span class="kn">from</span> <span class="nn">io</span> <span class="kn">import</span> <span class="n">StringIO</span>
+
+<span class="n">res</span> <span class="o">=</span> <span class="n">urlopen</span><span class="p">(</span><span class="s2">&quot;https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/005/845/GCF_000005845.2_ASM584v2/GCF_000005845.2_ASM584v2_genomic.fna.gz&quot;</span><span class="p">)</span>
+<span class="n">sio</span> <span class="o">=</span> <span class="n">StringIO</span><span class="p">(</span><span class="n">gzip</span><span class="o">.</span><span class="n">decompress</span><span class="p">(</span><span class="n">res</span><span class="o">.</span><span class="n">read</span><span class="p">())</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s2">&quot;utf-8&quot;</span><span class="p">))</span>
+
+<span class="kn">from</span> <span class="nn">Bio</span> <span class="kn">import</span> <span class="n">SeqIO</span>
+<span class="kn">from</span> <span class="nn">Bio.Seq</span> <span class="kn">import</span> <span class="n">Seq</span>
+<span class="n">seq</span> <span class="o">=</span> <span class="n">SeqIO</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="n">sio</span><span class="p">,</span> <span class="s2">&quot;fasta&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">seq0</span> <span class="o">=</span> <span class="nb">next</span><span class="p">(</span><span class="n">seq</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">seq0</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>SeqRecord(seq=Seq(&#39;AGCTTTTCATTCTGACTGCAACGGGCAATATGTCTCTGTGTGGATTAAAAAAAG...TTC&#39;), id=&#39;NC_000913.3&#39;, name=&#39;NC_000913.3&#39;, description=&#39;NC_000913.3 Escherichia coli str. K-12 substr. MG1655, complete genome&#39;, dbxrefs=[])
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">str</span><span class="p">(</span><span class="n">seq0</span><span class="o">.</span><span class="n">seq</span><span class="p">)[:</span><span class="mi">10</span><span class="p">],</span><span class="nb">str</span><span class="p">(</span><span class="n">seq0</span><span class="o">.</span><span class="n">seq</span><span class="p">)[</span><span class="o">-</span><span class="mi">10</span><span class="p">:]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(&#39;AGCTTTTCAT&#39;, &#39;AGTATTTTTC&#39;)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">str</span><span class="p">(</span><span class="n">seq0</span><span class="o">.</span><span class="n">seq</span><span class="o">.</span><span class="n">complement</span><span class="p">())[:</span><span class="mi">10</span><span class="p">],</span><span class="nb">str</span><span class="p">(</span><span class="n">seq0</span><span class="o">.</span><span class="n">seq</span><span class="o">.</span><span class="n">complement</span><span class="p">())[</span><span class="o">-</span><span class="mi">10</span><span class="p">:]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(&#39;TCGAAAAGTA&#39;, &#39;TCATAAAAAG&#39;)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">len</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">seq0</span><span class="o">.</span><span class="n">seq</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>4641652
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mi">3685536</span><span class="o">+</span><span class="mi">663</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3686199
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">s0s0</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">seq0</span><span class="o">.</span><span class="n">seq</span><span class="p">)[</span><span class="mi">3685533</span><span class="o">-</span><span class="mi">100</span><span class="p">:</span><span class="mi">3685536</span><span class="o">+</span><span class="mi">663</span><span class="o">+</span><span class="mi">100</span><span class="p">]</span>
+<span class="n">s0s0</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;AAAATAGCTGAAGATAAGGGTTCGCGGACAGAGCGAGCAATGCTTTCCAGTTGCGTAGCCGTGTTATAGCGATTCTGCTGGACCAGATGGAACAGCAAAACGGTGCAAAAAATAAAAACGAACACCAGGACAACGGCTGCCACCATTGCCATCTGCTTGATTGTTAACGAGCGACTTACGCGCAAATTGTCTCCCCCCGGAAATCCCAGATTGCCGCCCGAGTATACCCGATCGCAGCGGCATTAAGAGAGGCGCTATCTGAAAACTTACCAGTCGGCGTAAGGTATCAGCGGCTGCGGCGGTAAATCCATGTCACCCTGCCATCCGGCGGCGGAATAACGTACGTAGAGCAGGAAATGGCTGGGTGCGTAATCTTTCGCCTGCTGGATATCAATTGCCGTGCCAACAAACCAGTTGGAAGTAACACGTCGTTCAAGTAATGCCCGCGCCGTGTAGCCGAAGCCCTGACTGCTGCCGCCATCGTTGGATTGCCGCGCAGCTTCTTCCTGCCAGTCGGTCGGGATCAGATTCATCAGCGGATAACGCGGCATGGTTTTGGTGCGTGAATGCGACCACGAGCCAGACGCACCCAGCTCCCACGACCAGTTTTCCGTGCGCTCCCGCCACATCACCGGTATGGCAAACGACAGGTATTCCTGCGGACTGTAGTAACCGCCCTGACCGAGTGAGTAGCCACTCAGATCTTTGTCGTAATGCCAGATCATGTTGTTCAGGCCGATTGTGACGCGGCGATTGTTCTGGTTAATGACCTTATAGTAATAGCCCGTCATCCAGCGCACGCGCCAGTTATCTTCGACATTTTTACCGGTTAACTGGTCGCCACTAAGCGATGCCCAGACGCCGTT&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">s</span> <span class="o">=</span> <span class="n">orfipy_core</span><span class="o">.</span><span class="n">orfs</span><span class="p">(</span><span class="n">s0s0</span><span class="p">)</span>
+<span class="nb">sorted</span><span class="p">(</span><span class="n">s</span><span class="p">,</span><span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="nb">int</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;;&quot;</span><span class="p">)[</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;=&quot;</span><span class="p">)[</span><span class="mi">1</span><span class="p">]),</span> <span class="n">reverse</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[(269,
+  791,
+  &#39;-&#39;,
+  &#39;ID=Seq_ORF.22;ORF_type=complete;ORF_len=522;ORF_frame=-1;Start:ATG;Stop:TAA&#39;),
+ (439,
+  742,
+  &#39;+&#39;,
+  &#39;ID=Seq_ORF.15;ORF_type=complete;ORF_len=303;ORF_frame=2;Start:ATG;Stop:TGA&#39;),
+ (435,
+  720,
+  &#39;-&#39;,
+  &#39;ID=Seq_ORF.29;ORF_type=complete;ORF_len=285;ORF_frame=-3;Start:CTG;Stop:TGA&#39;),
+ (289,
+  499,
+  &#39;-&#39;,
+  &#39;ID=Seq_ORF.26;ORF_type=complete;ORF_len=210;ORF_frame=-2;Start:CTG;Stop:TGA&#39;),
+ (66,
+  273,
+  &#39;-&#39;,
+  &#39;ID=Seq_ORF.32;ORF_type=complete;ORF_len=207;ORF_frame=-3;Start:CTG;Stop:TAA&#39;),
+ (317,
+  437,
+  &#39;+&#39;,
+  &#39;ID=Seq_ORF.18;ORF_type=complete;ORF_len=120;ORF_frame=3;Start:CTG;Stop:TAA&#39;),
+ (566,
+  686,
+  &#39;+&#39;,
+  &#39;ID=Seq_ORF.20;ORF_type=complete;ORF_len=120;ORF_frame=3;Start:ATG;Stop:TGA&#39;),
+ (549,
+  666,
+  &#39;+&#39;,
+  &#39;ID=Seq_ORF.8;ORF_type=complete;ORF_len=117;ORF_frame=1;Start:ATG;Stop:TAG&#39;),
+ (713,
+  830,
+  &#39;+&#39;,
+  &#39;ID=Seq_ORF.21;ORF_type=complete;ORF_len=117;ORF_frame=3;Start:ATG;Stop:TAA&#39;),
+ (50,
+  164,
+  &#39;+&#39;,
+  &#39;ID=Seq_ORF.16;ORF_type=complete;ORF_len=114;ORF_frame=3;Start:TTG;Stop:TAA&#39;),
+ (160,
+  259,
+  &#39;+&#39;,
+  &#39;ID=Seq_ORF.13;ORF_type=complete;ORF_len=99;ORF_frame=2;Start:TTG;Stop:TGA&#39;),
+ (464,
+  563,
+  &#39;+&#39;,
+  &#39;ID=Seq_ORF.19;ORF_type=complete;ORF_len=99;ORF_frame=3;Start:CTG;Stop:TGA&#39;),
+ (156,
+  243,
+  &#39;+&#39;,
+  &#39;ID=Seq_ORF.2;ORF_type=complete;ORF_len=87;ORF_frame=1;Start:TTG;Stop:TAA&#39;),
+ (468,
+  540,
+  &#39;+&#39;,
+  &#39;ID=Seq_ORF.7;ORF_type=complete;ORF_len=72;ORF_frame=1;Start:CTG;Stop:TAA&#39;),
+ (723,
+  774,
+  &#39;+&#39;,
+  &#39;ID=Seq_ORF.10;ORF_type=complete;ORF_len=51;ORF_frame=1;Start:ATG;Stop:TAG&#39;),
+ (7,
+  55,
+  &#39;+&#39;,
+  &#39;ID=Seq_ORF.11;ORF_type=complete;ORF_len=48;ORF_frame=2;Start:CTG;Stop:TAG&#39;),
+ (535,
+  583,
+  &#39;-&#39;,
+  &#39;ID=Seq_ORF.25;ORF_type=complete;ORF_len=48;ORF_frame=-2;Start:CTG;Stop:TGA&#39;),
+ (414,
+  453,
+  &#39;+&#39;,
+  &#39;ID=Seq_ORF.6;ORF_type=complete;ORF_len=39;ORF_frame=1;Start:TTG;Stop:TAG&#39;),
+ (774,
+  807,
+  &#39;-&#39;,
+  &#39;ID=Seq_ORF.28;ORF_type=complete;ORF_len=33;ORF_frame=-3;Start:CTG;Stop:TAA&#39;),
+ (790,
+  820,
+  &#39;-&#39;,
+  &#39;ID=Seq_ORF.23;ORF_type=complete;ORF_len=30;ORF_frame=-2;Start:ATG;Stop:TGA&#39;),
+ (39,
+  66,
+  &#39;+&#39;,
+  &#39;ID=Seq_ORF.1;ORF_type=complete;ORF_len=27;ORF_frame=1;Start:ATG;Stop:TAG&#39;),
+ (309,
+  336,
+  &#39;+&#39;,
+  &#39;ID=Seq_ORF.4;ORF_type=complete;ORF_len=27;ORF_frame=1;Start:ATG;Stop:TAA&#39;),
+ (394,
+  421,
+  &#39;+&#39;,
+  &#39;ID=Seq_ORF.14;ORF_type=complete;ORF_len=27;ORF_frame=2;Start:TTG;Stop:TAA&#39;),
+ (258,
+  279,
+  &#39;+&#39;,
+  &#39;ID=Seq_ORF.3;ORF_type=complete;ORF_len=21;ORF_frame=1;Start:CTG;Stop:TAA&#39;),
+ (136,
+  157,
+  &#39;+&#39;,
+  &#39;ID=Seq_ORF.12;ORF_type=complete;ORF_len=21;ORF_frame=2;Start:CTG;Stop:TGA&#39;),
+ (393,
+  414,
+  &#39;-&#39;,
+  &#39;ID=Seq_ORF.30;ORF_type=complete;ORF_len=21;ORF_frame=-3;Start:CTG;Stop:TGA&#39;),
+ (631,
+  643,
+  &#39;-&#39;,
+  &#39;ID=Seq_ORF.24;ORF_type=complete;ORF_len=12;ORF_frame=-2;Start:TTG;Stop:TGA&#39;),
+ (846,
+  858,
+  &#39;-&#39;,
+  &#39;ID=Seq_ORF.27;ORF_type=complete;ORF_len=12;ORF_frame=-3;Start:CTG;Stop:TAG&#39;),
+ (360,
+  369,
+  &#39;+&#39;,
+  &#39;ID=Seq_ORF.5;ORF_type=complete;ORF_len=9;ORF_frame=1;Start:CTG;Stop:TAA&#39;),
+ (293,
+  302,
+  &#39;+&#39;,
+  &#39;ID=Seq_ORF.17;ORF_type=complete;ORF_len=9;ORF_frame=3;Start:CTG;Stop:TAA&#39;),
+ (315,
+  324,
+  &#39;-&#39;,
+  &#39;ID=Seq_ORF.31;ORF_type=complete;ORF_len=9;ORF_frame=-3;Start:ATG;Stop:TGA&#39;),
+ (705,
+  711,
+  &#39;+&#39;,
+  &#39;ID=Seq_ORF.9;ORF_type=complete;ORF_len=6;ORF_frame=1;Start:TTG;Stop:TAA&#39;)]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">str</span><span class="p">(</span><span class="n">seq0</span><span class="o">.</span><span class="n">seq</span><span class="p">)[</span><span class="mi">368120</span><span class="p">:</span><span class="mi">3</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">s0s1c</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;ACATGTTTTTAACAAAATAAGTTGCGCTGTACTGTGCGCGCAACGACATTTTGTCCGAGTCGTGAGGTACTGAAATGGCAATACAACACCCTGACATCCAGCCTGCTGTTAACCATAGCGTTCAGGTGGCGATCGCTGGTGCCGGCCCGGTTGGGCTGATGATGGCGAACTATCTCGGCCAGATGGGCATTGACGTGCTGGTGGTGGAGAAACTCGATAAGTTGATCGACTACCCGCGTGCGATTGGTATTGATGACGAGGCGCTGCGCACCATGCAGTCGGTCGGCCTGGTCGATGATGTTCTGCCGCACACTACGCCGTGGCACGCGATGCGTTTTCTCACCCCGAAAGGCCGCTGTTTTGCTGATATTCAGCCAATGACCGATGAATTTGGCTGGCCGCGCCGTAACGCCTTTATTCAGCCGCAGGTCGATGCGGTGATGCTGGAAGGGGTGTCGCGTTTTCCGAATGTGCGCTGCTTGTTTTCCCGCGAGCTGGAGGCCTTCAGTCAGCAAGATGACGAAGTGACCTTGCACCTGAAAACGGCAGAAGGGCAGCGGGAAATAGTCAAAGCCCAGTGGCTGGTAGCCTGTGACGGTGGAGCAAGTTTTGTCCGTCGCACTCTGAATGTGCCGTTTGAAGGTAAAACTGCGCCAAATCAGTGGATTGTGGTAGATATCGCCAACGATCCGTTAAGTACGCCGCATATCTATTTGTGTTGCGATCCGGTGCGCCCGTATGTTTCTGCCGCGCTGCCTCATGCGGTACGTCGCTTTGAATTTATGGTGATGCCGGGAGAAACCGAAGAGCAGCTGCGTGAGCCGCAAAATATGCGCAAGCTGTTAAGCAAAGTGCTGCCTAATCCGGACAATGTTGAATTGATTCGCCAGCGTGTCTACACCCACAACGCGCGACTGGCGCAACGTTTCCGTATTGATCGCGTACTGCTGGCGGGCGATGCCGCGCACATCATGCCGGTATGGCAGGGGCAGGGCTATAACAGTGGTATGCGCGACGCCTTTAACCTCGCATGGAAACTGGCGTTGGTTATCCAGGGGAAAGCCCGCGATGCGCTGCTCGATACCTATCAACAAGAACGTCGCGATCACGCCAAAGCGATGATTGACCTGTCCGTGACGGCGGGCAACGTGCTGGCTCCGCCGAAACGCTGGCAGGGTACGTTACGTGACGGCGTTTCCTGGCTGTTGAATTATCTGCCGCCAGTAAAACGCTACTTCCTCGAAATGCGCTTCAAGCCGATGCCGCAATATTACGGCGGTGCGCTGATGCGTGAGGGCGAAGCGAAGCACTCTCCGGTCGGCAAGATGTTTATTCAGCCGAAAGTCACGCTGGAAAACGGCGACGTGACGCTGCTCGATAACGCGATCGGCGCGAACTTCGCGGTAATTGGCTGGGGATGCAATCCACTGTGGGGGATGAGCGACGAGCAAATCCAGCAGTGGCGCGCGTTGGGCACACGCTTCATTCAGGTGGTGCCGGAAGTGCAAATTCATACCGCACAGGATAACCACGACGGCGTACTACGCGTGGGCGATACGCAAGGTCGCCTGCGTAGCTGGTTCGCGCAACACAATGCTTCGCTGGTGGTGATGCGCCCGGATCGCTTTGTTGCCGCCACCGCCATTCCGCAAACCCTGGGCAAGACCCTGAATAAACTGGCGTCGGTGATGACGCTGACCCGCCCTGATGCCGACGTTTCTGTCGAAAAGGTAGCCTGATATGCACGCTTATCTTCACTGTCTTTCCCACTCGCCGCTGGTGGGGTATGTCGACCCGGCGCAAGAGGTGCTCGATGAGGTCAATGGCGTGATTGCCAGCGCCCGCGAGCGTATTGCGGCATTCTCCCCTGAACTGGTGGTGCTGTTTGCGCCAGATCACTACAACGGCTTTTTCTATGACGTGATGCCACCGTTCTGTTTAGGCGTTGGAGCGACGGCAATTGGTGATTTCGGCAGTGCGGCAGGAGAGCTGCCCGTGCC&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">s</span> <span class="o">=</span> <span class="n">orfipy_core</span><span class="o">.</span><span class="n">orfs</span><span class="p">(</span><span class="n">s0s1c</span><span class="p">)</span>
+<span class="nb">sorted</span><span class="p">(</span><span class="n">s</span><span class="p">,</span><span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="nb">int</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;;&quot;</span><span class="p">)[</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;=&quot;</span><span class="p">)[</span><span class="mi">1</span><span class="p">]),</span> <span class="n">reverse</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[(1081,
+  1426,
+  &#39;+&#39;,
+  &#39;ID=Seq_ORF.16;ORF_type=complete;ORF_len=345;ORF_frame=2;Start:ATG;Stop:TGA&#39;),
+ (879,
+  1179,
+  &#39;-&#39;,
+  &#39;ID=Seq_ORF.77;ORF_type=complete;ORF_len=300;ORF_frame=-3;Start:ATG;Stop:TAA&#39;),
+ (526,
+  778,
+  &#39;+&#39;,
+  &#39;ID=Seq_ORF.14;ORF_type=complete;ORF_len=252;ORF_frame=2;Start:CTG;Stop:TAA&#39;),
+ (1690,
+  1939,
+  &#39;-&#39;,
+  &#39;ID=Seq_ORF.59;ORF_type=complete;ORF_len=249;ORF_frame=-2;Start:TTG;Stop:TAG&#39;),
+ (1124,
+  1331,
+  &#39;+&#39;,
+  &#39;ID=Seq_ORF.34;ORF_type=complete;ORF_len=207;ORF_frame=3;Start:CTG;Stop:TAA&#39;),
+ (10,
+  211,
+  &#39;+&#39;,
+  &#39;ID=Seq_ORF.12;ORF_type=complete;ORF_len=201;ORF_frame=2;Start:TTG;Stop:TGA&#39;),
+ (883,
+  1045,
+  &#39;-&#39;,
+  &#39;ID=Seq_ORF.65;ORF_type=complete;ORF_len=162;ORF_frame=-2;Start:TTG;Stop:TAG&#39;),
+ (1674,
+  1830,
+  &#39;+&#39;,
+  &#39;ID=Seq_ORF.10;ORF_type=complete;ORF_len=156;ORF_frame=1;Start:TTG;Stop:TAA&#39;),
+ (1712,
+  1859,
+  &#39;+&#39;,
+  &#39;ID=Seq_ORF.39;ORF_type=complete;ORF_len=147;ORF_frame=3;Start:CTG;Stop:TAA&#39;),
+ (942,
+  1086,
+  &#39;+&#39;,
+  &#39;ID=Seq_ORF.5;ORF_type=complete;ORF_len=144;ORF_frame=1;Start:ATG;Stop:TAG&#39;),
+ (1211,
+  1346,
+  &#39;-&#39;,
+  &#39;ID=Seq_ORF.46;ORF_type=complete;ORF_len=135;ORF_frame=-1;Start:CTG;Stop:TAA&#39;),
+ (1555,
+  1675,
+  &#39;+&#39;,
+  &#39;ID=Seq_ORF.18;ORF_type=complete;ORF_len=120;ORF_frame=2;Start:ATG;Stop:TGA&#39;),
+ (390,
+  510,
+  &#39;-&#39;,
+  &#39;ID=Seq_ORF.80;ORF_type=complete;ORF_len=120;ORF_frame=-3;Start:CTG;Stop:TAA&#39;),
+ (1526,
+  1643,
+  &#39;+&#39;,
+  &#39;ID=Seq_ORF.38;ORF_type=complete;ORF_len=117;ORF_frame=3;Start:TTG;Stop:TAA&#39;),
+ (1461,
+  1575,
+  &#39;-&#39;,
+  &#39;ID=Seq_ORF.76;ORF_type=complete;ORF_len=114;ORF_frame=-3;Start:ATG;Stop:TGA&#39;),
+ (663,
+  771,
+  &#39;-&#39;,
+  &#39;ID=Seq_ORF.78;ORF_type=complete;ORF_len=108;ORF_frame=-3;Start:CTG;Stop:TGA&#39;),
+ (518,
+  620,
+  &#39;+&#39;,
+  &#39;ID=Seq_ORF.29;ORF_type=complete;ORF_len=102;ORF_frame=3;Start:CTG;Stop:TGA&#39;),
+ (765,
+  861,
+  &#39;+&#39;,
+  &#39;ID=Seq_ORF.3;ORF_type=complete;ORF_len=96;ORF_frame=1;Start:ATG;Stop:TAG&#39;),
+ (1106,
+  1196,
+  &#39;-&#39;,
+  &#39;ID=Seq_ORF.47;ORF_type=complete;ORF_len=90;ORF_frame=-1;Start:TTG;Stop:TAG&#39;),
+ (81,
+  168,
+  &#39;+&#39;,
+  &#39;ID=Seq_ORF.1;ORF_type=complete;ORF_len=87;ORF_frame=1;Start:ATG;Stop:TGA&#39;),
+ (1123,
+  1207,
+  &#39;-&#39;,
+  &#39;ID=Seq_ORF.64;ORF_type=complete;ORF_len=84;ORF_frame=-2;Start:TTG;Stop:TAG&#39;),
+ (1539,
+  1620,
+  &#39;+&#39;,
+  &#39;ID=Seq_ORF.9;ORF_type=complete;ORF_len=81;ORF_frame=1;Start:ATG;Stop:TAG&#39;),
+ (279,
+  360,
+  &#39;-&#39;,
+  &#39;ID=Seq_ORF.81;ORF_type=complete;ORF_len=81;ORF_frame=-3;Start:TTG;Stop:TGA&#39;),
+ (799,
+  877,
+  &#39;+&#39;,
+  &#39;ID=Seq_ORF.15;ORF_type=complete;ORF_len=78;ORF_frame=2;Start:TTG;Stop:TAA&#39;),
+ (1709,
+  1787,
+  &#39;-&#39;,
+  &#39;ID=Seq_ORF.42;ORF_type=complete;ORF_len=78;ORF_frame=-1;Start:ATG;Stop:TAG&#39;),
+ (313,
+  388,
+  &#39;+&#39;,
+  &#39;ID=Seq_ORF.13;ORF_type=complete;ORF_len=75;ORF_frame=2;Start:ATG;Stop:TAA&#39;),
+ (1612,
+  1684,
+  &#39;-&#39;,
+  &#39;ID=Seq_ORF.60;ORF_type=complete;ORF_len=72;ORF_frame=-2;Start:CTG;Stop:TAG&#39;),
+ (1510,
+  1582,
+  &#39;-&#39;,
+  &#39;ID=Seq_ORF.61;ORF_type=complete;ORF_len=72;ORF_frame=-2;Start:TTG;Stop:TAA&#39;),
+ (667,
+  739,
+  &#39;-&#39;,
+  &#39;ID=Seq_ORF.67;ORF_type=complete;ORF_len=72;ORF_frame=-2;Start:ATG;Stop:TAG&#39;),
+ (518,
+  587,
+  &#39;-&#39;,
+  &#39;ID=Seq_ORF.55;ORF_type=complete;ORF_len=69;ORF_frame=-1;Start:ATG;Stop:TAG&#39;),
+ (568,
+  637,
+  &#39;-&#39;,
+  &#39;ID=Seq_ORF.68;ORF_type=complete;ORF_len=69;ORF_frame=-2;Start:TTG;Stop:TGA&#39;),
+ (579,
+  645,
+  &#39;-&#39;,
+  &#39;ID=Seq_ORF.79;ORF_type=complete;ORF_len=66;ORF_frame=-3;Start:ATG;Stop:TGA&#39;),
+ (1899,
+  1959,
+  &#39;+&#39;,
+  &#39;ID=Seq_ORF.11;ORF_type=complete;ORF_len=60;ORF_frame=1;Start:ATG;Stop:TAA&#39;),
+ (1690,
+  1750,
+  &#39;+&#39;,
+  &#39;ID=Seq_ORF.19;ORF_type=complete;ORF_len=60;ORF_frame=2;Start:CTG;Stop:TAG&#39;),
+ (254,
+  311,
+  &#39;+&#39;,
+  &#39;ID=Seq_ORF.27;ORF_type=complete;ORF_len=57;ORF_frame=3;Start:CTG;Stop:TGA&#39;),
+ (1832,
+  1886,
+  &#39;-&#39;,
+  &#39;ID=Seq_ORF.41;ORF_type=complete;ORF_len=54;ORF_frame=-1;Start:TTG;Stop:TAG&#39;),
+ (790,
+  844,
+  &#39;-&#39;,
+  &#39;ID=Seq_ORF.66;ORF_type=complete;ORF_len=54;ORF_frame=-2;Start:TTG;Stop:TAG&#39;),
+ (998,
+  1049,
+  &#39;+&#39;,
+  &#39;ID=Seq_ORF.33;ORF_type=complete;ORF_len=51;ORF_frame=3;Start:TTG;Stop:TAG&#39;),
+ (1896,
+  1947,
+  &#39;-&#39;,
+  &#39;ID=Seq_ORF.73;ORF_type=complete;ORF_len=51;ORF_frame=-3;Start:TTG;Stop:TAG&#39;),
+ (1740,
+  1791,
+  &#39;-&#39;,
+  &#39;ID=Seq_ORF.75;ORF_type=complete;ORF_len=51;ORF_frame=-3;Start:CTG;Stop:TAG&#39;),
+ (1164,
+  1209,
+  &#39;+&#39;,
+  &#39;ID=Seq_ORF.7;ORF_type=complete;ORF_len=45;ORF_frame=1;Start:TTG;Stop:TAA&#39;),
+ (1004,
+  1049,
+  &#39;-&#39;,
+  &#39;ID=Seq_ORF.48;ORF_type=complete;ORF_len=45;ORF_frame=-1;Start:TTG;Stop:TGA&#39;),
+ (386,
+  431,
+  &#39;-&#39;,
+  &#39;ID=Seq_ORF.56;ORF_type=complete;ORF_len=45;ORF_frame=-1;Start:CTG;Stop:TAG&#39;),
+ (725,
+  767,
+  &#39;-&#39;,
+  &#39;ID=Seq_ORF.52;ORF_type=complete;ORF_len=42;ORF_frame=-1;Start:ATG;Stop:TAG&#39;),
+ (442,
+  484,
+  &#39;-&#39;,
+  &#39;ID=Seq_ORF.69;ORF_type=complete;ORF_len=42;ORF_frame=-2;Start:TTG;Stop:TAG&#39;),
+ (254,
+  293,
+  &#39;-&#39;,
+  &#39;ID=Seq_ORF.58;ORF_type=complete;ORF_len=39;ORF_frame=-1;Start:CTG;Stop:TAG&#39;),
+ (184,
+  223,
+  &#39;-&#39;,
+  &#39;ID=Seq_ORF.71;ORF_type=complete;ORF_len=39;ORF_frame=-2;Start:TTG;Stop:TAG&#39;),
+ (22,
+  61,
+  &#39;-&#39;,
+  &#39;ID=Seq_ORF.72;ORF_type=complete;ORF_len=39;ORF_frame=-2;Start:CTG;Stop:TGA&#39;),
+ (896,
+  932,
+  &#39;+&#39;,
+  &#39;ID=Seq_ORF.32;ORF_type=complete;ORF_len=36;ORF_frame=3;Start:ATG;Stop:TAA&#39;),
+ (244,
+  280,
+  &#39;-&#39;,
+  &#39;ID=Seq_ORF.70;ORF_type=complete;ORF_len=36;ORF_frame=-2;Start:CTG;Stop:TAG&#39;),
+ (191,
+  224,
+  &#39;+&#39;,
+  &#39;ID=Seq_ORF.25;ORF_type=complete;ORF_len=33;ORF_frame=3;Start:CTG;Stop:TAG&#39;),
+ (1355,
+  1385,
+  &#39;+&#39;,
+  &#39;ID=Seq_ORF.35;ORF_type=complete;ORF_len=30;ORF_frame=3;Start:TTG;Stop:TAG&#39;),
+ (1513,
+  1540,
+  &#39;+&#39;,
+  &#39;ID=Seq_ORF.17;ORF_type=complete;ORF_len=27;ORF_frame=2;Start:ATG;Stop:TGA&#39;),
+ (1379,
+  1406,
+  &#39;-&#39;,
+  &#39;ID=Seq_ORF.45;ORF_type=complete;ORF_len=27;ORF_frame=-1;Start:ATG;Stop:TAG&#39;),
+ (222,
+  249,
+  &#39;-&#39;,
+  &#39;ID=Seq_ORF.82;ORF_type=complete;ORF_len=27;ORF_frame=-3;Start:ATG;Stop:TGA&#39;),
+ (912,
+  936,
+  &#39;+&#39;,
+  &#39;ID=Seq_ORF.4;ORF_type=complete;ORF_len=24;ORF_frame=1;Start:CTG;Stop:TAG&#39;),
+ (1870,
+  1894,
+  &#39;+&#39;,
+  &#39;ID=Seq_ORF.20;ORF_type=complete;ORF_len=24;ORF_frame=2;Start:TTG;Stop:TAG&#39;),
+ (683,
+  707,
+  &#39;+&#39;,
+  &#39;ID=Seq_ORF.30;ORF_type=complete;ORF_len=24;ORF_frame=3;Start:TTG;Stop:TAG&#39;),
+ (872,
+  896,
+  &#39;-&#39;,
+  &#39;ID=Seq_ORF.51;ORF_type=complete;ORF_len=24;ORF_frame=-1;Start:CTG;Stop:TAA&#39;),
+ (110,
+  131,
+  &#39;+&#39;,
+  &#39;ID=Seq_ORF.23;ORF_type=complete;ORF_len=21;ORF_frame=3;Start:TTG;Stop:TAG&#39;),
+ (167,
+  188,
+  &#39;+&#39;,
+  &#39;ID=Seq_ORF.24;ORF_type=complete;ORF_len=21;ORF_frame=3;Start:TTG;Stop:TAA&#39;),
+ (959,
+  980,
+  &#39;-&#39;,
+  &#39;ID=Seq_ORF.49;ORF_type=complete;ORF_len=21;ORF_frame=-1;Start:ATG;Stop:TAG&#39;),
+ (210,
+  228,
+  &#39;+&#39;,
+  &#39;ID=Seq_ORF.2;ORF_type=complete;ORF_len=18;ORF_frame=1;Start:TTG;Stop:TGA&#39;),
+ (29,
+  47,
+  &#39;+&#39;,
+  &#39;ID=Seq_ORF.21;ORF_type=complete;ORF_len=18;ORF_frame=3;Start:ATG;Stop:TAA&#39;),
+ (1453,
+  1471,
+  &#39;-&#39;,
+  &#39;ID=Seq_ORF.62;ORF_type=complete;ORF_len=18;ORF_frame=-2;Start:TTG;Stop:TAA&#39;),
+ (1089,
+  1104,
+  &#39;+&#39;,
+  &#39;ID=Seq_ORF.6;ORF_type=complete;ORF_len=15;ORF_frame=1;Start:TTG;Stop:TAG&#39;),
+ (227,
+  242,
+  &#39;+&#39;,
+  &#39;ID=Seq_ORF.26;ORF_type=complete;ORF_len=15;ORF_frame=3;Start:CTG;Stop:TAA&#39;),
+ (866,
+  881,
+  &#39;+&#39;,
+  &#39;ID=Seq_ORF.31;ORF_type=complete;ORF_len=15;ORF_frame=3;Start:CTG;Stop:TAA&#39;),
+ (1526,
+  1541,
+  &#39;-&#39;,
+  &#39;ID=Seq_ORF.44;ORF_type=complete;ORF_len=15;ORF_frame=-1;Start:ATG;Stop:TAG&#39;),
+ (659,
+  674,
+  &#39;-&#39;,
+  &#39;ID=Seq_ORF.53;ORF_type=complete;ORF_len=15;ORF_frame=-1;Start:ATG;Stop:TAA&#39;),
+ (1394,
+  1406,
+  &#39;+&#39;,
+  &#39;ID=Seq_ORF.36;ORF_type=complete;ORF_len=12;ORF_frame=3;Start:TTG;Stop:TAA&#39;),
+ (407,
+  416,
+  &#39;+&#39;,
+  &#39;ID=Seq_ORF.28;ORF_type=complete;ORF_len=9;ORF_frame=3;Start:TTG;Stop:TAA&#39;),
+ (1442,
+  1451,
+  &#39;+&#39;,
+  &#39;ID=Seq_ORF.37;ORF_type=complete;ORF_len=9;ORF_frame=3;Start:CTG;Stop:TAG&#39;),
+ (1925,
+  1934,
+  &#39;-&#39;,
+  &#39;ID=Seq_ORF.40;ORF_type=complete;ORF_len=9;ORF_frame=-1;Start:TTG;Stop:TAG&#39;),
+ (1622,
+  1631,
+  &#39;-&#39;,
+  &#39;ID=Seq_ORF.43;ORF_type=complete;ORF_len=9;ORF_frame=-1;Start:TTG;Stop:TAG&#39;),
+ (60,
+  69,
+  &#39;-&#39;,
+  &#39;ID=Seq_ORF.83;ORF_type=complete;ORF_len=9;ORF_frame=-3;Start:ATG;Stop:TGA&#39;),
+ (1227,
+  1233,
+  &#39;+&#39;,
+  &#39;ID=Seq_ORF.8;ORF_type=complete;ORF_len=6;ORF_frame=1;Start:TTG;Stop:TGA&#39;),
+ (938,
+  944,
+  &#39;-&#39;,
+  &#39;ID=Seq_ORF.50;ORF_type=complete;ORF_len=6;ORF_frame=-1;Start:ATG;Stop:TAG&#39;),
+ (608,
+  614,
+  &#39;-&#39;,
+  &#39;ID=Seq_ORF.54;ORF_type=complete;ORF_len=6;ORF_frame=-1;Start:CTG;Stop:TGA&#39;),
+ (1815,
+  1821,
+  &#39;-&#39;,
+  &#39;ID=Seq_ORF.74;ORF_type=complete;ORF_len=6;ORF_frame=-3;Start:CTG;Stop:TAG&#39;),
+ (92,
+  95,
+  &#39;+&#39;,
+  &#39;ID=Seq_ORF.22;ORF_type=complete;ORF_len=3;ORF_frame=3;Start:CTG;Stop:TAG&#39;),
+ (299,
+  302,
+  &#39;-&#39;,
+  &#39;ID=Seq_ORF.57;ORF_type=complete;ORF_len=3;ORF_frame=-1;Start:TTG;Stop:TAG&#39;),
+ (1327,
+  1330,
+  &#39;-&#39;,
+  &#39;ID=Seq_ORF.63;ORF_type=complete;ORF_len=3;ORF_frame=-2;Start:TTG;Stop:TAG&#39;)]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">s0s0rc</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">Seq</span><span class="p">(</span><span class="n">s0s0</span><span class="p">)</span><span class="o">.</span><span class="n">reverse_complement</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">orfipy_core</span> 
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">s</span> <span class="o">=</span> <span class="n">orfipy_core</span><span class="o">.</span><span class="n">orfs</span><span class="p">(</span><span class="n">s0s0rc</span><span class="p">)</span>
+<span class="nb">sorted</span><span class="p">(</span><span class="n">s</span><span class="p">,</span><span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="nb">int</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;;&quot;</span><span class="p">)[</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;=&quot;</span><span class="p">)[</span><span class="mi">1</span><span class="p">]),</span> <span class="n">reverse</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[(3695,
+  6767,
+  &#39;+&#39;,
+  &#39;ID=Seq_ORF.134;ORF_type=complete;ORF_len=3072;ORF_frame=3;Start:ATG;Stop:TAA&#39;),
+ (6791,
+  8072,
+  &#39;+&#39;,
+  &#39;ID=Seq_ORF.135;ORF_type=complete;ORF_len=1281;ORF_frame=3;Start:CTG;Stop:TAA&#39;),
+ (8857,
+  9997,
+  &#39;-&#39;,
+  &#39;ID=Seq_ORF.153;ORF_type=complete;ORF_len=1140;ORF_frame=-1;Start:CTG;Stop:TGA&#39;),
+ (2613,
+  3570,
+  &#39;+&#39;,
+  &#39;ID=Seq_ORF.15;ORF_type=complete;ORF_len=957;ORF_frame=1;Start:ATG;Stop:TGA&#39;),
+ (1466,
+  2411,
+  &#39;+&#39;,
+  &#39;ID=Seq_ORF.126;ORF_type=complete;ORF_len=945;ORF_frame=3;Start:ATG;Stop:TGA&#39;),
+ (8089,
+  8749,
+  &#39;+&#39;,
+  &#39;ID=Seq_ORF.106;ORF_type=complete;ORF_len=660;ORF_frame=2;Start:ATG;Stop:TAA&#39;),
+ (802,
+  1453,
+  &#39;+&#39;,
+  &#39;ID=Seq_ORF.62;ORF_type=complete;ORF_len=651;ORF_frame=2;Start:CTG;Stop:TAA&#39;),
+ (6448,
+  6925,
+  &#39;+&#39;,
+  &#39;ID=Seq_ORF.99;ORF_type=complete;ORF_len=477;ORF_frame=2;Start:CTG;Stop:TGA&#39;),
+ (2508,
+  2883,
+  &#39;-&#39;,
+  &#39;ID=Seq_ORF.248;ORF_type=complete;ORF_len=375;ORF_frame=-2;Start:CTG;Stop:TAA&#39;),
+ (289,
+  619,
+  &#39;+&#39;,
+  &#39;ID=Seq_ORF.60;ORF_type=complete;ORF_len=330;ORF_frame=2;Start:CTG;Stop:TAA&#39;),
+ (1477,
+  1804,
+  &#39;-&#39;,
+  &#39;ID=Seq_ORF.197;ORF_type=complete;ORF_len=327;ORF_frame=-1;Start:TTG;Stop:TAA&#39;),
+ (2423,
+  2738,
+  &#39;+&#39;,
+  &#39;ID=Seq_ORF.127;ORF_type=complete;ORF_len=315;ORF_frame=3;Start:ATG;Stop:TAA&#39;),
+ (4571,
+  4883,
+  &#39;-&#39;,
+  &#39;ID=Seq_ORF.303;ORF_type=complete;ORF_len=312;ORF_frame=-3;Start:ATG;Stop:TAG&#39;),
+ (5635,
+  5944,
+  &#39;-&#39;,
+  &#39;ID=Seq_ORF.172;ORF_type=complete;ORF_len=309;ORF_frame=-1;Start:ATG;Stop:TGA&#39;),
+ (9652,
+  9940,
+  &#39;+&#39;,
+  &#39;ID=Seq_ORF.112;ORF_type=complete;ORF_len=288;ORF_frame=2;Start:CTG;Stop:TAG&#39;),
+ (4,
+  280,
+  &#39;+&#39;,
+  &#39;ID=Seq_ORF.59;ORF_type=complete;ORF_len=276;ORF_frame=2;Start:CTG;Stop:TAA&#39;),
+ (5427,
+  5691,
+  &#39;-&#39;,
+  &#39;ID=Seq_ORF.234;ORF_type=complete;ORF_len=264;ORF_frame=-2;Start:TTG;Stop:TAA&#39;),
+ (3329,
+  3590,
+  &#39;+&#39;,
+  &#39;ID=Seq_ORF.132;ORF_type=complete;ORF_len=261;ORF_frame=3;Start:ATG;Stop:TGA&#39;),
+ (3358,
+  3619,
+  &#39;-&#39;,
+  &#39;ID=Seq_ORF.188;ORF_type=complete;ORF_len=261;ORF_frame=-1;Start:CTG;Stop:TGA&#39;),
+ (2197,
+  2452,
+  &#39;-&#39;,
+  &#39;ID=Seq_ORF.193;ORF_type=complete;ORF_len=255;ORF_frame=-1;Start:ATG;Stop:TGA&#39;),
+ (8875,
+  9124,
+  &#39;+&#39;,
+  &#39;ID=Seq_ORF.107;ORF_type=complete;ORF_len=249;ORF_frame=2;Start:CTG;Stop:TAA&#39;),
+ (5996,
+  6233,
+  &#39;-&#39;,
+  &#39;ID=Seq_ORF.295;ORF_type=complete;ORF_len=237;ORF_frame=-3;Start:CTG;Stop:TGA&#39;),
+ (6898,
+  7129,
+  &#39;-&#39;,
+  &#39;ID=Seq_ORF.163;ORF_type=complete;ORF_len=231;ORF_frame=-1;Start:ATG;Stop:TAG&#39;),
+ (5101,
+  5332,
+  &#39;-&#39;,
+  &#39;ID=Seq_ORF.175;ORF_type=complete;ORF_len=231;ORF_frame=-1;Start:CTG;Stop:TGA&#39;),
+ (3625,
+  3856,
+  &#39;-&#39;,
+  &#39;ID=Seq_ORF.187;ORF_type=complete;ORF_len=231;ORF_frame=-1;Start:CTG;Stop:TAA&#39;),
+ (7609,
+  7837,
+  &#39;-&#39;,
+  &#39;ID=Seq_ORF.160;ORF_type=complete;ORF_len=228;ORF_frame=-1;Start:CTG;Stop:TAG&#39;),
+ (5076,
+  5295,
+  &#39;+&#39;,
+  &#39;ID=Seq_ORF.26;ORF_type=complete;ORF_len=219;ORF_frame=1;Start:ATG;Stop:TGA&#39;),
+ (9450,
+  9669,
+  &#39;+&#39;,
+  &#39;ID=Seq_ORF.57;ORF_type=complete;ORF_len=219;ORF_frame=1;Start:TTG;Stop:TAA&#39;),
+ (7206,
+  7422,
+  &#39;+&#39;,
+  &#39;ID=Seq_ORF.42;ORF_type=complete;ORF_len=216;ORF_frame=1;Start:TTG;Stop:TAG&#39;),
+ (6576,
+  6789,
+  &#39;-&#39;,
+  &#39;ID=Seq_ORF.228;ORF_type=complete;ORF_len=213;ORF_frame=-2;Start:ATG;Stop:TGA&#39;),
+ (8978,
+  9185,
+  &#39;-&#39;,
+  &#39;ID=Seq_ORF.272;ORF_type=complete;ORF_len=207;ORF_frame=-3;Start:CTG;Stop:TAG&#39;),
+ (4229,
+  4433,
+  &#39;-&#39;,
+  &#39;ID=Seq_ORF.305;ORF_type=complete;ORF_len=204;ORF_frame=-3;Start:CTG;Stop:TAA&#39;),
+ (6467,
+  6668,
+  &#39;-&#39;,
+  &#39;ID=Seq_ORF.292;ORF_type=complete;ORF_len=201;ORF_frame=-3;Start:ATG;Stop:TGA&#39;),
+ (5384,
+  5582,
+  &#39;-&#39;,
+  &#39;ID=Seq_ORF.299;ORF_type=complete;ORF_len=198;ORF_frame=-3;Start:CTG;Stop:TAA&#39;),
+ (3771,
+  3963,
+  &#39;-&#39;,
+  &#39;ID=Seq_ORF.241;ORF_type=complete;ORF_len=192;ORF_frame=-2;Start:TTG;Stop:TAA&#39;),
+ (345,
+  531,
+  &#39;-&#39;,
+  &#39;ID=Seq_ORF.265;ORF_type=complete;ORF_len=186;ORF_frame=-2;Start:TTG;Stop:TGA&#39;),
+ (2129,
+  2315,
+  &#39;-&#39;,
+  &#39;ID=Seq_ORF.324;ORF_type=complete;ORF_len=186;ORF_frame=-3;Start:ATG;Stop:TAA&#39;),
+ (4035,
+  4215,
+  &#39;+&#39;,
+  &#39;ID=Seq_ORF.18;ORF_type=complete;ORF_len=180;ORF_frame=1;Start:TTG;Stop:TGA&#39;),
+ (8762,
+  8939,
+  &#39;+&#39;,
+  &#39;ID=Seq_ORF.144;ORF_type=complete;ORF_len=177;ORF_frame=3;Start:TTG;Stop:TGA&#39;),
+ (3057,
+  3234,
+  &#39;-&#39;,
+  &#39;ID=Seq_ORF.246;ORF_type=complete;ORF_len=177;ORF_frame=-2;Start:CTG;Stop:TAA&#39;),
+ (240,
+  414,
+  &#39;+&#39;,
+  &#39;ID=Seq_ORF.1;ORF_type=complete;ORF_len=174;ORF_frame=1;Start:CTG;Stop:TAA&#39;),
+ (5779,
+  5953,
+  &#39;+&#39;,
+  &#39;ID=Seq_ORF.95;ORF_type=complete;ORF_len=174;ORF_frame=2;Start:CTG;Stop:TAA&#39;),
+ (2875,
+  3043,
+  &#39;+&#39;,
+  &#39;ID=Seq_ORF.73;ORF_type=complete;ORF_len=168;ORF_frame=2;Start:ATG;Stop:TAG&#39;),
+ (9386,
+  9554,
+  &#39;-&#39;,
+  &#39;ID=Seq_ORF.270;ORF_type=complete;ORF_len=168;ORF_frame=-3;Start:CTG;Stop:TAA&#39;),
+ (8404,
+  8569,
+  &#39;-&#39;,
+  &#39;ID=Seq_ORF.155;ORF_type=complete;ORF_len=165;ORF_frame=-1;Start:ATG;Stop:TAA&#39;),
+ (1848,
+  2010,
+  &#39;+&#39;,
+  &#39;ID=Seq_ORF.10;ORF_type=complete;ORF_len=162;ORF_frame=1;Start:CTG;Stop:TGA&#39;),
+ (7163,
+  7322,
+  &#39;-&#39;,
+  &#39;ID=Seq_ORF.287;ORF_type=complete;ORF_len=159;ORF_frame=-3;Start:CTG;Stop:TAG&#39;),
+ (1655,
+  1814,
+  &#39;-&#39;,
+  &#39;ID=Seq_ORF.328;ORF_type=complete;ORF_len=159;ORF_frame=-3;Start:TTG;Stop:TAA&#39;),
+ (7159,
+  7315,
+  &#39;-&#39;,
+  &#39;ID=Seq_ORF.162;ORF_type=complete;ORF_len=156;ORF_frame=-1;Start:TTG;Stop:TAA&#39;),
+ (5461,
+  5617,
+  &#39;-&#39;,
+  &#39;ID=Seq_ORF.173;ORF_type=complete;ORF_len=156;ORF_frame=-1;Start:CTG;Stop:TAA&#39;),
+ (5825,
+  5981,
+  &#39;-&#39;,
+  &#39;ID=Seq_ORF.296;ORF_type=complete;ORF_len=156;ORF_frame=-3;Start:CTG;Stop:TGA&#39;),
+ (8540,
+  8693,
+  &#39;+&#39;,
+  &#39;ID=Seq_ORF.142;ORF_type=complete;ORF_len=153;ORF_frame=3;Start:TTG;Stop:TAA&#39;),
+ (7321,
+  7474,
+  &#39;-&#39;,
+  &#39;ID=Seq_ORF.161;ORF_type=complete;ORF_len=153;ORF_frame=-1;Start:CTG;Stop:TGA&#39;),
+ (6924,
+  7071,
+  &#39;+&#39;,
+  &#39;ID=Seq_ORF.39;ORF_type=complete;ORF_len=147;ORF_frame=1;Start:ATG;Stop:TAG&#39;),
+ (1394,
+  1541,
+  &#39;-&#39;,
+  &#39;ID=Seq_ORF.330;ORF_type=complete;ORF_len=147;ORF_frame=-3;Start:CTG;Stop:TGA&#39;),
+ (3861,
+  4005,
+  &#39;+&#39;,
+  &#39;ID=Seq_ORF.17;ORF_type=complete;ORF_len=144;ORF_frame=1;Start:ATG;Stop:TGA&#39;),
+ (3106,
+  3250,
+  &#39;-&#39;,
+  &#39;ID=Seq_ORF.190;ORF_type=complete;ORF_len=144;ORF_frame=-1;Start:TTG;Stop:TGA&#39;),
+ (5084,
+  5228,
+  &#39;-&#39;,
+  &#39;ID=Seq_ORF.301;ORF_type=complete;ORF_len=144;ORF_frame=-3;Start:CTG;Stop:TGA&#39;),
+ (3440,
+  3584,
+  &#39;-&#39;,
+  &#39;ID=Seq_ORF.310;ORF_type=complete;ORF_len=144;ORF_frame=-3;Start:TTG;Stop:TGA&#39;),
+ (5591,
+  5732,
+  &#39;-&#39;,
+  &#39;ID=Seq_ORF.298;ORF_type=complete;ORF_len=141;ORF_frame=-3;Start:CTG;Stop:TAA&#39;),
+ (8813,
+  8951,
+  &#39;-&#39;,
+  &#39;ID=Seq_ORF.273;ORF_type=complete;ORF_len=138;ORF_frame=-3;Start:CTG;Stop:TAA&#39;),
+ (5500,
+  5635,
+  &#39;+&#39;,
+  &#39;ID=Seq_ORF.93;ORF_type=complete;ORF_len=135;ORF_frame=2;Start:CTG;Stop:TAG&#39;),
+ (1308,
+  1443,
+  &#39;-&#39;,
+  &#39;ID=Seq_ORF.256;ORF_type=complete;ORF_len=135;ORF_frame=-2;Start:TTG;Stop:TGA&#39;),
+ (1086,
+  1221,
+  &#39;-&#39;,
+  &#39;ID=Seq_ORF.258;ORF_type=complete;ORF_len=135;ORF_frame=-2;Start:TTG;Stop:TGA&#39;),
+ (1662,
+  1794,
+  &#39;+&#39;,
+  &#39;ID=Seq_ORF.9;ORF_type=complete;ORF_len=132;ORF_frame=1;Start:TTG;Stop:TGA&#39;),
+ (637,
+  769,
+  &#39;+&#39;,
+  &#39;ID=Seq_ORF.61;ORF_type=complete;ORF_len=132;ORF_frame=2;Start:TTG;Stop:TAA&#39;),
+ (9390,
+  9522,
+  &#39;-&#39;,
+  &#39;ID=Seq_ORF.206;ORF_type=complete;ORF_len=132;ORF_frame=-2;Start:CTG;Stop:TGA&#39;),
+ (1803,
+  1932,
+  &#39;-&#39;,
+  &#39;ID=Seq_ORF.252;ORF_type=complete;ORF_len=129;ORF_frame=-2;Start:TTG;Stop:TGA&#39;),
+ (8421,
+  8547,
+  &#39;-&#39;,
+  &#39;ID=Seq_ORF.216;ORF_type=complete;ORF_len=126;ORF_frame=-2;Start:TTG;Stop:TAG&#39;),
+ (2217,
+  2340,
+  &#39;-&#39;,
+  &#39;ID=Seq_ORF.250;ORF_type=complete;ORF_len=123;ORF_frame=-2;Start:TTG;Stop:TAG&#39;),
+ (6245,
+  6368,
+  &#39;-&#39;,
+  &#39;ID=Seq_ORF.294;ORF_type=complete;ORF_len=123;ORF_frame=-3;Start:CTG;Stop:TAA&#39;),
+ (8958,
+  9075,
+  &#39;-&#39;,
+  &#39;ID=Seq_ORF.210;ORF_type=complete;ORF_len=117;ORF_frame=-2;Start:CTG;Stop:TGA&#39;),
+ (3731,
+  3848,
+  &#39;-&#39;,
+  &#39;ID=Seq_ORF.308;ORF_type=complete;ORF_len=117;ORF_frame=-3;Start:CTG;Stop:TAA&#39;),
+ (7791,
+  7905,
+  &#39;+&#39;,
+  &#39;ID=Seq_ORF.46;ORF_type=complete;ORF_len=114;ORF_frame=1;Start:TTG;Stop:TGA&#39;),
+ (9270,
+  9384,
+  &#39;+&#39;,
+  &#39;ID=Seq_ORF.56;ORF_type=complete;ORF_len=114;ORF_frame=1;Start:CTG;Stop:TAA&#39;),
+ (3964,
+  4078,
+  &#39;+&#39;,
+  &#39;ID=Seq_ORF.80;ORF_type=complete;ORF_len=114;ORF_frame=2;Start:CTG;Stop:TAA&#39;),
+ (7330,
+  7444,
+  &#39;+&#39;,
+  &#39;ID=Seq_ORF.102;ORF_type=complete;ORF_len=114;ORF_frame=2;Start:CTG;Stop:TAG&#39;),
+ (8963,
+  9077,
+  &#39;+&#39;,
+  &#39;ID=Seq_ORF.145;ORF_type=complete;ORF_len=114;ORF_frame=3;Start:TTG;Stop:TGA&#39;),
+ (4624,
+  4738,
+  &#39;-&#39;,
+  &#39;ID=Seq_ORF.179;ORF_type=complete;ORF_len=114;ORF_frame=-1;Start:TTG;Stop:TAG&#39;),
+ (4851,
+  4965,
+  &#39;-&#39;,
+  &#39;ID=Seq_ORF.236;ORF_type=complete;ORF_len=114;ORF_frame=-2;Start:TTG;Stop:TAA&#39;),
+ (593,
+  704,
+  &#39;+&#39;,
+  &#39;ID=Seq_ORF.119;ORF_type=complete;ORF_len=111;ORF_frame=3;Start:TTG;Stop:TGA&#39;),
+ (7503,
+  7611,
+  &#39;+&#39;,
+  &#39;ID=Seq_ORF.43;ORF_type=complete;ORF_len=108;ORF_frame=1;Start:ATG;Stop:TAA&#39;),
+ (3190,
+  3298,
+  &#39;+&#39;,
+  &#39;ID=Seq_ORF.75;ORF_type=complete;ORF_len=108;ORF_frame=2;Start:ATG;Stop:TAG&#39;),
+ (4297,
+  4405,
+  &#39;-&#39;,
+  &#39;ID=Seq_ORF.181;ORF_type=complete;ORF_len=108;ORF_frame=-1;Start:CTG;Stop:TGA&#39;),
+ (4566,
+  4674,
+  &#39;-&#39;,
+  &#39;ID=Seq_ORF.237;ORF_type=complete;ORF_len=108;ORF_frame=-2;Start:CTG;Stop:TGA&#39;),
+ (7370,
+  7478,
+  &#39;-&#39;,
+  &#39;ID=Seq_ORF.286;ORF_type=complete;ORF_len=108;ORF_frame=-3;Start:CTG;Stop:TAA&#39;),
+ (3753,
+  3858,
+  &#39;+&#39;,
+  &#39;ID=Seq_ORF.16;ORF_type=complete;ORF_len=105;ORF_frame=1;Start:CTG;Stop:TGA&#39;),
+ (2680,
+  2785,
+  &#39;+&#39;,
+  &#39;ID=Seq_ORF.72;ORF_type=complete;ORF_len=105;ORF_frame=2;Start:TTG;Stop:TAG&#39;),
+ (8266,
+  8371,
+  &#39;-&#39;,
+  &#39;ID=Seq_ORF.156;ORF_type=complete;ORF_len=105;ORF_frame=-1;Start:ATG;Stop:TGA&#39;),
+ (2928,
+  3033,
+  &#39;-&#39;,
+  &#39;ID=Seq_ORF.247;ORF_type=complete;ORF_len=105;ORF_frame=-2;Start:TTG;Stop:TAA&#39;),
+ (2756,
+  2861,
+  &#39;-&#39;,
+  &#39;ID=Seq_ORF.318;ORF_type=complete;ORF_len=105;ORF_frame=-3;Start:ATG;Stop:TGA&#39;),
+ (6099,
+  6201,
+  &#39;+&#39;,
+  &#39;ID=Seq_ORF.34;ORF_type=complete;ORF_len=102;ORF_frame=1;Start:TTG;Stop:TGA&#39;),
+ (4180,
+  4282,
+  &#39;-&#39;,
+  &#39;ID=Seq_ORF.182;ORF_type=complete;ORF_len=102;ORF_frame=-1;Start:CTG;Stop:TAA&#39;),
+ (2373,
+  2475,
+  &#39;-&#39;,
+  &#39;ID=Seq_ORF.249;ORF_type=complete;ORF_len=102;ORF_frame=-2;Start:TTG;Stop:TAG&#39;),
+ (6429,
+  6528,
+  &#39;+&#39;,
+  &#39;ID=Seq_ORF.36;ORF_type=complete;ORF_len=99;ORF_frame=1;Start:CTG;Stop:TGA&#39;),
+ (1477,
+  1576,
+  &#39;+&#39;,
+  &#39;ID=Seq_ORF.63;ORF_type=complete;ORF_len=99;ORF_frame=2;Start:TTG;Stop:TAA&#39;),
+ (8294,
+  8393,
+  &#39;-&#39;,
+  &#39;ID=Seq_ORF.279;ORF_type=complete;ORF_len=99;ORF_frame=-3;Start:TTG;Stop:TAA&#39;),
+ (7859,
+  7958,
+  &#39;-&#39;,
+  &#39;ID=Seq_ORF.283;ORF_type=complete;ORF_len=99;ORF_frame=-3;Start:CTG;Stop:TGA&#39;),
+ (1367,
+  1463,
+  &#39;+&#39;,
+  &#39;ID=Seq_ORF.125;ORF_type=complete;ORF_len=96;ORF_frame=3;Start:ATG;Stop:TAA&#39;),
+ (5276,
+  5372,
+  &#39;-&#39;,
+  &#39;ID=Seq_ORF.300;ORF_type=complete;ORF_len=96;ORF_frame=-3;Start:CTG;Stop:TAG&#39;),
+ (2867,
+  2963,
+  &#39;-&#39;,
+  &#39;ID=Seq_ORF.317;ORF_type=complete;ORF_len=96;ORF_frame=-3;Start:CTG;Stop:TAG&#39;),
+ (2358,
+  2451,
+  &#39;+&#39;,
+  &#39;ID=Seq_ORF.14;ORF_type=complete;ORF_len=93;ORF_frame=1;Start:TTG;Stop:TGA&#39;),
+ (3348,
+  3441,
+  &#39;-&#39;,
+  &#39;ID=Seq_ORF.245;ORF_type=complete;ORF_len=93;ORF_frame=-2;Start:CTG;Stop:TAA&#39;),
+ (3233,
+  3326,
+  &#39;-&#39;,
+  &#39;ID=Seq_ORF.313;ORF_type=complete;ORF_len=93;ORF_frame=-3;Start:CTG;Stop:TGA&#39;),
+ (341,
+  434,
+  &#39;-&#39;,
+  &#39;ID=Seq_ORF.337;ORF_type=complete;ORF_len=93;ORF_frame=-3;Start:ATG;Stop:TGA&#39;),
+ (173,
+  266,
+  &#39;-&#39;,
+  &#39;ID=Seq_ORF.339;ORF_type=complete;ORF_len=93;ORF_frame=-3;Start:CTG;Stop:TGA&#39;),
+ (4374,
+  4464,
+  &#39;+&#39;,
+  &#39;ID=Seq_ORF.19;ORF_type=complete;ORF_len=90;ORF_frame=1;Start:ATG;Stop:TAA&#39;),
+ (8325,
+  8415,
+  &#39;+&#39;,
+  &#39;ID=Seq_ORF.49;ORF_type=complete;ORF_len=90;ORF_frame=1;Start:CTG;Stop:TGA&#39;),
+ (6352,
+  6442,
+  &#39;+&#39;,
+  &#39;ID=Seq_ORF.98;ORF_type=complete;ORF_len=90;ORF_frame=2;Start:CTG;Stop:TGA&#39;),
+ (8808,
+  8898,
+  &#39;-&#39;,
+  &#39;ID=Seq_ORF.212;ORF_type=complete;ORF_len=90;ORF_frame=-2;Start:TTG;Stop:TAG&#39;),
+ (7499,
+  7589,
+  &#39;-&#39;,
+  &#39;ID=Seq_ORF.285;ORF_type=complete;ORF_len=90;ORF_frame=-3;Start:CTG;Stop:TGA&#39;),
+ (807,
+  894,
+  &#39;+&#39;,
+  &#39;ID=Seq_ORF.3;ORF_type=complete;ORF_len=87;ORF_frame=1;Start:TTG;Stop:TGA&#39;),
+ (5334,
+  5421,
+  &#39;+&#39;,
+  &#39;ID=Seq_ORF.27;ORF_type=complete;ORF_len=87;ORF_frame=1;Start:TTG;Stop:TGA&#39;),
+ (41,
+  128,
+  &#39;+&#39;,
+  &#39;ID=Seq_ORF.113;ORF_type=complete;ORF_len=87;ORF_frame=3;Start:TTG;Stop:TGA&#39;),
+ (956,
+  1043,
+  &#39;+&#39;,
+  &#39;ID=Seq_ORF.122;ORF_type=complete;ORF_len=87;ORF_frame=3;Start:CTG;Stop:TGA&#39;),
+ (9458,
+  9545,
+  &#39;+&#39;,
+  &#39;ID=Seq_ORF.149;ORF_type=complete;ORF_len=87;ORF_frame=3;Start:TTG;Stop:TGA&#39;),
+ (2968,
+  3055,
+  &#39;-&#39;,
+  &#39;ID=Seq_ORF.191;ORF_type=complete;ORF_len=87;ORF_frame=-1;Start:ATG;Stop:TAA&#39;),
+ (1978,
+  2065,
+  &#39;-&#39;,
+  &#39;ID=Seq_ORF.195;ORF_type=complete;ORF_len=87;ORF_frame=-1;Start:TTG;Stop:TGA&#39;),
+ (7356,
+  7443,
+  &#39;-&#39;,
+  &#39;ID=Seq_ORF.225;ORF_type=complete;ORF_len=87;ORF_frame=-2;Start:ATG;Stop:TGA&#39;),
+ (4137,
+  4224,
+  &#39;-&#39;,
+  &#39;ID=Seq_ORF.239;ORF_type=complete;ORF_len=87;ORF_frame=-2;Start:ATG;Stop:TAA&#39;),
+ (7754,
+  7841,
+  &#39;-&#39;,
+  &#39;ID=Seq_ORF.284;ORF_type=complete;ORF_len=87;ORF_frame=-3;Start:CTG;Stop:TGA&#39;),
+ (4100,
+  4187,
+  &#39;-&#39;,
+  &#39;ID=Seq_ORF.306;ORF_type=complete;ORF_len=87;ORF_frame=-3;Start:CTG;Stop:TAG&#39;),
+ (3026,
+  3113,
+  &#39;-&#39;,
+  &#39;ID=Seq_ORF.316;ORF_type=complete;ORF_len=87;ORF_frame=-3;Start:TTG;Stop:TGA&#39;),
+ (1970,
+  2057,
+  &#39;-&#39;,
+  &#39;ID=Seq_ORF.326;ORF_type=complete;ORF_len=87;ORF_frame=-3;Start:TTG;Stop:TAA&#39;),
+ (1383,
+  1467,
+  &#39;+&#39;,
+  &#39;ID=Seq_ORF.6;ORF_type=complete;ORF_len=84;ORF_frame=1;Start:TTG;Stop:TGA&#39;),
+ (7917,
+  8001,
+  &#39;+&#39;,
+  &#39;ID=Seq_ORF.47;ORF_type=complete;ORF_len=84;ORF_frame=1;Start:CTG;Stop:TAA&#39;),
+ (9487,
+  9571,
+  &#39;+&#39;,
+  &#39;ID=Seq_ORF.111;ORF_type=complete;ORF_len=84;ORF_frame=2;Start:TTG;Stop:TAA&#39;),
+ (6270,
+  6348,
+  &#39;+&#39;,
+  &#39;ID=Seq_ORF.35;ORF_type=complete;ORF_len=78;ORF_frame=1;Start:TTG;Stop:TGA&#39;),
+ (5248,
+  5326,
+  &#39;+&#39;,
+  &#39;ID=Seq_ORF.91;ORF_type=complete;ORF_len=78;ORF_frame=2;Start:ATG;Stop:TAA&#39;),
+ (6112,
+  6190,
+  &#39;+&#39;,
+  &#39;ID=Seq_ORF.97;ORF_type=complete;ORF_len=78;ORF_frame=2;Start:CTG;Stop:TGA&#39;),
+ (7870,
+  7948,
+  &#39;-&#39;,
+  &#39;ID=Seq_ORF.159;ORF_type=complete;ORF_len=78;ORF_frame=-1;Start:ATG;Stop:TAA&#39;),
+ (6297,
+  6375,
+  &#39;-&#39;,
+  &#39;ID=Seq_ORF.230;ORF_type=complete;ORF_len=78;ORF_frame=-2;Start:CTG;Stop:TAA&#39;),
+ (9764,
+  9842,
+  &#39;-&#39;,
+  &#39;ID=Seq_ORF.268;ORF_type=complete;ORF_len=78;ORF_frame=-3;Start:CTG;Stop:TGA&#39;),
+ (2327,
+  2405,
+  &#39;-&#39;,
+  &#39;ID=Seq_ORF.323;ORF_type=complete;ORF_len=78;ORF_frame=-3;Start:ATG;Stop:TAG&#39;),
+ (5430,
+  5505,
+  &#39;+&#39;,
+  &#39;ID=Seq_ORF.28;ORF_type=complete;ORF_len=75;ORF_frame=1;Start:ATG;Stop:TGA&#39;),
+ (2410,
+  2485,
+  &#39;+&#39;,
+  &#39;ID=Seq_ORF.68;ORF_type=complete;ORF_len=75;ORF_frame=2;Start:TTG;Stop:TGA&#39;),
+ (491,
+  566,
+  &#39;+&#39;,
+  &#39;ID=Seq_ORF.118;ORF_type=complete;ORF_len=75;ORF_frame=3;Start:ATG;Stop:TAG&#39;),
+ (8568,
+  8643,
+  &#39;-&#39;,
+  &#39;ID=Seq_ORF.215;ORF_type=complete;ORF_len=75;ORF_frame=-2;Start:ATG;Stop:TGA&#39;),
+ (5353,
+  5425,
+  &#39;+&#39;,
+  &#39;ID=Seq_ORF.92;ORF_type=complete;ORF_len=72;ORF_frame=2;Start:CTG;Stop:TAA&#39;),
+ (9584,
+  9656,
+  &#39;+&#39;,
+  &#39;ID=Seq_ORF.150;ORF_type=complete;ORF_len=72;ORF_frame=3;Start:ATG;Stop:TGA&#39;),
+ (9915,
+  9987,
+  &#39;-&#39;,
+  &#39;ID=Seq_ORF.200;ORF_type=complete;ORF_len=72;ORF_frame=-2;Start:TTG;Stop:TGA&#39;),
+ (6108,
+  6180,
+  &#39;-&#39;,
+  &#39;ID=Seq_ORF.231;ORF_type=complete;ORF_len=72;ORF_frame=-2;Start:CTG;Stop:TAG&#39;),
+ (7704,
+  7773,
+  &#39;+&#39;,
+  &#39;ID=Seq_ORF.45;ORF_type=complete;ORF_len=69;ORF_frame=1;Start:CTG;Stop:TGA&#39;),
+ (4861,
+  4930,
+  &#39;+&#39;,
+  &#39;ID=Seq_ORF.86;ORF_type=complete;ORF_len=69;ORF_frame=2;Start:CTG;Stop:TGA&#39;),
+ (3262,
+  3331,
+  &#39;-&#39;,
+  &#39;ID=Seq_ORF.189;ORF_type=complete;ORF_len=69;ORF_frame=-1;Start:ATG;Stop:TAA&#39;),
+ (9294,
+  9363,
+  &#39;-&#39;,
+  &#39;ID=Seq_ORF.207;ORF_type=complete;ORF_len=69;ORF_frame=-2;Start:TTG;Stop:TGA&#39;),
+ (2630,
+  2699,
+  &#39;-&#39;,
+  &#39;ID=Seq_ORF.319;ORF_type=complete;ORF_len=69;ORF_frame=-3;Start:CTG;Stop:TAA&#39;),
+ (2032,
+  2098,
+  &#39;+&#39;,
+  &#39;ID=Seq_ORF.65;ORF_type=complete;ORF_len=66;ORF_frame=2;Start:CTG;Stop:TGA&#39;),
+ (3061,
+  3127,
+  &#39;+&#39;,
+  &#39;ID=Seq_ORF.74;ORF_type=complete;ORF_len=66;ORF_frame=2;Start:CTG;Stop:TAG&#39;),
+ (3868,
+  3934,
+  &#39;+&#39;,
+  &#39;ID=Seq_ORF.79;ORF_type=complete;ORF_len=66;ORF_frame=2;Start:ATG;Stop:TGA&#39;),
+ (9235,
+  9301,
+  &#39;+&#39;,
+  &#39;ID=Seq_ORF.109;ORF_type=complete;ORF_len=66;ORF_frame=2;Start:CTG;Stop:TAA&#39;),
+ (4404,
+  4470,
+  &#39;-&#39;,
+  &#39;ID=Seq_ORF.238;ORF_type=complete;ORF_len=66;ORF_frame=-2;Start:CTG;Stop:TGA&#39;),
+ (8108,
+  8174,
+  &#39;-&#39;,
+  &#39;ID=Seq_ORF.281;ORF_type=complete;ORF_len=66;ORF_frame=-3;Start:CTG;Stop:TAA&#39;),
+ (4665,
+  4728,
+  &#39;+&#39;,
+  &#39;ID=Seq_ORF.22;ORF_type=complete;ORF_len=63;ORF_frame=1;Start:TTG;Stop:TGA&#39;),
+ (6534,
+  6597,
+  &#39;+&#39;,
+  &#39;ID=Seq_ORF.37;ORF_type=complete;ORF_len=63;ORF_frame=1;Start:ATG;Stop:TGA&#39;),
+ (8061,
+  8124,
+  &#39;+&#39;,
+  &#39;ID=Seq_ORF.48;ORF_type=complete;ORF_len=63;ORF_frame=1;Start:ATG;Stop:TAA&#39;),
+ (5673,
+  5733,
+  &#39;+&#39;,
+  &#39;ID=Seq_ORF.30;ORF_type=complete;ORF_len=60;ORF_frame=1;Start:ATG;Stop:TGA&#39;),
+ (5736,
+  5796,
+  &#39;+&#39;,
+  &#39;ID=Seq_ORF.31;ORF_type=complete;ORF_len=60;ORF_frame=1;Start:TTG;Stop:TAG&#39;),
+ (893,
+  953,
+  &#39;+&#39;,
+  &#39;ID=Seq_ORF.121;ORF_type=complete;ORF_len=60;ORF_frame=3;Start:TTG;Stop:TGA&#39;),
+ (9695,
+  9755,
+  &#39;+&#39;,
+  &#39;ID=Seq_ORF.151;ORF_type=complete;ORF_len=60;ORF_frame=3;Start:ATG;Stop:TAA&#39;),
+ (6704,
+  6764,
+  &#39;-&#39;,
+  &#39;ID=Seq_ORF.291;ORF_type=complete;ORF_len=60;ORF_frame=-3;Start:TTG;Stop:TGA&#39;),
+ (6763,
+  6820,
+  &#39;-&#39;,
+  &#39;ID=Seq_ORF.165;ORF_type=complete;ORF_len=57;ORF_frame=-1;Start:ATG;Stop:TGA&#39;),
+ (6415,
+  6472,
+  &#39;-&#39;,
+  &#39;ID=Seq_ORF.169;ORF_type=complete;ORF_len=57;ORF_frame=-1;Start:ATG;Stop:TAG&#39;),
+ (8022,
+  8079,
+  &#39;-&#39;,
+  &#39;ID=Seq_ORF.220;ORF_type=complete;ORF_len=57;ORF_frame=-2;Start:TTG;Stop:TAA&#39;),
+ (939,
+  996,
+  &#39;-&#39;,
+  &#39;ID=Seq_ORF.260;ORF_type=complete;ORF_len=57;ORF_frame=-2;Start:ATG;Stop:TGA&#39;),
+ (3170,
+  3227,
+  &#39;-&#39;,
+  &#39;ID=Seq_ORF.314;ORF_type=complete;ORF_len=57;ORF_frame=-3;Start:TTG;Stop:TGA&#39;),
+ (689,
+  746,
+  &#39;-&#39;,
+  &#39;ID=Seq_ORF.335;ORF_type=complete;ORF_len=57;ORF_frame=-3;Start:TTG;Stop:TGA&#39;),
+ (7261,
+  7315,
+  &#39;+&#39;,
+  &#39;ID=Seq_ORF.101;ORF_type=complete;ORF_len=54;ORF_frame=2;Start:CTG;Stop:TAA&#39;),
+ (6046,
+  6100,
+  &#39;-&#39;,
+  &#39;ID=Seq_ORF.171;ORF_type=complete;ORF_len=54;ORF_frame=-1;Start:ATG;Stop:TGA&#39;),
+ (4792,
+  4846,
+  &#39;-&#39;,
+  &#39;ID=Seq_ORF.178;ORF_type=complete;ORF_len=54;ORF_frame=-1;Start:TTG;Stop:TGA&#39;),
+ (8124,
+  8178,
+  &#39;-&#39;,
+  &#39;ID=Seq_ORF.219;ORF_type=complete;ORF_len=54;ORF_frame=-2;Start:TTG;Stop:TGA&#39;),
+ (1026,
+  1080,
+  &#39;-&#39;,
+  &#39;ID=Seq_ORF.259;ORF_type=complete;ORF_len=54;ORF_frame=-2;Start:ATG;Stop:TGA&#39;),
+ (8003,
+  8057,
+  &#39;-&#39;,
+  &#39;ID=Seq_ORF.282;ORF_type=complete;ORF_len=54;ORF_frame=-3;Start:CTG;Stop:TAA&#39;),
+ (3632,
+  3686,
+  &#39;-&#39;,
+  &#39;ID=Seq_ORF.309;ORF_type=complete;ORF_len=54;ORF_frame=-3;Start:CTG;Stop:TAA&#39;),
+ (3335,
+  3389,
+  &#39;-&#39;,
+  &#39;ID=Seq_ORF.312;ORF_type=complete;ORF_len=54;ORF_frame=-3;Start:CTG;Stop:TAA&#39;),
+ (7080,
+  7131,
+  &#39;+&#39;,
+  &#39;ID=Seq_ORF.40;ORF_type=complete;ORF_len=51;ORF_frame=1;Start:TTG;Stop:TAG&#39;),
+ (4990,
+  5041,
+  &#39;+&#39;,
+  &#39;ID=Seq_ORF.87;ORF_type=complete;ORF_len=51;ORF_frame=2;Start:CTG;Stop:TAA&#39;),
+ (140,
+  191,
+  &#39;+&#39;,
+  &#39;ID=Seq_ORF.114;ORF_type=complete;ORF_len=51;ORF_frame=3;Start:TTG;Stop:TAA&#39;),
+ (8450,
+  8501,
+  &#39;+&#39;,
+  &#39;ID=Seq_ORF.141;ORF_type=complete;ORF_len=51;ORF_frame=3;Start:TTG;Stop:TGA&#39;),
+ (8074,
+  8125,
+  &#39;-&#39;,
+  &#39;ID=Seq_ORF.158;ORF_type=complete;ORF_len=51;ORF_frame=-1;Start:ATG;Stop:TAA&#39;),
+ (2110,
+  2161,
+  &#39;-&#39;,
+  &#39;ID=Seq_ORF.194;ORF_type=complete;ORF_len=51;ORF_frame=-1;Start:TTG;Stop:TGA&#39;),
+ (3528,
+  3579,
+  &#39;-&#39;,
+  &#39;ID=Seq_ORF.243;ORF_type=complete;ORF_len=51;ORF_frame=-2;Start:TTG;Stop:TAA&#39;),
+ (5753,
+  5804,
+  &#39;-&#39;,
+  &#39;ID=Seq_ORF.297;ORF_type=complete;ORF_len=51;ORF_frame=-3;Start:TTG;Stop:TAG&#39;),
+ (6675,
+  6723,
+  &#39;+&#39;,
+  &#39;ID=Seq_ORF.38;ORF_type=complete;ORF_len=48;ORF_frame=1;Start:TTG;Stop:TGA&#39;),
+ (2188,
+  2236,
+  &#39;+&#39;,
+  &#39;ID=Seq_ORF.66;ORF_type=complete;ORF_len=48;ORF_frame=2;Start:CTG;Stop:TGA&#39;),
+ (2512,
+  2560,
+  &#39;+&#39;,
+  &#39;ID=Seq_ORF.70;ORF_type=complete;ORF_len=48;ORF_frame=2;Start:ATG;Stop:TGA&#39;),
+ (8240,
+  8288,
+  &#39;+&#39;,
+  &#39;ID=Seq_ORF.136;ORF_type=complete;ORF_len=48;ORF_frame=3;Start:ATG;Stop:TGA&#39;),
+ (4456,
+  4504,
+  &#39;-&#39;,
+  &#39;ID=Seq_ORF.180;ORF_type=complete;ORF_len=48;ORF_frame=-1;Start:CTG;Stop:TAG&#39;),
+ (678,
+  726,
+  &#39;-&#39;,
+  &#39;ID=Seq_ORF.263;ORF_type=complete;ORF_len=48;ORF_frame=-2;Start:ATG;Stop:TGA&#39;),
+ (4785,
+  4830,
+  &#39;+&#39;,
+  &#39;ID=Seq_ORF.23;ORF_type=complete;ORF_len=45;ORF_frame=1;Start:ATG;Stop:TGA&#39;),
+ (4920,
+  4965,
+  &#39;+&#39;,
+  &#39;ID=Seq_ORF.24;ORF_type=complete;ORF_len=45;ORF_frame=1;Start:ATG;Stop:TGA&#39;),
+ (8766,
+  8811,
+  &#39;+&#39;,
+  &#39;ID=Seq_ORF.52;ORF_type=complete;ORF_len=45;ORF_frame=1;Start:CTG;Stop:TAG&#39;),
+ (3146,
+  3191,
+  &#39;+&#39;,
+  &#39;ID=Seq_ORF.131;ORF_type=complete;ORF_len=45;ORF_frame=3;Start:CTG;Stop:TGA&#39;),
+ (4912,
+  4957,
+  &#39;-&#39;,
+  &#39;ID=Seq_ORF.177;ORF_type=complete;ORF_len=45;ORF_frame=-1;Start:ATG;Stop:TAG&#39;),
+ (792,
+  837,
+  &#39;-&#39;,
+  &#39;ID=Seq_ORF.262;ORF_type=complete;ORF_len=45;ORF_frame=-2;Start:ATG;Stop:TAG&#39;),
+ (915,
+  957,
+  &#39;+&#39;,
+  &#39;ID=Seq_ORF.4;ORF_type=complete;ORF_len=42;ORF_frame=1;Start:CTG;Stop:TGA&#39;),
+ (2292,
+  2334,
+  &#39;+&#39;,
+  &#39;ID=Seq_ORF.13;ORF_type=complete;ORF_len=42;ORF_frame=1;Start:TTG;Stop:TAG&#39;),
+ (2581,
+  2623,
+  &#39;+&#39;,
+  &#39;ID=Seq_ORF.71;ORF_type=complete;ORF_len=42;ORF_frame=2;Start:CTG;Stop:TGA&#39;),
+ (9157,
+  9199,
+  &#39;+&#39;,
+  &#39;ID=Seq_ORF.108;ORF_type=complete;ORF_len=42;ORF_frame=2;Start:TTG;Stop:TAA&#39;),
+ (1190,
+  1232,
+  &#39;+&#39;,
+  &#39;ID=Seq_ORF.123;ORF_type=complete;ORF_len=42;ORF_frame=3;Start:ATG;Stop:TAG&#39;),
+ (6535,
+  6577,
+  &#39;-&#39;,
+  &#39;ID=Seq_ORF.168;ORF_type=complete;ORF_len=42;ORF_frame=-1;Start:CTG;Stop:TAA&#39;),
+ (2479,
+  2521,
+  &#39;-&#39;,
+  &#39;ID=Seq_ORF.192;ORF_type=complete;ORF_len=42;ORF_frame=-1;Start:CTG;Stop:TGA&#39;),
+ (7578,
+  7620,
+  &#39;-&#39;,
+  &#39;ID=Seq_ORF.223;ORF_type=complete;ORF_len=42;ORF_frame=-2;Start:TTG;Stop:TAG&#39;),
+ (947,
+  989,
+  &#39;-&#39;,
+  &#39;ID=Seq_ORF.333;ORF_type=complete;ORF_len=42;ORF_frame=-3;Start:CTG;Stop:TGA&#39;),
+ (4536,
+  4575,
+  &#39;+&#39;,
+  &#39;ID=Seq_ORF.20;ORF_type=complete;ORF_len=39;ORF_frame=1;Start:ATG;Stop:TGA&#39;),
+ (2254,
+  2293,
+  &#39;+&#39;,
+  &#39;ID=Seq_ORF.67;ORF_type=complete;ORF_len=39;ORF_frame=2;Start:CTG;Stop:TGA&#39;),
+ (3631,
+  3670,
+  &#39;+&#39;,
+  &#39;ID=Seq_ORF.76;ORF_type=complete;ORF_len=39;ORF_frame=2;Start:ATG;Stop:TAA&#39;),
+ (5116,
+  5155,
+  &#39;+&#39;,
+  &#39;ID=Seq_ORF.89;ORF_type=complete;ORF_len=39;ORF_frame=2;Start:CTG;Stop:TGA&#39;),
+ (317,
+  356,
+  &#39;+&#39;,
+  &#39;ID=Seq_ORF.116;ORF_type=complete;ORF_len=39;ORF_frame=3;Start:TTG;Stop:TGA&#39;),
+ (9789,
+  9828,
+  &#39;-&#39;,
+  &#39;ID=Seq_ORF.202;ORF_type=complete;ORF_len=39;ORF_frame=-2;Start:ATG;Stop:TGA&#39;),
+ (6429,
+  6468,
+  &#39;-&#39;,
+  &#39;ID=Seq_ORF.229;ORF_type=complete;ORF_len=39;ORF_frame=-2;Start:CTG;Stop:TAA&#39;),
+ (5787,
+  5826,
+  &#39;-&#39;,
+  &#39;ID=Seq_ORF.233;ORF_type=complete;ORF_len=39;ORF_frame=-2;Start:CTG;Stop:TGA&#39;),
+ (3456,
+  3495,
+  &#39;-&#39;,
+  &#39;ID=Seq_ORF.244;ORF_type=complete;ORF_len=39;ORF_frame=-2;Start:TTG;Stop:TGA&#39;),
+ (1086,
+  1122,
+  &#39;+&#39;,
+  &#39;ID=Seq_ORF.5;ORF_type=complete;ORF_len=36;ORF_frame=1;Start:TTG;Stop:TGA&#39;),
+ (4168,
+  4204,
+  &#39;+&#39;,
+  &#39;ID=Seq_ORF.82;ORF_type=complete;ORF_len=36;ORF_frame=2;Start:CTG;Stop:TGA&#39;),
+ (9316,
+  9352,
+  &#39;+&#39;,
+  &#39;ID=Seq_ORF.110;ORF_type=complete;ORF_len=36;ORF_frame=2;Start:CTG;Stop:TAA&#39;),
+ (1402,
+  1438,
+  &#39;-&#39;,
+  &#39;ID=Seq_ORF.199;ORF_type=complete;ORF_len=36;ORF_frame=-1;Start:CTG;Stop:TGA&#39;),
+ (9219,
+  9255,
+  &#39;-&#39;,
+  &#39;ID=Seq_ORF.209;ORF_type=complete;ORF_len=36;ORF_frame=-2;Start:CTG;Stop:TAA&#39;),
+ (8751,
+  8787,
+  &#39;-&#39;,
+  &#39;ID=Seq_ORF.213;ORF_type=complete;ORF_len=36;ORF_frame=-2;Start:CTG;Stop:TAA&#39;),
+ (4997,
+  5033,
+  &#39;-&#39;,
+  &#39;ID=Seq_ORF.302;ORF_type=complete;ORF_len=36;ORF_frame=-3;Start:CTG;Stop:TAG&#39;),
+ (3122,
+  3158,
+  &#39;-&#39;,
+  &#39;ID=Seq_ORF.315;ORF_type=complete;ORF_len=36;ORF_frame=-3;Start:ATG;Stop:TGA&#39;),
+ (1590,
+  1623,
+  &#39;+&#39;,
+  &#39;ID=Seq_ORF.8;ORF_type=complete;ORF_len=33;ORF_frame=1;Start:ATG;Stop:TAA&#39;),
+ (8673,
+  8706,
+  &#39;+&#39;,
+  &#39;ID=Seq_ORF.51;ORF_type=complete;ORF_len=33;ORF_frame=1;Start:TTG;Stop:TAA&#39;),
+ (4093,
+  4126,
+  &#39;+&#39;,
+  &#39;ID=Seq_ORF.81;ORF_type=complete;ORF_len=33;ORF_frame=2;Start:CTG;Stop:TGA&#39;),
+ (8339,
+  8372,
+  &#39;+&#39;,
+  &#39;ID=Seq_ORF.138;ORF_type=complete;ORF_len=33;ORF_frame=3;Start:CTG;Stop:TAG&#39;),
+ (9797,
+  9830,
+  &#39;+&#39;,
+  &#39;ID=Seq_ORF.152;ORF_type=complete;ORF_len=33;ORF_frame=3;Start:CTG;Stop:TGA&#39;),
+ (8800,
+  8833,
+  &#39;-&#39;,
+  &#39;ID=Seq_ORF.154;ORF_type=complete;ORF_len=33;ORF_frame=-1;Start:TTG;Stop:TGA&#39;),
+ (9687,
+  9720,
+  &#39;-&#39;,
+  &#39;ID=Seq_ORF.204;ORF_type=complete;ORF_len=33;ORF_frame=-2;Start:TTG;Stop:TGA&#39;),
+ (1242,
+  1275,
+  &#39;-&#39;,
+  &#39;ID=Seq_ORF.257;ORF_type=complete;ORF_len=33;ORF_frame=-2;Start:TTG;Stop:TGA&#39;),
+ (8399,
+  8432,
+  &#39;-&#39;,
+  &#39;ID=Seq_ORF.278;ORF_type=complete;ORF_len=33;ORF_frame=-3;Start:TTG;Stop:TGA&#39;),
+ (1894,
+  1924,
+  &#39;+&#39;,
+  &#39;ID=Seq_ORF.64;ORF_type=complete;ORF_len=30;ORF_frame=2;Start:ATG;Stop:TGA&#39;),
+ (4678,
+  4708,
+  &#39;+&#39;,
+  &#39;ID=Seq_ORF.85;ORF_type=complete;ORF_len=30;ORF_frame=2;Start:CTG;Stop:TGA&#39;),
+ (9311,
+  9341,
+  &#39;+&#39;,
+  &#39;ID=Seq_ORF.147;ORF_type=complete;ORF_len=30;ORF_frame=3;Start:CTG;Stop:TAG&#39;),
+ (5416,
+  5446,
+  &#39;-&#39;,
+  &#39;ID=Seq_ORF.174;ORF_type=complete;ORF_len=30;ORF_frame=-1;Start:TTG;Stop:TGA&#39;),
+ (27,
+  57,
+  &#39;-&#39;,
+  &#39;ID=Seq_ORF.267;ORF_type=complete;ORF_len=30;ORF_frame=-2;Start:TTG;Stop:TGA&#39;),
+ (2543,
+  2573,
+  &#39;-&#39;,
+  &#39;ID=Seq_ORF.320;ORF_type=complete;ORF_len=30;ORF_frame=-3;Start:CTG;Stop:TGA&#39;),
+ (1530,
+  1557,
+  &#39;+&#39;,
+  &#39;ID=Seq_ORF.7;ORF_type=complete;ORF_len=27;ORF_frame=1;Start:ATG;Stop:TAA&#39;),
+ (2100,
+  2127,
+  &#39;+&#39;,
+  &#39;ID=Seq_ORF.11;ORF_type=complete;ORF_len=27;ORF_frame=1;Start:ATG;Stop:TAA&#39;),
+ (4635,
+  4662,
+  &#39;+&#39;,
+  &#39;ID=Seq_ORF.21;ORF_type=complete;ORF_len=27;ORF_frame=1;Start:TTG;Stop:TGA&#39;),
+ (5520,
+  5547,
+  &#39;+&#39;,
+  &#39;ID=Seq_ORF.29;ORF_type=complete;ORF_len=27;ORF_frame=1;Start:TTG;Stop:TGA&#39;),
+ (8943,
+  8970,
+  &#39;+&#39;,
+  &#39;ID=Seq_ORF.55;ORF_type=complete;ORF_len=27;ORF_frame=1;Start:ATG;Stop:TGA&#39;),
+ (9771,
+  9798,
+  &#39;+&#39;,
+  &#39;ID=Seq_ORF.58;ORF_type=complete;ORF_len=27;ORF_frame=1;Start:ATG;Stop:TGA&#39;),
+ (3742,
+  3769,
+  &#39;+&#39;,
+  &#39;ID=Seq_ORF.77;ORF_type=complete;ORF_len=27;ORF_frame=2;Start:CTG;Stop:TAA&#39;),
+ (8355,
+  8382,
+  &#39;-&#39;,
+  &#39;ID=Seq_ORF.218;ORF_type=complete;ORF_len=27;ORF_frame=-2;Start:TTG;Stop:TAA&#39;),
+ (7833,
+  7860,
+  &#39;-&#39;,
+  &#39;ID=Seq_ORF.221;ORF_type=complete;ORF_len=27;ORF_frame=-2;Start:CTG;Stop:TAA&#39;),
+ (7176,
+  7203,
+  &#39;-&#39;,
+  &#39;ID=Seq_ORF.226;ORF_type=complete;ORF_len=27;ORF_frame=-2;Start:ATG;Stop:TAA&#39;),
+ (2084,
+  2111,
+  &#39;-&#39;,
+  &#39;ID=Seq_ORF.325;ORF_type=complete;ORF_len=27;ORF_frame=-3;Start:TTG;Stop:TAA&#39;),
+ (4980,
+  5004,
+  &#39;+&#39;,
+  &#39;ID=Seq_ORF.25;ORF_type=complete;ORF_len=24;ORF_frame=1;Start:ATG;Stop:TGA&#39;),
+ (8553,
+  8577,
+  &#39;+&#39;,
+  &#39;ID=Seq_ORF.50;ORF_type=complete;ORF_len=24;ORF_frame=1;Start:CTG;Stop:TAA&#39;),
+ (5194,
+  5218,
+  &#39;+&#39;,
+  &#39;ID=Seq_ORF.90;ORF_type=complete;ORF_len=24;ORF_frame=2;Start:TTG;Stop:TGA&#39;),
+ (779,
+  803,
+  &#39;+&#39;,
+  &#39;ID=Seq_ORF.120;ORF_type=complete;ORF_len=24;ORF_frame=3;Start:TTG;Stop:TGA&#39;),
+ (8236,
+  8260,
+  &#39;-&#39;,
+  &#39;ID=Seq_ORF.157;ORF_type=complete;ORF_len=24;ORF_frame=-1;Start:ATG;Stop:TAA&#39;),
+ (9261,
+  9285,
+  &#39;-&#39;,
+  &#39;ID=Seq_ORF.208;ORF_type=complete;ORF_len=24;ORF_frame=-2;Start:TTG;Stop:TGA&#39;),
+ (7731,
+  7755,
+  &#39;-&#39;,
+  &#39;ID=Seq_ORF.222;ORF_type=complete;ORF_len=24;ORF_frame=-2;Start:CTG;Stop:TAA&#39;),
+ (5061,
+  5085,
+  &#39;-&#39;,
+  &#39;ID=Seq_ORF.235;ORF_type=complete;ORF_len=24;ORF_frame=-2;Start:CTG;Stop:TGA&#39;),
+ (1962,
+  1986,
+  &#39;-&#39;,
+  &#39;ID=Seq_ORF.251;ORF_type=complete;ORF_len=24;ORF_frame=-2;Start:TTG;Stop:TGA&#39;),
+ (8723,
+  8747,
+  &#39;-&#39;,
+  &#39;ID=Seq_ORF.275;ORF_type=complete;ORF_len=24;ORF_frame=-3;Start:CTG;Stop:TGA&#39;),
+ (2408,
+  2432,
+  &#39;-&#39;,
+  &#39;ID=Seq_ORF.322;ORF_type=complete;ORF_len=24;ORF_frame=-3;Start:TTG;Stop:TAA&#39;),
+ (1817,
+  1841,
+  &#39;-&#39;,
+  &#39;ID=Seq_ORF.327;ORF_type=complete;ORF_len=24;ORF_frame=-3;Start:CTG;Stop:TAA&#39;),
+ (1574,
+  1598,
+  &#39;-&#39;,
+  &#39;ID=Seq_ORF.329;ORF_type=complete;ORF_len=24;ORF_frame=-3;Start:CTG;Stop:TGA&#39;),
+ (6006,
+  6027,
+  &#39;+&#39;,
+  &#39;ID=Seq_ORF.32;ORF_type=complete;ORF_len=21;ORF_frame=1;Start:TTG;Stop:TGA&#39;),
+ (8889,
+  8910,
+  &#39;+&#39;,
+  &#39;ID=Seq_ORF.54;ORF_type=complete;ORF_len=21;ORF_frame=1;Start:CTG;Stop:TGA&#39;),
+ (5656,
+  5677,
+  &#39;+&#39;,
+  &#39;ID=Seq_ORF.94;ORF_type=complete;ORF_len=21;ORF_frame=2;Start:CTG;Stop:TAA&#39;),
+ (209,
+  230,
+  &#39;+&#39;,
+  &#39;ID=Seq_ORF.115;ORF_type=complete;ORF_len=21;ORF_frame=3;Start:TTG;Stop:TAG&#39;),
+ (8735,
+  8756,
+  &#39;+&#39;,
+  &#39;ID=Seq_ORF.143;ORF_type=complete;ORF_len=21;ORF_frame=3;Start:TTG;Stop:TAA&#39;),
+ (6589,
+  6610,
+  &#39;-&#39;,
+  &#39;ID=Seq_ORF.166;ORF_type=complete;ORF_len=21;ORF_frame=-1;Start:CTG;Stop:TGA&#39;),
+ (6232,
+  6253,
+  &#39;-&#39;,
+  &#39;ID=Seq_ORF.170;ORF_type=complete;ORF_len=21;ORF_frame=-1;Start:CTG;Stop:TGA&#39;),
+ (8919,
+  8940,
+  &#39;-&#39;,
+  &#39;ID=Seq_ORF.211;ORF_type=complete;ORF_len=21;ORF_frame=-2;Start:ATG;Stop:TGA&#39;),
+ (8388,
+  8409,
+  &#39;-&#39;,
+  &#39;ID=Seq_ORF.217;ORF_type=complete;ORF_len=21;ORF_frame=-2;Start:ATG;Stop:TAA&#39;),
+ (6822,
+  6843,
+  &#39;-&#39;,
+  &#39;ID=Seq_ORF.227;ORF_type=complete;ORF_len=21;ORF_frame=-2;Start:TTG;Stop:TAA&#39;),
+ (9338,
+  9359,
+  &#39;-&#39;,
+  &#39;ID=Seq_ORF.271;ORF_type=complete;ORF_len=21;ORF_frame=-3;Start:CTG;Stop:TGA&#39;),
+ (3416,
+  3437,
+  &#39;-&#39;,
+  &#39;ID=Seq_ORF.311;ORF_type=complete;ORF_len=21;ORF_frame=-3;Start:TTG;Stop:TGA&#39;),
+ (7143,
+  7161,
+  &#39;+&#39;,
+  &#39;ID=Seq_ORF.41;ORF_type=complete;ORF_len=18;ORF_frame=1;Start:TTG;Stop:TAG&#39;),
+ (7519,
+  7537,
+  &#39;+&#39;,
+  &#39;ID=Seq_ORF.103;ORF_type=complete;ORF_len=18;ORF_frame=2;Start:CTG;Stop:TGA&#39;),
+ (1274,
+  1292,
+  &#39;+&#39;,
+  &#39;ID=Seq_ORF.124;ORF_type=complete;ORF_len=18;ORF_frame=3;Start:ATG;Stop:TAG&#39;),
+ (8408,
+  8426,
+  &#39;+&#39;,
+  &#39;ID=Seq_ORF.140;ORF_type=complete;ORF_len=18;ORF_frame=3;Start:TTG;Stop:TAA&#39;),
+ (8633,
+  8651,
+  &#39;-&#39;,
+  &#39;ID=Seq_ORF.276;ORF_type=complete;ORF_len=18;ORF_frame=-3;Start:TTG;Stop:TGA&#39;),
+ (8249,
+  8267,
+  &#39;-&#39;,
+  &#39;ID=Seq_ORF.280;ORF_type=complete;ORF_len=18;ORF_frame=-3;Start:CTG;Stop:TAA&#39;),
+ (4478,
+  4496,
+  &#39;-&#39;,
+  &#39;ID=Seq_ORF.304;ORF_type=complete;ORF_len=18;ORF_frame=-3;Start:CTG;Stop:TAA&#39;),
+ (467,
+  485,
+  &#39;-&#39;,
+  &#39;ID=Seq_ORF.336;ORF_type=complete;ORF_len=18;ORF_frame=-3;Start:ATG;Stop:TAA&#39;),
+ (278,
+  296,
+  &#39;-&#39;,
+  &#39;ID=Seq_ORF.338;ORF_type=complete;ORF_len=18;ORF_frame=-3;Start:CTG;Stop:TGA&#39;),
+ (5062,
+  5077,
+  &#39;+&#39;,
+  &#39;ID=Seq_ORF.88;ORF_type=complete;ORF_len=15;ORF_frame=2;Start:CTG;Stop:TGA&#39;),
+ (7876,
+  7891,
+  &#39;+&#39;,
+  &#39;ID=Seq_ORF.105;ORF_type=complete;ORF_len=15;ORF_frame=2;Start:CTG;Stop:TAA&#39;),
+ (8387,
+  8402,
+  &#39;+&#39;,
+  &#39;ID=Seq_ORF.139;ORF_type=complete;ORF_len=15;ORF_frame=3;Start:ATG;Stop:TAA&#39;),
+ (5047,
+  5062,
+  &#39;-&#39;,
+  &#39;ID=Seq_ORF.176;ORF_type=complete;ORF_len=15;ORF_frame=-1;Start:ATG;Stop:TGA&#39;),
+ (4012,
+  4027,
+  &#39;-&#39;,
+  &#39;ID=Seq_ORF.184;ORF_type=complete;ORF_len=15;ORF_frame=-1;Start:TTG;Stop:TAG&#39;),
+ (1447,
+  1462,
+  &#39;-&#39;,
+  &#39;ID=Seq_ORF.198;ORF_type=complete;ORF_len=15;ORF_frame=-1;Start:ATG;Stop:TAA&#39;),
+ (9771,
+  9786,
+  &#39;-&#39;,
+  &#39;ID=Seq_ORF.203;ORF_type=complete;ORF_len=15;ORF_frame=-2;Start:TTG;Stop:TGA&#39;),
+ (840,
+  855,
+  &#39;-&#39;,
+  &#39;ID=Seq_ORF.261;ORF_type=complete;ORF_len=15;ORF_frame=-2;Start:TTG;Stop:TGA&#39;),
+ (9563,
+  9578,
+  &#39;-&#39;,
+  &#39;ID=Seq_ORF.269;ORF_type=complete;ORF_len=15;ORF_frame=-3;Start:CTG;Stop:TAG&#39;),
+ (6923,
+  6938,
+  &#39;-&#39;,
+  &#39;ID=Seq_ORF.290;ORF_type=complete;ORF_len=15;ORF_frame=-3;Start:ATG;Stop:TAG&#39;),
+ (9224,
+  9236,
+  &#39;+&#39;,
+  &#39;ID=Seq_ORF.146;ORF_type=complete;ORF_len=12;ORF_frame=3;Start:TTG;Stop:TGA&#39;),
+ (6877,
+  6889,
+  &#39;-&#39;,
+  &#39;ID=Seq_ORF.164;ORF_type=complete;ORF_len=12;ORF_frame=-1;Start:ATG;Stop:TAA&#39;),
+ (4150,
+  4162,
+  &#39;-&#39;,
+  &#39;ID=Seq_ORF.183;ORF_type=complete;ORF_len=12;ORF_frame=-1;Start:TTG;Stop:TGA&#39;),
+ (3982,
+  3994,
+  &#39;-&#39;,
+  &#39;ID=Seq_ORF.186;ORF_type=complete;ORF_len=12;ORF_frame=-1;Start:ATG;Stop:TAA&#39;),
+ (9585,
+  9597,
+  &#39;-&#39;,
+  &#39;ID=Seq_ORF.205;ORF_type=complete;ORF_len=12;ORF_frame=-2;Start:TTG;Stop:TAA&#39;),
+ (5973,
+  5985,
+  &#39;-&#39;,
+  &#39;ID=Seq_ORF.232;ORF_type=complete;ORF_len=12;ORF_frame=-2;Start:CTG;Stop:TAA&#39;),
+ (3681,
+  3693,
+  &#39;-&#39;,
+  &#39;ID=Seq_ORF.242;ORF_type=complete;ORF_len=12;ORF_frame=-2;Start:CTG;Stop:TGA&#39;),
+ (1563,
+  1575,
+  &#39;-&#39;,
+  &#39;ID=Seq_ORF.253;ORF_type=complete;ORF_len=12;ORF_frame=-2;Start:TTG;Stop:TAG&#39;),
+ (330,
+  342,
+  &#39;-&#39;,
+  &#39;ID=Seq_ORF.266;ORF_type=complete;ORF_len=12;ORF_frame=-2;Start:TTG;Stop:TGA&#39;),
+ (1058,
+  1070,
+  &#39;-&#39;,
+  &#39;ID=Seq_ORF.332;ORF_type=complete;ORF_len=12;ORF_frame=-3;Start:CTG;Stop:TAA&#39;),
+ (432,
+  441,
+  &#39;+&#39;,
+  &#39;ID=Seq_ORF.2;ORF_type=complete;ORF_len=9;ORF_frame=1;Start:ATG;Stop:TAA&#39;),
+ (2250,
+  2259,
+  &#39;+&#39;,
+  &#39;ID=Seq_ORF.12;ORF_type=complete;ORF_len=9;ORF_frame=1;Start:TTG;Stop:TGA&#39;),
+ (7653,
+  7662,
+  &#39;+&#39;,
+  &#39;ID=Seq_ORF.44;ORF_type=complete;ORF_len=9;ORF_frame=1;Start:TTG;Stop:TGA&#39;),
+ (8856,
+  8865,
+  &#39;+&#39;,
+  &#39;ID=Seq_ORF.53;ORF_type=complete;ORF_len=9;ORF_frame=1;Start:ATG;Stop:TGA&#39;),
+ (4477,
+  4486,
+  &#39;+&#39;,
+  &#39;ID=Seq_ORF.84;ORF_type=complete;ORF_len=9;ORF_frame=2;Start:ATG;Stop:TGA&#39;),
+ (5962,
+  5971,
+  &#39;+&#39;,
+  &#39;ID=Seq_ORF.96;ORF_type=complete;ORF_len=9;ORF_frame=2;Start:TTG;Stop:TAA&#39;),
+ (8303,
+  8312,
+  &#39;+&#39;,
+  &#39;ID=Seq_ORF.137;ORF_type=complete;ORF_len=9;ORF_frame=3;Start:TTG;Stop:TAG&#39;),
+ (1954,
+  1963,
+  &#39;-&#39;,
+  &#39;ID=Seq_ORF.196;ORF_type=complete;ORF_len=9;ORF_frame=-1;Start:CTG;Stop:TGA&#39;),
+ (9891,
+  9900,
+  &#39;-&#39;,
+  &#39;ID=Seq_ORF.201;ORF_type=complete;ORF_len=9;ORF_frame=-2;Start:CTG;Stop:TGA&#39;),
+ (7473,
+  7482,
+  &#39;-&#39;,
+  &#39;ID=Seq_ORF.224;ORF_type=complete;ORF_len=9;ORF_frame=-2;Start:TTG;Stop:TGA&#39;),
+ (585,
+  594,
+  &#39;-&#39;,
+  &#39;ID=Seq_ORF.264;ORF_type=complete;ORF_len=9;ORF_frame=-2;Start:ATG;Stop:TGA&#39;),
+ (8792,
+  8801,
+  &#39;-&#39;,
+  &#39;ID=Seq_ORF.274;ORF_type=complete;ORF_len=9;ORF_frame=-3;Start:CTG;Stop:TAG&#39;),
+ (6398,
+  6407,
+  &#39;-&#39;,
+  &#39;ID=Seq_ORF.293;ORF_type=complete;ORF_len=9;ORF_frame=-3;Start:TTG;Stop:TAA&#39;),
+ (3962,
+  3971,
+  &#39;-&#39;,
+  &#39;ID=Seq_ORF.307;ORF_type=complete;ORF_len=9;ORF_frame=-3;Start:CTG;Stop:TGA&#39;),
+ (1100,
+  1109,
+  &#39;-&#39;,
+  &#39;ID=Seq_ORF.331;ORF_type=complete;ORF_len=9;ORF_frame=-3;Start:CTG;Stop:TGA&#39;),
+ (6075,
+  6081,
+  &#39;+&#39;,
+  &#39;ID=Seq_ORF.33;ORF_type=complete;ORF_len=6;ORF_frame=1;Start:TTG;Stop:TAA&#39;),
+ (3802,
+  3808,
+  &#39;+&#39;,
+  &#39;ID=Seq_ORF.78;ORF_type=complete;ORF_len=6;ORF_frame=2;Start:CTG;Stop:TAA&#39;),
+ (4267,
+  4273,
+  &#39;+&#39;,
+  &#39;ID=Seq_ORF.83;ORF_type=complete;ORF_len=6;ORF_frame=2;Start:CTG;Stop:TGA&#39;),
+ (7168,
+  7174,
+  &#39;+&#39;,
+  &#39;ID=Seq_ORF.100;ORF_type=complete;ORF_len=6;ORF_frame=2;Start:TTG;Stop:TAA&#39;),
+ (7816,
+  7822,
+  &#39;+&#39;,
+  &#39;ID=Seq_ORF.104;ORF_type=complete;ORF_len=6;ORF_frame=2;Start:CTG;Stop:TAA&#39;),
+ (461,
+  467,
+  &#39;+&#39;,
+  &#39;ID=Seq_ORF.117;ORF_type=complete;ORF_len=6;ORF_frame=3;Start:CTG;Stop:TAG&#39;),
+ (2906,
+  2912,
+  &#39;+&#39;,
+  &#39;ID=Seq_ORF.129;ORF_type=complete;ORF_len=6;ORF_frame=3;Start:CTG;Stop:TAA&#39;),
+ (3089,
+  3095,
+  &#39;+&#39;,
+  &#39;ID=Seq_ORF.130;ORF_type=complete;ORF_len=6;ORF_frame=3;Start:CTG;Stop:TAA&#39;),
+ (9368,
+  9374,
+  &#39;+&#39;,
+  &#39;ID=Seq_ORF.148;ORF_type=complete;ORF_len=6;ORF_frame=3;Start:CTG;Stop:TAA&#39;),
+ (3997,
+  4003,
+  &#39;-&#39;,
+  &#39;ID=Seq_ORF.185;ORF_type=complete;ORF_len=6;ORF_frame=-1;Start:TTG;Stop:TAG&#39;),
+ (8718,
+  8724,
+  &#39;-&#39;,
+  &#39;ID=Seq_ORF.214;ORF_type=complete;ORF_len=6;ORF_frame=-2;Start:TTG;Stop:TAA&#39;),
+ (1518,
+  1524,
+  &#39;-&#39;,
+  &#39;ID=Seq_ORF.254;ORF_type=complete;ORF_len=6;ORF_frame=-2;Start:ATG;Stop:TGA&#39;),
+ (8579,
+  8585,
+  &#39;-&#39;,
+  &#39;ID=Seq_ORF.277;ORF_type=complete;ORF_len=6;ORF_frame=-3;Start:CTG;Stop:TAA&#39;),
+ (6995,
+  7001,
+  &#39;-&#39;,
+  &#39;ID=Seq_ORF.289;ORF_type=complete;ORF_len=6;ORF_frame=-3;Start:TTG;Stop:TAA&#39;),
+ (2474,
+  2480,
+  &#39;-&#39;,
+  &#39;ID=Seq_ORF.321;ORF_type=complete;ORF_len=6;ORF_frame=-3;Start:CTG;Stop:TGA&#39;),
+ (2488,
+  2491,
+  &#39;+&#39;,
+  &#39;ID=Seq_ORF.69;ORF_type=complete;ORF_len=3;ORF_frame=2;Start:ATG;Stop:TGA&#39;),
+ (2807,
+  2810,
+  &#39;+&#39;,
+  &#39;ID=Seq_ORF.128;ORF_type=complete;ORF_len=3;ORF_frame=3;Start:CTG;Stop:TAA&#39;),
+ (3659,
+  3662,
+  &#39;+&#39;,
+  &#39;ID=Seq_ORF.133;ORF_type=complete;ORF_len=3;ORF_frame=3;Start:TTG;Stop:TGA&#39;),
+ (6583,
+  6586,
+  &#39;-&#39;,
+  &#39;ID=Seq_ORF.167;ORF_type=complete;ORF_len=3;ORF_frame=-1;Start:CTG;Stop:TAG&#39;),
+ (4074,
+  4077,
+  &#39;-&#39;,
+  &#39;ID=Seq_ORF.240;ORF_type=complete;ORF_len=3;ORF_frame=-2;Start:ATG;Stop:TGA&#39;),
+ (1512,
+  1515,
+  &#39;-&#39;,
+  &#39;ID=Seq_ORF.255;ORF_type=complete;ORF_len=3;ORF_frame=-2;Start:TTG;Stop:TAG&#39;),
+ (7118,
+  7121,
+  &#39;-&#39;,
+  &#39;ID=Seq_ORF.288;ORF_type=complete;ORF_len=3;ORF_frame=-3;Start:TTG;Stop:TAA&#39;),
+ (872,
+  875,
+  &#39;-&#39;,
+  &#39;ID=Seq_ORF.334;ORF_type=complete;ORF_len=3;ORF_frame=-3;Start:CTG;Stop:TGA&#39;)]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">protain</span><span class="p">(</span><span class="n">seq_orf</span><span class="p">,</span> <span class="n">s_offset</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">reverse</span><span class="o">=</span><span class="mi">370000</span><span class="p">):</span>
+    <span class="n">st</span> <span class="o">=</span> <span class="n">s</span><span class="p">[</span><span class="n">seq_orf</span><span class="o">-</span><span class="mi">1</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span><span class="o">+</span><span class="n">s_offset</span>
+    <span class="n">ed</span> <span class="o">=</span> <span class="n">s</span><span class="p">[</span><span class="n">seq_orf</span><span class="o">-</span><span class="mi">1</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span>
+    <span class="n">pr</span> <span class="o">=</span> <span class="mi">160</span>
+    <span class="n">gn</span> <span class="o">=</span> <span class="n">s0s0rc</span><span class="p">[</span><span class="n">st</span><span class="o">-</span><span class="n">pr</span><span class="p">:</span><span class="n">ed</span><span class="p">]</span>
+    <span class="n">sc</span> <span class="o">=</span> <span class="n">s</span><span class="p">[</span><span class="n">seq_orf</span><span class="o">-</span><span class="mi">1</span><span class="p">][</span><span class="mi">3</span><span class="p">]</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;;&quot;</span><span class="p">)[</span><span class="mi">4</span><span class="p">]</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;:&quot;</span><span class="p">)[</span><span class="mi">1</span><span class="p">]</span>
+    
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="n">pr</span><span class="o">+</span><span class="mi">10</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">{:&gt; 8d}</span><span class="s2"> &quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">reverse</span><span class="o">-</span><span class="p">(</span><span class="n">st</span><span class="o">-</span><span class="n">pr</span><span class="p">)</span><span class="o">-</span><span class="n">i</span><span class="p">),</span> <span class="n">end</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">{:&gt; 4d}</span><span class="s2"> &quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">i</span><span class="o">-</span><span class="n">pr</span><span class="p">),</span> <span class="n">end</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">gn</span><span class="p">[</span><span class="n">i</span><span class="p">:</span><span class="n">i</span><span class="o">+</span><span class="mi">6</span><span class="p">],</span><span class="n">end</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot; </span><span class="si">{:0.4f}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">difflib</span><span class="o">.</span><span class="n">SequenceMatcher</span><span class="p">(</span><span class="kc">None</span><span class="p">,</span> <span class="s2">&quot;TTGACA&quot;</span><span class="p">,</span> <span class="n">gn</span><span class="p">[</span><span class="n">i</span><span class="p">:</span><span class="n">i</span><span class="o">+</span><span class="mi">6</span><span class="p">])</span><span class="o">.</span><span class="n">ratio</span><span class="p">()),</span> <span class="n">end</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot; </span><span class="si">{:0.4f}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">difflib</span><span class="o">.</span><span class="n">SequenceMatcher</span><span class="p">(</span><span class="kc">None</span><span class="p">,</span> <span class="s2">&quot;TATAAT&quot;</span><span class="p">,</span> <span class="n">gn</span><span class="p">[</span><span class="n">i</span><span class="p">:</span><span class="n">i</span><span class="o">+</span><span class="mi">6</span><span class="p">])</span><span class="o">.</span><span class="n">ratio</span><span class="p">()),</span> <span class="n">end</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
+        <span class="c1">#print(&quot; {:0.4f}&quot;.format(difflib.SequenceMatcher(None, s0s0rc[st:st+3],  gn[i:i+3]).ratio()))</span>
+        <span class="nb">print</span><span class="p">()</span>
+
+    <span class="k">return</span> <span class="n">sc</span><span class="p">,</span> <span class="n">Seq</span><span class="p">(</span><span class="n">sc</span><span class="p">)</span><span class="o">.</span><span class="n">translate</span><span class="p">(),</span> <span class="n">s0s0rc</span><span class="p">[</span><span class="n">st</span><span class="p">:</span><span class="n">st</span><span class="o">+</span><span class="mi">3</span><span class="p">],</span> <span class="n">Seq</span><span class="p">(</span><span class="n">s0s0rc</span><span class="p">[</span><span class="n">st</span><span class="p">:</span><span class="n">ed</span><span class="o">+</span><span class="mi">3</span><span class="p">])</span><span class="o">.</span><span class="n">translate</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># mhpR, Position relative to start of first gene (mhpR): -116</span>
+<span class="n">protain</span><span class="p">(</span><span class="mi">126</span><span class="p">,</span> <span class="n">s_offset</span><span class="o">=</span><span class="mi">114</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  368580 -160 GTTGCG 0.6667 0.3333
+  368579 -159 TTGCGC 0.6667 0.3333
+  368578 -158 TGCGCG 0.5000 0.1667
+  368577 -157 GCGCGC 0.3333 0.0000
+  368576 -156 CGCGCA 0.5000 0.1667
+  368575 -155 GCGCAC 0.5000 0.1667
+  368574 -154 CGCACA 0.6667 0.3333
+  368573 -153 GCACAG 0.6667 0.3333
+  368572 -152 CACAGT 0.5000 0.1667
+  368571 -151 ACAGTA 0.5000 0.3333
+  368570 -150 CAGTAC 0.5000 0.3333
+  368569 -149 AGTACA 0.6667 0.5000
+  368568 -148 GTACAG 0.6667 0.5000
+  368567 -147 TACAGC 0.6667 0.5000
+  368566 -146 ACAGCG 0.5000 0.3333
+  368565 -145 CAGCGC 0.3333 0.1667
+  368564 -144 AGCGCA 0.5000 0.3333
+  368563 -143 GCGCAA 0.5000 0.3333
+  368562 -142 CGCAAC 0.5000 0.3333
+  368561 -141 GCAACT 0.5000 0.5000
+  368560 -140 CAACTT 0.3333 0.5000
+  368559 -139 AACTTA 0.5000 0.3333
+  368558 -138 ACTTAT 0.5000 0.5000
+  368557 -137 CTTATT 0.5000 0.6667
+  368556 -136 TTATTT 0.5000 0.6667
+  368555 -135 TATTTT 0.3333 0.6667
+  368554 -134 ATTTTG 0.5000 0.5000
+  368553 -133 TTTTGT 0.5000 0.5000
+  368552 -132 TTTGTT 0.5000 0.5000
+  368551 -131 TTGTTA 0.6667 0.3333
+  368550 -130 TGTTAA 0.6667 0.6667
+  368549 -129 GTTAAA 0.6667 0.6667
+  368548 -128 TTAAAA 0.6667 0.6667
+  368547 -127 TAAAAA 0.5000 0.5000
+  368546 -126 AAAAAC 0.3333 0.3333
+  368545 -125 AAAACA 0.5000 0.3333
+  368544 -124 AAACAT 0.5000 0.3333
+  368543 -123 AACATG 0.5000 0.3333
+  368542 -122 ACATGT 0.5000 0.5000
+  368541 -121 CATGTA 0.5000 0.3333
+  368540 -120 ATGTAA 0.6667 0.6667
+  368539 -119 TGTAAA 0.6667 0.6667
+  368538 -118 GTAAAT 0.3333 0.6667
+  368537 -117 TAAATG 0.5000 0.6667
+  368536 -116 AAATGA 0.5000 0.6667
+  368535 -115 AATGAT 0.5000 0.5000
+  368534 -114 ATGATT 0.5000 0.6667
+  368533 -113 TGATTT 0.5000 0.6667
+  368532 -112 GATTTT 0.3333 0.5000
+  368531 -111 ATTTTT 0.3333 0.5000
+  368530 -110 TTTTTT 0.3333 0.5000
+  368529 -109 TTTTTA 0.5000 0.3333
+  368528 -108 TTTTAT 0.5000 0.5000
+  368527 -107 TTTATT 0.5000 0.6667
+  368526 -106 TTATTG 0.5000 0.6667
+  368525 -105 TATTGT 0.5000 0.6667
+  368524 -104 ATTGTG 0.5000 0.5000
+  368523 -103 TTGTGC 0.6667 0.5000
+  368522 -102 TGTGCG 0.5000 0.3333
+  368521 -101 GTGCGC 0.5000 0.1667
+  368520 -100 TGCGCT 0.5000 0.3333
+  368519  -99 GCGCTC 0.3333 0.1667
+  368518  -98 CGCTCA 0.5000 0.3333
+  368517  -97 GCTCAG 0.5000 0.3333
+  368516  -96 CTCAGT 0.5000 0.5000
+  368515  -95 TCAGTA 0.5000 0.3333
+  368514  -94 CAGTAT 0.3333 0.5000
+  368513  -93 AGTATA 0.5000 0.6667
+  368512  -92 GTATAG 0.5000 0.6667
+  368511  -91 TATAGG 0.5000 0.6667
+  368510  -90 ATAGGA 0.5000 0.6667
+  368509  -89 TAGGAA 0.6667 0.6667
+  368508  -88 AGGAAG 0.5000 0.5000
+  368507  -87 GGAAGG 0.5000 0.3333
+  368506  -86 GAAGGG 0.5000 0.3333
+  368505  -85 AAGGGT 0.1667 0.5000
+  368504  -84 AGGGTG 0.3333 0.1667
+  368503  -83 GGGTGT 0.3333 0.3333
+  368502  -82 GGTGTT 0.3333 0.5000
+  368501  -81 GTGTTT 0.3333 0.5000
+  368500  -80 TGTTTT 0.3333 0.5000
+  368499  -79 GTTTTC 0.5000 0.5000
+  368498  -78 TTTTCG 0.5000 0.5000
+  368497  -77 TTTCGG 0.5000 0.5000
+  368496  -76 TTCGGC 0.6667 0.3333
+  368495  -75 TCGGCT 0.3333 0.3333
+  368494  -74 CGGCTA 0.3333 0.3333
+  368493  -73 GGCTAC 0.5000 0.3333
+  368492  -72 GCTACA 0.6667 0.5000
+  368491  -71 CTACAA 0.6667 0.6667
+  368490  -70 TACAAT 0.6667 0.8333
+  368489  -69 ACAATC 0.5000 0.6667
+  368488  -68 CAATCA 0.3333 0.5000
+  368487  -67 AATCAA 0.5000 0.5000
+  368486  -66 ATCAAA 0.5000 0.6667
+  368485  -65 TCAAAA 0.5000 0.5000
+  368484  -64 CAAAAC 0.3333 0.3333
+  368483  -63 AAAACA 0.5000 0.3333
+  368482  -62 AAACAT 0.5000 0.3333
+  368481  -61 AACATG 0.5000 0.3333
+  368480  -60 ACATGC 0.5000 0.3333
+  368479  -59 CATGCC 0.5000 0.3333
+  368478  -58 ATGCCC 0.5000 0.3333
+  368477  -57 TGCCCG 0.5000 0.1667
+  368476  -56 GCCCGA 0.3333 0.1667
+  368475  -55 CCCGAA 0.5000 0.3333
+  368474  -54 CCGAAT 0.5000 0.5000
+  368473  -53 CGAATG 0.3333 0.5000
+  368472  -52 GAATGT 0.3333 0.5000
+  368471  -51 AATGTG 0.3333 0.5000
+  368470  -50 ATGTGC 0.5000 0.5000
+  368469  -49 TGTGCA 0.6667 0.3333
+  368468  -48 GTGCAC 0.6667 0.3333
+  368467  -47 TGCACC 0.6667 0.3333
+  368466  -46 GCACCA 0.6667 0.3333
+  368465  -45 CACCAG 0.5000 0.3333
+  368464  -44 ACCAGG 0.5000 0.3333
+  368463  -43 CCAGGT 0.3333 0.1667
+  368462  -42 CAGGTG 0.3333 0.1667
+  368461  -41 AGGTGC 0.5000 0.1667
+  368460  -40 GGTGCA 0.6667 0.3333
+  368459  -39 GTGCAC 0.6667 0.3333
+  368458  -38 TGCACC 0.6667 0.3333
+  368457  -37 GCACCA 0.6667 0.3333
+  368456  -36 CACCAC 0.5000 0.3333
+  368455  -35 ACCACG 0.5000 0.3333
+  368454  -34 CCACGT 0.3333 0.1667
+  368453  -33 CACGTT 0.3333 0.3333
+  368452  -32 ACGTTG 0.5000 0.3333
+  368451  -31 CGTTGT 0.5000 0.5000
+  368450  -30 GTTGTT 0.5000 0.5000
+  368449  -29 TTGTTT 0.5000 0.5000
+  368448  -28 TGTTTT 0.3333 0.5000
+  368447  -27 GTTTTA 0.5000 0.3333
+  368446  -26 TTTTAA 0.6667 0.6667
+  368445  -25 TTTAAC 0.6667 0.6667
+  368444  -24 TTAACT 0.6667 0.8333
+  368443  -23 TAACTA 0.6667 0.6667
+  368442  -22 AACTAT 0.5000 0.5000
+  368441  -21 ACTATA 0.5000 0.6667
+  368440  -20 CTATAG 0.5000 0.6667
+  368439  -19 TATAGA 0.6667 0.8333
+  368438  -18 ATAGAA 0.6667 0.6667
+  368437  -17 TAGAAA 0.6667 0.6667
+  368436  -16 AGAAAT 0.5000 0.6667
+  368435  -15 GAAATG 0.3333 0.6667
+  368434  -14 AAATGT 0.3333 0.6667
+  368433  -13 AATGTC 0.5000 0.5000
+  368432  -12 ATGTCA 0.6667 0.5000
+  368431  -11 TGTCAA 0.6667 0.6667
+  368430  -10 GTCAAT 0.5000 0.6667
+  368429   -9 TCAATT 0.3333 0.6667
+  368428   -8 CAATTA 0.5000 0.5000
+  368427   -7 AATTAA 0.6667 0.6667
+  368426   -6 ATTAAT 0.6667 0.8333
+  368425   -5 TTAATA 0.6667 0.8333
+  368424   -4 TAATAT 0.5000 0.6667
+  368423   -3 AATATG 0.5000 0.5000
+  368422   -2 ATATGC 0.6667 0.5000
+  368421   -1 TATGCA 0.8333 0.6667
+  368420    0 ATGCAG 0.6667 0.5000
+  368419    1 TGCAGA 0.6667 0.5000
+  368418    2 GCAGAA 0.5000 0.5000
+  368417    3 CAGAAC 0.5000 0.5000
+  368416    4 AGAACA 0.6667 0.5000
+  368415    5 GAACAA 0.6667 0.3333
+  368414    6 AACAAT 0.5000 0.6667
+  368413    7 ACAATG 0.5000 0.6667
+  368412    8 CAATGA 0.5000 0.5000
+  368411    9 AATGAG 0.5000 0.5000
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(&#39;ATG&#39;,
+ Seq(&#39;M&#39;),
+ &#39;ATG&#39;,
+ Seq(&#39;MQNNEQTEYKTVRGLTRGLMLLNMLNKLDGGASVGLLAELSGLHRTTVRRLLET...LR*&#39;))
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># lacI, Position relative to start of first gene (lacI): -28</span>
+<span class="n">protain</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span> <span class="n">s_offset</span><span class="o">=-</span><span class="mi">123</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  367670 -160 CGGGTA 0.3333 0.3333 0.6667
+  367669 -159 GGGTAG 0.3333 0.3333 0.6667
+  367668 -158 GGTAGC 0.5000 0.3333 0.6667
+  367667 -157 GTAGCA 0.6667 0.5000 0.6667
+  367666 -156 TAGCAA 0.6667 0.6667 0.3333
+  367665 -155 AGCAAA 0.5000 0.5000 0.3333
+  367664 -154 GCAAAA 0.5000 0.3333 0.3333
+  367663 -153 CAAAAC 0.3333 0.3333 0.0000
+  367662 -152 AAAACA 0.5000 0.3333 0.0000
+  367661 -151 AAACAG 0.5000 0.3333 0.0000
+  367660 -150 AACAGA 0.5000 0.3333 0.0000
+  367659 -149 ACAGAT 0.5000 0.3333 0.0000
+  367658 -148 CAGATC 0.5000 0.3333 0.3333
+  367657 -147 AGATCG 0.5000 0.3333 0.3333
+  367656 -146 GATCGA 0.6667 0.5000 0.6667
+  367655 -145 ATCGAA 0.6667 0.6667 0.3333
+  367654 -144 TCGAAG 0.6667 0.5000 0.3333
+  367653 -143 CGAAGA 0.5000 0.3333 0.3333
+  367652 -142 GAAGAA 0.5000 0.3333 0.3333
+  367651 -141 AAGAAG 0.5000 0.3333 0.3333
+  367650 -140 AGAAGG 0.5000 0.5000 0.3333
+  367649 -139 GAAGGG 0.5000 0.3333 0.3333
+  367648 -138 AAGGGG 0.1667 0.3333 0.3333
+  367647 -137 AGGGGT 0.1667 0.1667 0.6667
+  367646 -136 GGGGTT 0.3333 0.3333 0.6667
+  367645 -135 GGGTTG 0.5000 0.3333 0.6667
+  367644 -134 GGTTGA 0.6667 0.3333 0.6667
+  367643 -133 GTTGAA 0.8333 0.6667 0.6667
+  367642 -132 TTGAAT 0.8333 0.8333 0.6667
+  367641 -131 TGAATC 0.6667 0.6667 0.6667
+  367640 -130 GAATCG 0.5000 0.5000 0.3333
+  367639 -129 AATCGC 0.5000 0.5000 0.3333
+  367638 -128 ATCGCA 0.6667 0.5000 0.3333
+  367637 -127 TCGCAG 0.6667 0.3333 0.3333
+  367636 -126 CGCAGG 0.5000 0.1667 0.3333
+  367635 -125 GCAGGC 0.5000 0.1667 0.3333
+  367634 -124 CAGGCT 0.3333 0.1667 0.3333
+  367633 -123 AGGCTA 0.3333 0.3333 0.6667
+  367632 -122 GGCTAT 0.3333 0.5000 0.6667
+  367631 -121 GCTATT 0.3333 0.6667 0.6667
+  367630 -120 CTATTC 0.5000 0.6667 0.3333
+  367629 -119 TATTCT 0.5000 0.6667 0.3333
+  367628 -118 ATTCTG 0.5000 0.5000 0.3333
+  367627 -117 TTCTGG 0.5000 0.5000 0.3333
+  367626 -116 TCTGGT 0.5000 0.5000 0.3333
+  367625 -115 CTGGTG 0.3333 0.3333 0.6667
+  367624 -114 TGGTGG 0.3333 0.3333 0.6667
+  367623 -113 GGTGGC 0.5000 0.1667 0.6667
+  367622 -112 GTGGCC 0.5000 0.1667 1.0000
+  367621 -111 TGGCCG 0.5000 0.1667 0.6667
+  367620 -110 GGCCGG 0.3333 0.0000 0.6667
+  367619 -109 GCCGGA 0.3333 0.1667 0.3333
+  367618 -108 CCGGAA 0.5000 0.3333 0.3333
+  367617 -107 CGGAAG 0.5000 0.3333 0.6667
+  367616 -106 GGAAGG 0.5000 0.3333 0.6667
+  367615 -105 GAAGGC 0.5000 0.3333 0.3333
+  367614 -104 AAGGCG 0.3333 0.3333 0.3333
+  367613 -103 AGGCGA 0.3333 0.3333 0.6667
+  367612 -102 GGCGAA 0.5000 0.3333 0.6667
+  367611 -101 GCGAAG 0.5000 0.3333 0.6667
+  367610 -100 CGAAGC 0.5000 0.3333 0.3333
+  367609 -99 GAAGCG 0.5000 0.3333 0.3333
+  367608 -98 AAGCGG 0.3333 0.3333 0.3333
+  367607 -97 AGCGGC 0.3333 0.1667 0.3333
+  367606 -96 GCGGCA 0.5000 0.1667 0.6667
+  367605 -95 CGGCAT 0.5000 0.3333 0.6667
+  367604 -94 GGCATG 0.3333 0.3333 0.6667
+  367603 -93 GCATGC 0.5000 0.3333 0.3333
+  367602 -92 CATGCA 0.6667 0.5000 0.3333
+  367601 -91 ATGCAT 0.6667 0.6667 0.6667
+  367600 -90 TGCATT 0.3333 0.6667 0.6667
+  367599 -89 GCATTT 0.3333 0.5000 0.3333
+  367598 -88 CATTTA 0.5000 0.3333 0.3333
+  367597 -87 ATTTAC 0.6667 0.3333 0.3333
+  367596 -86 TTTACG 0.6667 0.3333 0.3333
+  367595 -85 TTACGT 0.6667 0.5000 0.3333
+  367594 -84 TACGTT 0.3333 0.6667 0.3333
+  367593 -83 ACGTTG 0.5000 0.3333 0.3333
+  367592 -82 CGTTGA 0.6667 0.3333 0.6667
+  367591 -81 GTTGAC 0.8333 0.3333 0.6667
+  367590 -80 TTGACA 1.0000 0.5000 0.6667
+  367589 -79 TGACAC 0.8333 0.5000 0.6667
+  367588 -78 GACACC 0.6667 0.3333 0.3333
+  367587 -77 ACACCA 0.5000 0.5000 0.0000
+  367586 -76 CACCAT 0.5000 0.3333 0.0000
+  367585 -75 ACCATC 0.5000 0.3333 0.0000
+  367584 -74 CCATCG 0.3333 0.3333 0.0000
+  367583 -73 CATCGA 0.5000 0.5000 0.3333
+  367582 -72 ATCGAA 0.6667 0.6667 0.3333
+  367581 -71 TCGAAT 0.6667 0.6667 0.3333
+  367580 -70 CGAATG 0.3333 0.5000 0.3333
+  367579 -69 GAATGG 0.3333 0.5000 0.3333
+  367578 -68 AATGGC 0.5000 0.5000 0.3333
+  367577 -67 ATGGCG 0.5000 0.3333 0.6667
+  367576 -66 TGGCGC 0.5000 0.1667 0.6667
+  367575 -65 GGCGCA 0.5000 0.1667 0.6667
+  367574 -64 GCGCAA 0.5000 0.3333 0.6667
+  367573 -63 CGCAAA 0.5000 0.3333 0.3333
+  367572 -62 GCAAAA 0.5000 0.3333 0.3333
+  367571 -61 CAAAAC 0.3333 0.3333 0.0000
+  367570 -60 AAAACC 0.3333 0.3333 0.0000
+  367569 -59 AAACCT 0.3333 0.5000 0.0000
+  367568 -58 AACCTT 0.3333 0.5000 0.0000
+  367567 -57 ACCTTT 0.3333 0.5000 0.0000
+  367566 -56 CCTTTC 0.5000 0.5000 0.3333
+  367565 -55 CTTTCG 0.5000 0.5000 0.3333
+  367564 -54 TTTCGC 0.6667 0.5000 0.3333
+  367563 -53 TTCGCG 0.6667 0.3333 0.3333
+  367562 -52 TCGCGG 0.5000 0.1667 0.3333
+  367561 -51 CGCGGT 0.1667 0.1667 0.3333
+  367560 -50 GCGGTA 0.3333 0.3333 0.6667
+  367559 -49 CGGTAT 0.3333 0.5000 0.6667
+  367558 -48 GGTATG 0.5000 0.5000 0.6667
+  367557 -47 GTATGG 0.5000 0.5000 0.6667
+  367556 -46 TATGGC 0.6667 0.5000 0.3333
+  367555 -45 ATGGCA 0.6667 0.5000 0.6667
+  367554 -44 TGGCAT 0.6667 0.5000 0.6667
+  367553 -43 GGCATG 0.3333 0.3333 0.6667
+  367552 -42 GCATGA 0.5000 0.5000 0.3333
+  367551 -41 CATGAT 0.5000 0.6667 0.3333
+  367550 -40 ATGATA 0.6667 0.6667 0.6667
+  367549 -39 TGATAG 0.6667 0.6667 0.6667
+  367548 -38 GATAGC 0.5000 0.5000 0.6667
+  367547 -37 ATAGCG 0.5000 0.5000 0.3333
+  367546 -36 TAGCGC 0.5000 0.3333 0.3333
+  367545 -35 AGCGCC 0.3333 0.1667 0.3333
+  367544 -34 GCGCCC 0.3333 0.0000 0.6667
+  367543 -33 CGCCCG 0.3333 0.0000 0.3333
+  367542 -32 GCCCGG 0.3333 0.0000 0.3333
+  367541 -31 CCCGGA 0.3333 0.1667 0.0000
+  367540 -30 CCGGAA 0.5000 0.3333 0.3333
+  367539 -29 CGGAAG 0.5000 0.3333 0.6667
+  367538 -28 GGAAGA 0.5000 0.3333 0.6667
+  367537 -27 GAAGAG 0.5000 0.3333 0.3333
+  367536 -26 AAGAGA 0.5000 0.3333 0.3333
+  367535 -25 AGAGAG 0.5000 0.5000 0.3333
+  367534 -24 GAGAGT 0.5000 0.1667 0.6667
+  367533 -23 AGAGTC 0.5000 0.1667 0.3333
+  367532 -22 GAGTCA 0.6667 0.3333 0.6667
+  367531 -21 AGTCAA 0.5000 0.5000 0.6667
+  367530 -20 GTCAAT 0.5000 0.6667 0.6667
+  367529 -19 TCAATT 0.3333 0.6667 0.3333
+  367528 -18 CAATTC 0.5000 0.5000 0.0000
+  367527 -17 AATTCA 0.6667 0.5000 0.3333
+  367526 -16 ATTCAG 0.6667 0.5000 0.3333
+  367525 -15 TTCAGG 0.6667 0.3333 0.3333
+  367524 -14 TCAGGG 0.5000 0.3333 0.3333
+  367523 -13 CAGGGT 0.3333 0.1667 0.3333
+  367522 -12 AGGGTG 0.3333 0.1667 0.6667
+  367521 -11 GGGTGG 0.3333 0.1667 0.6667
+  367520 -10 GGTGGT 0.3333 0.3333 0.6667
+  367519  -9 GTGGTG 0.3333 0.3333 1.0000
+  367518  -8 TGGTGA 0.6667 0.3333 0.6667
+  367517  -7 GGTGAA 0.6667 0.5000 0.6667
+  367516  -6 GTGAAT 0.6667 0.6667 1.0000
+  367515  -5 TGAATG 0.6667 0.6667 0.6667
+  367514  -4 GAATGT 0.3333 0.5000 0.3333
+  367513  -3 AATGTG 0.3333 0.5000 0.3333
+  367512  -2 ATGTGA 0.6667 0.5000 0.6667
+  367511  -1 TGTGAA 0.8333 0.6667 0.6667
+  367510   0 GTGAAA 0.6667 0.5000 1.0000
+  367509   1 TGAAAC 0.6667 0.5000 0.6667
+  367508   2 GAAACC 0.5000 0.3333 0.3333
+  367507   3 AAACCA 0.5000 0.3333 0.0000
+  367506   4 AACCAG 0.5000 0.3333 0.0000
+  367505   5 ACCAGT 0.5000 0.1667 0.0000
+  367504   6 CCAGTA 0.3333 0.3333 0.0000
+  367503   7 CAGTAA 0.3333 0.6667 0.3333
+  367502   8 AGTAAC 0.5000 0.6667 0.6667
+  367501   9 GTAACG 0.5000 0.5000 0.6667
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(&#39;ATG&#39;,
+ Seq(&#39;M&#39;),
+ &#39;GTG&#39;,
+ Seq(&#39;VKPVTLYDVAEYAGVSYQTVSRVVNQASHVSAKTREKVEAAMAELNYIPNRVAQ...GQ*&#39;))
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># lacZ, Position relative to start of first gene (lacZ): -38</span>
+<span class="n">protain</span><span class="p">(</span><span class="mi">134</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  366465 -160 TGGCAC 0.6667 0.3333
+  366464 -159 GGCACG 0.5000 0.1667
+  366463 -158 GCACGA 0.3333 0.3333
+  366462 -157 CACGAC 0.5000 0.3333
+  366461 -156 ACGACA 0.6667 0.5000
+  366460 -155 CGACAG 0.6667 0.3333
+  366459 -154 GACAGG 0.6667 0.3333
+  366458 -153 ACAGGT 0.5000 0.1667
+  366457 -152 CAGGTT 0.3333 0.3333
+  366456 -151 AGGTTT 0.3333 0.5000
+  366455 -150 GGTTTC 0.5000 0.5000
+  366454 -149 GTTTCC 0.5000 0.5000
+  366453 -148 TTTCCC 0.5000 0.5000
+  366452 -147 TTCCCG 0.5000 0.3333
+  366451 -146 TCCCGA 0.5000 0.3333
+  366450 -145 CCCGAC 0.5000 0.1667
+  366449 -144 CCGACT 0.5000 0.1667
+  366448 -143 CGACTG 0.5000 0.1667
+  366447 -142 GACTGG 0.5000 0.1667
+  366446 -141 ACTGGA 0.5000 0.3333
+  366445 -140 CTGGAA 0.6667 0.5000
+  366444 -139 TGGAAA 0.6667 0.5000
+  366443 -138 GGAAAG 0.5000 0.3333
+  366442 -137 GAAAGC 0.5000 0.3333
+  366441 -136 AAAGCG 0.3333 0.3333
+  366440 -135 AAGCGG 0.3333 0.3333
+  366439 -134 AGCGGG 0.3333 0.1667
+  366438 -133 GCGGGC 0.3333 0.0000
+  366437 -132 CGGGCA 0.5000 0.1667
+  366436 -131 GGGCAG 0.5000 0.1667
+  366435 -130 GGCAGT 0.5000 0.1667
+  366434 -129 GCAGTG 0.3333 0.1667
+  366433 -128 CAGTGA 0.5000 0.3333
+  366432 -127 AGTGAG 0.5000 0.3333
+  366431 -126 GTGAGC 0.6667 0.3333
+  366430 -125 TGAGCG 0.6667 0.3333
+  366429 -124 GAGCGC 0.5000 0.1667
+  366428 -123 AGCGCA 0.5000 0.3333
+  366427 -122 GCGCAA 0.5000 0.3333
+  366426 -121 CGCAAC 0.5000 0.3333
+  366425 -120 GCAACG 0.5000 0.3333
+  366424 -119 CAACGC 0.3333 0.3333
+  366423 -118 AACGCA 0.5000 0.3333
+  366422 -117 ACGCAA 0.5000 0.5000
+  366421 -116 CGCAAT 0.5000 0.5000
+  366420 -115 GCAATT 0.3333 0.5000
+  366419 -114 CAATTA 0.5000 0.5000
+  366418 -113 AATTAA 0.6667 0.6667
+  366417 -112 ATTAAT 0.6667 0.8333
+  366416 -111 TTAATG 0.5000 0.8333
+  366415 -110 TAATGT 0.5000 0.6667
+  366414 -109 AATGTG 0.3333 0.5000
+  366413 -108 ATGTGA 0.6667 0.5000
+  366412 -107 TGTGAG 0.6667 0.3333
+  366411 -106 GTGAGT 0.5000 0.5000
+  366410 -105 TGAGTT 0.5000 0.6667
+  366409 -104 GAGTTA 0.5000 0.3333
+  366408 -103 AGTTAG 0.5000 0.3333
+  366407 -102 GTTAGC 0.6667 0.3333
+  366406 -101 TTAGCT 0.6667 0.5000
+  366405 -100 TAGCTC 0.5000 0.5000
+  366404  -99 AGCTCA 0.5000 0.3333
+  366403  -98 GCTCAC 0.5000 0.3333
+  366402  -97 CTCACT 0.5000 0.5000
+  366401  -96 TCACTC 0.5000 0.5000
+  366400  -95 CACTCA 0.5000 0.3333
+  366399  -94 ACTCAT 0.5000 0.5000
+  366398  -93 CTCATT 0.3333 0.6667
+  366397  -92 TCATTA 0.5000 0.3333
+  366396  -91 CATTAG 0.5000 0.3333
+  366395  -90 ATTAGG 0.5000 0.3333
+  366394  -89 TTAGGC 0.6667 0.3333
+  366393  -88 TAGGCA 0.6667 0.5000
+  366392  -87 AGGCAC 0.5000 0.3333
+  366391  -86 GGCACC 0.5000 0.1667
+  366390  -85 GCACCC 0.5000 0.1667
+  366389  -84 CACCCC 0.3333 0.1667
+  366388  -83 ACCCCA 0.5000 0.3333
+  366387  -82 CCCCAG 0.3333 0.1667
+  366386  -81 CCCAGG 0.3333 0.1667
+  366385  -80 CCAGGC 0.3333 0.1667
+  366384  -79 CAGGCT 0.3333 0.1667
+  366383  -78 AGGCTT 0.3333 0.3333
+  366382  -77 GGCTTT 0.3333 0.5000
+  366381  -76 GCTTTA 0.5000 0.3333
+  366380  -75 CTTTAC 0.6667 0.3333
+  366379  -74 TTTACA 0.8333 0.5000
+  366378  -73 TTACAC 0.8333 0.5000
+  366377  -72 TACACT 0.6667 0.5000
+  366376  -71 ACACTT 0.5000 0.3333
+  366375  -70 CACTTT 0.3333 0.5000
+  366374  -69 ACTTTA 0.5000 0.3333
+  366373  -68 CTTTAT 0.5000 0.5000
+  366372  -67 TTTATG 0.5000 0.5000
+  366371  -66 TTATGC 0.6667 0.5000
+  366370  -65 TATGCT 0.6667 0.6667
+  366369  -64 ATGCTT 0.3333 0.5000
+  366368  -63 TGCTTC 0.5000 0.5000
+  366367  -62 GCTTCC 0.5000 0.3333
+  366366  -61 CTTCCG 0.5000 0.3333
+  366365  -60 TTCCGG 0.5000 0.3333
+  366364  -59 TCCGGC 0.5000 0.1667
+  366363  -58 CCGGCT 0.1667 0.1667
+  366362  -57 CGGCTC 0.3333 0.1667
+  366361  -56 GGCTCG 0.3333 0.1667
+  366360  -55 GCTCGT 0.3333 0.3333
+  366359  -54 CTCGTA 0.5000 0.3333
+  366358  -53 TCGTAT 0.5000 0.5000
+  366357  -52 CGTATG 0.5000 0.5000
+  366356  -51 GTATGT 0.5000 0.6667
+  366355  -50 TATGTT 0.3333 0.6667
+  366354  -49 ATGTTG 0.5000 0.5000
+  366353  -48 TGTTGT 0.5000 0.5000
+  366352  -47 GTTGTG 0.5000 0.5000
+  366351  -46 TTGTGT 0.5000 0.5000
+  366350  -45 TGTGTG 0.3333 0.5000
+  366349  -44 GTGTGG 0.3333 0.3333
+  366348  -43 TGTGGA 0.5000 0.3333
+  366347  -42 GTGGAA 0.6667 0.5000
+  366346  -41 TGGAAT 0.6667 0.6667
+  366345  -40 GGAATT 0.3333 0.5000
+  366344  -39 GAATTG 0.5000 0.5000
+  366343  -38 AATTGT 0.5000 0.5000
+  366342  -37 ATTGTG 0.5000 0.5000
+  366341  -36 TTGTGA 0.6667 0.3333
+  366340  -35 TGTGAG 0.6667 0.3333
+  366339  -34 GTGAGC 0.6667 0.3333
+  366338  -33 TGAGCG 0.6667 0.3333
+  366337  -32 GAGCGG 0.5000 0.1667
+  366336  -31 AGCGGA 0.3333 0.3333
+  366335  -30 GCGGAT 0.3333 0.3333
+  366334  -29 CGGATA 0.5000 0.5000
+  366333  -28 GGATAA 0.5000 0.6667
+  366332  -27 GATAAC 0.5000 0.6667
+  366331  -26 ATAACA 0.6667 0.6667
+  366330  -25 TAACAA 0.6667 0.5000
+  366329  -24 AACAAT 0.5000 0.6667
+  366328  -23 ACAATT 0.5000 0.6667
+  366327  -22 CAATTT 0.3333 0.5000
+  366326  -21 AATTTC 0.5000 0.5000
+  366325  -20 ATTTCA 0.6667 0.5000
+  366324  -19 TTTCAC 0.6667 0.3333
+  366323  -18 TTCACA 0.8333 0.5000
+  366322  -17 TCACAC 0.6667 0.5000
+  366321  -16 CACACA 0.5000 0.5000
+  366320  -15 ACACAG 0.5000 0.5000
+  366319  -14 CACAGG 0.5000 0.3333
+  366318  -13 ACAGGA 0.5000 0.5000
+  366317  -12 CAGGAA 0.5000 0.5000
+  366316  -11 AGGAAA 0.5000 0.5000
+  366315  -10 GGAAAC 0.5000 0.3333
+  366314   -9 GAAACA 0.6667 0.3333
+  366313   -8 AAACAG 0.5000 0.3333
+  366312   -7 AACAGC 0.5000 0.3333
+  366311   -6 ACAGCT 0.5000 0.1667
+  366310   -5 CAGCTA 0.3333 0.3333
+  366309   -4 AGCTAT 0.3333 0.5000
+  366308   -3 GCTATG 0.5000 0.5000
+  366307   -2 CTATGA 0.6667 0.6667
+  366306   -1 TATGAC 0.8333 0.6667
+  366305    0 ATGACC 0.6667 0.5000
+  366304    1 TGACCA 0.8333 0.5000
+  366303    2 GACCAT 0.6667 0.3333
+  366302    3 ACCATG 0.3333 0.3333
+  366301    4 CCATGA 0.5000 0.5000
+  366300    5 CATGAT 0.5000 0.6667
+  366299    6 ATGATT 0.5000 0.6667
+  366298    7 TGATTA 0.6667 0.3333
+  366297    8 GATTAC 0.6667 0.3333
+  366296    9 ATTACG 0.6667 0.3333
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(&#39;ATG&#39;,
+ Seq(&#39;M&#39;),
+ &#39;ATG&#39;,
+ Seq(&#39;MTMITDSLAVVLQRRDWENPGVTQLNRLAAHPPFASWRNSEEARTDRPSQQLRS...QK*&#39;))
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">TAATGTAGTTAGCTCACTCAT</span>
+<span class="n">AATTGTGAGCGGATAACAATTT</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># lacY</span>
+<span class="n">protain</span><span class="p">(</span><span class="mi">135</span><span class="p">,</span> <span class="n">s_offset</span><span class="o">=</span><span class="mi">30</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  363339 -160 TTTCCA 0.6667 0.3333 0.3333
+  363338 -159 TTCCAT 0.6667 0.5000 0.3333
+  363337 -158 TCCATA 0.5000 0.6667 0.3333
+  363336 -157 CCATAT 0.3333 0.5000 0.3333
+  363335 -156 CATATG 0.5000 0.5000 0.6667
+  363334 -155 ATATGG 0.5000 0.5000 0.6667
+  363333 -154 TATGGG 0.5000 0.5000 0.6667
+  363332 -153 ATGGGG 0.3333 0.3333 1.0000
+  363331 -152 TGGGGA 0.5000 0.3333 0.6667
+  363330 -151 GGGGAT 0.3333 0.3333 0.3333
+  363329 -150 GGGATT 0.3333 0.5000 0.3333
+  363328 -149 GGATTG 0.5000 0.5000 0.3333
+  363327 -148 GATTGG 0.5000 0.5000 0.6667
+  363326 -147 ATTGGT 0.5000 0.5000 0.6667
+  363325 -146 TTGGTG 0.5000 0.5000 0.6667
+  363324 -145 TGGTGG 0.3333 0.3333 0.6667
+  363323 -144 GGTGGC 0.5000 0.1667 0.3333
+  363322 -143 GTGGCG 0.5000 0.1667 0.6667
+  363321 -142 TGGCGA 0.5000 0.3333 0.6667
+  363320 -141 GGCGAC 0.5000 0.1667 0.3333
+  363319 -140 GCGACG 0.5000 0.1667 0.3333
+  363318 -139 CGACGA 0.6667 0.3333 0.3333
+  363317 -138 GACGAC 0.6667 0.3333 0.3333
+  363316 -137 ACGACT 0.5000 0.1667 0.6667
+  363315 -136 CGACTC 0.5000 0.1667 0.3333
+  363314 -135 GACTCC 0.5000 0.1667 0.3333
+  363313 -134 ACTCCT 0.3333 0.3333 0.6667
+  363312 -133 CTCCTG 0.5000 0.3333 0.3333
+  363311 -132 TCCTGG 0.5000 0.3333 0.3333
+  363310 -131 CCTGGA 0.5000 0.3333 0.3333
+  363309 -130 CTGGAG 0.5000 0.3333 0.6667
+  363308 -129 TGGAGC 0.6667 0.3333 0.6667
+  363307 -128 GGAGCC 0.5000 0.1667 0.3333
+  363306 -127 GAGCCC 0.5000 0.1667 0.6667
+  363305 -126 AGCCCG 0.3333 0.1667 0.6667
+  363304 -125 GCCCGT 0.1667 0.1667 0.3333
+  363303 -124 CCCGTC 0.3333 0.1667 0.0000
+  363302 -123 CCGTCA 0.5000 0.3333 0.3333
+  363301 -122 CGTCAG 0.5000 0.3333 0.3333
+  363300 -121 GTCAGT 0.5000 0.5000 0.3333
+  363299 -120 TCAGTA 0.5000 0.3333 0.3333
+  363298 -119 CAGTAT 0.3333 0.5000 0.6667
+  363297 -118 AGTATC 0.5000 0.5000 0.6667
+  363296 -117 GTATCG 0.5000 0.5000 0.3333
+  363295 -116 TATCGG 0.5000 0.5000 0.6667
+  363294 -115 ATCGGC 0.5000 0.3333 0.6667
+  363293 -114 TCGGCG 0.5000 0.1667 0.6667
+  363292 -113 CGGCGG 0.3333 0.0000 0.3333
+  363291 -112 GGCGGA 0.3333 0.1667 0.3333
+  363290 -111 GCGGAA 0.5000 0.3333 0.3333
+  363289 -110 CGGAAT 0.5000 0.5000 0.3333
+  363288 -109 GGAATT 0.3333 0.5000 0.3333
+  363287 -108 GAATTC 0.5000 0.5000 0.3333
+  363286 -107 AATTCC 0.5000 0.5000 0.6667
+  363285 -106 ATTCCA 0.6667 0.5000 0.6667
+  363284 -105 TTCCAG 0.6667 0.3333 0.3333
+  363283 -104 TCCAGC 0.5000 0.3333 0.3333
+  363282 -103 CCAGCT 0.3333 0.1667 0.3333
+  363281 -102 CAGCTG 0.3333 0.1667 0.6667
+  363280 -101 AGCTGA 0.5000 0.3333 0.6667
+  363279 -100 GCTGAG 0.5000 0.3333 0.3333
+  363278 -99 CTGAGC 0.6667 0.3333 0.6667
+  363277 -98 TGAGCG 0.6667 0.3333 0.6667
+  363276 -97 GAGCGC 0.5000 0.1667 0.6667
+  363275 -96 AGCGCC 0.3333 0.1667 0.6667
+  363274 -95 GCGCCG 0.3333 0.0000 0.3333
+  363273 -94 CGCCGG 0.3333 0.0000 0.3333
+  363272 -93 GCCGGT 0.1667 0.1667 0.3333
+  363271 -92 CCGGTC 0.3333 0.1667 0.3333
+  363270 -91 CGGTCG 0.3333 0.1667 0.3333
+  363269 -90 GGTCGC 0.5000 0.1667 0.3333
+  363268 -89 GTCGCT 0.3333 0.3333 0.3333
+  363267 -88 TCGCTA 0.5000 0.3333 0.6667
+  363266 -87 CGCTAC 0.5000 0.3333 0.3333
+  363265 -86 GCTACC 0.5000 0.3333 0.3333
+  363264 -85 CTACCA 0.6667 0.5000 0.3333
+  363263 -84 TACCAT 0.6667 0.6667 0.3333
+  363262 -83 ACCATT 0.3333 0.5000 0.3333
+  363261 -82 CCATTA 0.5000 0.3333 0.3333
+  363260 -81 CATTAC 0.6667 0.3333 0.6667
+  363259 -80 ATTACC 0.6667 0.3333 0.6667
+  363258 -79 TTACCA 0.8333 0.5000 0.3333
+  363257 -78 TACCAG 0.6667 0.5000 0.3333
+  363256 -77 ACCAGT 0.5000 0.1667 0.3333
+  363255 -76 CCAGTT 0.3333 0.3333 0.3333
+  363254 -75 CAGTTG 0.5000 0.3333 0.6667
+  363253 -74 AGTTGG 0.5000 0.3333 0.6667
+  363252 -73 GTTGGT 0.5000 0.5000 0.3333
+  363251 -72 TTGGTC 0.6667 0.5000 0.6667
+  363250 -71 TGGTCT 0.5000 0.5000 0.6667
+  363249 -70 GGTCTG 0.5000 0.3333 0.3333
+  363248 -69 GTCTGG 0.5000 0.3333 0.3333
+  363247 -68 TCTGGT 0.5000 0.5000 0.3333
+  363246 -67 CTGGTG 0.3333 0.3333 0.6667
+  363245 -66 TGGTGT 0.3333 0.5000 0.6667
+  363244 -65 GGTGTC 0.5000 0.3333 0.3333
+  363243 -64 GTGTCA 0.6667 0.3333 0.6667
+  363242 -63 TGTCAA 0.6667 0.6667 0.6667
+  363241 -62 GTCAAA 0.5000 0.5000 0.3333
+  363240 -61 TCAAAA 0.5000 0.5000 0.3333
+  363239 -60 CAAAAA 0.3333 0.3333 0.3333
+  363238 -59 AAAAAT 0.1667 0.6667 0.3333
+  363237 -58 AAAATA 0.3333 0.5000 0.3333
+  363236 -57 AAATAA 0.5000 0.6667 0.3333
+  363235 -56 AATAAT 0.3333 0.8333 0.6667
+  363234 -55 ATAATA 0.5000 0.8333 0.6667
+  363233 -54 TAATAA 0.6667 0.8333 0.3333
+  363232 -53 AATAAT 0.3333 0.8333 0.6667
+  363231 -52 ATAATA 0.5000 0.8333 0.6667
+  363230 -51 TAATAA 0.6667 0.8333 0.3333
+  363229 -50 AATAAC 0.5000 0.6667 0.6667
+  363228 -49 ATAACC 0.5000 0.6667 0.6667
+  363227 -48 TAACCG 0.5000 0.5000 0.3333
+  363226 -47 AACCGG 0.3333 0.3333 0.3333
+  363225 -46 ACCGGG 0.3333 0.1667 0.3333
+  363224 -45 CCGGGC 0.3333 0.0000 0.3333
+  363223 -44 CGGGCA 0.5000 0.1667 0.3333
+  363222 -43 GGGCAG 0.5000 0.1667 0.3333
+  363221 -42 GGCAGG 0.5000 0.1667 0.3333
+  363220 -41 GCAGGC 0.5000 0.1667 0.3333
+  363219 -40 CAGGCC 0.3333 0.1667 0.6667
+  363218 -39 AGGCCA 0.5000 0.3333 0.6667
+  363217 -38 GGCCAT 0.5000 0.3333 0.3333
+  363216 -37 GCCATG 0.3333 0.3333 0.3333
+  363215 -36 CCATGT 0.3333 0.5000 0.3333
+  363214 -35 CATGTC 0.5000 0.5000 0.6667
+  363213 -34 ATGTCT 0.5000 0.5000 1.0000
+  363212 -33 TGTCTG 0.5000 0.5000 0.6667
+  363211 -32 GTCTGC 0.6667 0.3333 0.3333
+  363210 -31 TCTGCC 0.6667 0.3333 0.3333
+  363209 -30 CTGCCC 0.5000 0.1667 0.6667
+  363208 -29 TGCCCG 0.5000 0.1667 0.6667
+  363207 -28 GCCCGT 0.1667 0.1667 0.3333
+  363206 -27 CCCGTA 0.3333 0.3333 0.0000
+  363205 -26 CCGTAT 0.3333 0.5000 0.3333
+  363204 -25 CGTATT 0.3333 0.6667 0.3333
+  363203 -24 GTATTT 0.3333 0.6667 0.3333
+  363202 -23 TATTTC 0.5000 0.6667 0.6667
+  363201 -22 ATTTCG 0.5000 0.5000 0.6667
+  363200 -21 TTTCGC 0.6667 0.5000 0.3333
+  363199 -20 TTCGCG 0.6667 0.3333 0.3333
+  363198 -19 TCGCGT 0.3333 0.3333 0.6667
+  363197 -18 CGCGTA 0.3333 0.3333 0.3333
+  363196 -17 GCGTAA 0.5000 0.5000 0.3333
+  363195 -16 CGTAAG 0.3333 0.5000 0.3333
+  363194 -15 GTAAGG 0.3333 0.5000 0.3333
+  363193 -14 TAAGGA 0.5000 0.5000 0.3333
+  363192 -13 AAGGAA 0.5000 0.3333 0.6667
+  363191 -12 AGGAAA 0.5000 0.5000 0.6667
+  363190 -11 GGAAAT 0.5000 0.6667 0.3333
+  363189 -10 GAAATC 0.5000 0.6667 0.3333
+  363188  -9 AAATCC 0.3333 0.6667 0.3333
+  363187  -8 AATCCA 0.5000 0.5000 0.6667
+  363186  -7 ATCCAT 0.5000 0.6667 0.6667
+  363185  -6 TCCATT 0.3333 0.6667 0.3333
+  363184  -5 CCATTA 0.5000 0.3333 0.3333
+  363183  -4 CATTAT 0.5000 0.5000 0.6667
+  363182  -3 ATTATG 0.5000 0.5000 0.6667
+  363181  -2 TTATGT 0.5000 0.6667 0.3333
+  363180  -1 TATGTA 0.6667 0.6667 0.6667
+  363179   0 ATGTAC 0.6667 0.3333 1.0000
+  363178   1 TGTACT 0.6667 0.5000 0.6667
+  363177   2 GTACTA 0.6667 0.6667 0.3333
+  363176   3 TACTAT 0.6667 0.5000 0.3333
+  363175   4 ACTATT 0.3333 0.6667 0.6667
+  363174   5 CTATTT 0.3333 0.6667 0.3333
+  363173   6 TATTTA 0.5000 0.6667 0.6667
+  363172   7 ATTTAA 0.6667 0.6667 0.6667
+  363171   8 TTTAAA 0.6667 0.6667 0.3333
+  363170   9 TTAAAA 0.6667 0.6667 0.3333
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(&#39;CTG&#39;,
+ Seq(&#39;L&#39;),
+ &#39;ATG&#39;,
+ Seq(&#39;MYYLKNTNFWMFGLFFFFYFFIMGAYFPFFPIWLHDINHISKSDTGIIFAAISL...VA*&#39;))
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># lacA</span>
+<span class="n">protain</span><span class="p">(</span><span class="mi">106</span><span class="p">,</span> <span class="n">s_offset</span><span class="o">=</span><span class="mi">51</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  362020 -160 TGGTGG 0.3333 0.3333 0.6667
+  362019 -159 GGTGGC 0.5000 0.1667 0.3333
+  362018 -158 GTGGCG 0.5000 0.1667 0.6667
+  362017 -157 TGGCGC 0.5000 0.1667 0.6667
+  362016 -156 GGCGCT 0.1667 0.1667 0.3333
+  362015 -155 GCGCTG 0.3333 0.1667 0.3333
+  362014 -154 CGCTGG 0.3333 0.1667 0.3333
+  362013 -153 GCTGGG 0.3333 0.1667 0.3333
+  362012 -152 CTGGGC 0.5000 0.1667 0.6667
+  362011 -151 TGGGCT 0.5000 0.3333 0.6667
+  362010 -150 GGGCTT 0.3333 0.3333 0.3333
+  362009 -149 GGCTTC 0.5000 0.3333 0.3333
+  362008 -148 GCTTCA 0.6667 0.3333 0.3333
+  362007 -147 CTTCAC 0.6667 0.3333 0.6667
+  362006 -146 TTCACC 0.6667 0.3333 0.6667
+  362005 -145 TCACCT 0.5000 0.5000 0.3333
+  362004 -144 CACCTT 0.3333 0.3333 0.0000
+  362003 -143 ACCTTA 0.5000 0.3333 0.0000
+  362002 -142 CCTTAA 0.6667 0.6667 0.3333
+  362001 -141 CTTAAT 0.6667 0.8333 0.6667
+  362000 -140 TTAATT 0.6667 0.8333 0.6667
+  361999 -139 TAATTT 0.3333 0.6667 0.3333
+  361998 -138 AATTTC 0.5000 0.5000 0.3333
+  361997 -137 ATTTCC 0.5000 0.5000 0.6667
+  361996 -136 TTTCCG 0.5000 0.5000 0.6667
+  361995 -135 TTCCGT 0.5000 0.5000 0.6667
+  361994 -134 TCCGTG 0.5000 0.3333 0.3333
+  361993 -133 CCGTGT 0.3333 0.3333 0.3333
+  361992 -132 CGTGTT 0.3333 0.5000 0.3333
+  361991 -131 GTGTTC 0.5000 0.5000 0.6667
+  361990 -130 TGTTCA 0.6667 0.3333 0.6667
+  361989 -129 GTTCAC 0.6667 0.3333 0.6667
+  361988 -128 TTCACG 0.6667 0.3333 0.6667
+  361987 -127 TCACGC 0.5000 0.3333 0.3333
+  361986 -126 CACGCT 0.3333 0.1667 0.0000
+  361985 -125 ACGCTT 0.3333 0.3333 0.3333
+  361984 -124 CGCTTA 0.5000 0.3333 0.3333
+  361983 -123 GCTTAG 0.5000 0.3333 0.3333
+  361982 -122 CTTAGC 0.6667 0.3333 0.6667
+  361981 -121 TTAGCG 0.6667 0.3333 0.6667
+  361980 -120 TAGCGG 0.5000 0.3333 0.6667
+  361979 -119 AGCGGC 0.3333 0.1667 0.3333
+  361978 -118 GCGGCC 0.3333 0.0000 0.3333
+  361977 -117 CGGCCC 0.3333 0.0000 0.3333
+  361976 -116 GGCCCC 0.3333 0.0000 0.3333
+  361975 -115 GCCCCG 0.3333 0.0000 0.3333
+  361974 -114 CCCCGG 0.1667 0.0000 0.0000
+  361973 -113 CCCGGC 0.3333 0.0000 0.0000
+  361972 -112 CCGGCC 0.3333 0.0000 0.3333
+  361971 -111 CGGCCC 0.3333 0.0000 0.3333
+  361970 -110 GGCCCG 0.3333 0.0000 0.3333
+  361969 -109 GCCCGC 0.3333 0.0000 0.3333
+  361968 -108 CCCGCT 0.1667 0.1667 0.0000
+  361967 -107 CCGCTT 0.3333 0.3333 0.3333
+  361966 -106 CGCTTT 0.3333 0.5000 0.3333
+  361965 -105 GCTTTC 0.5000 0.5000 0.3333
+  361964 -104 CTTTCC 0.5000 0.5000 0.6667
+  361963 -103 TTTCCC 0.5000 0.5000 0.6667
+  361962 -102 TTCCCT 0.5000 0.5000 0.6667
+  361961 -101 TCCCTG 0.5000 0.3333 0.3333
+  361960 -100 CCCTGC 0.5000 0.1667 0.0000
+  361959 -99 CCTGCT 0.5000 0.3333 0.3333
+  361958 -98 CTGCTG 0.5000 0.3333 0.6667
+  361957 -97 TGCTGC 0.5000 0.3333 0.6667
+  361956 -96 GCTGCG 0.5000 0.1667 0.3333
+  361955 -95 CTGCGT 0.5000 0.3333 0.6667
+  361954 -94 TGCGTC 0.5000 0.3333 0.6667
+  361953 -93 GCGTCG 0.3333 0.1667 0.3333
+  361952 -92 CGTCGT 0.3333 0.3333 0.3333
+  361951 -91 GTCGTC 0.5000 0.3333 0.3333
+  361950 -90 TCGTCA 0.6667 0.3333 0.6667
+  361949 -89 CGTCAG 0.5000 0.3333 0.3333
+  361948 -88 GTCAGG 0.5000 0.3333 0.3333
+  361947 -87 TCAGGT 0.5000 0.5000 0.3333
+  361946 -86 CAGGTG 0.3333 0.1667 0.3333
+  361945 -85 AGGTGA 0.5000 0.3333 0.3333
+  361944 -84 GGTGAA 0.6667 0.5000 0.3333
+  361943 -83 GTGAAT 0.6667 0.6667 0.6667
+  361942 -82 TGAATG 0.6667 0.6667 0.6667
+  361941 -81 GAATGA 0.5000 0.5000 0.3333
+  361940 -80 AATGAA 0.6667 0.5000 0.3333
+  361939 -79 ATGAAG 0.6667 0.6667 0.6667
+  361938 -78 TGAAGT 0.6667 0.6667 0.6667
+  361937 -77 GAAGTC 0.5000 0.5000 0.3333
+  361936 -76 AAGTCG 0.3333 0.5000 0.3333
+  361935 -75 AGTCGC 0.5000 0.1667 0.3333
+  361934 -74 GTCGCT 0.3333 0.3333 0.3333
+  361933 -73 TCGCTT 0.3333 0.5000 0.6667
+  361932 -72 CGCTTA 0.5000 0.3333 0.3333
+  361931 -71 GCTTAA 0.6667 0.6667 0.3333
+  361930 -70 CTTAAG 0.5000 0.6667 0.6667
+  361929 -69 TTAAGC 0.6667 0.6667 0.6667
+  361928 -68 TAAGCA 0.6667 0.5000 0.3333
+  361927 -67 AAGCAA 0.5000 0.3333 0.3333
+  361926 -66 AGCAAT 0.5000 0.6667 0.3333
+  361925 -65 GCAATC 0.5000 0.5000 0.3333
+  361924 -64 CAATCA 0.3333 0.5000 0.0000
+  361923 -63 AATCAA 0.5000 0.5000 0.3333
+  361922 -62 ATCAAT 0.5000 0.8333 0.3333
+  361921 -61 TCAATG 0.5000 0.6667 0.3333
+  361920 -60 CAATGT 0.3333 0.5000 0.0000
+  361919 -59 AATGTC 0.5000 0.5000 0.3333
+  361918 -58 ATGTCG 0.5000 0.5000 0.6667
+  361917 -57 TGTCGG 0.5000 0.3333 0.6667
+  361916 -56 GTCGGA 0.5000 0.3333 0.3333
+  361915 -55 TCGGAT 0.5000 0.5000 0.6667
+  361914 -54 CGGATG 0.3333 0.3333 0.3333
+  361913 -53 GGATGC 0.5000 0.3333 0.3333
+  361912 -52 GATGCG 0.5000 0.3333 0.3333
+  361911 -51 ATGCGG 0.5000 0.3333 0.6667
+  361910 -50 TGCGGC 0.5000 0.1667 0.6667
+  361909 -49 GCGGCG 0.3333 0.0000 0.3333
+  361908 -48 CGGCGC 0.3333 0.0000 0.3333
+  361907 -47 GGCGCG 0.3333 0.0000 0.3333
+  361906 -46 GCGCGA 0.3333 0.1667 0.3333
+  361905 -45 CGCGAG 0.3333 0.1667 0.3333
+  361904 -44 GCGAGC 0.5000 0.1667 0.3333
+  361903 -43 CGAGCG 0.5000 0.1667 0.3333
+  361902 -42 GAGCGC 0.5000 0.1667 0.3333
+  361901 -41 AGCGCC 0.3333 0.1667 0.3333
+  361900 -40 GCGCCT 0.1667 0.1667 0.3333
+  361899 -39 CGCCTT 0.3333 0.3333 0.3333
+  361898 -38 GCCTTA 0.5000 0.3333 0.3333
+  361897 -37 CCTTAT 0.5000 0.5000 0.3333
+  361896 -36 CTTATC 0.6667 0.5000 0.6667
+  361895 -35 TTATCC 0.6667 0.5000 0.6667
+  361894 -34 TATCCG 0.5000 0.5000 0.6667
+  361893 -33 ATCCGA 0.5000 0.5000 0.3333
+  361892 -32 TCCGAC 0.6667 0.3333 0.3333
+  361891 -31 CCGACC 0.5000 0.1667 0.3333
+  361890 -30 CGACCA 0.6667 0.3333 0.3333
+  361889 -29 GACCAA 0.6667 0.5000 0.3333
+  361888 -28 ACCAAC 0.5000 0.5000 0.0000
+  361887 -27 CCAACA 0.5000 0.3333 0.0000
+  361886 -26 CAACAT 0.5000 0.3333 0.0000
+  361885 -25 AACATA 0.5000 0.5000 0.0000
+  361884 -24 ACATAT 0.5000 0.5000 0.0000
+  361883 -23 CATATC 0.3333 0.5000 0.3333
+  361882 -22 ATATCA 0.6667 0.6667 0.3333
+  361881 -21 TATCAT 0.6667 0.8333 0.6667
+  361880 -20 ATCATA 0.5000 0.6667 0.3333
+  361879 -19 TCATAA 0.5000 0.8333 0.3333
+  361878 -18 CATAAC 0.5000 0.6667 0.3333
+  361877 -17 ATAACG 0.5000 0.6667 0.3333
+  361876 -16 TAACGG 0.5000 0.5000 0.3333
+  361875 -15 AACGGA 0.3333 0.3333 0.0000
+  361874 -14 ACGGAG 0.3333 0.3333 0.3333
+  361873 -13 CGGAGT 0.3333 0.1667 0.3333
+  361872 -12 GGAGTG 0.3333 0.1667 0.3333
+  361871 -11 GAGTGA 0.5000 0.3333 0.3333
+  361870 -10 AGTGAT 0.5000 0.5000 0.3333
+  361869  -9 GTGATC 0.6667 0.5000 0.6667
+  361868  -8 TGATCG 0.6667 0.5000 0.6667
+  361867  -7 GATCGC 0.5000 0.3333 0.3333
+  361866  -6 ATCGCA 0.6667 0.5000 0.3333
+  361865  -5 TCGCAT 0.6667 0.5000 0.6667
+  361864  -4 CGCATT 0.3333 0.5000 0.3333
+  361863  -3 GCATTG 0.5000 0.5000 0.3333
+  361862  -2 CATTGA 0.6667 0.5000 0.3333
+  361861  -1 ATTGAA 0.8333 0.6667 0.6667
+  361860   0 TTGAAC 0.8333 0.6667 1.0000
+  361859   1 TGAACA 0.8333 0.5000 0.6667
+  361858   2 GAACAT 0.6667 0.3333 0.3333
+  361857   3 AACATG 0.5000 0.3333 0.0000
+  361856   4 ACATGC 0.5000 0.3333 0.0000
+  361855   5 CATGCC 0.5000 0.3333 0.3333
+  361854   6 ATGCCA 0.6667 0.5000 0.6667
+  361853   7 TGCCAA 0.6667 0.5000 0.6667
+  361852   8 GCCAAT 0.5000 0.5000 0.3333
+  361851   9 CCAATG 0.3333 0.5000 0.0000
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(&#39;ATG&#39;,
+ Seq(&#39;M&#39;),
+ &#39;TTG&#39;,
+ Seq(&#39;LNMPMTERIRAGKLFTDMCEGLPEKRLRGKTLMYEFNHSHPSEVEKRESLIKEM...SV*&#39;))
+</pre></div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      By Ani Adhikari and John DeNero and David Wagner<br/>
+    
+        &copy; Copyright 2021.<br/>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>

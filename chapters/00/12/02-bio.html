@@ -1,0 +1,2178 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Central dogma &#8212; Computational and Inferential Thinking</title>
+    
+  <link href="../../../_static/css/theme.css" rel="stylesheet">
+  <link href="../../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/book.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../../../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/clipboard.min.js"></script>
+    <script src="../../../_static/copybutton.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../../../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="canonical" href="https://inferentialthinking.org/chapters/00/12/02-bio.html" />
+    <link rel="shortcut icon" href="../../../_static/favicon.png"/>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Central dogma" href="03-bio.html" />
+    <link rel="prev" title="Inheritance" href="01-bio.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+<script async="" src="https://www.google-analytics.com/analytics.js"></script>
+<script>
+                        window.ga = window.ga || function () {
+                            (ga.q = ga.q || []).push(arguments) };
+                        ga.l = +new Date;
+                        ga('create', 'UA-148221575-1', 'auto');
+                        ga('set', 'anonymizeIp', true);
+                        ga('send', 'pageview');
+                    </script>
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../../../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../../../_static/favicon.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Computational and Inferential Thinking</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  2022/07/19
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="00-bio.html">
+   Bioinfomatics
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="01-bio.html">
+   Inheritance
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Central dogma
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="03-bio.html">
+   Central dogma
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="04-bio.html">
+   Genetic recombination
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  2022/07/12
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../11/tycho.html">
+   Tycho Brahe
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../11/kepler.html">
+   Johannes Kepler
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../11/cycloid.html">
+   Isacc Newton
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../10/napier_3.html">
+   Napier (3)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../10/assignment.html">
+   Assignment
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  2022/07/05
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../10/leibniz_7.html">
+   Leibniz (5)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../10/napier_1.html">
+   Napier (1)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../10/napier_2.html">
+   Napier (2)
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  2022/06/28
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../10/leibniz_5.html">
+   Leibniz (2)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../10/leibniz_6.html">
+   Leibniz (3)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../10/leibniz_4.html">
+   プログラミングのない世界 (3)
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  2022/06/21
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../9/assign_6.html">
+   Assignment (6)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../9/assign_5.html">
+   Assignment (5)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../8/leibniz_3.html">
+   Leibniz (1)
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  2022/06/14
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../9/assign_1.html">
+   Assignment (1)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../9/assign_2.html">
+   Assignment (2)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../9/assign_3.html">
+   Assignment (3)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../9/assign_4.html">
+   Assignment (4)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../9/assign_7.html">
+   Assignment (7)
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  2022/06/07
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../8/leibniz_1.html">
+   Japanese wordplay
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../8/leibniz_2.html">
+   Computer algebra
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../8/assign.html">
+   Assignment
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  2022/05/31
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../7/pythagoras_1.html">
+   from Pythagoras to Einstein (1)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../7/pythagoras_2.html">
+   Plimpton 322 and YBC 7289
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../7/pythagoras_3.html">
+   YBC 7289 (1)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../7/pythagoras_4.html">
+   YBC 7289 (2)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../7/pythagoras_5.html">
+   YBC 7289 (3)
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  2022/05/24
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../6/plimpton322_2.html">
+   Decoding Plimpton 322 (1)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../6/plimpton322_3.html">
+   Decoding Plimpton 322 (2)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../6/plimpton322_4.html">
+   Decoding Plimpton 322 (3)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../6/assign_1.html">
+   Assignment (1)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../6/assign_2.html">
+   Assignment (2)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../6/assign_3.html">
+   Assignment (3)
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  2022/05/17
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../5/long_division.html">
+   Long Division
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../5/assign_1.html">
+   Assignment (1)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../5/assign_2.html">
+   Assignment (2)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../5/assign_3.html">
+   Assignment (3)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../5/assign_4.html">
+   Assignment (4)
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  2022/05/10
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../4/plimpton322_1.html">
+   Plimpton 322 (1)
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  2022/04/19
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../3/intro_add_1.html">
+   Notebook additional setting
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  2022/04/12
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../intro_add.html">
+   Precautions
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../0/1/Receiving_invitation_mail.html">
+     Federated authentication
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../0/1/Accessing_JupyterHub.html">
+     Application registration
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../1/intro_add_1.html">
+     Notebook execution
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../1/intro_add_2.html">
+     Notebook security
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../1/intro_add_3.html">
+     Notebook activity
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../2/intro_add.html">
+   Request for cooperation
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../2/intro_add_4.html">
+     Experiment explanation
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../2/intro_add_5.html">
+     Informed concent
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../2/intro_add_6.html">
+     Withdrawal of concent
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  DATA 8
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../01/what-is-data-science.html">
+   1. Data Science
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../../01/1/intro.html">
+     1.1. Introduction
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+    <label for="toctree-checkbox-4">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../01/1/1/computational-tools.html">
+       1.1.1. Computational Tools
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../01/1/2/statistical-techniques.html">
+       1.1.2. Statistical Techniques
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../01/2/why-data-science.html">
+     1.2. Why Data Science?
+    </a>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../../01/3/Plotting_the_Classics.html">
+     1.3. Plotting the Classics
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+    <label for="toctree-checkbox-5">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../01/3/1/Literary_Characters.html">
+       1.3.1. Literary Characters
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../01/3/2/Another_Kind_Of_Character.html">
+       1.3.2. Another Kind of Character
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../02/causality-and-experiments.html">
+   2. Causality and Experiments
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../02/1/observation-and-visualization-john-snow-and-the-broad-street-pump.html">
+     2.1. John Snow and the Broad Street Pump
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../02/2/snow-s-grand-experiment.html">
+     2.2. Snow’s “Grand Experiment”
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../02/3/establishing-causality.html">
+     2.3. Establishing Causality
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../02/4/randomization.html">
+     2.4. Randomization
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../02/5/endnote.html">
+     2.5. Endnote
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../03/programming-in-python.html">
+   3. Programming in Python
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+  <label for="toctree-checkbox-7">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../03/1/Expressions.html">
+     3.1. Expressions
+    </a>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../../03/2/Names.html">
+     3.2. Names
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+    <label for="toctree-checkbox-8">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../03/2/1/Growth.html">
+       3.2.1. Example: Growth Rates
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../03/3/Calls.html">
+     3.3. Call Expressions
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../03/4/Introduction_to_Tables.html">
+     3.4. Introduction to Tables
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../04/Data_Types.html">
+   4. Data Types
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
+  <label for="toctree-checkbox-9">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../04/1/Numbers.html">
+     4.1. Numbers
+    </a>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../../04/2/Strings.html">
+     4.2. Strings
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
+    <label for="toctree-checkbox-10">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../04/2/1/String_Methods.html">
+       4.2.1. String Methods
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../04/3/Comparison.html">
+     4.3. Comparisons
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../05/Sequences.html">
+   5. Sequences
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/>
+  <label for="toctree-checkbox-11">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../05/1/Arrays.html">
+     5.1. Arrays
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../05/2/Ranges.html">
+     5.2. Ranges
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../05/3/More_on_Arrays.html">
+     5.3. More on Arrays
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../06/Tables.html">
+   6. Tables
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/>
+  <label for="toctree-checkbox-12">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../06/1/Sorting_Rows.html">
+     6.1. Sorting Rows
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../06/2/Selecting_Rows.html">
+     6.2. Selecting Rows
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../06/3/Example_Population_Trends.html">
+     6.3. Example: Population Trends
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../06/4/Example_Sex_Ratios.html">
+     6.4. Example: Sex Ratios
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../07/Visualization.html">
+   7. Visualization
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" type="checkbox"/>
+  <label for="toctree-checkbox-13">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../07/1/Visualizing_Categorical_Distributions.html">
+     7.1. Categorical Distributions
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../07/2/Visualizing_Numerical_Distributions.html">
+     7.2. Numerical Distributions
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../07/3/Overlaid_Graphs.html">
+     7.3. Overlaid Graphs
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../08/Functions_and_Tables.html">
+   8. Functions and Tables
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" type="checkbox"/>
+  <label for="toctree-checkbox-14">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../08/1/Applying_a_Function_to_a_Column.html">
+     8.5. Applying Functions to Columns
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../08/2/Classifying_by_One_Variable.html">
+     8.6. Classifying by One Variable
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../08/3/Cross-Classifying_by_More_than_One_Variable.html">
+     8.7. Cross-Classifying
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../08/4/Joining_Tables_by_Columns.html">
+     8.8. Joining Tables by Columns
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../08/5/Bike_Sharing_in_the_Bay_Area.html">
+     8.9. Bike Sharing in the Bay Area
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../09/Randomness.html">
+   9. Randomness
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" type="checkbox"/>
+  <label for="toctree-checkbox-15">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../09/1/Conditional_Statements.html">
+     9.1. Conditional Statements
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../09/2/Iteration.html">
+     9.2. Iteration
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../09/3/Simulation.html">
+     9.3. Simulation
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../09/4/Monty_Hall_Problem.html">
+     9.4. The Monty Hall Problem
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../09/5/Finding_Probabilities.html">
+     9.5. Finding Probabilities
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../10/Sampling_and_Empirical_Distributions.html">
+   10. Sampling and Empirical Distributions
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-16" name="toctree-checkbox-16" type="checkbox"/>
+  <label for="toctree-checkbox-16">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../10/1/Empirical_Distributions.html">
+     10.1. Empirical Distributions
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../10/2/Sampling_from_a_Population.html">
+     10.2. Sampling from a Population
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../10/3/Empirical_Distribution_of_a_Statistic.html">
+     10.3. Empirical Distibution of a Statistic
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../10/4/Random_Sampling_in_Python.html">
+     10.4. Random Sampling in Python
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../11/Testing_Hypotheses.html">
+   11. Testing Hypotheses
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-17" name="toctree-checkbox-17" type="checkbox"/>
+  <label for="toctree-checkbox-17">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../11/1/Assessing_a_Model.html">
+     11.1. Assessing a Model
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../11/2/Multiple_Categories.html">
+     11.2. Multiple Categories
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../11/3/Decisions_and_Uncertainty.html">
+     11.3. Decisions and Uncertainty
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../11/4/Error_Probabilities.html">
+     11.4. Error Probabilities
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../12/Comparing_Two_Samples.html">
+   12. Comparing Two Samples
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-18" name="toctree-checkbox-18" type="checkbox"/>
+  <label for="toctree-checkbox-18">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../12/1/AB_Testing.html">
+     12.1. A/B Testing
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../12/2/Causality.html">
+     12.2. Causality
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../12/3/Deflategate.html">
+     12.3. Deflategate
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../13/Estimation.html">
+   13. Estimation
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-19" name="toctree-checkbox-19" type="checkbox"/>
+  <label for="toctree-checkbox-19">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../13/1/Percentiles.html">
+     13.1. Percentiles
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../13/2/Bootstrap.html">
+     13.2. The Bootstrap
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../13/3/Confidence_Intervals.html">
+     13.3. Confidence Intervals
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../13/4/Using_Confidence_Intervals.html">
+     13.4. Using Confidence Intervals
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../14/Why_the_Mean_Matters.html">
+   14. Why the Mean Matters
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-20" name="toctree-checkbox-20" type="checkbox"/>
+  <label for="toctree-checkbox-20">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../14/1/Properties_of_the_Mean.html">
+     14.1. Properties of the Mean
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../14/2/Variability.html">
+     14.2. Variability
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../14/3/SD_and_the_Normal_Curve.html">
+     14.3. The SD and the Normal Curve
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../14/4/Central_Limit_Theorem.html">
+     14.4. The Central Limit Theorem
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../14/5/Variability_of_the_Sample_Mean.html">
+     14.5. The Variability of the Sample Mean
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../14/6/Choosing_a_Sample_Size.html">
+     14.6. Choosing a Sample Size
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../15/Prediction.html">
+   15. Prediction
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-21" name="toctree-checkbox-21" type="checkbox"/>
+  <label for="toctree-checkbox-21">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../15/1/Correlation.html">
+     15.1. Correlation
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../15/2/Regression_Line.html">
+     15.2. The Regression Line
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../15/3/Method_of_Least_Squares.html">
+     15.3. The Method of Least Squares
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../15/4/Least_Squares_Regression.html">
+     15.4. Least Squares Regression
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../15/5/Visual_Diagnostics.html">
+     15.5. Visual Diagnostics
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../15/6/Numerical_Diagnostics.html">
+     15.6. Numerical Diagnostics
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../16/Inference_for_Regression.html">
+   16. Inference for Regression
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-22" name="toctree-checkbox-22" type="checkbox"/>
+  <label for="toctree-checkbox-22">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../16/1/Regression_Model.html">
+     16.1. A Regression Model
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../16/2/Inference_for_the_True_Slope.html">
+     16.2. Inference for the True Slope
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../16/3/Prediction_Intervals.html">
+     16.3. Prediction Intervals
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../17/Classification.html">
+   17. Classification
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-23" name="toctree-checkbox-23" type="checkbox"/>
+  <label for="toctree-checkbox-23">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../17/1/Nearest_Neighbors.html">
+     17.1. Nearest Neighbors
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../17/2/Training_and_Testing.html">
+     17.2. Training and Testing
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../17/3/Rows_of_Tables.html">
+     17.3. Rows of Tables
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../17/4/Implementing_the_Classifier.html">
+     17.4. Implementing the Classifier
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../17/5/Accuracy_of_the_Classifier.html">
+     17.5. The Accuracy of the Classifier
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../17/6/Multiple_Regression.html">
+     17.6. Multiple Regression
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../18/Updating_Predictions.html">
+   18. Updating Predictions
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-24" name="toctree-checkbox-24" type="checkbox"/>
+  <label for="toctree-checkbox-24">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../18/1/More_Likely_than_Not_Binary_Classifier.html">
+     18.1. A "More Likely Than Not" Binary Classifier
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../18/2/Making_Decisions.html">
+     18.2. Making Decisions
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../../_sources/chapters/00/12/02-bio.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/Cloudedu-Osaka/textbook"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/Cloudedu-Osaka/textbook/main?urlpath=tree/chapters/00/12/02-bio.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../../../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        <a class="jupyterhub-button" href="https://cloudedu-jhub.japaneast.cloudapp.azure.com/hub/user-redirect/git-pull?repo=https://github.com/Cloudedu-Osaka/textbook&urlpath=tree/textbook/chapters/00/12/02-bio.ipynb&branch=main"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch JupyterHub" data-toggle="tooltip"
+                data-placement="left"><img class="jupyterhub-button-logo"
+                    src="../../../_static/images/logo_jupyterhub.svg"
+                    alt="Interact on JupyterHub">JupyterHub</button></a>
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   Central dogma
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#transcription">
+   Transcription
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#escherichia-coli">
+     Escherichia coli
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#ecocyc-e-coli-encycle">
+       EcoCyc = “E. Coli” + “Encycle”
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#eco-escherichia-coli">
+       Eco = “Escherichia Coli”
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#e-coli-mg1655">
+     E.coli MG1655の遺伝情報をダウンロードする
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#find-a-open-reading-frame">
+     Find a Open Reading frame
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#binding-site-box">
+     Binding site (box)
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#find-its-promoter">
+     Find its promoter
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#transcription-factor">
+     Transcription factor
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Central dogma</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   Central dogma
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#transcription">
+   Transcription
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#escherichia-coli">
+     Escherichia coli
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#ecocyc-e-coli-encycle">
+       EcoCyc = “E. Coli” + “Encycle”
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#eco-escherichia-coli">
+       Eco = “Escherichia Coli”
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#e-coli-mg1655">
+     E.coli MG1655の遺伝情報をダウンロードする
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#find-a-open-reading-frame">
+     Find a Open Reading frame
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#binding-site-box">
+     Binding site (box)
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#find-its-promoter">
+     Find its promoter
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#transcription-factor">
+     Transcription factor
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <div class="cell tag_remove-input docutils container">
+</div>
+<div class="tex2jax_ignore mathjax_ignore section" id="central-dogma">
+<h1>Central dogma<a class="headerlink" href="#central-dogma" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Central_dogma_of_molecular_biology">Central dogma of molecular biology - Wikipedia</a></p>
+<ul>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/DNA_replication">DNA replication - Wikipedia</a> (複製)</p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Transcription_%28biology%29">Transcription (biology) - Wikipedia</a> (転写)</p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Translation_%28biology%29#:~:text=In%20molecular%20biology%20and%20genetics,process%20is%20called%20gene%20expression.">Translation (biology) - Wikipedia</a> (翻訳)</p></li>
+</ul>
+</li>
+</ul>
+<p><img alt="fig-4" src="https://upload.wikimedia.org/wikipedia/commons/6/68/Central_Dogma_of_Molecular_Biochemistry_with_Enzymes.jpg" /></p>
+</div>
+<div class="tex2jax_ignore mathjax_ignore section" id="transcription">
+<h1>Transcription<a class="headerlink" href="#transcription" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li><p><a class="reference external" href="https://pdb101.rcsb.org/motm/40">PDB-101: Molecule of the Month: RNA Polymerase</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/RNA_polymerase">RNA polymerase - Wikipedia</a></p>
+<ul>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Bacteria">Bacteria - Wikipedia</a></p>
+<ul>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Bacterial_transcription">Bacterial transcription - Wikipedia</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Eukaryote">Eukaryote - Wikipedia</a></p>
+<ul>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/RNA_polymerase_I">RNA polymerase I - Wikipedia</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/RNA_polymerase_II">RNA polymerase II - Wikipedia</a></p>
+<ul>
+<li><p>(1947 – ) <a class="reference external" href="https://en.wikipedia.org/wiki/Roger_D._Kornberg">Roger D. Kornberg - Wikipedia</a></p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p><img alt="fig-11" src="https://cdn.rcsb.org/pdb101/motm/40/1i6h-composite.gif" /></p>
+<p><img alt="fig-6" src="https://upload.wikimedia.org/wikipedia/commons/5/5c/Process_of_transcription_%2813080846733%29.jpg" /></p>
+<div class="section" id="escherichia-coli">
+<h2>Escherichia coli<a class="headerlink" href="#escherichia-coli" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Escherichia_coli">Escherichia coli - Wikipedia</a></p>
+<ul>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Escherichia_coli_in_molecular_biology">Escherichia coli in molecular biology - Wikipedia</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference external" href="https://www.cytivalifesciences.co.jp/newsletter/biodirect_mail/cell_story/36.html">細胞夜話 第1回：Escherichia coli K-12株 - バイオダイレクトメール vol.36</a></p></li>
+</ul>
+<div class="section" id="ecocyc-e-coli-encycle">
+<h3>EcoCyc = “E. Coli” + “Encycle”<a class="headerlink" href="#ecocyc-e-coli-encycle" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><a class="reference external" href="https://biocyc.org/">BioCyc Pathway/Genome Database Collection</a></p>
+<ul>
+<li><p><a class="reference external" href="https://ecocyc.org/">EcoCyc: Encyclopedia of E. coli Genes and Metabolism</a></p></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="eco-escherichia-coli">
+<h3>Eco = “Escherichia Coli”<a class="headerlink" href="#eco-escherichia-coli" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>(1886) <a class="reference external" href="https://en.wikipedia.org/wiki/Theodor_Escherich">Theodor Escherich - Wikipedia</a></p>
+<ul>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Escherichia_coli">Escherichia coli - Wikipedia</a></p>
+<ul>
+<li><p>(1972) <a class="reference external" href="https://en.wikipedia.org/wiki/Recombinant_DNA">Recombinant DNA - Wikipedia</a></p>
+<ul>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Plasmid">Plasmid - Wikipedia</a></p></li>
+</ul>
+</li>
+<li><p>(1961) <a class="reference external" href="https://en.wikipedia.org/wiki/Lac_operon">lac operon - Wikipedia</a></p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="e-coli-mg1655">
+<h2>E.coli MG1655の遺伝情報をダウンロードする<a class="headerlink" href="#e-coli-mg1655" title="Permalink to this headline">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">pydna.genbank</span> <span class="kn">import</span> <span class="n">Genbank</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">gb</span> <span class="o">=</span> <span class="n">Genbank</span><span class="p">(</span><span class="s2">&quot;u416528d@ecs.osaka-u.ac.jp&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">MG1655</span> <span class="o">=</span> <span class="n">gb</span><span class="o">.</span><span class="n">nucleotide</span><span class="p">(</span><span class="s2">&quot;U00096.3&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">MG1655</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Dseqrecord
+circular: True
+size: 4641652
+ID: U00096.3
+Name: U00096
+Description: Escherichia coli str. K-12 substr. MG1655, complete genome
+Database cross-references: BioProject:PRJNA225, BioSample:SAMN02604091
+Number of features: 9261
+/molecule_type=DNA
+/topology=circular
+/data_file_division=BCT
+/date=07-MAR-2022
+/accessions=[&#39;U00096&#39;]
+/sequence_version=3
+/keywords=[&#39;&#39;]
+/source=Escherichia coli str. K-12 substr. MG1655
+/organism=Escherichia coli str. K-12 substr. MG1655
+/taxonomy=[&#39;Bacteria&#39;, &#39;Proteobacteria&#39;, &#39;Gammaproteobacteria&#39;, &#39;Enterobacterales&#39;, &#39;Enterobacteriaceae&#39;, &#39;Escherichia&#39;]
+/references=[Reference(title=&#39;The complete genome sequence of Escherichia coli K-12&#39;, ...), Reference(title=&#39;Highly accurate genome sequences of Escherichia coli K-12 strains MG1655 and W3110&#39;, ...), Reference(title=&#39;Escherichia coli K-12: a cooperatively developed annotation snapshot--2005&#39;, ...), Reference(title=&#39;Workshop on Annotation of Escherichia coli K-12&#39;, ...), Reference(title=&#39;ASAP: Escherichia coli K-12 strain MG1655 version m56&#39;, ...), Reference(title=&#39;A more accurate sequence comparison between genomes of Escherichia coli K12 W3110 and MG1655 strains&#39;, ...), Reference(title=&#39;Escherichia coli K-12 MG1655 yqiK-rfaE intergenic region, genomic sequence correction&#39;, ...), Reference(title=&#39;A manual approach to accurate translation start site annotation: an E. coli K-12 case study&#39;, ...), Reference(title=&#39;Direct Submission&#39;, ...), Reference(title=&#39;Direct Submission&#39;, ...), Reference(title=&#39;Direct Submission&#39;, ...), Reference(title=&#39;Direct Submission&#39;, ...), Reference(title=&#39;Direct Submission&#39;, ...), Reference(title=&#39;Direct Submission&#39;, ...), Reference(title=&#39;Direct Submission&#39;, ...), Reference(title=&#39;Direct Submission&#39;, ...), Reference(title=&#39;Direct Submission&#39;, ...), Reference(title=&#39;Direct Submission&#39;, ...)]
+/comment=On Sep 26, 2013 this sequence version replaced U00096.2.
+Changes to proteins and annotation made on March 7, 2022.  Current
+U00096 annotation updates are derived from EcoCyc
+https://ecocyc.org/.  Suggestions for updates can be sent to
+biocyc-support@ai.sri.com. These updates are being generated from a
+collaboration  that includes EcoCyc, the University of Wisconsin,
+UniProtKB/Swiss-Prot, and the National Center for Biotechnology
+Information (NCBI).
+Dseq(o4641652)
+AGCT..TTTC
+TCGA..AAAG
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">len</span><span class="p">(</span><span class="n">MG1655</span><span class="o">.</span><span class="n">seq</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>4641652
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="find-a-open-reading-frame">
+<h2>Find a Open Reading frame<a class="headerlink" href="#find-a-open-reading-frame" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Reading_frame">Reading frame - Wikipedia</a></p>
+<ul>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Open_reading_frame">Open reading frame - Wikipedia</a></p>
+<ul>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Start_codon">Start codon - Wikipedia</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Stop_codon">Stop codon - Wikipedia</a></p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul class="simple">
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Beta-galactosidase">Beta-galactosidase - Wikipedia</a></p></li>
+<li><p><a class="reference external" href="https://ecocyc.org/ECOLI/NEW-IMAGE?type=LOCUS-POSITION&amp;object=EG10527&amp;chromosome=COLI-K12">Escherichia coli K-12 substr. MG1655 lacZ</a></p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;</span><span class="n">gnl</span><span class="o">|</span><span class="n">ECOLI</span><span class="o">|</span><span class="n">EG10527</span> <span class="n">lacZ</span> <span class="n">BETAGALACTOSID</span><span class="o">-</span><span class="n">MONOMER</span> <span class="p">(</span><span class="n">complement</span><span class="p">(</span><span class="mf">363231..366305</span><span class="p">))</span> <span class="n">Escherichia</span> <span class="n">coli</span> <span class="n">K</span><span class="o">-</span><span class="mi">12</span> <span class="n">substr</span><span class="o">.</span> <span class="n">MG1655</span>
+</pre></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">orfipy_core</span> 
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sseq</span><span class="o">=</span><span class="n">MG1655</span><span class="o">.</span><span class="n">seq</span><span class="p">[</span><span class="mi">360000</span><span class="p">:</span><span class="mi">370000</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">len</span><span class="p">(</span><span class="n">sseq</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>10000
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">orf</span><span class="o">=</span><span class="n">orfipy_core</span><span class="o">.</span><span class="n">orfs</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">sseq</span><span class="o">.</span><span class="n">reverse_complement</span><span class="p">()))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">sorted</span><span class="p">(</span><span class="n">orf</span><span class="p">,</span> 
+       <span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="nb">int</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;;&quot;</span><span class="p">)[</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;=&quot;</span><span class="p">)[</span><span class="mi">1</span><span class="p">]),</span> 
+       <span class="n">reverse</span><span class="o">=</span><span class="kc">True</span><span class="p">)[:</span><span class="mi">5</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[(3695,
+  6767,
+  &#39;+&#39;,
+  &#39;ID=Seq_ORF.134;ORF_type=complete;ORF_len=3072;ORF_frame=3;Start:ATG;Stop:TAA&#39;),
+ (6791,
+  8072,
+  &#39;+&#39;,
+  &#39;ID=Seq_ORF.135;ORF_type=complete;ORF_len=1281;ORF_frame=3;Start:CTG;Stop:TAA&#39;),
+ (8857,
+  9997,
+  &#39;-&#39;,
+  &#39;ID=Seq_ORF.153;ORF_type=complete;ORF_len=1140;ORF_frame=-1;Start:CTG;Stop:TGA&#39;),
+ (2613,
+  3570,
+  &#39;+&#39;,
+  &#39;ID=Seq_ORF.15;ORF_type=complete;ORF_len=957;ORF_frame=1;Start:ATG;Stop:TGA&#39;),
+ (1466,
+  2411,
+  &#39;+&#39;,
+  &#39;ID=Seq_ORF.126;ORF_type=complete;ORF_len=945;ORF_frame=3;Start:ATG;Stop:TGA&#39;)]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">orf</span><span class="p">[</span><span class="mi">133</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(3695,
+ 6767,
+ &#39;+&#39;,
+ &#39;ID=Seq_ORF.134;ORF_type=complete;ORF_len=3072;ORF_frame=3;Start:ATG;Stop:TAA&#39;)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mi">370000</span><span class="o">-</span><span class="n">orf</span><span class="p">[</span><span class="mi">133</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span><span class="o">-</span><span class="mi">3</span><span class="p">,</span> <span class="mi">370000</span><span class="o">-</span><span class="n">orf</span><span class="p">[</span><span class="mi">133</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(363230, 366305)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">str</span><span class="p">(</span><span class="n">MG1655</span><span class="o">.</span><span class="n">seq</span><span class="p">[</span><span class="mi">363230</span><span class="p">:</span><span class="mi">366305</span><span class="p">]</span><span class="o">.</span><span class="n">reverse_complement</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;ATGACCATGATTACGGATTCACTGGCCGTCGTTTTACAACGTCGTGACTGGGAAAACCCTGGCGTTACCCAACTTAATCGCCTTGCAGCACATCCCCCTTTCGCCAGCTGGCGTAATAGCGAAGAGGCCCGCACCGATCGCCCTTCCCAACAGTTGCGCAGCCTGAATGGCGAATGGCGCTTTGCCTGGTTTCCGGCACCAGAAGCGGTGCCGGAAAGCTGGCTGGAGTGCGATCTTCCTGAGGCCGATACTGTCGTCGTCCCCTCAAACTGGCAGATGCACGGTTACGATGCGCCCATCTACACCAACGTGACCTATCCCATTACGGTCAATCCGCCGTTTGTTCCCACGGAGAATCCGACGGGTTGTTACTCGCTCACATTTAATGTTGATGAAAGCTGGCTACAGGAAGGCCAGACGCGAATTATTTTTGATGGCGTTAACTCGGCGTTTCATCTGTGGTGCAACGGGCGCTGGGTCGGTTACGGCCAGGACAGTCGTTTGCCGTCTGAATTTGACCTGAGCGCATTTTTACGCGCCGGAGAAAACCGCCTCGCGGTGATGGTGCTGCGCTGGAGTGACGGCAGTTATCTGGAAGATCAGGATATGTGGCGGATGAGCGGCATTTTCCGTGACGTCTCGTTGCTGCATAAACCGACTACACAAATCAGCGATTTCCATGTTGCCACTCGCTTTAATGATGATTTCAGCCGCGCTGTACTGGAGGCTGAAGTTCAGATGTGCGGCGAGTTGCGTGACTACCTACGGGTAACAGTTTCTTTATGGCAGGGTGAAACGCAGGTCGCCAGCGGCACCGCGCCTTTCGGCGGTGAAATTATCGATGAGCGTGGTGGTTATGCCGATCGCGTCACACTACGTCTGAACGTCGAAAACCCGAAACTGTGGAGCGCCGAAATCCCGAATCTCTATCGTGCGGTGGTTGAACTGCACACCGCCGACGGCACGCTGATTGAAGCAGAAGCCTGCGATGTCGGTTTCCGCGAGGTGCGGATTGAAAATGGTCTGCTGCTGCTGAACGGCAAGCCGTTGCTGATTCGAGGCGTTAACCGTCACGAGCATCATCCTCTGCATGGTCAGGTCATGGATGAGCAGACGATGGTGCAGGATATCCTGCTGATGAAGCAGAACAACTTTAACGCCGTGCGCTGTTCGCATTATCCGAACCATCCGCTGTGGTACACGCTGTGCGACCGCTACGGCCTGTATGTGGTGGATGAAGCCAATATTGAAACCCACGGCATGGTGCCAATGAATCGTCTGACCGATGATCCGCGCTGGCTACCGGCGATGAGCGAACGCGTAACGCGAATGGTGCAGCGCGATCGTAATCACCCGAGTGTGATCATCTGGTCGCTGGGGAATGAATCAGGCCACGGCGCTAATCACGACGCGCTGTATCGCTGGATCAAATCTGTCGATCCTTCCCGCCCGGTGCAGTATGAAGGCGGCGGAGCCGACACCACGGCCACCGATATTATTTGCCCGATGTACGCGCGCGTGGATGAAGACCAGCCCTTCCCGGCTGTGCCGAAATGGTCCATCAAAAAATGGCTTTCGCTACCTGGAGAGACGCGCCCGCTGATCCTTTGCGAATACGCCCACGCGATGGGTAACAGTCTTGGCGGTTTCGCTAAATACTGGCAGGCGTTTCGTCAGTATCCCCGTTTACAGGGCGGCTTCGTCTGGGACTGGGTGGATCAGTCGCTGATTAAATATGATGAAAACGGCAACCCGTGGTCGGCTTACGGCGGTGATTTTGGCGATACGCCGAACGATCGCCAGTTCTGTATGAACGGTCTGGTCTTTGCCGACCGCACGCCGCATCCAGCGCTGACGGAAGCAAAACACCAGCAGCAGTTTTTCCAGTTCCGTTTATCCGGGCAAACCATCGAAGTGACCAGCGAATACCTGTTCCGTCATAGCGATAACGAGCTCCTGCACTGGATGGTGGCGCTGGATGGTAAGCCGCTGGCAAGCGGTGAAGTGCCTCTGGATGTCGCTCCACAAGGTAAACAGTTGATTGAACTGCCTGAACTACCGCAGCCGGAGAGCGCCGGGCAACTCTGGCTCACAGTACGCGTAGTGCAACCGAACGCGACCGCATGGTCAGAAGCCGGGCACATCAGCGCCTGGCAGCAGTGGCGTCTGGCGGAAAACCTCAGTGTGACGCTCCCCGCCGCGTCCCACGCCATCCCGCATCTGACCACCAGCGAAATGGATTTTTGCATCGAGCTGGGTAATAAGCGTTGGCAATTTAACCGCCAGTCAGGCTTTCTTTCACAGATGTGGATTGGCGATAAAAAACAACTGCTGACGCCGCTGCGCGATCAGTTCACCCGTGCACCGCTGGATAACGACATTGGCGTAAGTGAAGCGACCCGCATTGACCCTAACGCCTGGGTCGAACGCTGGAAGGCGGCGGGCCATTACCAGGCCGAAGCAGCGTTGTTGCAGTGCACGGCAGATACACTTGCTGATGCGGTGCTGATTACGACCGCTCACGCGTGGCAGCATCAGGGGAAAACCTTATTTATCAGCCGGAAAACCTACCGGATTGATGGTAGTGGTCAAATGGCGATTACCGTTGATGTTGAAGTGGCGAGCGATACACCGCATCCGGCGCGGATTGGCCTGAACTGCCAGCTGGCGCAGGTAGCAGAGCGGGTAAACTGGCTCGGATTAGGGCCGCAAGAAAACTATCCCGACCGCCTTACTGCCGCCTGTTTTGACCGCTGGGATCTGCCATTGTCAGACATGTATACCCCGTACGTCTTCCCGAGCGAAAACGGTCTGCGCTGCGGGACGCGCGAATTGAATTATGGCCCACACCAGTGGCGCGGCGACTTCCAGTTCAACATCAGCCGCTACAGTCAACAGCAACTGATGGAAACCAGCCATCGCCATCTGCTGCACGCGGAAGAAGGCACATGGCTGAATATCGACGGTTTCCATATGGGGATTGGTGGCGACGACTCCTGGAGCCCGTCAGTATCGGCGGAATTCCAGCTGAGCGCCGGTCGCTACCATTACCAGTTGGTCTGGTGTCAAAAATAA&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">len</span><span class="p">(</span><span class="n">_</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3075
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">str</span><span class="p">(</span><span class="n">MG1655</span><span class="o">.</span><span class="n">seq</span><span class="p">[</span><span class="mi">363230</span><span class="p">:</span><span class="mi">366305</span><span class="p">]</span><span class="o">.</span><span class="n">reverse_complement</span><span class="p">()</span><span class="o">.</span><span class="n">translate</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;MTMITDSLAVVLQRRDWENPGVTQLNRLAAHPPFASWRNSEEARTDRPSQQLRSLNGEWRFAWFPAPEAVPESWLECDLPEADTVVVPSNWQMHGYDAPIYTNVTYPITVNPPFVPTENPTGCYSLTFNVDESWLQEGQTRIIFDGVNSAFHLWCNGRWVGYGQDSRLPSEFDLSAFLRAGENRLAVMVLRWSDGSYLEDQDMWRMSGIFRDVSLLHKPTTQISDFHVATRFNDDFSRAVLEAEVQMCGELRDYLRVTVSLWQGETQVASGTAPFGGEIIDERGGYADRVTLRLNVENPKLWSAEIPNLYRAVVELHTADGTLIEAEACDVGFREVRIENGLLLLNGKPLLIRGVNRHEHHPLHGQVMDEQTMVQDILLMKQNNFNAVRCSHYPNHPLWYTLCDRYGLYVVDEANIETHGMVPMNRLTDDPRWLPAMSERVTRMVQRDRNHPSVIIWSLGNESGHGANHDALYRWIKSVDPSRPVQYEGGGADTTATDIICPMYARVDEDQPFPAVPKWSIKKWLSLPGETRPLILCEYAHAMGNSLGGFAKYWQAFRQYPRLQGGFVWDWVDQSLIKYDENGNPWSAYGGDFGDTPNDRQFCMNGLVFADRTPHPALTEAKHQQQFFQFRLSGQTIEVTSEYLFRHSDNELLHWMVALDGKPLASGEVPLDVAPQGKQLIELPELPQPESAGQLWLTVRVVQPNATAWSEAGHISAWQQWRLAENLSVTLPAASHAIPHLTTSEMDFCIELGNKRWQFNRQSGFLSQMWIGDKKQLLTPLRDQFTRAPLDNDIGVSEATRIDPNAWVERWKAAGHYQAEAALLQCTADTLADAVLITTAHAWQHQGKTLFISRKTYRIDGSGQMAITVDVEVASDTPHPARIGLNCQLAQVAERVNWLGLGPQENYPDRLTAACFDRWDLPLSDMYTPYVFPSENGLRCGTRELNYGPHQWRGDFQFNISRYSQQQLMETSHRHLLHAEEGTWLNIDGFHMGIGGDDSWSPSVSAEFQLSAGRYHYQLVWCQK*&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">len</span><span class="p">(</span><span class="n">_</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1025
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="binding-site-box">
+<h2>Binding site (box)<a class="headerlink" href="#binding-site-box" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Consensus_sequence">Consensus sequence - Wikipedia</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/DNA_binding_site">DNA binding site - Wikipedia</a></p>
+<ul>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/DNA-binding_protein">DNA-binding protein - Wikipedia</a></p>
+<ul>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Transcription_factor">Transcription factor - Wikipedia</a></p>
+<ul>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Gene_expression">Gene expression - Wikipedia</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Transcriptional_regulation">Transcriptional regulation - Wikipedia</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Downregulation_and_upregulation">Downregulation and upregulation - Wikipedia</a></p>
+<ul>
+<li><p>activation, promotion</p></li>
+<li><p>repression, suppression</p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p><img alt="fig-20" src="https://upload.wikimedia.org/wikipedia/commons/8/80/Transcription_Factors.svg" /></p>
+</div>
+<div class="section" id="find-its-promoter">
+<h2>Find its promoter<a class="headerlink" href="#find-its-promoter" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/RNA_polymerase">RNA polymerase - Wikipedia</a></p>
+<ul>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Promoter_%28genetics%29">Promoter (genetics) - Wikipedia</a></p>
+<ul>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Sigma_factor">Sigma factor - Wikipedia</a></p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul class="simple">
+<li><p><a class="reference external" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6095464/">An Introduction to the Structure and Function of the catalytic core enzyme of Escherichia coli RNA polymerase - PMC</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Sigma_factor">Sigma factor - Wikipedia</a></p></li>
+</ul>
+<p><img alt="fig-7" src="https://upload.wikimedia.org/wikipedia/commons/d/dd/Sigma_70_domains.png" /></p>
+<ul class="simple">
+<li><p>EcoCyc</p>
+<ul>
+<li><p><a class="reference external" href="https://ecocyc.org/ECOLI/NEW-IMAGE?type=OPERON&amp;object=TU00036">Escherichia coli K-12 substr. MG1655 lacZYA</a></p></li>
+</ul>
+</li>
+</ul>
+<ul class="simple">
+<li><p>Promoter:</p>
+<ul>
+<li><p>lacZp1</p>
+<ul>
+<li><p>Absolute Position of Transcription Start Site: 366343 base pairs</p></li>
+<li><p>Position relative to start of first gene (lacZ): -38</p>
+<ul>
+<li><p><span class="math notranslate nohighlight">\(\sigma^{70}\)</span>: -10, -35</p></li>
+<li><p>-10: “TATGTT”</p></li>
+<li><p>-35: “TTTACA”</p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>Activator:</p>
+<ul>
+<li><p>Site 10 (<span class="math notranslate nohighlight">\(\rm{Crp}^{10}\)</span>):</p>
+<ul>
+<li><p>Position of Site Center Relative to Transcription Start Site (bp): 61.5</p></li>
+<li><p>“TAATGTGAGTTAGCTCACTCAT”</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>Repressor:</p>
+<ul>
+<li><p>Site 1 (<span class="math notranslate nohighlight">\(\rm{LacI}^{1}\)</span>):</p>
+<ul>
+<li><p>Position of Site Center Relative to Transcription Start Site (bp): 412</p></li>
+<li><p>“GGTTGTTACTCGCTCACATTT”</p></li>
+</ul>
+</li>
+<li><p>Site 4 (<span class="math notranslate nohighlight">\(\rm{LacI}^{4}\)</span>):</p>
+<ul>
+<li><p>Position of Site Center Relative to Transcription Start Site (bp): 11</p></li>
+<li><p>“AATTGTGAGCGGATAACAATT”</p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">orf</span><span class="p">[</span><span class="mi">133</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(3695,
+ 6767,
+ &#39;+&#39;,
+ &#39;ID=Seq_ORF.134;ORF_type=complete;ORF_len=3072;ORF_frame=3;Start:ATG;Stop:TAA&#39;)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">difflib</span>
+<span class="kn">from</span> <span class="nn">Bio.Seq</span> <span class="kn">import</span> <span class="n">Seq</span>
+
+<span class="k">def</span> <span class="nf">promotor</span><span class="p">(</span><span class="n">seq_orf</span><span class="p">,</span> <span class="n">s_offset</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">m10</span><span class="o">=</span><span class="s2">&quot;TATAAT&quot;</span><span class="p">,</span> <span class="n">m35</span><span class="o">=</span><span class="s2">&quot;TTGACA&quot;</span><span class="p">,</span> <span class="n">reverse</span><span class="o">=</span><span class="mi">370000</span><span class="p">):</span>
+    <span class="n">st</span> <span class="o">=</span> <span class="n">orf</span><span class="p">[</span><span class="n">seq_orf</span><span class="o">-</span><span class="mi">1</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span><span class="o">+</span><span class="n">s_offset</span>
+    <span class="n">ed</span> <span class="o">=</span> <span class="n">orf</span><span class="p">[</span><span class="n">seq_orf</span><span class="o">-</span><span class="mi">1</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span>
+    <span class="n">pr</span> <span class="o">=</span> <span class="mi">80</span>
+    <span class="n">gn</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">sseq</span><span class="o">.</span><span class="n">reverse_complement</span><span class="p">())[</span><span class="n">st</span><span class="o">-</span><span class="n">pr</span><span class="p">:</span><span class="n">ed</span><span class="p">]</span>
+    <span class="n">sc</span> <span class="o">=</span> <span class="n">orf</span><span class="p">[</span><span class="n">seq_orf</span><span class="o">-</span><span class="mi">1</span><span class="p">][</span><span class="mi">3</span><span class="p">]</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;;&quot;</span><span class="p">)[</span><span class="mi">4</span><span class="p">]</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;:&quot;</span><span class="p">)[</span><span class="mi">1</span><span class="p">]</span>
+    
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="n">pr</span><span class="o">+</span><span class="mi">10</span><span class="p">):</span>
+        <span class="n">rto10</span> <span class="o">=</span> <span class="n">difflib</span><span class="o">.</span><span class="n">SequenceMatcher</span><span class="p">(</span><span class="kc">None</span><span class="p">,</span> <span class="n">m10</span><span class="p">,</span> <span class="n">gn</span><span class="p">[</span><span class="n">i</span><span class="p">:</span><span class="n">i</span><span class="o">+</span><span class="mi">6</span><span class="p">])</span><span class="o">.</span><span class="n">ratio</span><span class="p">()</span>
+        <span class="n">rto35</span> <span class="o">=</span> <span class="n">difflib</span><span class="o">.</span><span class="n">SequenceMatcher</span><span class="p">(</span><span class="kc">None</span><span class="p">,</span> <span class="n">m35</span><span class="p">,</span> <span class="n">gn</span><span class="p">[</span><span class="n">i</span><span class="p">:</span><span class="n">i</span><span class="o">+</span><span class="mi">6</span><span class="p">])</span><span class="o">.</span><span class="n">ratio</span><span class="p">()</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">{:&gt; 8d}</span><span class="s2"> &quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">reverse</span><span class="o">-</span><span class="p">(</span><span class="n">st</span><span class="o">-</span><span class="n">pr</span><span class="p">)</span><span class="o">-</span><span class="n">i</span><span class="p">),</span> <span class="n">end</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">{:&gt; 4d}</span><span class="s2"> &quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">i</span><span class="o">-</span><span class="n">pr</span><span class="p">),</span> <span class="n">end</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">gn</span><span class="p">[</span><span class="n">i</span><span class="p">:</span><span class="n">i</span><span class="o">+</span><span class="mi">6</span><span class="p">],</span><span class="n">end</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot; </span><span class="si">{:0.2f}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">rto10</span><span class="p">),</span> <span class="n">end</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;|</span><span class="si">{:&lt;10s}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="s1">&#39;=&#39;</span><span class="o">*</span><span class="nb">int</span><span class="p">(</span><span class="n">rto10</span><span class="o">*</span><span class="mi">10</span><span class="p">)),</span> <span class="n">end</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot; </span><span class="si">{:0.2f}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">rto35</span><span class="p">),</span> <span class="n">end</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;|</span><span class="si">{:&lt;10s}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="s1">&#39;=&#39;</span><span class="o">*</span><span class="nb">int</span><span class="p">(</span><span class="n">rto35</span><span class="o">*</span><span class="mi">10</span><span class="p">)),</span> <span class="n">end</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">promotor</span><span class="p">(</span><span class="mi">134</span><span class="p">,</span> <span class="n">m10</span><span class="o">=</span><span class="s2">&quot;TATAAT&quot;</span><span class="p">,</span> <span class="n">m35</span><span class="o">=</span><span class="s2">&quot;TTGACA&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  366385  -80 CCAGGC 0.17|=          0.33|===       
+  366384  -79 CAGGCT 0.17|=          0.33|===       
+  366383  -78 AGGCTT 0.33|===        0.33|===       
+  366382  -77 GGCTTT 0.50|=====      0.33|===       
+  366381  -76 GCTTTA 0.33|===        0.50|=====     
+  366380  -75 CTTTAC 0.33|===        0.67|======    
+  366379  -74 TTTACA 0.50|=====      0.83|========  
+  366378  -73 TTACAC 0.50|=====      0.83|========  
+  366377  -72 TACACT 0.50|=====      0.67|======    
+  366376  -71 ACACTT 0.33|===        0.50|=====     
+  366375  -70 CACTTT 0.50|=====      0.33|===       
+  366374  -69 ACTTTA 0.33|===        0.50|=====     
+  366373  -68 CTTTAT 0.50|=====      0.50|=====     
+  366372  -67 TTTATG 0.50|=====      0.50|=====     
+  366371  -66 TTATGC 0.50|=====      0.67|======    
+  366370  -65 TATGCT 0.67|======     0.67|======    
+  366369  -64 ATGCTT 0.50|=====      0.33|===       
+  366368  -63 TGCTTC 0.50|=====      0.50|=====     
+  366367  -62 GCTTCC 0.33|===        0.50|=====     
+  366366  -61 CTTCCG 0.33|===        0.50|=====     
+  366365  -60 TTCCGG 0.33|===        0.50|=====     
+  366364  -59 TCCGGC 0.17|=          0.50|=====     
+  366363  -58 CCGGCT 0.17|=          0.17|=         
+  366362  -57 CGGCTC 0.17|=          0.33|===       
+  366361  -56 GGCTCG 0.17|=          0.33|===       
+  366360  -55 GCTCGT 0.33|===        0.33|===       
+  366359  -54 CTCGTA 0.33|===        0.50|=====     
+  366358  -53 TCGTAT 0.50|=====      0.50|=====     
+  366357  -52 CGTATG 0.50|=====      0.50|=====     
+  366356  -51 GTATGT 0.67|======     0.50|=====     
+  366355  -50 TATGTT 0.67|======     0.33|===       
+  366354  -49 ATGTTG 0.50|=====      0.50|=====     
+  366353  -48 TGTTGT 0.50|=====      0.50|=====     
+  366352  -47 GTTGTG 0.50|=====      0.50|=====     
+  366351  -46 TTGTGT 0.50|=====      0.50|=====     
+  366350  -45 TGTGTG 0.50|=====      0.33|===       
+  366349  -44 GTGTGG 0.33|===        0.33|===       
+  366348  -43 TGTGGA 0.33|===        0.50|=====     
+  366347  -42 GTGGAA 0.50|=====      0.67|======    
+  366346  -41 TGGAAT 0.67|======     0.67|======    
+  366345  -40 GGAATT 0.50|=====      0.33|===       
+  366344  -39 GAATTG 0.50|=====      0.50|=====     
+  366343  -38 AATTGT 0.50|=====      0.50|=====     
+  366342  -37 ATTGTG 0.50|=====      0.50|=====     
+  366341  -36 TTGTGA 0.33|===        0.67|======    
+  366340  -35 TGTGAG 0.33|===        0.67|======    
+  366339  -34 GTGAGC 0.33|===        0.67|======    
+  366338  -33 TGAGCG 0.33|===        0.67|======    
+  366337  -32 GAGCGG 0.17|=          0.50|=====     
+  366336  -31 AGCGGA 0.33|===        0.33|===       
+  366335  -30 GCGGAT 0.33|===        0.33|===       
+  366334  -29 CGGATA 0.50|=====      0.50|=====     
+  366333  -28 GGATAA 0.67|======     0.50|=====     
+  366332  -27 GATAAC 0.67|======     0.50|=====     
+  366331  -26 ATAACA 0.67|======     0.67|======    
+  366330  -25 TAACAA 0.50|=====      0.67|======    
+  366329  -24 AACAAT 0.67|======     0.50|=====     
+  366328  -23 ACAATT 0.67|======     0.50|=====     
+  366327  -22 CAATTT 0.50|=====      0.33|===       
+  366326  -21 AATTTC 0.50|=====      0.50|=====     
+  366325  -20 ATTTCA 0.50|=====      0.67|======    
+  366324  -19 TTTCAC 0.33|===        0.67|======    
+  366323  -18 TTCACA 0.50|=====      0.83|========  
+  366322  -17 TCACAC 0.50|=====      0.67|======    
+  366321  -16 CACACA 0.50|=====      0.50|=====     
+  366320  -15 ACACAG 0.50|=====      0.50|=====     
+  366319  -14 CACAGG 0.33|===        0.50|=====     
+  366318  -13 ACAGGA 0.50|=====      0.50|=====     
+  366317  -12 CAGGAA 0.50|=====      0.50|=====     
+  366316  -11 AGGAAA 0.50|=====      0.50|=====     
+  366315  -10 GGAAAC 0.33|===        0.50|=====     
+  366314   -9 GAAACA 0.33|===        0.67|======    
+  366313   -8 AAACAG 0.33|===        0.50|=====     
+  366312   -7 AACAGC 0.33|===        0.50|=====     
+  366311   -6 ACAGCT 0.17|=          0.50|=====     
+  366310   -5 CAGCTA 0.33|===        0.33|===       
+  366309   -4 AGCTAT 0.50|=====      0.33|===       
+  366308   -3 GCTATG 0.50|=====      0.50|=====     
+  366307   -2 CTATGA 0.67|======     0.67|======    
+  366306   -1 TATGAC 0.67|======     0.83|========  
+  366305    0 ATGACC 0.50|=====      0.67|======    
+  366304    1 TGACCA 0.50|=====      0.83|========  
+  366303    2 GACCAT 0.33|===        0.67|======    
+  366302    3 ACCATG 0.33|===        0.33|===       
+  366301    4 CCATGA 0.50|=====      0.50|=====     
+  366300    5 CATGAT 0.67|======     0.50|=====     
+  366299    6 ATGATT 0.67|======     0.50|=====     
+  366298    7 TGATTA 0.33|===        0.67|======    
+  366297    8 GATTAC 0.33|===        0.67|======    
+  366296    9 ATTACG 0.33|===        0.67|======    
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">promotor</span><span class="p">(</span><span class="mi">134</span><span class="p">,</span> <span class="n">m10</span><span class="o">=</span><span class="s2">&quot;TATGTT&quot;</span><span class="p">,</span> <span class="n">m35</span><span class="o">=</span><span class="s2">&quot;TTTACA&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  366385  -80 CCAGGC 0.33|===        0.33|===       
+  366384  -79 CAGGCT 0.17|=          0.33|===       
+  366383  -78 AGGCTT 0.67|======     0.33|===       
+  366382  -77 GGCTTT 0.50|=====      0.50|=====     
+  366381  -76 GCTTTA 0.33|===        0.67|======    
+  366380  -75 CTTTAC 0.33|===        0.83|========  
+  366379  -74 TTTACA 0.33|===        1.00|==========
+  366378  -73 TTACAC 0.33|===        0.83|========  
+  366377  -72 TACACT 0.50|=====      0.67|======    
+  366376  -71 ACACTT 0.50|=====      0.50|=====     
+  366375  -70 CACTTT 0.50|=====      0.50|=====     
+  366374  -69 ACTTTA 0.33|===        0.67|======    
+  366373  -68 CTTTAT 0.50|=====      0.67|======    
+  366372  -67 TTTATG 0.67|======     0.67|======    
+  366371  -66 TTATGC 0.67|======     0.67|======    
+  366370  -65 TATGCT 0.83|========   0.50|=====     
+  366369  -64 ATGCTT 0.83|========   0.33|===       
+  366368  -63 TGCTTC 0.67|======     0.50|=====     
+  366367  -62 GCTTCC 0.50|=====      0.50|=====     
+  366366  -61 CTTCCG 0.33|===        0.50|=====     
+  366365  -60 TTCCGG 0.33|===        0.50|=====     
+  366364  -59 TCCGGC 0.33|===        0.33|===       
+  366363  -58 CCGGCT 0.17|=          0.17|=         
+  366362  -57 CGGCTC 0.17|=          0.33|===       
+  366361  -56 GGCTCG 0.33|===        0.33|===       
+  366360  -55 GCTCGT 0.50|=====      0.33|===       
+  366359  -54 CTCGTA 0.33|===        0.50|=====     
+  366358  -53 TCGTAT 0.50|=====      0.50|=====     
+  366357  -52 CGTATG 0.67|======     0.33|===       
+  366356  -51 GTATGT 0.83|========   0.33|===       
+  366355  -50 TATGTT 1.00|========== 0.33|===       
+  366354  -49 ATGTTG 0.83|========   0.33|===       
+  366353  -48 TGTTGT 0.67|======     0.50|=====     
+  366352  -47 GTTGTG 0.67|======     0.50|=====     
+  366351  -46 TTGTGT 0.83|========   0.50|=====     
+  366350  -45 TGTGTG 0.67|======     0.50|=====     
+  366349  -44 GTGTGG 0.50|=====      0.33|===       
+  366348  -43 TGTGGA 0.50|=====      0.50|=====     
+  366347  -42 GTGGAA 0.33|===        0.50|=====     
+  366346  -41 TGGAAT 0.50|=====      0.33|===       
+  366345  -40 GGAATT 0.50|=====      0.33|===       
+  366344  -39 GAATTG 0.50|=====      0.33|===       
+  366343  -38 AATTGT 0.67|======     0.50|=====     
+  366342  -37 ATTGTG 0.67|======     0.50|=====     
+  366341  -36 TTGTGA 0.67|======     0.67|======    
+  366340  -35 TGTGAG 0.50|=====      0.50|=====     
+  366339  -34 GTGAGC 0.33|===        0.50|=====     
+  366338  -33 TGAGCG 0.33|===        0.50|=====     
+  366337  -32 GAGCGG 0.33|===        0.33|===       
+  366336  -31 AGCGGA 0.33|===        0.50|=====     
+  366335  -30 GCGGAT 0.33|===        0.17|=         
+  366334  -29 CGGATA 0.33|===        0.33|===       
+  366333  -28 GGATAA 0.33|===        0.50|=====     
+  366332  -27 GATAAC 0.33|===        0.50|=====     
+  366331  -26 ATAACA 0.33|===        0.67|======    
+  366330  -25 TAACAA 0.33|===        0.67|======    
+  366329  -24 AACAAT 0.33|===        0.50|=====     
+  366328  -23 ACAATT 0.50|=====      0.50|=====     
+  366327  -22 CAATTT 0.67|======     0.50|=====     
+  366326  -21 AATTTC 0.67|======     0.67|======    
+  366325  -20 ATTTCA 0.67|======     0.83|========  
+  366324  -19 TTTCAC 0.33|===        0.83|========  
+  366323  -18 TTCACA 0.33|===        0.83|========  
+  366322  -17 TCACAC 0.33|===        0.67|======    
+  366321  -16 CACACA 0.17|=          0.50|=====     
+  366320  -15 ACACAG 0.33|===        0.50|=====     
+  366319  -14 CACAGG 0.33|===        0.50|=====     
+  366318  -13 ACAGGA 0.33|===        0.50|=====     
+  366317  -12 CAGGAA 0.33|===        0.33|===       
+  366316  -11 AGGAAA 0.33|===        0.33|===       
+  366315  -10 GGAAAC 0.17|=          0.33|===       
+  366314   -9 GAAACA 0.17|=          0.50|=====     
+  366313   -8 AAACAG 0.33|===        0.50|=====     
+  366312   -7 AACAGC 0.33|===        0.50|=====     
+  366311   -6 ACAGCT 0.17|=          0.50|=====     
+  366310   -5 CAGCTA 0.33|===        0.33|===       
+  366309   -4 AGCTAT 0.50|=====      0.33|===       
+  366308   -3 GCTATG 0.67|======     0.33|===       
+  366307   -2 CTATGA 0.67|======     0.50|=====     
+  366306   -1 TATGAC 0.67|======     0.50|=====     
+  366305    0 ATGACC 0.50|=====      0.50|=====     
+  366304    1 TGACCA 0.33|===        0.67|======    
+  366303    2 GACCAT 0.33|===        0.50|=====     
+  366302    3 ACCATG 0.50|=====      0.50|=====     
+  366301    4 CCATGA 0.50|=====      0.33|===       
+  366300    5 CATGAT 0.67|======     0.33|===       
+  366299    6 ATGATT 0.83|========   0.33|===       
+  366298    7 TGATTA 0.33|===        0.67|======    
+  366297    8 GATTAC 0.33|===        0.67|======    
+  366296    9 ATTACG 0.50|=====      0.67|======    
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="transcription-factor">
+<h2>Transcription factor<a class="headerlink" href="#transcription-factor" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Transcription_factor">Transcription factor - Wikipedia</a></p>
+<ul>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Gene_expression">Gene expression - Wikipedia</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Transcriptional_regulation">Transcriptional regulation - Wikipedia</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Downregulation_and_upregulation">Downregulation and upregulation - Wikipedia</a></p>
+<ul>
+<li><p>activation, promotion</p></li>
+<li><p>repression, suppression</p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p><img alt="fig-20" src="https://upload.wikimedia.org/wikipedia/commons/8/80/Transcription_Factors.svg" /></p>
+<ul class="simple">
+<li><p>EcoCyc</p>
+<ul>
+<li><p><a class="reference external" href="https://ecocyc.org/ECOLI/NEW-IMAGE?type=OPERON&amp;object=TU00036">Escherichia coli K-12 substr. MG1655 lacZYA</a></p></li>
+</ul>
+</li>
+</ul>
+<ul class="simple">
+<li><p>Activator:</p>
+<ul>
+<li><p>Site 10 (<span class="math notranslate nohighlight">\(\rm{Crp}^{10}\)</span>):</p>
+<ul>
+<li><p>Position of Site Center Relative to Transcription Start Site (bp): 61.5</p></li>
+<li><p>“TAATGTGAGTTAGCTCACTCAT”</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>Repressor:</p>
+<ul>
+<li><p>Site 1 (<span class="math notranslate nohighlight">\(\rm{LacI}^{1}\)</span>):</p>
+<ul>
+<li><p>Position of Site Center Relative to Transcription Start Site (bp): 412</p></li>
+<li><p>“GGTTGTTACTCGCTCACATTT”</p></li>
+</ul>
+</li>
+<li><p>Site 4 (<span class="math notranslate nohighlight">\(\rm{LacI}^{4}\)</span>):</p>
+<ul>
+<li><p>Position of Site Center Relative to Transcription Start Site (bp): 11</p></li>
+<li><p>“AATTGTGAGCGGATAACAATT”</p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul class="simple">
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Activator_%28genetics%29">Activator (genetics) - Wikipedia</a></p>
+<ul>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Catabolite_activator_protein">Catabolite activator protein - Wikipedia</a></p>
+<ul>
+<li><p><a class="reference external" href="https://pdb101.rcsb.org/motm/48#:~:text=Catabolite%20activator%20protein%20%28CAP%29%2C,blue%20from%20PDB%20entry%201cgp%20.">PDB-101: Molecule of the Month: Catabolite Activator Protein</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/CAMP_receptor_protein">cAMP receptor protein - Wikipedia</a></p>
+<ul>
+<li><p><a class="reference external" href="https://pdb101.rcsb.org/motm/152">PDB-101: Molecule of the Month: cAMP-dependent Protein Kinase (PKA)</a></p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul class="simple">
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Repressor">Repressor - Wikipedia</a></p>
+<ul>
+<li><p><a class="reference external" href="https://pdb101.rcsb.org/motm/39">PDB-101: Molecule of the Month: lac Repressor</a></p></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./chapters/00/12"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="01-bio.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Inheritance</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="03-bio.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Central dogma</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      By Ani Adhikari and John DeNero and David Wagner<br/>
+    
+        &copy; Copyright 2021.<br/>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../../../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>
