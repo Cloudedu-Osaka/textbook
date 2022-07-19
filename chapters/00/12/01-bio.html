@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Inheritance &#8212; Computational and Inferential Thinking</title>
+    <title>Gene &#8212; Computational and Inferential Thinking</title>
     
   <link href="../../../_static/css/theme.css" rel="stylesheet">
   <link href="../../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -56,7 +56,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="shortcut icon" href="../../../_static/favicon.png"/>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="Central dogma" href="02-bio.html" />
+    <link rel="next" title="Central dogma (1)" href="02-bio.html" />
     <link rel="prev" title="Bioinfomatics" href="00-bio.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
@@ -112,27 +112,27 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="00-bio.html">
-   Bioinfomatics
+   Bioinformatics (1)
   </a>
  </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   Inheritance
+   Bioinformatics (2)
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="02-bio.html">
-   Central dogma
+   Central dogma (1)
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="03-bio.html">
-   Central dogma
+   Central dogma (2)
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="04-bio.html">
-   Genetic recombination
+   Bioinformatics (5)
   </a>
  </li>
 </ul>
@@ -1236,42 +1236,40 @@ const thebe_selector_output = ".output, .cell_output"
             </div>
             <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#inheritance">
    Inheritance
   </a>
  </li>
- <li class="toc-h1 nav-item toc-entry">
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#chromosome">
    Chromosome
   </a>
  </li>
- <li class="toc-h1 nav-item toc-entry">
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#dna">
    DNA
   </a>
-  <ul class="visible nav section-nav flex-column">
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#fetching-genetic-sequence">
-     Fetching genetic sequence
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#fetching-genetic-sequence">
+   Fetching genetic sequence
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#method-1">
+     method-1
     </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#method-1">
-       method-1
-      </a>
-     </li>
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#method-2">
-       method-2
-      </a>
-     </li>
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#six-frame-and-their-complement">
-       six-frame (and their complement)
-      </a>
-     </li>
-    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#method-2">
+     method-2
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#six-frame-translation">
+     six-frame translation
+    </a>
    </li>
   </ul>
  </li>
@@ -1285,7 +1283,7 @@ const thebe_selector_output = ".output, .cell_output"
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Inheritance</h1>
+                <h1>Gene</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -1295,42 +1293,40 @@ const thebe_selector_output = ".output, .cell_output"
                         </div>
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#inheritance">
    Inheritance
   </a>
  </li>
- <li class="toc-h1 nav-item toc-entry">
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#chromosome">
    Chromosome
   </a>
  </li>
- <li class="toc-h1 nav-item toc-entry">
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#dna">
    DNA
   </a>
-  <ul class="visible nav section-nav flex-column">
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#fetching-genetic-sequence">
-     Fetching genetic sequence
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#fetching-genetic-sequence">
+   Fetching genetic sequence
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#method-1">
+     method-1
     </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#method-1">
-       method-1
-      </a>
-     </li>
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#method-2">
-       method-2
-      </a>
-     </li>
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#six-frame-and-their-complement">
-       six-frame (and their complement)
-      </a>
-     </li>
-    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#method-2">
+     method-2
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#six-frame-translation">
+     six-frame translation
+    </a>
    </li>
   </ul>
  </li>
@@ -1345,8 +1341,17 @@ const thebe_selector_output = ".output, .cell_output"
                 
   <div class="cell tag_remove-input docutils container">
 </div>
-<div class="tex2jax_ignore mathjax_ignore section" id="inheritance">
-<h1>Inheritance<a class="headerlink" href="#inheritance" title="Permalink to this headline">¶</a></h1>
+<div class="tex2jax_ignore mathjax_ignore section" id="gene">
+<h1>Gene<a class="headerlink" href="#gene" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Gene#DNA">Gene - Wikipedia</a></p>
+<ul>
+<li><p>“A gene is a region of <em>DNA</em> that encodes function. A <em>chromosome</em> consists of a long strand of DNA containing many genes. A human chromosome can have up to 500 million base pairs of DNA with thousands of genes.”</p></li>
+</ul>
+</li>
+</ul>
+<div class="section" id="inheritance">
+<h2>Inheritance<a class="headerlink" href="#inheritance" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Heredity">Heredity - Wikipedia</a></p></li>
 <li><p>(1865) <a class="reference external" href="https://en.wikipedia.org/wiki/Mendelian_inheritance">Mendelian inheritance - Wikipedia</a></p>
@@ -1356,8 +1361,8 @@ const thebe_selector_output = ".output, .cell_output"
 </li>
 </ul>
 </div>
-<div class="tex2jax_ignore mathjax_ignore section" id="chromosome">
-<h1>Chromosome<a class="headerlink" href="#chromosome" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="chromosome">
+<h2>Chromosome<a class="headerlink" href="#chromosome" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Chromatin">Chromatin - Wikipedia</a></p>
 <ul>
@@ -1381,8 +1386,8 @@ const thebe_selector_output = ".output, .cell_output"
 </li>
 </ul>
 </div>
-<div class="tex2jax_ignore mathjax_ignore section" id="dna">
-<h1>DNA<a class="headerlink" href="#dna" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="dna">
+<h2>DNA<a class="headerlink" href="#dna" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><p>(1953) <a class="reference external" href="https://en.wikipedia.org/wiki/Nucleic_acid_double_helix">Nucleic acid double helix - Wikipedia</a>, <a class="reference external" href="https://en.wikipedia.org/wiki/Base_pair">Base pair - Wikipedia</a></p>
 <ul>
@@ -1396,6 +1401,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Histone">Histone - Wikipedia</a></p></li>
 </ul>
 <p><img alt="fig-2" src="https://upload.wikimedia.org/wikipedia/commons/6/6b/1aoi.jpg" /></p>
+</div>
 <div class="section" id="fetching-genetic-sequence">
 <h2>Fetching genetic sequence<a class="headerlink" href="#fetching-genetic-sequence" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
@@ -1436,14 +1442,14 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">seq0</span> <span class="o">=</span> <span class="nb">next</span><span class="p">(</span><span class="n">seq</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">MG1655</span> <span class="o">=</span> <span class="nb">next</span><span class="p">(</span><span class="n">seq</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">len</span><span class="p">(</span><span class="n">seq0</span><span class="o">.</span><span class="n">seq</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">len</span><span class="p">(</span><span class="n">MG1655</span><span class="o">.</span><span class="n">seq</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1499,34 +1505,20 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 </div>
-<div class="section" id="six-frame-and-their-complement">
-<h3>six-frame (and their complement)<a class="headerlink" href="#six-frame-and-their-complement" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="six-frame-translation">
+<h3>six-frame translation<a class="headerlink" href="#six-frame-translation" title="Permalink to this headline">¶</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">):</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">MG1655</span><span class="o">.</span><span class="n">seq</span><span class="p">[</span><span class="n">i</span><span class="p">:</span><span class="n">i</span><span class="o">+</span><span class="mi">30</span><span class="p">]</span><span class="o">.</span><span class="n">translate</span><span class="p">())</span>
+    <span class="n">sseq</span> <span class="o">=</span> <span class="n">MG1655</span><span class="o">.</span><span class="n">seq</span><span class="p">[</span><span class="n">i</span><span class="p">:</span><span class="n">i</span><span class="o">+</span><span class="mi">30</span><span class="p">]</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">sseq</span><span class="p">,</span> <span class="n">sseq</span><span class="o">.</span><span class="n">translate</span><span class="p">())</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>SFSF*LQRAI
-AFHSDCNGQY
-LFILTATGNM
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">):</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">MG1655</span><span class="o">.</span><span class="n">seq</span><span class="p">[</span><span class="n">i</span><span class="p">:</span><span class="n">i</span><span class="o">+</span><span class="mi">30</span><span class="p">][::</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">translate</span><span class="p">())</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>ITGNVSLTFR
-YNGQRQSYFS
-V*RATSVLLF
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>AGCTTTTCATTCTGACTGCAACGGGCAATA SFSF*LQRAI
+GCTTTTCATTCTGACTGCAACGGGCAATAT AFHSDCNGQY
+CTTTTCATTCTGACTGCAACGGGCAATATG LFILTATGNM
 </pre></div>
 </div>
 </div>
@@ -1534,29 +1526,15 @@ V*RATSVLLF
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">):</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">MG1655</span><span class="o">.</span><span class="n">seq</span><span class="p">[</span><span class="n">i</span><span class="p">:</span><span class="n">i</span><span class="o">+</span><span class="mi">30</span><span class="p">]</span><span class="o">.</span><span class="n">complement</span><span class="p">()</span><span class="o">.</span><span class="n">translate</span><span class="p">())</span>
+    <span class="n">sseq</span> <span class="o">=</span> <span class="n">MG1655</span><span class="o">.</span><span class="n">seq</span><span class="o">.</span><span class="n">reverse_complement</span><span class="p">()[</span><span class="n">i</span><span class="p">:</span><span class="n">i</span><span class="o">+</span><span class="mi">30</span><span class="p">]</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">sseq</span><span class="p">,</span> <span class="n">sseq</span><span class="o">.</span><span class="n">translate</span><span class="p">())</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>SKSKTDVARY
-RKVRLTLPVI
-EK*D*RCPLY
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">):</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">MG1655</span><span class="o">.</span><span class="n">seq</span><span class="p">[</span><span class="n">i</span><span class="p">:</span><span class="n">i</span><span class="o">+</span><span class="mi">30</span><span class="p">][::</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">complement</span><span class="p">()</span><span class="o">.</span><span class="n">translate</span><span class="p">())</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>YCPLQSE*KA
-ILPVAVRMKS
-HIARCSQNEK
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>GAAAAATACTTACTAAGGCGTTTTTTATTT EKYLLRRFLF
+AAAAATACTTACTAAGGCGTTTTTTATTTG KNTY*GVFYL
+AAAATACTTACTAAGGCGTTTTTTATTTGG KILTKAFFIW
 </pre></div>
 </div>
 </div>
@@ -1600,7 +1578,7 @@ HIARCSQNEK
     <a class='right-next' id="next-link" href="02-bio.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Central dogma</p>
+        <p class="prev-next-title">Central dogma (1)</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

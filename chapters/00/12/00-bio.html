@@ -56,7 +56,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="shortcut icon" href="../../../_static/favicon.png"/>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="Inheritance" href="01-bio.html" />
+    <link rel="next" title="Gene" href="01-bio.html" />
     <link rel="prev" title="プログラミングで遡る科学史" href="../entry.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
@@ -112,27 +112,27 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="current nav bd-sidenav">
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   Bioinfomatics
+   Bioinformatics (1)
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="01-bio.html">
-   Inheritance
+   Bioinformatics (2)
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="02-bio.html">
-   Central dogma
+   Central dogma (1)
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="03-bio.html">
-   Central dogma
+   Central dogma (2)
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="04-bio.html">
-   Genetic recombination
+   Bioinformatics (5)
   </a>
  </li>
 </ul>
@@ -1236,19 +1236,14 @@ const thebe_selector_output = ".output, .cell_output"
             </div>
             <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#">
-   Bioinfomatics
-  </a>
- </li>
- <li class="toc-h1 nav-item toc-entry">
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#codon-table">
    codon table
   </a>
-  <ul class="visible nav section-nav flex-column">
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#gene">
-     Gene
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#directonality">
+     Directonality
     </a>
    </li>
   </ul>
@@ -1273,19 +1268,14 @@ const thebe_selector_output = ".output, .cell_output"
                         </div>
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#">
-   Bioinfomatics
-  </a>
- </li>
- <li class="toc-h1 nav-item toc-entry">
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#codon-table">
    codon table
   </a>
-  <ul class="visible nav section-nav flex-column">
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#gene">
-     Gene
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#directonality">
+     Directonality
     </a>
    </li>
   </ul>
@@ -1401,9 +1391,8 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 </div>
-</div>
-<div class="tex2jax_ignore mathjax_ignore section" id="codon-table">
-<h1>codon table<a class="headerlink" href="#codon-table" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="codon-table">
+<h2>codon table<a class="headerlink" href="#codon-table" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><p><a class="reference external" href="https://en.wikipedia.org/wiki/DNA_and_RNA_codon_tables">DNA and RNA codon tables - Wikipedia</a></p>
 <ul>
@@ -1597,10 +1586,40 @@ GGG G
 </div>
 </div>
 </div>
+<div class="section" id="directonality">
+<h3>Directonality<a class="headerlink" href="#directonality" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Directionality_%28molecular_biology%29">Directionality (molecular biology) - Wikipedia</a></p></li>
+</ul>
+<p><img alt="fig-10" src="https://upload.wikimedia.org/wikipedia/commons/e/e4/DNA_chemical_structure.svg" /></p>
 <p><img alt="fig-1" src="https://upload.wikimedia.org/wikipedia/commons/a/a0/Example_DNA_sequence.png" /></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">seq</span> <span class="o">=</span> <span class="s2">&quot;ATGACGTGGGA&quot;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Seq</span><span class="p">(</span><span class="n">seq</span><span class="p">)</span><span class="o">.</span><span class="n">complement</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Seq(&#39;TACTGCACCCT&#39;)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Seq</span><span class="p">(</span><span class="n">seq</span><span class="p">)</span><span class="o">.</span><span class="n">reverse_complement</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Seq(&#39;TCCCACGTCAT&#39;)
 </pre></div>
 </div>
 </div>
@@ -1665,7 +1684,7 @@ LHP
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">):</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">Seq</span><span class="p">(</span><span class="n">seq</span><span class="p">[</span><span class="n">i</span><span class="p">:][::</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span><span class="o">.</span><span class="n">complement</span><span class="p">()</span><span class="o">.</span><span class="n">translate</span><span class="p">())</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">Seq</span><span class="p">(</span><span class="n">seq</span><span class="p">[</span><span class="n">i</span><span class="p">:])</span><span class="o">.</span><span class="n">reverse_complement</span><span class="p">()</span><span class="o">.</span><span class="n">translate</span><span class="p">())</span>
 </pre></div>
 </div>
 </div>
@@ -1677,15 +1696,7 @@ SHV
 </div>
 </div>
 </div>
-<div class="section" id="gene">
-<h2>Gene<a class="headerlink" href="#gene" title="Permalink to this headline">¶</a></h2>
-<ul class="simple">
-<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Gene#DNA">Gene - Wikipedia</a></p>
-<ul>
-<li><p>“A gene is a region of <em>DNA</em> that encodes function. A <em>chromosome</em> consists of a long strand of DNA containing many genes. A human chromosome can have up to 500 million base pairs of DNA with thousands of genes.”</p></li>
-</ul>
-</li>
-</ul>
+</div>
 </div>
 </div>
 
@@ -1724,7 +1735,7 @@ SHV
     <a class='right-next' id="next-link" href="01-bio.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Inheritance</p>
+        <p class="prev-next-title">Gene</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
